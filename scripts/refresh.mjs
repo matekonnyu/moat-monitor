@@ -52,10 +52,18 @@ async function fetchDaily(sym) {
 }
 
 const at = new Date().toISOString();
+export const CAND_TTL = 2 * 864e5; // 2 nap
 let ok = 0, fail = 0;
 for (const f of FILES) {
   let list;
   try { list = JSON.parse(await readFile(f, "utf8")); } catch { continue; }
+  if (f.endsWith("candidates.json")) {
+    // Jóváhagyásra váró elemzés: az első mentés ideje "added"; 2 nap után kikerül a várólistából.
+    for (const c of list) if (!c.added) c.added = at;
+    const before = list.length;
+    list = list.filter((c) => Date.parse(at) - Date.parse(c.added) < CAND_TTL);
+    if (list.length < before) console.log(`Lejárt jelölt törölve: ${before - list.length}`);
+  }
   for (const c of list) {
     if (!c.y) continue;
     try {

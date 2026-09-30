@@ -179,12 +179,13 @@ function pick() {
 }
 
 function drawQ() {
+  const TTL = 2 * 864e5; CD = CD.filter((c) => !c.added || Date.now() - Date.parse(c.added) < TTL);
   $("#nqc").hidden = !CD.length; $("#nqc").textContent = CD.length || ""; $("#nqc").title = CD.length ? CD.length + " elemzés vár jóváhagyásra" : "";
   $("#qs").innerHTML = CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${tri(c)}
 <div class="dg" style="margin-top:10px"><div>${pillars(c.p)}</div>
 <div><div class="k"><span>Score</span><span>${c.s}</span></div><div class="k"><span>Ár${c.mk.d ? ` (${esc(c.mk.d)})` : ""}</span><span>${mon(c.px, c.cur)}</span></div><div class="k"><span>Belső érték</span><span>${mon(c.iv, c.cur)}</span></div><div class="k"><span>Buy Below (MoS ${c.mos}%)</span><span>${mon(c.bb, c.cur)}</span></div><div class="k"><span>Ár vs IV</span><span>${pct(c.pv)}</span></div><div class="k"><span>Célár</span><span>${mon(c.tp, c.cur)}</span></div><div class="k"><span>Pénzügyi erő</span>${chip(c.f)}</div><div class="k"><span>AI-kockázat</span>${chip(c.ai)}</div></div></div>
 <p class="rec">${esc(c.r)}</p>${c.risks ? `<p class="rec">Kockázatok: ${esc(c.risks)}</p>` : ""}${c.ivb ? `<p class="rec note">Belső érték alapja: ${esc(c.ivb)}</p>` : ""}${c.srcs ? `<p class="rec note">Források: ${esc(c.srcs)}</p>` : ""}
-<button class="btn pri" style="margin-top:10px" data-act="Felvétel: ${esc(c.id)}">Hozzáadás a listához</button> <button class="btn" style="margin-top:10px" data-act="Elvetés: ${esc(c.id)}">Elvetés</button></div>`; }).join("");
+${c.added ? `<p class="rec note">Ha nem veszed fel a listára, ${new Date(Date.parse(c.added) + TTL).toLocaleString("hu-HU", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })} után törlődik a várólistáról.</p>` : ""}<button class="btn pri" style="margin-top:10px" data-act="Felvétel: ${esc(c.id)}">Hozzáadás a listához</button> <button class="btn" style="margin-top:10px" data-act="Elvetés: ${esc(c.id)}">Elvetés</button></div>`; }).join("");
 }
 
 $("#hd").addEventListener("click", (e) => { const k = e.target.dataset.k; if (!k) return; sd = sk == k ? -sd : (k == "n" ? 1 : -1); sk = k; draw(); });
