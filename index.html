@@ -98,7 +98,8 @@ details summary{cursor:pointer}
 <p class="note">Bármelyik részvényt kérheted, amit a George-ban megvehetsz: amerikai, német, osztrák vagy BÉT-papírt. Claude pár perc alatt elkészíti a teljes elemzést (friss árfolyam, jelentések, moat, belső érték), és itt jelenik meg jóváhagyásra.</p>
 <div id="run2"></div>
 <div id="qs"></div>
-<details class="res" style="margin-top:18px"><summary><b>Háttérben futtatás beállítása</b> <span class="note" id="tokst"></span></summary>
+<details class="res" style="margin-top:18px"><summary><b>Háttérben futtatás beállítása</b></summary>
+<p id="tokst" style="font-weight:500"></p>
 <p class="note">Egyszer kell megcsinálni, ezen a böngészőn/telefonon. A kulcs csak itt tárolódik, a weboldalba és a repóba nem kerül be.</p>
 <ol class="note">
 <li>Nyisd meg: <a class="g" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">új GitHub-kulcs létrehozása</a>.</li>
@@ -108,6 +109,7 @@ details summary{cursor:pointer}
 <li>Generate token → másold ki, és illeszd be ide:</li>
 </ol>
 <div class="fm"><input id="tok" type="password" placeholder="github_pat_..." aria-label="GitHub-kulcs" autocomplete="off"><button class="btn pri" id="toksave">Mentés</button><button class="btn" id="tokdel" hidden>Kulcs törlése</button></div>
+<p id="tokmsg" hidden></p>
 </details>
 </section>
 

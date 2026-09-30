@@ -50,56 +50,5 @@
    "at": "2026-09-30T12:11:55.167Z",
    "src": "Yahoo Finance"
   }
- },
- {
-  "id": "PEP",
-  "n": "PepsiCo, Inc.",
-  "t": "PEP",
-  "y": "PEP",
-  "l": "Jelölt",
-  "m": "Wide",
-  "s": 80,
-  "ai": "Low",
-  "c": "High",
-  "p": [
-   88,
-   30,
-   45,
-   75,
-   70
-  ],
-  "sec": "Consumer Defensive",
-  "r": "Hold – erős márkák és disztribúció, de az ár (128,69 USD) a konzervatív belső érték (125 USD) fölött van, a biztonsági ráta nem adott.",
-  "risks": "Az észak-amerikai Frito-Lay volumen- és árrésnyomás, az egészségtudatos fogyasztás és GLP-1 hatás, valamint a magas osztalékkifizetés mellett lassuló szabad cash flow-növekedés.",
-  "ivb": "Owner-earnings alapon: kb. 9,28 Mrd USD TTM szabad cash flow (~6,5–6,8 USD/részvény, a részvényszám becslés) 8% hozam és 3% tartós növekedés mellett ≈125 USD; a nettó adósságot pontosan nem ellenőriztem.",
-  "srcs": [
-   "Yahoo Finance",
-   "StockAnalysis",
-   "PepsiCo Q2 2026 earnings release"
-  ],
-  "d": "2026-09-30",
-  "ch": "https://finance.yahoo.com/chart/PEP",
-  "pr": 128.69,
-  "tp": 151.09,
-  "iv": 125,
-  "bb": 100,
-  "mos": 20,
-  "f": "Adequate",
-  "cur": "USD",
-  "mk": {
-   "p": 128.69,
-   "prev": 128.5,
-   "sma20": 134.03,
-   "sma50": 137.53,
-   "sma200": 147.62,
-   "ema20": 133.04,
-   "ema50": 136.77,
-   "tr": "Csökkenő",
-   "ch1m": -8.78,
-   "ch6m": -17.94,
-   "d": "2026-09-29",
-   "at": "2026-09-30T12:11:55.167Z",
-   "src": "Yahoo Finance"
-  }
  }
 ]

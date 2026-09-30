@@ -132,13 +132,16 @@ function drawTok() {
   $("#tokst").textContent = TOKEN ? "Be van állítva: a gombok a háttérben futnak, átirányítás nélkül." : "Nincs beállítva: a gombok egy GitHub-oldalt nyitnak meg.";
   $("#tokdel").hidden = !TOKEN;
 }
+function tokMsg(t, ok) { const e = $("#tokmsg"); e.textContent = t; e.className = "note " + (ok ? "g" : "r"); e.hidden = false; }
 $("#toksave").onclick = async () => {
-  const t = $("#tok").value.trim(); if (!t) return;
+  const t = $("#tok").value.trim(); if (!t) { tokMsg("Előbb illeszd be a kulcsot a mezőbe.", false); return; }
+  tokMsg("Ellenőrzés...", true);
   const r = await fetch(API + "/issues?per_page=1", { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" } }).catch(() => null);
-  if (!r || !r.ok) { $("#tokst").textContent = "Ez a kulcs nem működik ehhez a repóhoz. Ellenőrizd a jogosultságokat."; return; }
+  if (!r || !r.ok) { tokMsg(r && (r.status == 401) ? "Ez a kulcs érvénytelen. Másold be újra, teljes hosszában." : "Ez a kulcs nem fér hozzá a moat-monitor repóhoz. Ellenőrizd: Only select repositories → moat-monitor, Issues: Read and write.", false); return; }
   TOKEN = t; try { localStorage.setItem("mm_gh_token", t); } catch {} $("#tok").value = ""; drawTok(); poll(true);
+  tokMsg("Mentve, működik. Mostantól a gombok a háttérben futnak.", true);
 };
-$("#tokdel").onclick = () => { TOKEN = ""; try { localStorage.removeItem("mm_gh_token"); } catch {} drawTok(); };
+$("#tokdel").onclick = () => { TOKEN = ""; try { localStorage.removeItem("mm_gh_token"); } catch {} drawTok(); tokMsg("A kulcsot töröltem ebből a böngészőből.", true); };
 drawTok();
 $("#an").addEventListener("keydown", (e) => { if (e.key == "Enter") $("#go").click(); });
 
