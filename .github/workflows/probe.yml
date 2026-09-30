@@ -1,0 +1,21 @@
+name: probe
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          set +e
+          UA="Mozilla/5.0"
+          {
+          echo "== yahoo search headers"; curl -sS -D - -o /tmp/y.json -A "$UA" -H "Origin: https://konninvest.com" "https://query2.finance.yahoo.com/v1/finance/search?q=richter&quotesCount=8&newsCount=0" | grep -i -E "^HTTP|access-control"; head -c 1500 /tmp/y.json; echo
+          echo "== yahoo q1"; curl -sS -D - -o /tmp/y1.json -A "$UA" -H "Origin: https://konninvest.com" "https://query1.finance.yahoo.com/v1/finance/search?q=OTP&quotesCount=8&newsCount=0" | grep -i -E "^HTTP|access-control"; head -c 800 /tmp/y1.json; echo
+          echo "== nasdaqtrader"; curl -sS -A "$UA" https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt | head -3; curl -sS -A "$UA" https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt | head -3
+          echo "== xetra page"; curl -sSL -A "$UA" "https://www.cashmarket.deutsche-boerse.com/cash-en/Data-Tech/statistics/instruments" | grep -o 'href="[^"]*allTradableInstruments[^"]*"' | head
+          echo "== xetra page2"; curl -sSL -A "$UA" "https://www.xetra.com/xetra-en/instruments/instruments" | grep -o 'href="[^"]*allTradableInstruments[^"]*"' | head
+          echo "== bet"; curl -sSL -A "$UA" -o /tmp/b.html -w "%{http_code}\n" "https://bet.hu/oldalak/ceglista"; grep -o 'Részvény[^<]\{0,80\}' /tmp/b.html | head -3
+          } > probe.txt 2>&1
+          git config user.name bot; git config user.email bot@users.noreply.github.com
+          git checkout -q --orphan probe; git rm -rfq . ; git add probe.txt; git commit -qm probe; git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe
