@@ -93,7 +93,7 @@ const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</s
 
 function detail(r) {
   const mk = r.mk;
-  return `<tr class="d"><td colspan="14"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
+  return `<tr class="d"><td colspan="14"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}${r.srcs ? `<p class="rec note">Források: ${esc([].concat(r.srcs).join(", "))}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
 <div><div class="k"><span>Záróár dátuma</span><span>${esc(mk.d || r.d || "–")}</span></div>
 <div class="k"><span>Napi változás</span><span>${mk.prev ? pct((mk.p / mk.prev - 1) * 100) : "–"}</span></div>
 <div class="k"><span>Trend (20 / 50 / 200 nap)</span><span>${esc(r.trS || "–")} / ${esc(r.trM || "–")} / ${esc(r.trL || "–")}</span></div>
@@ -119,7 +119,7 @@ function draw() {
 <td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : "pillanatkép"}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td><td>${tri(r)}</td>
 <td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv == null ? "" : r.pv < 0 ? "g" : r.pv > 15 ? "r" : ""}">${pct(r.pv)}</td><td>${r.v ? `<span class="chip ${K[r.v] || ""}">${VH[r.v] || esc(r.v)}</span>` : "–"}</td>
 <td>${chip(r.m)}</td><td><span class="sc"><span class="tr"><i style="width:${r.s}%"></i></span>${r.s ?? "–"}</span></td><td><b>${r.mpa ?? "–"}</b></td><td class="${r.gap == null ? "" : r.gap > 0 ? "g" : r.gap < 0 ? "r" : ""}">${sg(r.gap)}</td>
-<td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}${r.nu ? ` <a class="nl" href="${esc(r.nu)}" target="_blank" rel="noopener" title="Elemzés megnyitása a Notionben">↗</a>` : ""}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("");
+<td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("");
   document.querySelectorAll("#hd th").forEach((h) => { const on = h.dataset.k == sk; h.classList.toggle("on", on); h.textContent = h.textContent.replace(/ [▲▼]$/, "") + (on ? (sd < 0 ? " ▼" : " ▲") : ""); });
   pick();
 }
