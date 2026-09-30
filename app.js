@@ -12,8 +12,8 @@ const chip = (t) => t ? `<span class="chip ${K[t] || ""}">${esc(t)}</span>` : `<
 const PL = ["Immateriális javak", "Váltási költség", "Hálózati hatás", "Költségelőny", "Hatékony méret"];
 
 // GitHub repó a címből: https://<owner>.github.io/<repo>/
-const OWNER = location.hostname.endsWith(".github.io") ? location.hostname.split(".")[0] : "OWNER";
-const REPO = location.hostname.endsWith(".github.io") ? (location.pathname.split("/").filter(Boolean)[0] || OWNER + ".github.io") : "moat-monitor";
+// Saját domain (konninvest.com) vagy github.io alatt is ugyanazt a repót használja.
+const OWNER = "matekonnyu", REPO = "moat-monitor";
 const issueUrl = (title, body = "") => `https://github.com/${OWNER}/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body || "Ezt a kérést a Moat Monitor oldal készítette. Kattints a „Submit new issue” gombra.")}`;
 
 // Háttérben futtatás: a tulajdonos egyszer megad egy GitHub-kulcsot (csak ebben a böngészőben tárolódik).
