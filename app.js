@@ -121,9 +121,8 @@ function pick() {
   const c = all.filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő" && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
   const ds = all.map((r) => r.mk.d).filter(Boolean).sort();
   const day = (ds[ds.length - 1] || new Date().toISOString().slice(0, 10)).replace(/-/g, ".") + ".";
-  const rule = `<p class="pkn">Kiválasztás a listából: score legalább 70, van moat, vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, a közép- (50 nap) és hosszú távú (200 nap) trend nem mutat lefelé; ezek közül az, amelyiknek az ára a legközelebb van a vételi szinthez. Nem személyre szabott befektetési tanács.</p>`;
   $("#pk").hidden = false;
-  if (!c) { $("#pk").innerHTML = `<div class="pkh"><span class="pkl">Mai ajánlat · ${day}</span></div><h2>Ma nincs ajánlat</h2><p class="pks">Egyik cég sem felel meg egyszerre minden feltételnek, ezért ma nem ajánlok vételt.</p>${rule}`; return; }
+  if (!c) { $("#pk").innerHTML = `<div class="pkh"><span class="pkl">Mai ajánlat · ${day}</span></div><h2>Ma nincs ajánlat</h2><p class="pks">Egyik cég sem felel meg egyszerre minden feltételnek, ezért ma nem ajánlok vételt.</p>`; return; }
   const HU = { Undervalued: "Alulértékelt", Fair: "Korrekt ár", Expensive: "Drága" };
   const col = (x, inv) => x == null || !isFinite(x) ? "" : (inv ? x < 0 : x > 0) ? "g" : "r";
   const tile = (l, v, k = "") => `<div class="mt"><span>${l}</span><b class="${k}">${v}</b></div>`;
@@ -143,7 +142,7 @@ function pick() {
 <p class="pks">${esc(c.m)} moat · ${esc(c.sec || "")} · az ár a vételi szint ${gb <= 0 ? "alatt" : "felett"}</p>
 <div class="mts">${tile("Árfolyam", mon(c.px, c.cur))}${tile("Belső érték (IV)", mon(c.iv, c.cur))}${tile("Vételi szint", mon(c.bb, c.cur))}${tile("Ár vs IV", pct(c.pv), col(c.pv, true))}${tile("Konszenzus célár", mon(c.tp, c.cur))}${tile("Potenciál a célárig", pct(c.up), col(c.up))}${tile("Score / Moat", `${c.s} / ${esc(c.m)}`)}${tile("Trend 20 / 50 / 200", trT, "tt")}</div>
 <div class="why"><div><h3>Miért most?</h3><ul>${why.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h3>Kockázatok</h3><ul class="rk">${risks.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
-<button class="pkb" type="button" id="pkd" data-id="${esc(c.id)}">Részletek →</button>${rule}`;
+<button class="pkb" type="button" id="pkd" data-id="${esc(c.id)}">Részletek →</button>`;
   $("#pkd").onclick = () => { ["#q", "#fm", "#fl", "#ft"].forEach((q) => { $(q).value = ""; }); open.add(c.id); draw(); const tr = document.querySelector(`tr.row[data-id="${CSS.escape(c.id)}"]`); if (tr) tr.scrollIntoView({ behavior: "smooth", block: "center" }); };
 }
 
