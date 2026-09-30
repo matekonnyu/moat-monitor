@@ -73,7 +73,7 @@ function trends(mk) {
   return { trS: shortT, trM: midT, trL: longT };
 }
 const ARW = { "Emelkedő": "↑", "Oldalazó": "→", "Csökkenő": "↓" };
-const tri = (r) => r.trM || r.trS || r.trL ? `<span class="tri">${[["20n", r.trS], ["50n", r.trM], ["200n", r.trL]].map(([l, t]) => `<span class="${K[t] || ""}" title="${l}: ${t || "nincs adat"}">${l}&nbsp;${ARW[t] || "–"}</span>`).join(" ")}</span>` : chip(null);
+const tri = (r) => r.trM || r.trS || r.trL ? `<span class="tri">${[["20 nap", r.trS], ["50 nap", r.trM], ["200 nap", r.trL]].map(([l, t]) => `<span class="${K[t] || ""}" title="${l}: ${t || "nincs adat"}" aria-label="${l}: ${t || "nincs adat"}">${ARW[t] || "–"}</span>`).join(" ")}</span>` : chip(null);
 const trTxt = (r) => `rövid ${(r.trS || "–").toLowerCase()}, közép ${(r.trM || "–").toLowerCase()}, hosszú ${(r.trL || "–").toLowerCase()}`;
 function valuation(pv) { return pv < -10 ? "Undervalued" : pv <= 15 ? "Fair" : "Expensive"; }
 function derive(o) {

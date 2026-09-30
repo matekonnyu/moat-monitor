@@ -12,7 +12,7 @@
 :root[data-theme="dark"]{--bg:#10171e;--card:#182129;--ink:#e6ecf1;--mut:#93a1ae;--line:#2a3743;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.45 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums;padding-bottom:env(safe-area-inset-bottom,0px)}
-main{max-width:1120px;margin:0 auto;padding:20px 16px 32px}
+main{max-width:1240px;margin:0 auto;padding:20px 16px 32px}
 h1{font-size:26px;font-weight:600;margin:0 0 2px;letter-spacing:-.01em}
 .sub{color:var(--mut);margin:0 0 14px}
 nav.tabs{display:flex;gap:6px;margin-bottom:14px}
@@ -62,7 +62,9 @@ footer{color:var(--mut);font-size:12px;margin-top:14px}
 tr.d .dg{position:sticky;left:0;max-width:min(1080px,calc(100vw - 58px))}
 @keyframes mmspin{to{transform:rotate(360deg)}}.spin{display:inline-block;width:11px;height:11px;margin-right:7px;border:2px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:mmspin 1s linear infinite;vertical-align:-1px}@media (prefers-reduced-motion:reduce){.spin{animation:none}}
 details summary{cursor:pointer}
-.tri{display:inline-flex;gap:8px;font-size:12px;font-weight:500;white-space:nowrap}
+.tri{display:inline-flex;gap:10px;font-size:15px;font-weight:600;white-space:nowrap}
+td:first-child{white-space:normal;max-width:230px}
+th,td{padding:9px 8px}
 </style>
 </head>
 <body>
@@ -85,7 +87,7 @@ details summary{cursor:pointer}
 </div>
 <div class="w"><table>
 <thead><tr id="hd">
-<th data-k="n">Cég</th><th data-k="mo">Moat</th><th data-k="s">Score</th><th data-k="px">Ár</th><th data-k="to">Trend</th><th data-k="up">Upside</th><th data-k="iv">Belső érték</th><th data-k="bb">Buy Below</th><th data-k="pv">Ár vs IV</th><th data-k="vo">Értékelés</th>
+<th data-k="n">Cég</th><th data-k="mo">Moat</th><th data-k="s">Score</th><th data-k="px">Ár</th><th data-k="to" title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th data-k="up">Upside</th><th data-k="iv">Belső érték</th><th data-k="bb">Buy Below</th><th data-k="pv">Ár vs IV</th><th data-k="vo">Értékelés</th>
 </tr></thead>
 <tbody id="tb"></tbody>
 </table></div>
