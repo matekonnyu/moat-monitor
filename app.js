@@ -148,7 +148,7 @@ function pick() {
 }
 
 function drawQ() {
-  $("#t2").textContent = CD.length ? `Új cég (${CD.length} kész)` : "Új cég";
+  $("#nqc").hidden = !CD.length; $("#nqc").textContent = CD.length || ""; $("#nqc").title = CD.length ? CD.length + " elemzés vár jóváhagyásra" : "";
   $("#qs").innerHTML = CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${tri(c)}
 <div class="dg" style="margin-top:10px"><div>${pillars(c.p)}</div>
 <div><div class="k"><span>Score</span><span>${c.s}</span></div><div class="k"><span>Ár${c.mk.d ? ` (${esc(c.mk.d)})` : ""}</span><span>${mon(c.px, c.cur)}</span></div><div class="k"><span>Belső érték</span><span>${mon(c.iv, c.cur)}</span></div><div class="k"><span>Buy Below (MoS ${c.mos}%)</span><span>${mon(c.bb, c.cur)}</span></div><div class="k"><span>Ár vs IV</span><span>${pct(c.pv)}</span></div><div class="k"><span>Célár</span><span>${mon(c.tp, c.cur)}</span></div><div class="k"><span>Pénzügyi erő</span>${chip(c.f)}</div><div class="k"><span>AI-kockázat</span>${chip(c.ai)}</div></div></div>
@@ -161,9 +161,10 @@ const tog = (e) => { if (e.target.dataset.act) { e.stopPropagation(); if (!e.tar
 $("#tb").addEventListener("click", tog);
 $("#tb").addEventListener("keydown", (e) => { if (e.key == "Enter") tog(e); });
 ["#q", "#fm", "#fl", "#ft"].forEach((s) => $(s).addEventListener("input", draw));
-function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#t1").classList.toggle("on", v == 1); $("#t2").classList.toggle("on", v == 2); $("#nlist").classList.toggle("on", v == 1); }
-$("#t1").onclick = () => show(1); $("#t2").onclick = () => show(2);
+function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#nlist").classList.toggle("on", v == 1); $("#nnew").classList.toggle("on", v == 2); document.body.classList.toggle("v2", v == 2); }
+$(".brand").onclick = (e) => { e.preventDefault(); show(1); scrollTo(0, 0); };
 $("#nnew").onclick = () => { show(2); scrollTo(0, 0); }; $("#nlist").onclick = () => { show(1); scrollTo(0, 0); };
+show(1);
 { const root = document.documentElement; try { const t = localStorage.getItem("mm_theme"); if (t) root.dataset.theme = t; } catch {}
   $("#thm").onclick = () => { const dark = root.dataset.theme ? root.dataset.theme == "dark" : matchMedia("(prefers-color-scheme: dark)").matches; root.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("mm_theme", root.dataset.theme); } catch {} }; }
 $("#go").onclick = () => { const q = $("#an").value.trim(); if (!q) { $("#an").focus(); return; } act("Elemzés: " + q); $("#an").value = ""; };
