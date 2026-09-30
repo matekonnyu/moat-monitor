@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moat Monitor</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230f766e'/><path d='M3 12V7l2-2 2 2V4l2-2 2 2v3l2-2v7z' fill='white'/></svg>">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f5f7;--card:#fff;--ink:#16222e;--mut:#5d6b78;--line:#d9e0e6;--g:#0f766e;--a:#a8650a;--r:#b3372b;--gb:#dff2ef;--ab:#faecd3;--rb:#f8e0dc;--nb:#e8ecf0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171e;--card:#182129;--ink:#e6ecf1;--mut:#93a1ae;--line:#2a3743;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039}}
+:root[data-theme="dark"]{--bg:#10171e;--card:#182129;--ink:#e6ecf1;--mut:#93a1ae;--line:#2a3743;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.45 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums;padding-bottom:env(safe-area-inset-bottom,0px)}
+main{max-width:1120px;margin:0 auto;padding:20px 16px 32px}
+h1{font-size:26px;font-weight:600;margin:0 0 2px;letter-spacing:-.01em}
+.sub{color:var(--mut);margin:0 0 14px}
+nav.tabs{display:flex;gap:6px;margin-bottom:14px}
+button,input,select{font:inherit;color:var(--ink)}
+nav.tabs button,.btn{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 14px;min-height:38px;cursor:pointer}
+nav.tabs button.on,.btn.pri{background:var(--g);border-color:var(--g);color:var(--bg);font-weight:500}
+.btn:disabled{opacity:.55;cursor:default}
+input,select{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px;min-height:38px}
+:focus-visible{outline:2px solid var(--g);outline-offset:1px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.bar input{flex:1 1 180px}
+#cnt{color:var(--mut);margin-left:auto}
+.status{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;color:var(--mut);font-size:13px;margin-bottom:12px}
+.status .btn{padding:4px 10px;min-height:30px;font-size:13px}
+.pk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--g);border-radius:8px;padding:12px 14px;margin-bottom:14px}
+.pk p{margin:4px 0 0}.pk small{color:var(--mut)}
+.w{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:900px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--card);min-width:170px}
+th{font-weight:500;color:var(--mut);cursor:pointer;user-select:none;font-size:13px}
+th.on{color:var(--ink)}
+tr.row{cursor:pointer}
+tr.row:hover td{background:var(--bg)}
+td small{display:block;color:var(--mut);font-size:12px}
+.chip{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:500;background:var(--nb);color:var(--mut)}
+.g{color:var(--g)}.a{color:var(--a)}.r{color:var(--r)}
+.chip.g{background:var(--gb)}.chip.a{background:var(--ab)}.chip.r{background:var(--rb)}
+.sc{display:inline-flex;align-items:center;gap:8px;justify-content:flex-end}
+.tr{width:52px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.tr i{display:block;height:100%;background:var(--g)}
+tr.d td{background:var(--bg);white-space:normal;text-align:left;position:static}
+.dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:4px 2px}
+.p{display:grid;grid-template-columns:130px 1fr 28px;gap:8px;align-items:center;margin:4px 0;font-size:13px}
+.p span:first-child{color:var(--mut)}
+.k{display:flex;justify-content:space-between;gap:12px;padding:3px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.k span:first-child{color:var(--mut)}
+.rec{margin:8px 0 0}
+.del{color:var(--r);background:none;border:1px solid var(--line);border-radius:6px;padding:4px 10px;margin-top:10px;cursor:pointer}
+.fm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.fm input{flex:1 1 200px}
+.res{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;margin-top:12px}
+.note{color:var(--mut);font-size:13px}
+.hits button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 2px;cursor:pointer}
+[hidden]{display:none!important}
+footer{color:var(--mut);font-size:12px;margin-top:14px}
+tr.d .dg{position:sticky;left:0;max-width:min(1080px,calc(100vw - 58px))}
+</style>
+</head>
+<body>
+<main>
+<h1>Moat Monitor</h1>
+<p class="sub">Moat-minőség, belső érték és árfolyamtrend a követett cégeidre.</p>
+<nav class="tabs"><button id="t1" class="on">Lista</button><button id="t2">Új cég</button></nav>
+
+<section id="v1">
+<div class="status"><span id="st">Adatok betöltése...</span></div>
+<div class="pk" id="pk" hidden></div>
+<div class="bar">
+<input id="q" type="search" placeholder="Keresés: név, ticker, szektor" aria-label="Keresés">
+<select id="fm" aria-label="Moat"><option value="">Minden moat</option><option>Wide</option><option>Narrow</option><option>None</option></select>
+<select id="fl" aria-label="Lista"><option value="">Minden lista</option><option>Követett</option><option>Jelölt</option></select>
+<select id="ft" aria-label="Trend"><option value="">Minden trend</option><option>Emelkedő</option><option>Oldalazó</option><option>Csökkenő</option></select>
+<span id="cnt"></span>
+</div>
+<div class="w"><table>
+<thead><tr id="hd">
+<th data-k="n">Cég</th><th data-k="mo">Moat</th><th data-k="s">Score</th><th data-k="px">Ár</th><th data-k="to">Trend</th><th data-k="up">Upside</th><th data-k="iv">Belső érték</th><th data-k="bb">Buy Below</th><th data-k="pv">Ár vs IV</th><th data-k="vo">Értékelés</th>
+</tr></thead>
+<tbody id="tb"></tbody>
+</table></div>
+</section>
+
+<section id="v2" hidden>
+<div class="fm">
+<input id="an" placeholder="Cégnév vagy ticker, pl. Costco, SAP, 4iG, Zwack" aria-label="Cég">
+<button class="btn pri" id="go">Elemzés kérése</button>
+</div>
+<p class="note">Bármelyik részvényt kérheted, amit a George-ban megvehetsz: amerikai, német, osztrák vagy BÉT-papírt. A gomb egy előre kitöltött GitHub-kérést nyit; ott csak a „Submit new issue” gombra kell kattintani. Claude a következő reggelre elkészíti a teljes elemzést (friss árfolyam, jelentések, moat, belső érték), és itt jelenik meg jóváhagyásra.</p>
+<div id="qs"></div>
+</section>
+
+<footer>Árfolyamok: Yahoo Finance napi záróárak, minden reggel frissítve. Trend a 20 és 50 napos mozgóátlagokból: Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van; Csökkenő, ha mindkettő fordítva; egyébként Oldalazó. A célár az elemzői konszenzus, a belső érték és a Buy Below saját Buffett–Munger-becslés. Kutatási eszköz, nem befektetési tanács.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
