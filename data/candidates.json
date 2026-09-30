@@ -1,1 +1,55 @@
-[]
+[
+ {
+  "id": "ZS",
+  "n": "Zscaler, Inc.",
+  "t": "ZS",
+  "y": "ZS",
+  "l": "Jelölt",
+  "m": "Narrow",
+  "s": 66,
+  "ai": "Medium",
+  "c": "Medium",
+  "p": [
+   45,
+   72,
+   60,
+   55,
+   62
+  ],
+  "sec": "Software - Cybersecurity",
+  "r": "Avoid: a szűk moat és a kiváló növekedés ellenére a 199,39 USD-s ár jóval a konzervatív ~115 USD-s belső érték felett van, a biztonsági ráhagyás (~80 USD) messze.",
+  "risks": "Magas részvényalapú kompenzáció (GAAP veszteség), erős verseny a Palo Alto/Microsoft/Cloudflare felől, valamint az AI-alapú biztonsági átalakulás és a Red Canary-integráció kockázata; az FCF-marzs FY27-re is csak ~23%.",
+  "ivb": "Owner earnings ≈ az FY2026 szabad cash flow (779 M USD) durva 50%-a az SBC miatt (SBC pontos összegét nem ellenőriztem), ~160 M részvényre, 15% növekedés 10 évig, 10% diszkontráta, 22x záró szorzó; a nettó készpénz (~1,7 Mrd USD) figyelembe véve is kb. 115 USD.",
+  "srcs": [
+   "Zscaler FY2026 Q4 8-K (SEC)",
+   "Zscaler IR",
+   "Benzinga",
+   "S&P Global/StockAnalysis konszenzus",
+   "Investing.com"
+  ],
+  "d": "2026-09-30",
+  "ch": "https://finance.yahoo.com/chart/ZS",
+  "pr": 199.39,
+  "tp": 208.86,
+  "iv": 115,
+  "bb": 80.5,
+  "mos": 30,
+  "f": "Strong",
+  "cur": "USD",
+  "mk": {
+   "p": 198.35,
+   "prev": 199.39,
+   "sma20": 188.2,
+   "sma50": 175.81,
+   "sma200": 166.99,
+   "ema20": 192.5,
+   "ema50": 178.67,
+   "tr": "Emelkedő",
+   "ch1m": 7.67,
+   "ch6m": 44.51,
+   "d": "2026-09-29",
+   "at": "2026-09-30T12:36:32.361Z",
+   "src": "Yahoo Finance"
+  }
+ }
+]
