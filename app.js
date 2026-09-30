@@ -22,6 +22,8 @@ const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés)\s*:\s*(.+?)\s*$/i;
 let PENDING = [], pollT = null, lastPendingCount = 0;
 async function act(title) {
   if (!TOKEN) { window.open(issueUrl(title), "_blank", "noopener"); return; }
+  if (PENDING.some((p) => p.title.toLowerCase() == title.toLowerCase())) { flash("Ez a kérés már folyamatban van, várd meg, amíg lefut."); return; }
+  document.querySelectorAll("[data-act]").forEach((b) => { if (b.dataset.act == title) b.disabled = true; });
   try {
     const r = await gh("/issues", { method: "POST", body: JSON.stringify({ title, body: "A Moat Monitor oldal indította." }) });
     if (r.status == 401 || r.status == 403 || r.status == 404) { flash("A GitHub-kulcs érvénytelen vagy nincs hozzá jogosultsága. Állítsd be újra az „Új cég” fül alján."); return; }
