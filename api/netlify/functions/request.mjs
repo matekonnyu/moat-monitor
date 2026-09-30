@@ -1,8 +1,7 @@
-// v2 – újratelepítés a GITHUB_TOKEN beállítása után
 // konninvest.com – nyilvános kérés-közvetítő.
 // Bárki kérhet új cég elemzést vagy árfolyam-frissítést GitHub-fiók nélkül:
 // ez a függvény a tulajdonos szűk jogú GitHub-kulcsával (csak Issues írás a moat-monitor repón)
-// nyit egy "Elemzés: …" / "Frissítés: most" issue-t, "nyilvános" címkével.
+// nyit egy "Elemzés: …" / "Frissítés: most" issue-t, a törzsében a nyilvános-kérés jelöléssel.
 // Védelem: csak cégnév/ticker formátum, napi korlát, a lista módosítása (felvétel, törlés) itt nem kérhető.
 const REPO = "matekonnyu/moat-monitor";
 const ORIGINS = ["https://konninvest.com", "https://www.konninvest.com", "https://matekonnyu.github.io"];
@@ -41,16 +40,17 @@ export default async (req) => {
 
   // Napi korlát a nyilvános kérésekre (címke alapján), és a már futó azonos kérés kiszűrése.
   const since = new Date(); since.setUTCHours(0, 0, 0, 0);
-  const r = await gh(`/issues?state=all&labels=nyilvanos&since=${since.toISOString()}&per_page=100`);
+  const r = await gh(`/issues?state=all&since=${since.toISOString()}&per_page=100`);
   if (!r.ok) return json(502, { error: "A GitHub most nem érhető el, próbáld újra később." }, origin);
-  const today = (await r.json()).filter((i) => new Date(i.created_at) >= since);
+  const MARK = "Nyilvános kérés a konninvest.com oldalról.";
+  const today = (await r.json()).filter((i) => !i.pull_request && new Date(i.created_at) >= since && String(i.body || "").includes(MARK));
   const same = today.find((i) => i.state === "open" && i.title.toLowerCase() === title.toLowerCase());
   if (same) return json(200, { number: same.number, title: same.title, duplicate: true }, origin);
   const used = today.filter((i) => i.title.startsWith(kind === "analysis" ? "Elemzés:" : "Frissítés:")).length;
   const limit = kind === "analysis" ? DAILY_LIMIT : 3;
   if (used >= limit) return json(429, { error: kind === "analysis" ? `Ma már elfogyott a napi ${limit} nyilvános elemzés. Próbáld újra holnap.` : "Ma már többször frissültek az árak, próbáld később." }, origin);
 
-  const c = await gh("/issues", { method: "POST", body: JSON.stringify({ title, body: "Nyilvános kérés a konninvest.com oldalról.", labels: ["nyilvanos"] }) });
+  const c = await gh("/issues", { method: "POST", body: JSON.stringify({ title, body: MARK }) });
   if (!c.ok) return json(502, { error: "Nem sikerült elküldeni a kérést, próbáld újra." }, origin);
   const i = await c.json();
   return json(201, { number: i.number, title: i.title }, origin);
