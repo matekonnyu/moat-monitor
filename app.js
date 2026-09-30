@@ -64,13 +64,24 @@ async function reload() {
 let C = [], CD = [], RQ = [], META = {}, sk = "s", sd = -1;
 const open = new Set();
 
+// Három időtáv: rövid (20 nap), közép (50 nap, a korábbi szabály), hosszú (200 nap).
+function trends(mk) {
+  const p = mk.p, band = 0.01;
+  const shortT = mk.sma20 ? (p > mk.sma20 * (1 + band) ? "Emelkedő" : p < mk.sma20 * (1 - band) ? "Csökkenő" : "Oldalazó") : null;
+  const midT = mk.tr || null;
+  const longT = mk.sma200 && mk.sma50 ? (p > mk.sma200 && mk.sma50 > mk.sma200 ? "Emelkedő" : p < mk.sma200 && mk.sma50 < mk.sma200 ? "Csökkenő" : "Oldalazó") : null;
+  return { trS: shortT, trM: midT, trL: longT };
+}
+const ARW = { "Emelkedő": "↑", "Oldalazó": "→", "Csökkenő": "↓" };
+const tri = (r) => r.trM || r.trS || r.trL ? `<span class="tri">${[["20n", r.trS], ["50n", r.trM], ["200n", r.trL]].map(([l, t]) => `<span class="${K[t] || ""}" title="${l}: ${t || "nincs adat"}">${l}&nbsp;${ARW[t] || "–"}</span>`).join(" ")}</span>` : chip(null);
+const trTxt = (r) => `rövid ${(r.trS || "–").toLowerCase()}, közép ${(r.trM || "–").toLowerCase()}, hosszú ${(r.trL || "–").toLowerCase()}`;
 function valuation(pv) { return pv < -10 ? "Undervalued" : pv <= 15 ? "Fair" : "Expensive"; }
 function derive(o) {
   const mk = o.mk || {}, px = mk.p ?? o.pr;
   const pv = o.iv > 0 && px > 0 ? (px / o.iv - 1) * 100 : null;
   const up = o.tp > 0 && px > 0 ? (o.tp / px - 1) * 100 : null;
   const v = pv == null ? o.v : valuation(pv);
-  return { ...o, mk, px, pv, up, v, tr: mk.tr || null, mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: { Undervalued: 3, Fair: 2, Expensive: 1 }[v] || 0, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
+  return { ...o, mk, px, pv, up, v, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: { Undervalued: 3, Fair: 2, Expensive: 1 }[v] || 0, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
 }
 const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</span><div class="tr"><i style="width:${v}%"></i></div><span>${v}</span></div>`).join("");
 
@@ -79,6 +90,7 @@ function detail(r) {
   return `<tr class="d"><td colspan="10"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
 <div><div class="k"><span>Záróár dátuma</span><span>${esc(mk.d || r.d || "–")}</span></div>
 <div class="k"><span>Napi változás</span><span>${mk.prev ? pct((mk.p / mk.prev - 1) * 100) : "–"}</span></div>
+<div class="k"><span>Trend (20 / 50 / 200 nap)</span><span>${esc(r.trS || "–")} / ${esc(r.trM || "–")} / ${esc(r.trL || "–")}</span></div>
 <div class="k"><span>1 hónap / 6 hónap</span><span>${pct(mk.ch1m)} / ${pct(mk.ch6m)}</span></div>
 <div class="k"><span>SMA20 / SMA50 / SMA200</span><span>${mon(mk.sma20, r.cur)} / ${mon(mk.sma50, r.cur)} / ${mon(mk.sma200, r.cur)}</span></div>
 <div class="k"><span>EMA20 / EMA50</span><span>${mon(mk.ema20, r.cur)} / ${mon(mk.ema50, r.cur)}</span></div>
@@ -95,7 +107,7 @@ function draw() {
   const a = C.map(derive).filter((r) => (!q || (r.n + r.t + r.sec).toLowerCase().includes(q)) && (!fm || r.m == fm) && (!fl || r.l == fl) && (!ft || r.tr == ft));
   a.sort((x, y) => { const u = x[sk] ?? -1e18, w = y[sk] ?? -1e18; return (typeof u == "string" ? u.localeCompare(w) : u - w) * sd; });
   $("#cnt").textContent = a.length + " / " + C.length + " cég";
-  $("#tb").innerHTML = a.map((r) => `<tr class="row" tabindex="0" data-id="${esc(r.id)}"><td><b>${esc(r.n)}</b><small>${esc(r.t)}, ${esc(r.l)}</small></td><td>${chip(r.m)}</td><td><span class="sc"><span class="tr"><i style="width:${r.s}%"></i></span>${r.s}</span></td><td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : "pillanatkép"}</small></td><td>${chip(r.tr)}</td><td class="${r.up >= 0 ? "g" : "r"}">${pct(r.up)}</td><td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv <= 0 ? "g" : "r"}">${pct(r.pv)}</td><td>${chip(r.v)}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("") || `<tr><td colspan="10" style="text-align:center;padding:24px;position:static">Nincs találat ezekkel a szűrőkkel.</td></tr>`;
+  $("#tb").innerHTML = a.map((r) => `<tr class="row" tabindex="0" data-id="${esc(r.id)}"><td><b>${esc(r.n)}</b><small>${esc(r.t)}, ${esc(r.l)}</small></td><td>${chip(r.m)}</td><td><span class="sc"><span class="tr"><i style="width:${r.s}%"></i></span>${r.s}</span></td><td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : "pillanatkép"}</small></td><td>${tri(r)}</td><td class="${r.up >= 0 ? "g" : "r"}">${pct(r.up)}</td><td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv <= 0 ? "g" : "r"}">${pct(r.pv)}</td><td>${chip(r.v)}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("") || `<tr><td colspan="10" style="text-align:center;padding:24px;position:static">Nincs találat ezekkel a szűrőkkel.</td></tr>`;
   document.querySelectorAll("#hd th").forEach((h) => { const on = h.dataset.k == sk; h.classList.toggle("on", on); h.textContent = h.textContent.replace(/ [▲▼]$/, "") + (on ? (sd < 0 ? " ▼" : " ▲") : ""); });
   pick();
 }
@@ -103,16 +115,16 @@ function draw() {
 // Napi ajánlat: vételi ajánlás, nem drága, trend nem lefelé, score ≥ 70, van moat; a Buy Below-hoz legközelebbi.
 function pick() {
   const buy = (r) => /^\s*(buy|accumulate)/i.test(r.r || "");
-  const c = C.map(derive).filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && r.tr && r.tr != "Csökkenő" && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
+  const c = C.map(derive).filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő" && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
   $("#pk").hidden = false;
-  if (!c) { $("#pk").innerHTML = `<b>Ma nincs ajánlat</b><p>Egyik cég sem felel meg egyszerre minden feltételnek: vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, és a trend nem mutat lefelé.</p>`; return; }
+  if (!c) { $("#pk").innerHTML = `<b>Ma nincs ajánlat</b><p>Egyik cég sem felel meg egyszerre minden feltételnek: vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, és a közép- (50 nap) és hosszú távú (200 nap) trend nem mutat lefelé.</p>`; return; }
   const g = (c.px / c.bb - 1) * 100;
-  $("#pk").innerHTML = `<b>Mai ajánlat: ${esc(c.n)} (${esc(c.t)})</b><p>${c.m} moat, score ${c.s}, trend: ${c.tr}. Ár ${mon(c.px, c.cur)}, Buy Below ${mon(c.bb, c.cur)}: az ár ${g > 0 ? Math.abs(g).toFixed(1).replace(".", ",") + "%-kal felette van" : "alatta van"}. Célár szerinti upside ${pct(c.up)}.</p><p>${esc(c.r)}</p><p><small>Szűrés a listából: score legalább 70, van moat, vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, a trend nem mutat lefelé, és ezek közül az ár a legközelebb van a Buy Belowhoz. Nem személyre szabott befektetési tanács.</small></p>`;
+  $("#pk").innerHTML = `<b>Mai ajánlat: ${esc(c.n)} (${esc(c.t)})</b><p>${c.m} moat, score ${c.s}, trend: ${trTxt(c)}. Ár ${mon(c.px, c.cur)}, Buy Below ${mon(c.bb, c.cur)}: az ár ${g > 0 ? Math.abs(g).toFixed(1).replace(".", ",") + "%-kal felette van" : "alatta van"}. Célár szerinti upside ${pct(c.up)}.</p><p>${esc(c.r)}</p><p><small>Szűrés a listából: score legalább 70, van moat, vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, a közép- és hosszú távú trend nem mutat lefelé, és ezek közül az ár a legközelebb van a Buy Belowhoz. Nem személyre szabott befektetési tanács.</small></p>`;
 }
 
 function drawQ() {
   $("#t2").textContent = CD.length ? `Új cég (${CD.length} kész)` : "Új cég";
-  $("#qs").innerHTML = CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${c.tr ? chip(c.tr) : ""}
+  $("#qs").innerHTML = CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${tri(c)}
 <div class="dg" style="margin-top:10px"><div>${pillars(c.p)}</div>
 <div><div class="k"><span>Score</span><span>${c.s}</span></div><div class="k"><span>Ár${c.mk.d ? ` (${esc(c.mk.d)})` : ""}</span><span>${mon(c.px, c.cur)}</span></div><div class="k"><span>Belső érték</span><span>${mon(c.iv, c.cur)}</span></div><div class="k"><span>Buy Below (MoS ${c.mos}%)</span><span>${mon(c.bb, c.cur)}</span></div><div class="k"><span>Ár vs IV</span><span>${pct(c.pv)}</span></div><div class="k"><span>Célár</span><span>${mon(c.tp, c.cur)}</span></div><div class="k"><span>Pénzügyi erő</span>${chip(c.f)}</div><div class="k"><span>AI-kockázat</span>${chip(c.ai)}</div></div></div>
 <p class="rec">${esc(c.r)}</p>${c.risks ? `<p class="rec">Kockázatok: ${esc(c.risks)}</p>` : ""}${c.ivb ? `<p class="rec note">Belső érték alapja: ${esc(c.ivb)}</p>` : ""}${c.srcs ? `<p class="rec note">Források: ${esc(c.srcs)}</p>` : ""}
