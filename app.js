@@ -182,7 +182,51 @@ $("#nnew").onclick = () => { show(2); scrollTo(0, 0); }; $("#nlist").onclick = (
 show(1);
 { const root = document.documentElement; try { const t = localStorage.getItem("mm_theme"); if (t) root.dataset.theme = t; } catch {}
   $("#thm").onclick = () => { const dark = root.dataset.theme ? root.dataset.theme == "dark" : matchMedia("(prefers-color-scheme: dark)").matches; root.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("mm_theme", root.dataset.theme); } catch {} }; }
-$("#go").onclick = () => { const q = $("#an").value.trim(); if (!q) { $("#an").focus(); return; } act("Elemzés: " + q); $("#an").value = ""; };
+// Kereső: találati lista az Új cég mezőhöz (data/symbols.json: [yahooSymbol, név, tőzsde])
+let SYM = null, symP = null, acSel = -1, acItems = [];
+const norm = (x) => String(x || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9.& -]/g, " ").replace(/\s+/g, " ").trim();
+function loadSym() { return symP ||= getJSON("data/symbols.json").then((a) => (SYM = a.map((r) => [...r, norm(r[1]), norm(r[0].replace(/\.(BD|DE|VI)$/, ""))]))).catch(() => (SYM = [])); }
+function search(q) {
+  const n = norm(q); if (!n) return [];
+  const sc = [];
+  for (const r of SYM) {
+    const [, , , nn, ns] = r; let v = -1;
+    if (ns == n) v = 0; else if (ns.startsWith(n)) v = 1; else if (nn.startsWith(n)) v = 2; else if ((" " + nn).includes(" " + n)) v = 3; else if (n.length >= 3 && nn.includes(n)) v = 4;
+    if (v >= 0) sc.push([v + (r[2] == "USA" || r[2] == "BÉT" ? 0 : 0.5), r]);
+  }
+  return sc.sort((a, b) => a[0] - b[0] || a[1][1].length - b[1][1].length).slice(0, 10).map((x) => x[1]);
+}
+function acClose() { $("#ac").hidden = true; $("#an").setAttribute("aria-expanded", "false"); acSel = -1; }
+function acDraw() {
+  const q = $("#an").value.trim(); if (!q) { acClose(); return; }
+  if (!SYM) { $("#ac").innerHTML = `<li class="msg">Lista betöltése…</li>`; $("#ac").hidden = false; loadSym().then(acDraw); return; }
+  const mine = new Set([...C, ...CD].map((c) => c.y));
+  acItems = search(q);
+  $("#ac").innerHTML = acItems.map((r, i) => `<li role="option" id="aco${i}" data-i="${i}" aria-selected="${i == acSel}"><span class="an">${esc(r[1])}</span><span class="as">${esc(r[0])}</span><span class="ax${mine.has(r[0]) ? " on" : ""}">${mine.has(r[0]) ? "listán" : esc(r[2])}</span></li>`).join("")
+    + `<li role="option" class="free" data-i="-2" aria-selected="${acSel == acItems.length}">Elemzés kérése erre: „${esc(q)}”</li>`;
+  $("#ac").hidden = false; $("#an").setAttribute("aria-expanded", "true");
+}
+function acPick(i) {
+  const q = $("#an").value.trim();
+  if (i >= 0 && acItems[i]) {
+    const [y, n] = acItems[i];
+    if ([...C, ...CD].some((c) => c.y == y)) { flash(`${n} (${y}) már a listán vagy a jóváhagyásra várók között van.`); acClose(); return; }
+    act(`Elemzés: ${n} (${y})`);
+  } else if (q) act("Elemzés: " + q);
+  $("#an").value = ""; acClose();
+}
+let acT = null;
+$("#an").addEventListener("input", () => { acSel = -1; clearTimeout(acT); acT = setTimeout(acDraw, 80); });
+$("#an").addEventListener("focus", () => { loadSym(); if ($("#an").value.trim()) acDraw(); });
+$("#an").addEventListener("keydown", (e) => {
+  const max = acItems.length; // az utolsó sor a szabad szöveges kérés
+  if (e.key == "ArrowDown" || e.key == "ArrowUp") { e.preventDefault(); if ($("#ac").hidden) acDraw(); acSel = e.key == "ArrowDown" ? Math.min(acSel + 1, max) : Math.max(acSel - 1, -1); acDraw(); const el = $(`#ac [aria-selected="true"]`); el?.scrollIntoView({ block: "nearest" }); }
+  else if (e.key == "Enter") { e.preventDefault(); acPick(acSel >= 0 && acSel < max ? acSel : acSel == max ? -2 : (acItems.length && !$("#ac").hidden ? 0 : -2)); }
+  else if (e.key == "Escape") acClose();
+});
+$("#ac").addEventListener("mousedown", (e) => { const li = e.target.closest("li[data-i]"); if (!li) return; e.preventDefault(); acPick(+li.dataset.i); });
+document.addEventListener("click", (e) => { if (!e.target.closest(".acw")) acClose(); });
+$("#go").onclick = () => { if (!$("#an").value.trim()) { $("#an").focus(); return; } acPick(!$("#ac").hidden && acSel >= 0 && acSel < acItems.length ? acSel : -2); };
 $("#rf").addEventListener("click", () => act("Frissítés: most"));
 $("#qs").addEventListener("click", (e) => { if (e.target.dataset.act) act(e.target.dataset.act); });
 function drawTok() {
@@ -200,7 +244,6 @@ $("#toksave").onclick = async () => {
 };
 $("#tokdel").onclick = () => { TOKEN = ""; try { localStorage.removeItem("mm_gh_token"); } catch {} drawTok(); tokMsg("A kulcsot töröltem ebből a böngészőből.", true); };
 drawTok();
-$("#an").addEventListener("keydown", (e) => { if (e.key == "Enter") $("#go").click(); });
 
 async function getJSON(p) { const r = await fetch(p + "?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) throw new Error(p); return r.json(); }
 (async () => {

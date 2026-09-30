@@ -100,6 +100,15 @@ header.top .in{max-width:1440px;margin:0 auto;padding:10px 16px;min-height:56px;
 @media (max-width:700px){.why{grid-template-columns:1fr}.pk2{padding:16px}.mts{grid-template-columns:1fr 1fr}}
 .nl{color:var(--gold);text-decoration:none;font-weight:600;margin-left:4px}.nl:hover{text-decoration:underline}
 .stars{font-size:14px;letter-spacing:1px;white-space:nowrap}.stars i{font-style:normal;color:var(--line2)}.stars+small{text-align:right}
+.acw{position:relative;flex:1 1 260px}.acw input{width:100%}
+#ac{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 4px);margin:0;padding:4px;list-style:none;background:var(--card);border:1px solid var(--line2);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18);max-height:min(60vh,420px);overflow:auto}
+#ac li{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:7px;cursor:pointer}
+#ac li[aria-selected="true"],#ac li:hover{background:var(--bg)}
+#ac .an{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#ac .as{font-weight:600;font-size:13px;color:var(--mut)}
+#ac .ax{font-size:11px;padding:1px 7px;border-radius:9px;background:var(--nb);color:var(--mut);white-space:nowrap}
+#ac .ax.on{background:var(--gb);color:var(--g)}
+#ac li.free{color:var(--mut);font-size:13px}#ac li.msg{cursor:default;color:var(--mut);font-size:13px}
 details summary{cursor:pointer}
 .tri{display:inline-flex;gap:10px;font-size:15px;font-weight:600;white-space:nowrap}
 td:first-child{white-space:normal;max-width:190px}
@@ -142,7 +151,7 @@ th,td{padding:9px 7px}
 
 <section id="v2" hidden>
 <div class="fm">
-<input id="an" placeholder="Cégnév vagy ticker, pl. Costco, SAP, 4iG, Zwack" aria-label="Cég">
+<div class="acw"><input id="an" placeholder="Kezdd el gépelni: cégnév vagy ticker, pl. Costco, SAP, 4iG" aria-label="Cég" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="ac" autocomplete="off"><ul id="ac" role="listbox" hidden></ul></div>
 <button class="btn pri" id="go">Elemzés kérése</button>
 </div>
 <p class="note">Bármelyik részvényt kérheted, amit a George-ban megvehetsz: amerikai, német, osztrák vagy BÉT-papírt. Claude pár perc alatt elkészíti a teljes elemzést (friss árfolyam, jelentések, moat, belső érték), és itt jelenik meg jóváhagyásra.</p>
@@ -165,6 +174,6 @@ th,td{padding:9px 7px}
 
 <footer id="mod"><b>Módszertan (Morningstar-gyakorlat).</b> <b>Moat:</b> Wide, ha nagyon valószínű, hogy a cég 10 évig a tőkeköltsége felett keres (ROIC &gt; WACC), és inkább igen, mint nem, hogy 20 évig is; Narrow, ha inkább igen, mint nem, hogy legalább 10 évig; None, ha egyik sem. Mellette a moat trend (erősödő / stabil / gyengülő) és az öt moat-forrás pontszáma. <b>Értékelés (csillagok):</b> az árfolyam és a becsült belső érték (fair value) aránya a Morningstar bizonytalansági besorolása szerint: 5 csillag, ha az ár legalább 20% (alacsony), 30% (közepes), 40% (magas), 50% (nagyon magas) vagy 75% (extrém bizonytalanság) diszkonttal forog; 1 csillag 25% / 35% / 55% / 75% / 300% prémium felett; a 2–4 csillag a köztes sávok. A <b>vételi szint</b> az 5 csillagos ár. A <b>MPA score</b> a Buffett–Munger szemlélet összesítője: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30); az <b>Eltérés</b> = MPA score − Moat score. <b>Trend</b> három időtávon: 20 nap (az ár a 20 napos átlag felett/alatt ±1%), 50 nap (Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van, Csökkenő, ha fordítva), 200 nap (Emelkedő, ha az ár és az SMA50 is a 200 napos átlag felett van). A napi ajánlat csak vételi ajánlású, nem drága, és közép- és hosszú távon nem csökkenő trendű cég lehet. Árfolyam: Yahoo Finance napi záró. A cégelemzések internetes forrásokból készülnek (a források a részletekben). Kutatási eszköz, nem befektetési tanács.</footer>
 </main>
-<script src="app.js?v=20260930g"></script>
+<script src="app.js?v=20260930h"></script>
 </body>
 </html>

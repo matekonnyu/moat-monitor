@@ -22,6 +22,12 @@ try {
   }
 } catch (e) { console.error("USA:", e.message); }
 
+// Xetra-nevek szépítése: "SIEMENS AG NA O.N." -> "Siemens AG"
+const KEEP = new Set(["AG", "SE", "SA", "NV", "N.V.", "PLC", "KGAA", "AB", "ASA", "A/S", "SPA", "S.P.A.", "INC.", "CORP.", "LTD", "CO.", "&", "USA", "US", "UK", "BMW", "SAP", "BASF", "RWE", "E.ON", "OMV", "TUI", "MTU", "HHLA", "IBM", "AMD", "ASML", "HSBC", "ING", "AXA", "BNP", "UBS", "DWS", "KION", "GEA", "LEG", "TAG", "SGL", "MBB", "CTS", "PVA", "SMA", "KWS"]);
+function xname(n) {
+  n = n.replace(/\s+(NA|INH\.?|O\.N\.?|VNA|VZO|ST|STAMM|NAM\.?|BR|ADR|ADS|DL|EO|SF|LS|YC|HD|CD|SK|DK|NK|Z\.VERK\.?|REG\.?|CL\.?\s?[A-Z]?)\b.*$/i, "").replace(/\s+[A-Z]{2}[-,.\d]+.*$/, "").trim();
+  return n.split(" ").map((w) => KEEP.has(w.toUpperCase()) ? (w.length <= 5 ? w.toUpperCase().replace("KGAA", "KGaA") : w) : w.charAt(0) + w.slice(1).toLowerCase()).join(" ").replace(/\bAg\b/, "AG").replace(/\bSe\b/, "SE");
+}
 // 2) Xetra – Deutsche Börse "All tradable instruments"
 try {
   const page = await get("https://www.xetra.com/xetra-en/instruments/instruments");
@@ -37,7 +43,7 @@ try {
     const t = iT >= 0 ? c[iT] : ""; types[t] = (types[t] || 0) + 1;
     if (iT >= 0 && !/^(CS|Common Stock)$/i.test(t)) continue;
     if (iS >= 0 && /inactive|suspend/i.test(c[iS])) continue;
-    if (c[iM]) add(c[iM] + ".DE", c[iN], "Xetra");
+    if (c[iM]) add(c[iM] + ".DE", xname(c[iN]), "Xetra");
   }
   stats.xetraTypes = types;
 } catch (e) { console.error("Xetra:", e.message); }
