@@ -117,11 +117,34 @@ function draw() {
 // Napi ajánlat: vételi ajánlás, nem drága, trend nem lefelé, score ≥ 70, van moat; a Buy Below-hoz legközelebbi.
 function pick() {
   const buy = (r) => /^\s*(buy|accumulate)/i.test(r.r || "");
-  const c = C.map(derive).filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő" && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
+  const all = C.map(derive);
+  const c = all.filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő" && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
+  const ds = all.map((r) => r.mk.d).filter(Boolean).sort();
+  const day = (ds[ds.length - 1] || new Date().toISOString().slice(0, 10)).replace(/-/g, ".") + ".";
+  const rule = `<p class="pkn">Kiválasztás a listából: score legalább 70, van moat, vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, a közép- (50 nap) és hosszú távú (200 nap) trend nem mutat lefelé; ezek közül az, amelyiknek az ára a legközelebb van a vételi szinthez. Nem személyre szabott befektetési tanács.</p>`;
   $("#pk").hidden = false;
-  if (!c) { $("#pk").innerHTML = `<b>Ma nincs ajánlat</b><p>Egyik cég sem felel meg egyszerre minden feltételnek: vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, és a közép- (50 nap) és hosszú távú (200 nap) trend nem mutat lefelé.</p>`; return; }
-  const g = (c.px / c.bb - 1) * 100;
-  $("#pk").innerHTML = `<b>Mai ajánlat: ${esc(c.n)} (${esc(c.t)})</b><p>${c.m} moat, score ${c.s}, trend: ${trTxt(c)}. Ár ${mon(c.px, c.cur)}, Buy Below ${mon(c.bb, c.cur)}: az ár ${g > 0 ? Math.abs(g).toFixed(1).replace(".", ",") + "%-kal felette van" : "alatta van"}. Célár szerinti upside ${pct(c.up)}.</p><p>${esc(c.r)}</p><p><small>Szűrés a listából: score legalább 70, van moat, vételi (Buy/Accumulate) ajánlás, nem drága az ár a belső értékhez képest, a közép- és hosszú távú trend nem mutat lefelé, és ezek közül az ár a legközelebb van a Buy Belowhoz. Nem személyre szabott befektetési tanács.</small></p>`;
+  if (!c) { $("#pk").innerHTML = `<div class="pkh"><span class="pkl">Mai ajánlat · ${day}</span></div><h2>Ma nincs ajánlat</h2><p class="pks">Egyik cég sem felel meg egyszerre minden feltételnek, ezért ma nem ajánlok vételt.</p>${rule}`; return; }
+  const HU = { Undervalued: "Alulértékelt", Fair: "Korrekt ár", Expensive: "Drága" };
+  const col = (x, inv) => x == null || !isFinite(x) ? "" : (inv ? x < 0 : x > 0) ? "g" : "r";
+  const tile = (l, v, k = "") => `<div class="mt"><span>${l}</span><b class="${k}">${v}</b></div>`;
+  const gb = (c.px / c.bb - 1) * 100;
+  const arr = { "Emelkedő": "↑", "Oldalazó": "→", "Csökkenő": "↓" };
+  const trT = [c.trS, c.trM, c.trL].map((t) => `<i class="${K[t] || ""}" title="${esc(t || "nincs adat")}">${arr[t] || "–"}</i>`).join(" ");
+  const why = [c.r,
+    c.pv != null ? `Az ár ${Math.abs(c.pv).toFixed(1).replace(".", ",")}%-kal a becsült belső érték ${c.pv < 0 ? "alatt" : "felett"} van; a vételi szinttől (${mon(c.bb, c.cur)}) ${gb <= 0 ? Math.abs(gb).toFixed(1).replace(".", ",") + "%-kal lejjebb" : Math.abs(gb).toFixed(1).replace(".", ",") + "%-kal feljebb"} jár.` : "",
+    `Trend: 20 nap ${c.trS || "–"}, 50 nap ${c.trM || "–"}, 200 nap ${c.trL || "–"}.`,
+    c.mk.ch1m != null ? `Árfolyamváltozás: 1 hónap ${pct(c.mk.ch1m)}, 6 hónap ${pct(c.mk.ch6m)}.` : "",
+    c.up != null ? `Elemzői konszenzus célár ${mon(c.tp, c.cur)} (${pct(c.up)}).` : "",
+    c.ivb ? `Belső érték alapja: ${c.ivb}` : ""].filter(Boolean);
+  const risks = [...String(c.risks || "").split(/;\s*|\.\s+(?=[A-ZÁÉÍÓÖŐÚÜŰ])/).map((x) => x.trim().replace(/\.$/, "")).filter(Boolean),
+    c.ai ? `AI-diszrupciós kockázat: ${c.ai}` : "", c.f ? `Pénzügyi erő: ${c.f}` : ""].filter(Boolean);
+  $("#pk").innerHTML = `<div class="pkh"><span class="pkl">Mai ajánlat · ${day}</span>${c.v ? `<span class="bdg ${K[c.v] || ""}">${HU[c.v] || esc(c.v)}</span>` : ""}</div>
+<h2>${esc(c.n)} <span class="tk">${esc(c.t)}</span></h2>
+<p class="pks">${esc(c.m)} moat · ${esc(c.sec || "")} · az ár a vételi szint ${gb <= 0 ? "alatt" : "felett"}</p>
+<div class="mts">${tile("Árfolyam", mon(c.px, c.cur))}${tile("Belső érték (IV)", mon(c.iv, c.cur))}${tile("Vételi szint", mon(c.bb, c.cur))}${tile("Ár vs IV", pct(c.pv), col(c.pv, true))}${tile("Konszenzus célár", mon(c.tp, c.cur))}${tile("Potenciál a célárig", pct(c.up), col(c.up))}${tile("Score / Moat", `${c.s} / ${esc(c.m)}`)}${tile("Trend 20 / 50 / 200", trT, "tt")}</div>
+<div class="why"><div><h3>Miért most?</h3><ul>${why.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h3>Kockázatok</h3><ul class="rk">${risks.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
+<button class="pkb" type="button" id="pkd" data-id="${esc(c.id)}">Részletek →</button>${rule}`;
+  $("#pkd").onclick = () => { ["#q", "#fm", "#fl", "#ft"].forEach((q) => { $(q).value = ""; }); open.add(c.id); draw(); const tr = document.querySelector(`tr.row[data-id="${CSS.escape(c.id)}"]`); if (tr) tr.scrollIntoView({ behavior: "smooth", block: "center" }); };
 }
 
 function drawQ() {

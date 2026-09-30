@@ -7,9 +7,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232c3e50'/><g stroke='white' stroke-width='2.6' stroke-linecap='round' fill='none'><path d='M9.5 6v20'/><path d='M9.5 22.5 20.6 13.6'/><path d='M15.4 17.8 21.8 25'/></g><circle cx='21.6' cy='12.8' r='2.7' fill='%23c8a96a' stroke='white' stroke-width='1.3'/></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@500;600;700&display=swap">
 <style>
-:root{--bg:#f4f4f4;--card:#fff;--ink:#1c1c1c;--mut:#5f6368;--line:#e2e2e2;--g:#0f766e;--a:#a8650a;--r:#b3372b;--gb:#dff2ef;--ab:#faecd3;--rb:#f8e0dc;--nb:#e8ecf0;--gold:#8f6f2e;--line2:#d6d6d6;--wm:#2c3e50;--lt1:#3d5066;--lt2:#2c3e50;--lk:#fff;--ld:#c8a96a;--lr:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}}
-:root[data-theme="dark"]{--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}
+:root{--bg:#f4f4f4;--card:#fff;--ink:#1c1c1c;--mut:#5f6368;--line:#e2e2e2;--g:#0f766e;--a:#a8650a;--r:#b3372b;--gb:#dff2ef;--ab:#faecd3;--rb:#f8e0dc;--nb:#e8ecf0;--gold:#8f6f2e;--line2:#d6d6d6;--wm:#2c3e50;--pkb:#dcc596;--pkg:rgba(200,169,106,.10);--tile:#f7f7f7;--lt1:#3d5066;--lt2:#2c3e50;--lk:#fff;--ld:#c8a96a;--lr:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--pkb:#7d6a45;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}}
+:root[data-theme="dark"]{--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--pkb:#7d6a45;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.45 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums;padding-bottom:env(safe-area-inset-bottom,0px)}
 main{max-width:1240px;margin:0 auto;padding:20px 16px 32px}
@@ -74,6 +74,26 @@ header.top .in{max-width:1240px;margin:0 auto;padding:10px 16px;min-height:56px;
 .hero h1{font:700 34px/1.1 "Inter",system-ui,sans-serif;letter-spacing:-.025em;margin:10px 0 8px}
 .hero .sub{font-size:16px;margin:0 0 18px;max-width:620px}
 @media (max-width:600px){.navl.opt{display:none}header.top .in{gap:14px}}@media (max-width:420px){.brand{font-size:18px}.hero h1{font-size:30px}}
+.pk2{position:relative;border:1px solid var(--pkb);border-radius:14px;padding:20px 22px;margin-bottom:18px;background:linear-gradient(135deg,var(--pkg),transparent 55%),var(--card)}
+.pkh{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pkl{color:var(--gold);font:700 12px/1.2 "Inter",system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.bdg{padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;background:var(--nb);color:var(--mut)}
+.bdg.g{background:var(--gb);color:var(--g)}.bdg.a{background:var(--ab);color:var(--a)}.bdg.r{background:var(--rb);color:var(--r)}
+.pk2 h2{font:700 23px/1.25 "Inter",system-ui,sans-serif;letter-spacing:-.015em;margin:8px 0 4px}
+.tk{display:inline-block;vertical-align:3px;border:1px solid var(--line2);border-radius:6px;padding:1px 7px;font-size:13px;font-weight:600;color:var(--mut)}
+.pks{color:var(--mut);margin:0 0 16px;font-size:15px}
+.mts{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:18px}
+.mt{background:var(--tile);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.mt span{display:block;color:var(--mut);font-size:12.5px;margin-bottom:2px}
+.mt b{font-size:17px;font-weight:600}
+.mt b.tt i{font-style:normal;font-size:18px;margin-right:4px}
+.why{display:grid;grid-template-columns:1.5fr 1fr;gap:10px 40px}
+.why h3{font-size:15px;font-weight:600;margin:0 0 6px}
+.why ul{margin:0 0 12px;padding-left:20px;line-height:1.6}
+.why ul.rk li::marker{color:var(--r)}
+.pkb{background:var(--ink);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;font-weight:600;cursor:pointer;margin-top:4px}
+.pkn{color:var(--mut);font-size:12px;margin:12px 0 0}
+@media (max-width:700px){.why{grid-template-columns:1fr}.pk2{padding:16px}.mts{grid-template-columns:1fr 1fr}}
 details summary{cursor:pointer}
 .tri{display:inline-flex;gap:10px;font-size:15px;font-weight:600;white-space:nowrap}
 td:first-child{white-space:normal;max-width:230px}
@@ -99,7 +119,7 @@ th,td{padding:9px 8px}
 <div class="status"><span id="st">Adatok betöltése...</span><button class="btn" id="rf" data-act="Frissítés: most">Árak frissítése most</button></div>
 <p class="note r" id="msg" hidden></p>
 <div id="run1"></div>
-<div class="pk" id="pk" hidden></div>
+<section class="pk2" id="pk" hidden></section>
 <div class="bar">
 <input id="q" type="search" placeholder="Keresés: név, ticker, szektor" aria-label="Keresés">
 <select id="fm" aria-label="Moat"><option value="">Minden moat</option><option>Wide</option><option>Narrow</option><option>None</option></select>
