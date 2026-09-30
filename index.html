@@ -8,9 +8,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232c3e50'/><g stroke='white' stroke-width='2.6' stroke-linecap='round' fill='none'><path d='M9.5 6v20'/><path d='M9.5 22.5 20.6 13.6'/><path d='M15.4 17.8 21.8 25'/></g><circle cx='21.6' cy='12.8' r='2.7' fill='%23c8a96a' stroke='white' stroke-width='1.3'/></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@500;600;700&display=swap">
 <style>
-:root{--bg:#f4f4f4;--card:#fff;--ink:#1c1c1c;--mut:#5f6368;--line:#e2e2e2;--g:#0f766e;--a:#a8650a;--r:#b3372b;--gb:#dff2ef;--ab:#faecd3;--rb:#f8e0dc;--nb:#e8ecf0;--gold:#8f6f2e;--line2:#d6d6d6;--wm:#2c3e50;--pkb:#dcc596;--pkg:rgba(200,169,106,.10);--tile:#f7f7f7;--lt1:#3d5066;--lt2:#2c3e50;--lk:#fff;--ld:#c8a96a;--lr:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--pkb:#7d6a45;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}}
-:root[data-theme="dark"]{--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--pkb:#7d6a45;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}
+:root{--bg:#f4f4f4;--card:#fff;--ink:#101214;--mut:#3e4348;--line:#c9ccd0;--g:#0f766e;--a:#a8650a;--r:#b3372b;--gb:#dff2ef;--ab:#faecd3;--rb:#f8e0dc;--nb:#e8ecf0;--gold:#8f6f2e;--line2:#b4b8bd;--goldl:rgba(143,111,46,.45);--goldb:rgba(143,111,46,.10);--wm:#2c3e50;--pkb:#c4a25e;--pkg:rgba(200,169,106,.10);--tile:#f7f7f7;--lt1:#3d5066;--lt2:#2c3e50;--lk:#fff;--ld:#c8a96a;--lr:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#b4b8bc;--line:#474c52;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#5a6068;--goldl:rgba(217,191,130,.45);--goldb:rgba(217,191,130,.10);--wm:#ececec;--pkb:#a08850;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}}
+:root[data-theme="dark"]{--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#b4b8bc;--line:#474c52;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#5a6068;--goldl:rgba(217,191,130,.45);--goldb:rgba(217,191,130,.10);--wm:#ececec;--pkb:#a08850;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.45 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums;padding-bottom:env(safe-area-inset-bottom,0px)}
 main{max-width:1440px;margin:0 auto;padding:20px 16px 32px}
@@ -114,6 +114,23 @@ details.own{margin-top:28px;font-size:13px;color:var(--mut)}details.own summary{
 body.ro .ron{display:block}
 body.ro [data-act^="Felvétel"]::before,body.ro [data-act^="Elvetés"]::before,body.ro [data-act^="Törlés"]::before,.lk{content:"";display:inline-block;width:.78em;height:.78em;margin-right:6px;vertical-align:-.05em;background:currentColor;opacity:.75;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.75 7V5.25a3.25 3.25 0 0 1 6.5 0V7' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round'/%3E%3Crect x='2.5' y='7' width='11' height='8' rx='2.2'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.75 7V5.25a3.25 3.25 0 0 1 6.5 0V7' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round'/%3E%3Crect x='2.5' y='7' width='11' height='8' rx='2.2'/%3E%3C/svg%3E") center/contain no-repeat}
 .ron .lk{background:var(--gold);opacity:1}
+
+/* erősebb keretek és több arany */
+.btn.pri{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--card)!important;font-weight:600}
+.btn,input,select,.thm{border-color:var(--line2)}
+input:focus,select:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px var(--goldb)}
+:focus-visible{outline-color:var(--gold)}
+.w{border:1px solid var(--goldl)}
+th{color:var(--gold);font-weight:600;border-bottom:2px solid var(--goldl)}
+th.on{color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+th,td{border-bottom-color:var(--line)}
+.tr{background:var(--line)}.tr i{background:var(--gold)}
+.res,.mt,details.own[open]{border-color:var(--line2)}
+header.top{border-bottom:1px solid var(--goldl)}
+tr.row:hover td{background:var(--goldb)}
+.spin{border-top-color:var(--gold)}
+#ac{border-color:var(--goldl)}
+.pk2{border-width:1.5px}
 details summary{cursor:pointer}
 .tri{display:inline-flex;gap:10px;font-size:15px;font-weight:600;white-space:nowrap}
 td:first-child{white-space:normal;max-width:190px}
@@ -180,6 +197,6 @@ th,td{padding:9px 7px}
 
 <footer id="mod"><b>Módszertan (Morningstar-gyakorlat).</b> <b>Moat:</b> Wide, ha nagyon valószínű, hogy a cég 10 évig a tőkeköltsége felett keres (ROIC &gt; WACC), és inkább igen, mint nem, hogy 20 évig is; Narrow, ha inkább igen, mint nem, hogy legalább 10 évig; None, ha egyik sem. Mellette a moat trend (erősödő / stabil / gyengülő) és az öt moat-forrás pontszáma. <b>Értékelés (csillagok):</b> az árfolyam és a becsült belső érték (fair value) aránya a Morningstar bizonytalansági besorolása szerint: 5 csillag, ha az ár legalább 20% (alacsony), 30% (közepes), 40% (magas), 50% (nagyon magas) vagy 75% (extrém bizonytalanság) diszkonttal forog; 1 csillag 25% / 35% / 55% / 75% / 300% prémium felett; a 2–4 csillag a köztes sávok. A <b>vételi szint</b> az 5 csillagos ár. A <b>MPA score</b> a Buffett–Munger szemlélet összesítője: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30); az <b>Eltérés</b> = MPA score − Moat score. <b>Trend</b> három időtávon: 20 nap (az ár a 20 napos átlag felett/alatt ±1%), 50 nap (Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van, Csökkenő, ha fordítva), 200 nap (Emelkedő, ha az ár és az SMA50 is a 200 napos átlag felett van). A napi ajánlat csak vételi ajánlású, nem drága, és közép- és hosszú távon nem csökkenő trendű cég lehet. Árfolyam: Yahoo Finance napi záró. A cégelemzések internetes forrásokból készülnek (a források a részletekben). Kutatási eszköz, nem befektetési tanács.</footer>
 </main>
-<script src="app.js?v=20260930k"></script>
+<script src="app.js?v=20261001a"></script>
 </body>
 </html>
