@@ -138,8 +138,11 @@ const tog = (e) => { if (e.target.dataset.act) { e.stopPropagation(); if (!e.tar
 $("#tb").addEventListener("click", tog);
 $("#tb").addEventListener("keydown", (e) => { if (e.key == "Enter") tog(e); });
 ["#q", "#fm", "#fl", "#ft"].forEach((s) => $(s).addEventListener("input", draw));
-function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#t1").classList.toggle("on", v == 1); $("#t2").classList.toggle("on", v == 2); }
+function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#t1").classList.toggle("on", v == 1); $("#t2").classList.toggle("on", v == 2); $("#nlist").classList.toggle("on", v == 1); }
 $("#t1").onclick = () => show(1); $("#t2").onclick = () => show(2);
+$("#nnew").onclick = () => { show(2); scrollTo(0, 0); }; $("#nlist").onclick = () => { show(1); scrollTo(0, 0); };
+{ const root = document.documentElement; try { const t = localStorage.getItem("mm_theme"); if (t) root.dataset.theme = t; } catch {}
+  $("#thm").onclick = () => { const dark = root.dataset.theme ? root.dataset.theme == "dark" : matchMedia("(prefers-color-scheme: dark)").matches; root.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("mm_theme", root.dataset.theme); } catch {} }; }
 $("#go").onclick = () => { const q = $("#an").value.trim(); if (!q) { $("#an").focus(); return; } act("Elemzés: " + q); $("#an").value = ""; };
 $("#rf").addEventListener("click", () => act("Frissítés: most"));
 $("#qs").addEventListener("click", (e) => { if (e.target.dataset.act) act(e.target.dataset.act); });
