@@ -8,13 +8,16 @@ const api = (p, o = {}) => fetch(`https://api.github.com/repos/${REPO}${p}`, { .
 const i = await (await api(`/issues/${NUM}`)).json();
 const title = String(i.title || "").replace(/[\r\n]/g, " ");
 let ok = /^\s*Elemzés\s*:/i.test(title), why = "";
-if (ok && i.user?.login !== owner) {
+// Nyilvános kérés: más GitHub-felhasználótól, vagy a konninvest.com közvetítőjén át (a törzsében a jelöléssel).
+const MARK = "Nyilvános kérés a konninvest.com oldalról.";
+const isPublic = (x) => x.user?.login !== owner || String(x.body || "").includes(MARK);
+if (ok && isPublic(i)) {
   const q = title.replace(/^\s*Elemzés\s*:\s*/i, "");
   if (!/^[\p{L}\p{N} .,&()'\-]{1,60}$/u.test(q) || q.trim().split(/\s+/).length > 6) { ok = false; why = "Csak cégnevet vagy tickert írj a kérésbe (legfeljebb 60 karakter, speciális jelek nélkül)."; }
   else {
     const since = new Date(); since.setUTCHours(0, 0, 0, 0);
     const list = await (await api(`/issues?state=all&since=${since.toISOString()}&per_page=100`)).json();
-    const n = list.filter((x) => !x.pull_request && /^\s*Elemzés\s*:/i.test(x.title) && x.user?.login !== owner && new Date(x.created_at) >= since && x.number <= i.number).length;
+    const n = list.filter((x) => !x.pull_request && /^\s*Elemzés\s*:/i.test(x.title) && isPublic(x) && new Date(x.created_at) >= since && x.number <= i.number).length;
     if (n > LIMIT) { ok = false; why = `Ma már elérte a nyilvános elemzési kérések napi korlátját (${LIMIT}). Próbáld újra holnap.`; }
   }
   if (!ok) {
