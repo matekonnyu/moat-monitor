@@ -14,6 +14,53 @@ const OWNER = location.hostname.endsWith(".github.io") ? location.hostname.split
 const REPO = location.hostname.endsWith(".github.io") ? (location.pathname.split("/").filter(Boolean)[0] || OWNER + ".github.io") : "moat-monitor";
 const issueUrl = (title, body = "") => `https://github.com/${OWNER}/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body || "Ezt a kérést a Moat Monitor oldal készítette. Kattints a „Submit new issue” gombra.")}`;
 
+// Háttérben futtatás: a tulajdonos egyszer megad egy GitHub-kulcsot (csak ebben a böngészőben tárolódik).
+let TOKEN = ""; try { TOKEN = localStorage.getItem("mm_gh_token") || ""; } catch {}
+const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
+const gh = (path, opt = {}) => fetch(API + path, { ...opt, headers: { Accept: "application/vnd.github+json", ...(TOKEN ? { Authorization: "Bearer " + TOKEN } : {}), ...(opt.body ? { "Content-Type": "application/json" } : {}), ...(opt.headers || {}) } });
+const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés)\s*:\s*(.+?)\s*$/i;
+let PENDING = [], pollT = null, lastPendingCount = 0;
+async function act(title) {
+  if (!TOKEN) { window.open(issueUrl(title), "_blank", "noopener"); return; }
+  try {
+    const r = await gh("/issues", { method: "POST", body: JSON.stringify({ title, body: "A Moat Monitor oldal indította." }) });
+    if (r.status == 401 || r.status == 403 || r.status == 404) { flash("A GitHub-kulcs érvénytelen vagy nincs hozzá jogosultsága. Állítsd be újra az „Új cég” fül alján."); return; }
+    if (!r.ok) throw new Error(r.status);
+    const i = await r.json();
+    PENDING.push({ n: i.number, title, at: Date.now() }); renderPending(); poll(true);
+  } catch (e) { flash("Nem sikerült elküldeni a kérést (" + (e.message || e) + "). Próbáld újra."); }
+}
+function flash(t) { $("#msg").textContent = t; $("#msg").hidden = !t; }
+function ago(ms) { const m = Math.round((Date.now() - ms) / 60000); return m < 1 ? "most" : m + " perce"; }
+function renderPending() {
+  const lbl = { "elemzés": "Elemzés fut", "felvétel": "Hozzáadás folyamatban", "elvetés": "Elvetés folyamatban", "törlés": "Törlés folyamatban" };
+  const html = PENDING.map((p) => { const m = p.title.match(ACT); return `<div class="k"><span><span class="spin"></span>${esc(lbl[m[1].toLowerCase()] || "Fut")}: <b>${esc(m[2])}</b></span><span>${ago(p.at)}${m[1].toLowerCase() == "elemzés" ? ", kb. 3–8 perc" : ", kb. 1 perc"}</span></div>`; }).join("");
+  for (const id of ["#run1", "#run2"]) { $(id).innerHTML = html ? `<div class="res">${html}</div>` : ""; }
+}
+async function poll(soon) {
+  clearTimeout(pollT);
+  if (OWNER == "OWNER") return;
+  try {
+    const r = await gh("/issues?state=open&per_page=50");
+    if (r.ok) {
+      const open = (await r.json()).filter((i) => !i.pull_request && ACT.test(i.title) && i.user.login == OWNER);
+      const had = PENDING.length;
+      const keep = new Map(PENDING.map((p) => [p.n, p]));
+      PENDING = open.map((i) => keep.get(i.number) || { n: i.number, title: i.title, at: Date.parse(i.created_at) });
+      renderPending();
+      if (PENDING.length < had) await reload();
+    }
+  } catch {}
+  if (PENDING.length) pollT = setTimeout(poll, TOKEN ? 8000 : 60000);
+}
+async function reload() {
+  try {
+    const raw = async (f) => { if (TOKEN) { const r = await gh("/contents/" + f, { headers: { Accept: "application/vnd.github.raw+json" } }); if (r.ok) return r.json(); } return getJSON(f); };
+    [C, CD] = await Promise.all([raw("data/companies.json"), raw("data/candidates.json")]);
+    draw(); drawQ();
+  } catch {}
+}
+
 let C = [], CD = [], RQ = [], META = {}, sk = "s", sd = -1;
 const open = new Set();
 
@@ -29,7 +76,7 @@ const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</s
 
 function detail(r) {
   const mk = r.mk;
-  return `<tr class="d"><td colspan="10"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}<a class="del" style="display:inline-block;text-decoration:none" href="${issueUrl("Törlés: " + r.id)}" target="_blank" rel="noopener">Törlés a listáról</a></div>
+  return `<tr class="d"><td colspan="10"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
 <div><div class="k"><span>Záróár dátuma</span><span>${esc(mk.d || r.d || "–")}</span></div>
 <div class="k"><span>Napi változás</span><span>${mk.prev ? pct((mk.p / mk.prev - 1) * 100) : "–"}</span></div>
 <div class="k"><span>1 hónap / 6 hónap</span><span>${pct(mk.ch1m)} / ${pct(mk.ch6m)}</span></div>
@@ -65,34 +112,37 @@ function pick() {
 
 function drawQ() {
   $("#t2").textContent = CD.length ? `Új cég (${CD.length} kész)` : "Új cég";
-  $("#qs").innerHTML = (RQ.length ? `<div class="res"><b>Folyamatban lévő kérések</b>${RQ.map((r) => `<div class="k"><span>${esc(r.q)}</span><span>pár percen belül kész</span></div>`).join("")}</div>` : "") +
-    CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${c.tr ? chip(c.tr) : ""}
+  $("#qs").innerHTML = CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${c.tr ? chip(c.tr) : ""}
 <div class="dg" style="margin-top:10px"><div>${pillars(c.p)}</div>
 <div><div class="k"><span>Score</span><span>${c.s}</span></div><div class="k"><span>Ár${c.mk.d ? ` (${esc(c.mk.d)})` : ""}</span><span>${mon(c.px, c.cur)}</span></div><div class="k"><span>Belső érték</span><span>${mon(c.iv, c.cur)}</span></div><div class="k"><span>Buy Below (MoS ${c.mos}%)</span><span>${mon(c.bb, c.cur)}</span></div><div class="k"><span>Ár vs IV</span><span>${pct(c.pv)}</span></div><div class="k"><span>Célár</span><span>${mon(c.tp, c.cur)}</span></div><div class="k"><span>Pénzügyi erő</span>${chip(c.f)}</div><div class="k"><span>AI-kockázat</span>${chip(c.ai)}</div></div></div>
 <p class="rec">${esc(c.r)}</p>${c.risks ? `<p class="rec">Kockázatok: ${esc(c.risks)}</p>` : ""}${c.ivb ? `<p class="rec note">Belső érték alapja: ${esc(c.ivb)}</p>` : ""}${c.srcs ? `<p class="rec note">Források: ${esc(c.srcs)}</p>` : ""}
-<a class="btn pri" style="display:inline-block;margin-top:10px;text-decoration:none" href="${issueUrl("Felvétel: " + c.id)}" target="_blank" rel="noopener">Hozzáadás a listához</a> <a class="btn" style="display:inline-block;margin-top:10px;text-decoration:none" href="${issueUrl("Elvetés: " + c.id)}" target="_blank" rel="noopener">Elvetés</a></div>`; }).join("");
+<button class="btn pri" style="margin-top:10px" data-act="Felvétel: ${esc(c.id)}">Hozzáadás a listához</button> <button class="btn" style="margin-top:10px" data-act="Elvetés: ${esc(c.id)}">Elvetés</button></div>`; }).join("");
 }
 
 $("#hd").addEventListener("click", (e) => { const k = e.target.dataset.k; if (!k) return; sd = sk == k ? -sd : (k == "n" ? 1 : -1); sk = k; draw(); });
-const tog = (e) => { const tr = e.target.closest("tr.row"); if (!tr || e.target.closest("a")) return; const id = tr.dataset.id; open.has(id) ? open.delete(id) : open.add(id); draw(); };
+const tog = (e) => { if (e.target.dataset.act) { e.stopPropagation(); if (!e.target.dataset.act.startsWith("Törlés") || confirm("Törlöd a listáról?")) act(e.target.dataset.act); return; } const tr = e.target.closest("tr.row"); if (!tr || e.target.closest("a")) return; const id = tr.dataset.id; open.has(id) ? open.delete(id) : open.add(id); draw(); };
 $("#tb").addEventListener("click", tog);
 $("#tb").addEventListener("keydown", (e) => { if (e.key == "Enter") tog(e); });
 ["#q", "#fm", "#fl", "#ft"].forEach((s) => $(s).addEventListener("input", draw));
 function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#t1").classList.toggle("on", v == 1); $("#t2").classList.toggle("on", v == 2); }
 $("#t1").onclick = () => show(1); $("#t2").onclick = () => show(2);
-$("#go").onclick = () => { const q = $("#an").value.trim(); if (!q) { $("#an").focus(); return; } window.open(issueUrl("Elemzés: " + q), "_blank", "noopener"); $("#an").value = ""; };
+$("#go").onclick = () => { const q = $("#an").value.trim(); if (!q) { $("#an").focus(); return; } act("Elemzés: " + q); $("#an").value = ""; };
+$("#qs").addEventListener("click", (e) => { if (e.target.dataset.act) act(e.target.dataset.act); });
+function drawTok() {
+  $("#tokst").textContent = TOKEN ? "Be van állítva: a gombok a háttérben futnak, átirányítás nélkül." : "Nincs beállítva: a gombok egy GitHub-oldalt nyitnak meg.";
+  $("#tokdel").hidden = !TOKEN;
+}
+$("#toksave").onclick = async () => {
+  const t = $("#tok").value.trim(); if (!t) return;
+  const r = await fetch(API + "/issues?per_page=1", { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" } }).catch(() => null);
+  if (!r || !r.ok) { $("#tokst").textContent = "Ez a kulcs nem működik ehhez a repóhoz. Ellenőrizd a jogosultságokat."; return; }
+  TOKEN = t; try { localStorage.setItem("mm_gh_token", t); } catch {} $("#tok").value = ""; drawTok(); poll(true);
+};
+$("#tokdel").onclick = () => { TOKEN = ""; try { localStorage.removeItem("mm_gh_token"); } catch {} drawTok(); };
+drawTok();
 $("#an").addEventListener("keydown", (e) => { if (e.key == "Enter") $("#go").click(); });
 
 async function getJSON(p) { const r = await fetch(p + "?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) throw new Error(p); return r.json(); }
-async function loadRequests() {
-  if (OWNER == "OWNER") return;
-  try {
-    const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues?state=open&per_page=50`);
-    if (!r.ok) return;
-    RQ = (await r.json()).filter((i) => !i.pull_request && /^\s*Elemzés\s*:/i.test(i.title)).map((i) => ({ q: i.title.replace(/^\s*Elemzés\s*:\s*/i, "") }));
-    drawQ();
-  } catch {}
-}
 (async () => {
   try {
     [C, CD] = await Promise.all([getJSON("data/companies.json"), getJSON("data/candidates.json")]);
@@ -100,6 +150,6 @@ async function loadRequests() {
     const ds = C.map((r) => r.mk?.d).filter(Boolean).sort();
     const when = META.refreshedAt ? new Date(META.refreshedAt).toLocaleString("hu-HU", { dateStyle: "medium", timeStyle: "short" }) : null;
     $("#st").textContent = (ds.length ? `Árak: ${ds[ds.length - 1]} záró.` : "") + (when ? ` Utolsó frissítés: ${when}.` : "") + (META.fail ? ` ${META.fail} papírnál nem sikerült.` : "");
-    draw(); drawQ(); loadRequests();
+    draw(); drawQ(); poll(true);
   } catch (e) { $("#st").textContent = "Az adatok betöltése nem sikerült. Töltsd újra az oldalt."; }
 })();

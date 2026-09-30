@@ -60,6 +60,8 @@ tr.d td{background:var(--bg);white-space:normal;text-align:left;position:static}
 [hidden]{display:none!important}
 footer{color:var(--mut);font-size:12px;margin-top:14px}
 tr.d .dg{position:sticky;left:0;max-width:min(1080px,calc(100vw - 58px))}
+@keyframes mmspin{to{transform:rotate(360deg)}}.spin{display:inline-block;width:11px;height:11px;margin-right:7px;border:2px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:mmspin 1s linear infinite;vertical-align:-1px}@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+details summary{cursor:pointer}
 </style>
 </head>
 <body>
@@ -70,6 +72,8 @@ tr.d .dg{position:sticky;left:0;max-width:min(1080px,calc(100vw - 58px))}
 
 <section id="v1">
 <div class="status"><span id="st">Adatok betöltése...</span></div>
+<p class="note r" id="msg" hidden></p>
+<div id="run1"></div>
 <div class="pk" id="pk" hidden></div>
 <div class="bar">
 <input id="q" type="search" placeholder="Keresés: név, ticker, szektor" aria-label="Keresés">
@@ -91,8 +95,20 @@ tr.d .dg{position:sticky;left:0;max-width:min(1080px,calc(100vw - 58px))}
 <input id="an" placeholder="Cégnév vagy ticker, pl. Costco, SAP, 4iG, Zwack" aria-label="Cég">
 <button class="btn pri" id="go">Elemzés kérése</button>
 </div>
-<p class="note">Bármelyik részvényt kérheted, amit a George-ban megvehetsz: amerikai, német, osztrák vagy BÉT-papírt. A gomb egy előre kitöltött GitHub-kérést nyit; ott csak a „Submit new issue” gombra kell kattintani. Claude pár percen belül elkészíti a teljes elemzést (friss árfolyam, jelentések, moat, belső érték), és itt jelenik meg jóváhagyásra.</p>
+<p class="note">Bármelyik részvényt kérheted, amit a George-ban megvehetsz: amerikai, német, osztrák vagy BÉT-papírt. Claude pár perc alatt elkészíti a teljes elemzést (friss árfolyam, jelentések, moat, belső érték), és itt jelenik meg jóváhagyásra.</p>
+<div id="run2"></div>
 <div id="qs"></div>
+<details class="res" style="margin-top:18px"><summary><b>Háttérben futtatás beállítása</b> <span class="note" id="tokst"></span></summary>
+<p class="note">Egyszer kell megcsinálni, ezen a böngészőn/telefonon. A kulcs csak itt tárolódik, a weboldalba és a repóba nem kerül be.</p>
+<ol class="note">
+<li>Nyisd meg: <a class="g" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">új GitHub-kulcs létrehozása</a>.</li>
+<li>Token name: <b>moat-monitor</b>, Expiration: <b>1 év</b> (vagy „No expiration”).</li>
+<li>Repository access: <b>Only select repositories</b> → <b>moat-monitor</b>.</li>
+<li>Permissions → Repository permissions: <b>Issues: Read and write</b>, <b>Contents: Read-only</b>.</li>
+<li>Generate token → másold ki, és illeszd be ide:</li>
+</ol>
+<div class="fm"><input id="tok" type="password" placeholder="github_pat_..." aria-label="GitHub-kulcs" autocomplete="off"><button class="btn pri" id="toksave">Mentés</button><button class="btn" id="tokdel" hidden>Kulcs törlése</button></div>
+</details>
 </section>
 
 <footer>Árfolyamok: Yahoo Finance napi záróárak, minden reggel frissítve. Trend a 20 és 50 napos mozgóátlagokból: Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van; Csökkenő, ha mindkettő fordítva; egyébként Oldalazó. A célár az elemzői konszenzus, a belső érték és a Buy Below saját Buffett–Munger-becslés. Kutatási eszköz, nem befektetési tanács.</footer>
