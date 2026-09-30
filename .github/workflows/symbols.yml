@@ -1,0 +1,38 @@
+name: Kereshető részvénylista
+
+# Hetente újraépíti a data/symbols.json-t (USA, Xetra, BÉT, Bécs) az "Új cég elemzése" keresőhöz.
+on:
+  schedule:
+    - cron: "15 4 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: symbols
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Lista építése és mentése
+        run: |
+          git config user.name "moat-monitor-bot"
+          git config user.email "moat-monitor-bot@users.noreply.github.com"
+          node scripts/symbols.mjs
+          cp data/symbols.json data/symbols-meta.json "$RUNNER_TEMP/"
+          for n in 1 2 3 4; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/symbols.json" "$RUNNER_TEMP/symbols-meta.json" data/
+            git add data/symbols.json data/symbols-meta.json
+            git diff --cached --quiet && exit 0
+            git commit -qm "Részvénylista frissítése $(date -u +%F)"
+            git push -q origin HEAD:main && exit 0
+            sleep $((n*5))
+          done
+          exit 1
