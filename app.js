@@ -23,7 +23,10 @@ const gh = (path, opt = {}) => fetch(API + path, { ...opt, headers: { Accept: "a
 const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés|Frissítés)\s*:\s*(.+?)\s*$/i;
 let PENDING = [], pollT = null, lastPendingCount = 0;
 async function act(title) {
-  if (!TOKEN) { window.open(issueUrl(title), "_blank", "noopener"); return; }
+  if (!TOKEN) {
+    if (!confirm("Ez a művelet csak a Moat Monitor tulajdonosának engedélyezett.\n\nEbben a böngészőben nincs megadva GitHub-kulcs, ezért a GitHub oldalán kell megerősíteni (a tulajdonos fiókjával bejelentkezve). Más felhasználó kérését a rendszer nem hajtja végre.\n\nMegnyitod a GitHubot?")) return;
+    window.open(issueUrl(title), "_blank", "noopener"); return;
+  }
   if (PENDING.some((p) => p.title.toLowerCase() == title.toLowerCase())) { flash("Ez a kérés már folyamatban van, várd meg, amíg lefut."); return; }
   document.querySelectorAll("[data-act]").forEach((b) => { if (b.dataset.act == title) b.disabled = true; });
   try {
@@ -230,6 +233,7 @@ $("#go").onclick = () => { if (!$("#an").value.trim()) { $("#an").focus(); retur
 $("#rf").addEventListener("click", () => act("Frissítés: most"));
 $("#qs").addEventListener("click", (e) => { if (e.target.dataset.act) act(e.target.dataset.act); });
 function drawTok() {
+  document.body.classList.toggle("ro", !TOKEN);
   $("#tokst").textContent = TOKEN ? "Be van állítva: a gombok a háttérben futnak, átirányítás nélkül." : "Nincs beállítva: a gombok egy GitHub-oldalt nyitnak meg.";
   $("#tokdel").hidden = !TOKEN;
 }
