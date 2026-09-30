@@ -50,7 +50,60 @@
    "ch1m": -0.32,
    "ch6m": -39.38,
    "d": "2026-09-29",
-   "at": "2026-09-30T23:05:42.945Z",
+   "at": "2026-09-30T23:48:10.743Z",
+   "src": "Yahoo Finance"
+  }
+ },
+ {
+  "id": "MS",
+  "n": "Morgan Stanley",
+  "t": "MS",
+  "y": "MS",
+  "l": "Jelölt",
+  "m": "Narrow",
+  "s": 62,
+  "ai": "Low",
+  "c": "Medium",
+  "p": [
+   70,
+   65,
+   25,
+   30,
+   60
+  ],
+  "sec": "Financial Services - Capital Markets",
+  "r": "Hold: a 188,08 USD-s ár kb. 25%-kal a ~150 USD-s konzervatív belső érték felett van, távol a 90 USD-s vételi szinttől, de a Wide-közeli wealth management franchise és a 26,6%-os ROTCE miatt minőségi tartás.",
+  "risks": "Ciklikus tőkepiaci és befektetésibanki bevételek (IPO/M&A piaci visszaesés) és a rekordközeli eredmény normalizálódása; szigorúbb tőkeszabályozás (Basel III endgame) és a 15x P/E mellett magas elvárások; hitel- és piaci kockázat a kereskedési könyvben; díjnyomás és AI/robo-tanácsadás a wealth szegmensben",
+  "mt": "Stable",
+  "u": "High",
+  "ivb": "Normalizált ~11 USD/részvény éves eredmény (a 12,38 USD TTM EPS és a ciklikus átlag közötti konzervatív érték) x 13,5 szorzó, ≈150 USD, a 67,80 USD könyv szerinti és 53,18 USD tangible book értékkel egybevetve; bankoknál a szabad cash flow nem értelmezhető.",
+  "srcs": [
+   "Morgan Stanley 2Q26 earnings release (SEC 8-K, 2026-07)",
+   "StockAnalysis.com (ár, P/E, konszenzus célár, 2026-09-30)",
+   "MarketBeat / Public.com (elemzői konszenzus)"
+  ],
+  "d": "2026-09-30",
+  "ch": "https://finance.yahoo.com/chart/MS",
+  "pr": 188.08,
+  "tp": 235.81,
+  "iv": 150,
+  "bb": 90,
+  "mos": 40,
+  "f": "Strong",
+  "cur": "USD",
+  "mk": {
+   "p": 188.08,
+   "prev": 192.76,
+   "sma20": 204.93,
+   "sma50": 210.55,
+   "sma200": 193.77,
+   "ema20": 202.18,
+   "ema50": 207.58,
+   "tr": "Csökkenő",
+   "ch1m": -11.83,
+   "ch6m": 14.29,
+   "d": "2026-09-30",
+   "at": "2026-09-30T23:48:10.743Z",
    "src": "Yahoo Finance"
   }
  }
