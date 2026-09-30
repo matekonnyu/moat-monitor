@@ -1,3 +1,4 @@
+// v2 – újratelepítés a GITHUB_TOKEN beállítása után
 // konninvest.com – nyilvános kérés-közvetítő.
 // Bárki kérhet új cég elemzést vagy árfolyam-frissítést GitHub-fiók nélkül:
 // ez a függvény a tulajdonos szűk jogú GitHub-kulcsával (csak Issues írás a moat-monitor repón)
