@@ -1,1 +1,57 @@
-[]
+[
+ {
+  "id": "4IG",
+  "n": "4iG Nyrt.",
+  "t": "4IG",
+  "y": "4IG.BD",
+  "l": "Jelölt",
+  "m": "None",
+  "s": 35,
+  "ai": "Low",
+  "c": "Low",
+  "p": [
+   25,
+   40,
+   20,
+   40,
+   50
+  ],
+  "sec": "Communication Services - Telecom Services / IT Services",
+  "r": "Avoid: az 1589 HUF-os ár kb. 59%-kal a ~1000 HUF-os, durva becslésű belső érték felett van, messze az 500 HUF-os vételi szinttől, a magas tőkeáttétel és az állami átvilágítás pedig nagy bizonytalanságot jelent.",
+  "risks": "Magas tőkeáttétel (nettó adósság/EBITDA 3,7x, BB- besorolás, leminősítési kockázat) és a Vodafone-akvizíciós hitel októberre tervezett refinanszírozása; a Tisza-kormány átvilágítása az állami szerződésekre, finanszírozásokra és a Vodafone-vásárlásra; a féléves 21,9 Mrd Ft nyereséget 36,1 Mrd Ft nem realizált árfolyamnyereség hajtotta (korrigálva -3,9 Mrd Ft); akvizíciók integrációja és a védelmi/űripari szerződések végrehajtási kockázata",
+  "mt": "Stable",
+  "u": "Very High",
+  "ivb": "Szabad cash flow és részvényenkénti EPS nem volt fellelhető, ezért durva becslés: ~270 Mrd Ft 12 havi EBITDA x 4,0 EV/EBITDA mínusz ~800 Mrd Ft nettó adósság, 293,7 M részvényre ≈ 1000 HUF (a korrigált nettó eredmény negatív, ezért nem fújtuk fel).",
+  "srcs": [
+   "4iG H1 2026 gyorsjelentés (4ig.hu, 2026-08-31)",
+   "Portfolio.hu / VG.hu / Index 2026-08 (átvilágítás, eredmény)",
+   "Portfolio.hu 2026-09-03 (Scope, leminősítés)",
+   "Rankia 4iG elemzés 2026",
+   "Erste Market / BÉT árfolyamadat"
+  ],
+  "d": "2026-09-30",
+  "ch": "https://finance.yahoo.com/chart/4IG.BD",
+  "pr": 1589,
+  "tp": null,
+  "iv": 1000,
+  "bb": 500,
+  "mos": 50,
+  "f": "Weak",
+  "cur": "HUF",
+  "mk": {
+   "p": 1634,
+   "prev": 1576,
+   "sma20": 1623.2,
+   "sma50": 1661.38,
+   "sma200": 2612.05,
+   "ema20": 1616.87,
+   "ema50": 1687.09,
+   "tr": "Csökkenő",
+   "ch1m": 6.73,
+   "ch6m": -30.47,
+   "d": "2026-09-30",
+   "at": "2026-09-30T20:59:39.764Z",
+   "src": "Yahoo Finance"
+  }
+ }
+]
