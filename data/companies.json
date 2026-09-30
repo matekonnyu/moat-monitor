@@ -36,13 +36,14 @@
   ],
   "pr": 341.07,
   "r": "Hold – premium valuation, ecosystem intact",
-  "risks": "",
+  "risks": "iPhone ciklus / Kína; Services növekedés lassulás; AI termékverseny; magas multiple; antitrust.",
   "s": 89,
   "sec": "Technology",
   "t": "AAPL",
   "tp": 328.22,
   "id": "AAPL",
-  "y": "AAPL"
+  "y": "AAPL",
+  "nu": "https://app.notion.com/3e50ec5d01dd81c2923cc2b494dfa973"
  },
  {
   "ai": "Medium",
@@ -81,13 +82,14 @@
   ],
   "pr": 630.63,
   "r": "Hold – $1T priced; wait for pullback",
-  "risks": "",
+  "risks": "Extrém értékelés (150×+ trailing); AI GPU share vs NVDA; végrehajtási kockázat; ciklus; Narrow moat. IV nagyon rough.",
   "s": 72,
   "sec": "Technology",
   "t": "AMD",
   "tp": 616.51,
   "id": "AMD",
-  "y": "AMD"
+  "y": "AMD",
+  "nu": "https://app.notion.com/3e50ec5d01dd81b8b3a8d21d9b0db302"
  },
  {
   "ai": "Medium",
@@ -126,13 +128,14 @@
   ],
   "pr": 249.67,
   "r": "Buy – AWS + logistics flywheel; Narrow (AI agent / cloud share risk)",
-  "risks": "",
+  "risks": "AI capex → negatív FCF; AWS növekedés lassulás; retail margin nyomás; GAAP EPS torzítás (befektetések); Narrow moat retail.",
   "s": 80,
   "sec": "Consumer Cyclical",
   "t": "AMZN",
   "tp": 329.54,
   "id": "AMZN",
-  "y": "AMZN"
+  "y": "AMZN",
+  "nu": "https://app.notion.com/cc01d4e3288d4ef48249c6af358d19d4"
  },
  {
   "ai": "Low",
@@ -171,13 +174,14 @@
   ],
   "pr": 1743.94,
   "r": "Hold – Wide EUV-moat, de ár az IV felett; várj korrekcióra a Buy Below (~960 USD) felé",
-  "risks": "",
+  "risks": "Kína exportkorlátozások / MATCH Act (~20% bevétel-kitettség); ügyfélkoncentráció (TSMC/Samsung/Intel); félvezető CapEx-ciklus; High-NA ramp végrehajtás; geopolitika / USA–NL szabályozás; prémium valuáció (trailing P/E ~55).",
   "s": 91,
   "sec": "Technology",
   "t": "ASML",
   "tp": 2115.91,
   "id": "ASML",
-  "y": "ASML"
+  "y": "ASML",
+  "nu": "https://app.notion.com/3e90ec5d01dd8187b865cd54facbe69c"
  },
  {
   "ai": "Low",
@@ -216,13 +220,14 @@
   ],
   "pr": 352.81,
   "r": "Buy – AI ASIC + VMware, large upside",
-  "risks": "",
+  "risks": "AI ASIC koncentráció; VMware integráció; adósság/goodwill; ügyfélkoncentráció; multiple zsugorodás.",
   "s": 88,
   "sec": "Technology",
   "t": "AVGO",
   "tp": 531.85,
   "id": "AVGO",
-  "y": "AVGO"
+  "y": "AVGO",
+  "nu": "https://app.notion.com/3e50ec5d01dd8125bbb0c81bea45e272"
  },
  {
   "ai": "Medium",
@@ -261,13 +266,14 @@
   ],
   "pr": 163.95,
   "r": "Buy – OTA network, ~52% to target",
-  "risks": "",
+  "risks": "Utazási kereslet ciklus; Google/OTA verseny; szabályozás (EU); negatív könyvérték / buyback; AI agent diszrupció.",
   "s": 83,
   "sec": "Consumer Discretionary",
   "t": "BKNG",
   "tp": 238.78,
   "id": "BKNG",
-  "y": "BKNG"
+  "y": "BKNG",
+  "nu": "https://app.notion.com/3e50ec5d01dd81bb987ddc34435e89b2"
  },
  {
   "ai": "Low",
@@ -306,13 +312,14 @@
   ],
   "pr": 27,
   "r": "Accumulate – T-Mobile US növekedés + DE infrastruktúra; ár IV alatt",
-  "risks": "",
+  "risks": "Magas tőkeáttétel (nettó adósság ~138 Mrd EUR); spektrum/fiber capex; US verseny (Verizon/AT&T); szabályozás EU/DE; USD/EUR árfolyam; TMUS integrációs költségek (UScellular).",
   "s": 74,
   "sec": "Communication Services",
   "t": "DTE",
   "tp": 36.44,
   "id": "DTE",
-  "y": "DTE.DE"
+  "y": "DTE.DE",
+  "nu": "https://app.notion.com/3e60ec5d01dd81aca3d9da957d96a87a"
  },
  {
   "ai": "Medium",
@@ -351,13 +358,14 @@
   ],
   "pr": 343.92,
   "r": "Attractive among Mag7 – search + cloud dual engine",
-  "risks": "",
+  "risks": "Kereső AI diszrupció / forgalomvesztés; YouTube/ads ciklus; antitrust; AI capex FCF nyomás; egyszeri eredménytorzítás.",
   "s": 87,
   "sec": "Communication Services",
   "t": "GOOGL",
   "tp": 429.46,
   "id": "GOOGL",
-  "y": "GOOGL"
+  "y": "GOOGL",
+  "nu": "https://app.notion.com/3e50ec5d01dd81a7b7b4f2144855c6f9"
  },
  {
   "ai": "Low",
@@ -396,13 +404,14 @@
   ],
   "pr": 87.81,
   "r": "Hold – classic wide brand moat; valuation full, buy on dips",
-  "risks": "",
+  "risks": "Cukoradó és egészségügyi trendek; FX fejlődő piacokon; műanyag/csomagolás szabályozás; IRS adóvita; prémium értékelés (P/E ~26)",
   "s": 87,
   "sec": "Consumer Defensive",
   "t": "KO",
   "tp": 94.7,
   "id": "KO",
-  "y": "KO"
+  "y": "KO",
+  "nu": "https://app.notion.com/3e60ec5d01dd81f2851bd172f1695f81"
  },
  {
   "ai": "Low",
@@ -441,13 +450,14 @@
   ],
   "pr": 567.65,
   "r": "Buy – quality payments compounder",
-  "risks": "",
+  "risks": "Szabályozás / interchange díjak; fintech és real-time payment diszrupció; fogyasztói költés ciklus; tőkeáttétel.",
   "s": 91,
   "sec": "Financials",
   "t": "MA",
   "tp": 666.71,
   "id": "MA",
-  "y": "MA"
+  "y": "MA",
+  "nu": "https://app.notion.com/3e50ec5d01dd8197840ff2be775b8636"
  },
  {
   "ai": "Medium",
@@ -486,13 +496,14 @@
   ],
   "pr": 751.66,
   "r": "Hold – near consensus after Connect rally",
-  "risks": "",
+  "risks": "AI capex ROI; Reality Labs veszteség; szabályozás/ads privacy; engagement telítettség; FCF átmeneti gyengeség.",
   "s": 86,
   "sec": "Communication Services",
   "t": "META",
   "tp": 761.01,
   "id": "META",
-  "y": "META"
+  "y": "META",
+  "nu": "https://app.notion.com/3e50ec5d01dd81e79ea2d5daf9d13909"
  },
  {
   "ai": "Low",
@@ -531,13 +542,14 @@
   ],
   "pr": 5150,
   "r": "Cyclical / dividend – refining & geopolitics key",
-  "risks": "",
+  "risks": "Olajár / finomítói árrés ciklus; orosz olaj / szankciók; szabályozói adó; ESG átállás; mid-cycle EPS messze a csúcstól.",
   "s": 56,
   "sec": "Energy",
   "t": "MOL",
   "tp": 4961,
   "id": "MOL",
-  "y": "MOL.BD"
+  "y": "MOL.BD",
+  "nu": "https://app.notion.com/3e50ec5d01dd81f6a66fe5ef6b80cdb1"
  },
  {
   "ai": "Low",
@@ -576,13 +588,14 @@
   ],
   "pr": 516.17,
   "r": "Core long-term hold – enterprise switching costs",
-  "risks": "",
+  "risks": "AI capex ROI elmaradás; FCF átmeneti nyomás; szabályozás/antitröszt; felhő növekedés lassulás.",
   "s": 92,
   "sec": "Technology",
   "t": "MSFT",
   "tp": 576.4,
   "id": "MSFT",
-  "y": "MSFT"
+  "y": "MSFT",
+  "nu": "https://app.notion.com/3e50ec5d01dd811e9129e80f0799f155"
  },
  {
   "ai": "Low",
@@ -621,13 +634,14 @@
   ],
   "pr": 2540,
   "r": "Income hold – oligopol + osztalék; mérsékelt upside a célárhoz",
-  "risks": "",
+  "risks": "Szabályozott telekom árazás; verseny (4iG); capex 5G; anyavállalat (Deutsche Telekom) stratégia; osztalékpolitika.",
   "s": 65,
   "sec": "Communication Services",
   "t": "MTELEKOM",
   "tp": 2618.25,
   "id": "MTELEKOM",
-  "y": "MTELEKOM.BD"
+  "y": "MTELEKOM.BD",
+  "nu": "https://app.notion.com/3e50ec5d01dd818f958ae8b22f264bce"
  },
  {
   "ai": "Medium",
@@ -666,13 +680,14 @@
   ],
   "pr": 225.07,
   "r": "Accumulate on dips – widest AI infrastructure moat; Strong Buy konszenzus",
-  "risks": "",
+  "risks": "AI GPU kereslet normalizálódás; ügyfélkoncentráció; verseny (custom ASIC, AMD); exportkorlátozások; értékelési multiple zsugorodás.",
   "s": 93,
   "sec": "Technology",
   "t": "NVDA",
   "tp": 327.7,
   "id": "NVDA",
-  "y": "NVDA"
+  "y": "NVDA",
+  "nu": "https://app.notion.com/3e50ec5d01dd81eeac1df4e5ee249436"
  },
  {
   "ai": "Low",
@@ -711,13 +726,14 @@
   ],
   "pr": 1.02,
   "r": "Avoid – clinical-stage biotech, binary readout, nincs tartós moat",
-  "risks": "",
+  "risks": "OCU400/OCU410ST klinikai kudarc vagy gyenge hatás; hígítás (átváltható kötvény, tőkebevonás); verseny (Nanoscope, Beacon, Luxturna/Roche, J&J); szabályozási késés / BLA elutasítás; tartós veszteség és bevételhiány",
   "s": 26,
   "sec": "Healthcare",
   "t": "OCGN",
   "tp": 12.08,
   "id": "OCGN",
-  "y": "OCGN"
+  "y": "OCGN",
+  "nu": "https://app.notion.com/3e70ec5d01dd81d28b41ea701b70be7f"
  },
  {
   "ai": "Medium",
@@ -756,13 +772,14 @@
   ],
   "pr": 45870,
   "r": "Hold – CEE regionális compounder; erős 1Y rally után korlátozott upside a célárhoz",
-  "risks": "",
+  "risks": "CEE / geopolitikai kockázat; kamatciklus és hitelminőség; szabályozói adó/extra profitadó; UKR/RU kitettség.",
   "s": 70,
   "sec": "Financials",
   "t": "OTP",
   "tp": 47399,
   "id": "OTP",
-  "y": "OTP.BD"
+  "y": "OTP.BD",
+  "nu": "https://app.notion.com/3e50ec5d01dd81eb9e04f7747ffdc6f9"
  },
  {
   "ai": "Low",
@@ -801,13 +818,14 @@
   ],
   "pr": 12480,
   "r": "Hold – fair közel az IV-hez; Narrow moat, Vraylar LoE 2029–30; belépő Buy Below ~9000 Ft",
-  "risks": "",
+  "risks": "Vraylar LoE ~2029–30 (profitkoncentráció AbbVie royaltyra); USD/HUF és RUB FX; orosz/CEE geopolitikai kitettség; generikus és bioszimilar árazási nyomás; pipeline/partnerkockázat (AbbVie, Hetero).",
   "s": 72,
   "sec": "Healthcare",
   "t": "RICHTER",
   "tp": 12929,
   "id": "RICHTER",
-  "y": "RICHTER.BD"
+  "y": "RICHTER.BD",
+  "nu": "https://app.notion.com/3e60ec5d01dd81e5ad4ffddb00a48f13"
  },
  {
   "ai": "Medium",
@@ -846,13 +864,14 @@
   ],
   "pr": 148.03,
   "r": "Hold – széles moat, de ~68× sales és negatív FCF mellett az ár extrém; várj Buy Below (~68) közeli korrekcióra",
-  "risks": "",
+  "risks": "Starship végrehajtás; Amazon Kuiper verseny; AI CapEx ROI és 90 napos felmondható cloud szerződések; ügyfélkoncentráció (Customer B ~19,5%); kulcsember (Musk) és dual-class; ARPU-erózió; szabályozás/FCC; hígítás",
   "s": 85,
   "sec": "Industrials",
   "t": "SPCX",
   "tp": 233.63,
   "id": "SPCX",
-  "y": "SPCX"
+  "y": "SPCX",
+  "nu": "https://app.notion.com/3e60ec5d01dd81fca3b2d610e1fc2cb1"
  },
  {
   "ai": "Low",
@@ -891,13 +910,14 @@
   ],
   "pr": 450.61,
   "r": "Buy – leading-edge foundry moat (ADR TSM)",
-  "risks": "",
+  "risks": "Geopolitikai Tajvan-kockázat; AI capex ciklus lassulás; ügyfélkoncentráció (NVDA/Apple); valuta/NTD.",
   "s": 94,
   "sec": "Technology",
   "t": "TSM",
   "tp": 552.26,
   "id": "TSM",
-  "y": "TSM"
+  "y": "TSM",
+  "nu": "https://app.notion.com/3e50ec5d01dd811f9d4bd59e28081567"
  },
  {
   "ai": "Low",
@@ -936,13 +956,14 @@
   ],
   "pr": 367.38,
   "r": "Buy/Hold – durable network effects, steady compounding",
-  "risks": "",
+  "risks": "Szabályozás / interchange; fintech és A2A fizetések; költés ciklus; Mastercard/Amex verseny.",
   "s": 79,
   "sec": "Financial Services",
   "t": "V",
   "tp": 419.36,
   "id": "V",
-  "y": "V"
+  "y": "V",
+  "nu": "https://app.notion.com/cb8116abf2444bfeaea322212e0965bd"
  },
  {
   "id": "PEP",

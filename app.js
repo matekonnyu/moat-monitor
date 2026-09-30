@@ -85,13 +85,15 @@ function derive(o) {
   const pv = o.iv > 0 && px > 0 ? (px / o.iv - 1) * 100 : null;
   const up = o.tp > 0 && px > 0 ? (o.tp / px - 1) * 100 : null;
   const v = pv == null ? o.v : valuation(pv);
-  return { ...o, mk, px, pv, up, v, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: { Undervalued: 3, Fair: 2, Expensive: 1 }[v] || 0, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
+  const mpa = o.m ? ({ Wide: 40, Narrow: 25 }[o.m] ?? 5) + ({ Strong: 30, Adequate: 18, Weak: 5 }[o.f] ?? 5) + (pv == null ? 0 : o.bb > 0 && px <= o.bb ? 30 : pv < 0 ? 22 : pv <= 10 ? 15 : pv <= 30 ? 8 : 0) : null;
+  const rw = (String(o.r || "").match(/^\s*(Buy|Accumulate|Hold|Avoid)/i) || [])[1] || (/\bhold\b/i.test(o.r || "") ? "Hold" : "");
+  return { ...o, mk, px, pv, up, v, mpa, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: { Undervalued: 3, Fair: 2, Expensive: 1 }[v] || 0, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
 }
 const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</span><div class="tr"><i style="width:${v}%"></i></div><span>${v}</span></div>`).join("");
 
 function detail(r) {
   const mk = r.mk;
-  return `<tr class="d"><td colspan="10"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
+  return `<tr class="d"><td colspan="14"><div class="dg"><div>${pillars(r.p)}<p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
 <div><div class="k"><span>Záróár dátuma</span><span>${esc(mk.d || r.d || "–")}</span></div>
 <div class="k"><span>Napi változás</span><span>${mk.prev ? pct((mk.p / mk.prev - 1) * 100) : "–"}</span></div>
 <div class="k"><span>Trend (20 / 50 / 200 nap)</span><span>${esc(r.trS || "–")} / ${esc(r.trM || "–")} / ${esc(r.trL || "–")}</span></div>
@@ -99,7 +101,7 @@ function detail(r) {
 <div class="k"><span>SMA20 / SMA50 / SMA200</span><span>${mon(mk.sma20, r.cur)} / ${mon(mk.sma50, r.cur)} / ${mon(mk.sma200, r.cur)}</span></div>
 <div class="k"><span>EMA20 / EMA50</span><span>${mon(mk.ema20, r.cur)} / ${mon(mk.ema50, r.cur)}</span></div>
 <div class="k"><span>Célár (konszenzus)</span><span>${mon(r.tp, r.cur)}</span></div>
-<div class="k"><span>AI-kockázat</span>${chip(r.ai)}</div><div class="k"><span>Pénzügyi erő</span>${chip(r.f)}</div>
+<div class="k"><span>Bizonyosság</span>${chip(r.c)}</div><div class="k"><span>AI-kockázat</span>${chip(r.ai)}</div><div class="k"><span>Pénzügyi erő</span>${chip(r.f)}</div>
 <div class="k"><span>Margin of Safety</span><span>${r.mos ?? "–"}%</span></div>
 <div class="k"><span>Szektor</span><span>${esc(r.sec)}</span></div><div class="k"><span>Elemzés dátuma</span><span>${esc(r.d || "–")}</span></div>
 <div class="k"><span>Árfolyamgrafikon</span><a class="g" href="${esc(r.ch || "https://finance.yahoo.com/chart/" + r.y)}" target="_blank" rel="noopener">${esc(r.y || r.t)}</a></div>
@@ -111,7 +113,13 @@ function draw() {
   const a = C.map(derive).filter((r) => (!q || (r.n + r.t + r.sec).toLowerCase().includes(q)) && (!fm || r.m == fm) && (!fl || r.l == fl) && (!ft || r.tr == ft));
   a.sort((x, y) => { const u = x[sk] ?? -1e18, w = y[sk] ?? -1e18; return (typeof u == "string" ? u.localeCompare(w) : u - w) * sd; });
   $("#cnt").textContent = a.length + " / " + C.length + " cég";
-  $("#tb").innerHTML = a.map((r) => `<tr class="row" tabindex="0" data-id="${esc(r.id)}"><td><b>${esc(r.n)}</b><small>${esc(r.t)}, ${esc(r.l)}</small></td><td>${chip(r.m)}</td><td><span class="sc"><span class="tr"><i style="width:${r.s}%"></i></span>${r.s}</span></td><td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : "pillanatkép"}</small></td><td>${tri(r)}</td><td class="${r.up >= 0 ? "g" : "r"}">${pct(r.up)}</td><td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv <= 0 ? "g" : "r"}">${pct(r.pv)}</td><td>${chip(r.v)}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("") || `<tr><td colspan="10" style="text-align:center;padding:24px;position:static">Nincs találat ezekkel a szűrőkkel.</td></tr>`;
+  const RC = { buy: "g", accumulate: "g", hold: "a", avoid: "r" }, VH = { Undervalued: "Alulértékelt", Fair: "Korrekt ár", Expensive: "Drága" };
+  const sg = (x) => x == null ? "–" : (x > 0 ? "+" : "") + x;
+  $("#tb").innerHTML = a.map((r) => `<tr class="row" tabindex="0" data-id="${esc(r.id)}"><td><b>${esc(r.n)}</b><small>${esc(r.t)}, ${esc(r.l)}</small></td>
+<td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : "pillanatkép"}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td><td>${tri(r)}</td>
+<td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv == null ? "" : r.pv < 0 ? "g" : r.pv > 15 ? "r" : ""}">${pct(r.pv)}</td><td>${r.v ? `<span class="chip ${K[r.v] || ""}">${VH[r.v] || esc(r.v)}</span>` : "–"}</td>
+<td>${chip(r.m)}</td><td><span class="sc"><span class="tr"><i style="width:${r.s}%"></i></span>${r.s ?? "–"}</span></td><td><b>${r.mpa ?? "–"}</b></td><td class="${r.gap == null ? "" : r.gap > 0 ? "g" : r.gap < 0 ? "r" : ""}">${sg(r.gap)}</td>
+<td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}${r.nu ? ` <a class="nl" href="${esc(r.nu)}" target="_blank" rel="noopener" title="Elemzés megnyitása a Notionben">↗</a>` : ""}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("");
   document.querySelectorAll("#hd th").forEach((h) => { const on = h.dataset.k == sk; h.classList.toggle("on", on); h.textContent = h.textContent.replace(/ [▲▼]$/, "") + (on ? (sd < 0 ? " ▼" : " ▲") : ""); });
   pick();
 }

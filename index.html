@@ -13,7 +13,7 @@
 :root[data-theme="dark"]{--bg:#1b1d20;--card:#23262a;--ink:#ececec;--mut:#a3a7ab;--line:#33373c;--g:#4fd1c0;--a:#e9b25c;--r:#f08a7d;--gb:#12332f;--ab:#3a2c12;--rb:#3d1c18;--nb:#223039;--gold:#d9bf82;--line2:#3d4146;--wm:#ececec;--pkb:#7d6a45;--pkg:rgba(200,169,106,.09);--tile:#1e2124;--lt1:#f6f3ec;--lt2:#ebe5d8;--lk:#2c3e50;--ld:#9e7b38;--lr:#2c3e50}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.45 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums;padding-bottom:env(safe-area-inset-bottom,0px)}
-main{max-width:1240px;margin:0 auto;padding:20px 16px 32px}
+main{max-width:1440px;margin:0 auto;padding:20px 16px 32px}
 h1{font-size:26px;font-weight:600;margin:0 0 2px;letter-spacing:-.01em}
 .sub{color:var(--mut);margin:0 0 14px}
 nav.tabs{display:flex;gap:6px;margin-bottom:14px}
@@ -31,7 +31,7 @@ input,select{background:var(--card);border:1px solid var(--line);border-radius:6
 .pk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--g);border-radius:8px;padding:12px 14px;margin-bottom:14px}
 .pk p{margin:4px 0 0}.pk small{color:var(--mut)}
 .w{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:8px}
-table{border-collapse:collapse;width:100%;min-width:900px}
+table{border-collapse:collapse;width:100%;min-width:1180px}
 th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
 th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--card);min-width:170px}
 th{font-weight:500;color:var(--mut);cursor:pointer;user-select:none;font-size:13px}
@@ -63,7 +63,7 @@ footer{color:var(--mut);font-size:12px;margin-top:14px}
 tr.d .dg{position:sticky;left:0;max-width:min(1080px,calc(100vw - 58px))}
 @keyframes mmspin{to{transform:rotate(360deg)}}.spin{display:inline-block;width:11px;height:11px;margin-right:7px;border:2px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:mmspin 1s linear infinite;vertical-align:-1px}@media (prefers-reduced-motion:reduce){.spin{animation:none}}
 header.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-header.top .in{max-width:1240px;margin:0 auto;padding:10px 16px;min-height:56px;display:flex;align-items:center;gap:18px}
+header.top .in{max-width:1440px;margin:0 auto;padding:10px 16px;min-height:56px;display:flex;align-items:center;gap:18px}
 .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--wm);font:600 19px/1 "Inter",system-ui,sans-serif;letter-spacing:-.035em;margin-right:auto}
 .brand svg{width:32px;height:32px;flex:none}
 .brand b{font-weight:600;color:var(--gold)}
@@ -98,10 +98,11 @@ header.top .in{max-width:1240px;margin:0 auto;padding:10px 16px;min-height:56px;
 .pkb{background:var(--ink);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;font-weight:600;cursor:pointer;margin-top:4px}
 .pkn{color:var(--mut);font-size:12px;margin:12px 0 0}
 @media (max-width:700px){.why{grid-template-columns:1fr}.pk2{padding:16px}.mts{grid-template-columns:1fr 1fr}}
+.nl{color:var(--gold);text-decoration:none;font-weight:600;margin-left:4px}.nl:hover{text-decoration:underline}
 details summary{cursor:pointer}
 .tri{display:inline-flex;gap:10px;font-size:15px;font-weight:600;white-space:nowrap}
-td:first-child{white-space:normal;max-width:230px}
-th,td{padding:9px 8px}
+td:first-child{white-space:normal;max-width:190px}
+th,td{padding:9px 7px}
 </style>
 </head>
 <body>
@@ -132,7 +133,7 @@ th,td{padding:9px 8px}
 </div>
 <div class="w"><table>
 <thead><tr id="hd">
-<th data-k="n">Cég</th><th data-k="mo">Moat</th><th data-k="s">Score</th><th data-k="px">Ár</th><th data-k="to" title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th data-k="up">Upside</th><th data-k="iv">Belső érték</th><th data-k="bb">Buy Below</th><th data-k="pv">Ár vs IV</th><th data-k="vo">Értékelés</th>
+<th data-k="n">Cég</th><th data-k="px">Árfolyam</th><th data-k="tp">Célár</th><th data-k="up">Potenciál</th><th data-k="to" title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th data-k="iv">Belső érték</th><th data-k="bb">Vételi szint</th><th data-k="pv">Ár vs IV</th><th data-k="vo">Értékelés</th><th data-k="mo">Moat</th><th data-k="s">Moat score</th><th data-k="mpa" title="Buffett–Munger / MPA: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30)">MPA score</th><th data-k="gap" title="MPA score − Moat score">Eltérés</th><th data-k="rk">Elemzés</th>
 </tr></thead>
 <tbody id="tb"></tbody>
 </table></div>
@@ -163,6 +164,6 @@ th,td{padding:9px 8px}
 
 <footer id="mod">Árfolyamok: Yahoo Finance napi záróárak, minden reggel frissítve. Trend három időtávon: <b>20 nap</b> (rövid): az ár a 20 napos átlag felett/alatt (±1%); <b>50 nap</b> (közép): Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van, Csökkenő, ha mindkettő fordítva; <b>200 nap</b> (hosszú): Emelkedő, ha az ár és az SMA50 is a 200 napos átlag felett van, Csökkenő, ha mindkettő alatta. A napi ajánlat a közép- és hosszú távú trendet nézi. A célár az elemzői konszenzus, a belső érték és a Buy Below saját Buffett–Munger-becslés. Kutatási eszköz, nem befektetési tanács.</footer>
 </main>
-<script src="app.js?v=20260930c"></script>
+<script src="app.js?v=20260930d"></script>
 </body>
 </html>
