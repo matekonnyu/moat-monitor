@@ -7,7 +7,7 @@ const esc = (x) => String(x ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const num = (x) => x.toLocaleString("hu-HU", { minimumFractionDigits: Math.abs(x) >= 1000 ? 0 : 2, maximumFractionDigits: Math.abs(x) >= 1000 ? 0 : 2 });
 const mon = (x, c) => x == null || !isFinite(x) ? "–" : c == "USD" ? "$" + num(x) : c == "EUR" ? num(x) + " €" : c == "HUF" ? num(x) + " Ft" : c == "GBP" ? "£" + num(x) : num(x) + " " + (c || "");
 const pct = (x) => x == null || !isFinite(x) ? "–" : (x > 0 ? "+" : "") + x.toFixed(1).replace(".", ",") + "%";
-const K = { Wide: "g", Narrow: "a", None: "r", Undervalued: "g", Fair: "a", Expensive: "r", Strong: "g", Adequate: "a", Weak: "r", Low: "g", Medium: "a", High: "r", "Emelkedő": "g", "Oldalazó": "a", "Csökkenő": "r" };
+const K = { Positive: "g", Negative: "r", "Very High": "r", Extreme: "r", Wide: "g", Narrow: "a", None: "r", Undervalued: "g", Fair: "a", Expensive: "r", Strong: "g", Adequate: "a", Weak: "r", Low: "g", Medium: "a", High: "r", "Emelkedő": "g", "Oldalazó": "a", "Csökkenő": "r" };
 const chip = (t) => t ? `<span class="chip ${K[t] || ""}">${esc(t)}</span>` : `<span class="chip">nincs adat</span>`;
 const PL = ["Immateriális javak", "Váltási költség", "Hálózati hatás", "Költségelőny", "Hatékony méret"];
 
@@ -80,14 +80,20 @@ const ARW = { "Emelkedő": "↑", "Oldalazó": "→", "Csökkenő": "↓" };
 const tri = (r) => r.trM || r.trS || r.trL ? `<span class="tri">${[["20 nap", r.trS], ["50 nap", r.trM], ["200 nap", r.trL]].map(([l, t]) => `<span class="${K[t] || ""}" title="${l}: ${t || "nincs adat"}" aria-label="${l}: ${t || "nincs adat"}">${ARW[t] || "–"}</span>`).join(" ")}</span>` : chip(null);
 const trTxt = (r) => `rövid ${(r.trS || "–").toLowerCase()}, közép ${(r.trM || "–").toLowerCase()}, hosszú ${(r.trL || "–").toLowerCase()}`;
 function valuation(pv) { return pv < -10 ? "Undervalued" : pv <= 15 ? "Fair" : "Expensive"; }
+// Morningstar-csillag: az 5 és 1 csillag határa a Morningstar bizonytalansági besorolásából (Uncertainty Rating) jön;
+// a 4/3/2 csillag sávhatára a köztes pontokon (saját interpoláció).
+const UD = { Low: [0.20, 0.25], Medium: [0.30, 0.35], High: [0.40, 0.55], "Very High": [0.50, 0.75], Extreme: [0.75, 3.00] };
+function stars(px, iv, u) { const d = UD[u]; if (!d || !(px > 0) || !(iv > 0)) return null; const x = px / iv;
+  return x <= 1 - d[0] ? 5 : x <= 1 - d[0] / 2 ? 4 : x < 1 + d[1] / 2 ? 3 : x < 1 + d[1] ? 2 : 1; }
 function derive(o) {
   const mk = o.mk || {}, px = mk.p ?? o.pr;
   const pv = o.iv > 0 && px > 0 ? (px / o.iv - 1) * 100 : null;
   const up = o.tp > 0 && px > 0 ? (o.tp / px - 1) * 100 : null;
-  const v = pv == null ? o.v : valuation(pv);
+  const st = stars(px, o.iv, o.u);
+  const v = st ? (st >= 4 ? "Undervalued" : st == 3 ? "Fair" : "Expensive") : pv == null ? o.v : valuation(pv);
   const mpa = o.m ? ({ Wide: 40, Narrow: 25 }[o.m] ?? 5) + ({ Strong: 30, Adequate: 18, Weak: 5 }[o.f] ?? 5) + (pv == null ? 0 : o.bb > 0 && px <= o.bb ? 30 : pv < 0 ? 22 : pv <= 10 ? 15 : pv <= 30 ? 8 : 0) : null;
   const rw = (String(o.r || "").match(/^\s*(Buy|Accumulate|Hold|Avoid)/i) || [])[1] || (/\bhold\b/i.test(o.r || "") ? "Hold" : "");
-  return { ...o, mk, px, pv, up, v, mpa, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: { Undervalued: 3, Fair: 2, Expensive: 1 }[v] || 0, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
+  return { ...o, mk, px, pv, up, v, mpa, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: st ?? ({ Undervalued: 4, Fair: 3, Expensive: 2 }[v] || 0), st, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
 }
 const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</span><div class="tr"><i style="width:${v}%"></i></div><span>${v}</span></div>`).join("");
 
@@ -101,7 +107,7 @@ function detail(r) {
 <div class="k"><span>SMA20 / SMA50 / SMA200</span><span>${mon(mk.sma20, r.cur)} / ${mon(mk.sma50, r.cur)} / ${mon(mk.sma200, r.cur)}</span></div>
 <div class="k"><span>EMA20 / EMA50</span><span>${mon(mk.ema20, r.cur)} / ${mon(mk.ema50, r.cur)}</span></div>
 <div class="k"><span>Célár (konszenzus)</span><span>${mon(r.tp, r.cur)}</span></div>
-<div class="k"><span>Bizonyosság</span>${chip(r.c)}</div><div class="k"><span>AI-kockázat</span>${chip(r.ai)}</div><div class="k"><span>Pénzügyi erő</span>${chip(r.f)}</div>
+<div class="k"><span>Moat trend</span>${chip(r.mt)}</div><div class="k"><span>Bizonytalanság (Uncertainty)</span>${chip(r.u)}</div><div class="k"><span>Bizonyosság</span>${chip(r.c)}</div><div class="k"><span>AI-kockázat</span>${chip(r.ai)}</div><div class="k"><span>Pénzügyi erő</span>${chip(r.f)}</div>
 <div class="k"><span>Margin of Safety</span><span>${r.mos ?? "–"}%</span></div>
 <div class="k"><span>Szektor</span><span>${esc(r.sec)}</span></div><div class="k"><span>Elemzés dátuma</span><span>${esc(r.d || "–")}</span></div>
 <div class="k"><span>Árfolyamgrafikon</span><a class="g" href="${esc(r.ch || "https://finance.yahoo.com/chart/" + r.y)}" target="_blank" rel="noopener">${esc(r.y || r.t)}</a></div>
@@ -117,7 +123,7 @@ function draw() {
   const sg = (x) => x == null ? "–" : (x > 0 ? "+" : "") + x;
   $("#tb").innerHTML = a.map((r) => `<tr class="row" tabindex="0" data-id="${esc(r.id)}"><td><b>${esc(r.n)}</b><small>${esc(r.t)}, ${esc(r.l)}</small></td>
 <td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : "pillanatkép"}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td><td>${tri(r)}</td>
-<td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv == null ? "" : r.pv < 0 ? "g" : r.pv > 15 ? "r" : ""}">${pct(r.pv)}</td><td>${r.v ? `<span class="chip ${K[r.v] || ""}">${VH[r.v] || esc(r.v)}</span>` : "–"}</td>
+<td>${mon(r.iv, r.cur)}</td><td>${mon(r.bb, r.cur)}</td><td class="${r.pv == null ? "" : r.pv < 0 ? "g" : r.pv > 15 ? "r" : ""}">${pct(r.pv)}</td><td>${r.st ? `<span class="stars ${K[r.v] || ""}" title="Morningstar-módszer: ${r.st} csillag, bizonytalanság: ${esc(r.u)}">${"★".repeat(r.st)}<i>${"★".repeat(5 - r.st)}</i></span><small>${VH[r.v]}</small>` : r.v ? `<span class="chip ${K[r.v] || ""}">${VH[r.v] || esc(r.v)}</span>` : "–"}</td>
 <td>${chip(r.m)}</td><td><span class="sc"><span class="tr"><i style="width:${r.s}%"></i></span>${r.s ?? "–"}</span></td><td><b>${r.mpa ?? "–"}</b></td><td class="${r.gap == null ? "" : r.gap > 0 ? "g" : r.gap < 0 ? "r" : ""}">${sg(r.gap)}</td>
 <td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}</td></tr>${open.has(r.id) ? detail(r) : ""}`).join("");
   document.querySelectorAll("#hd th").forEach((h) => { const on = h.dataset.k == sk; h.classList.toggle("on", on); h.textContent = h.textContent.replace(/ [▲▼]$/, "") + (on ? (sd < 0 ? " ▼" : " ▲") : ""); });

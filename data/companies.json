@@ -1,7 +1,7 @@
 [
  {
   "ai": "Medium",
-  "bb": 164.8,
+  "bb": 144.2,
   "c": "High",
   "ch": "https://finance.yahoo.com/chart/AAPL",
   "cur": "USD",
@@ -25,7 +25,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "Apple Inc.",
   "p": [
    92,
@@ -35,7 +35,7 @@
    40
   ],
   "pr": 336.14,
-  "r": "Avoid: a széles moat és a rekord Q3 FY2026 ellenére a 336,14 USD-s ár kb. 63%-kal a konzervatív ~206 USD-s belső érték és a ~165 USD-s vételi ár felett van, ~38x TTM P/E mellett.",
+  "r": "Avoid: a széles és stabil moat ellenére a 336,14 USD-s ár kb. 63%-kal a ~206 USD-s fair value felett van (1 csillagos zóna), messze a közepes bizonytalansághoz tartozó ~144 USD-s vételi szinttől.",
   "risks": "Az App Store-díjakat és a Google keresési megállapodást érintő szabályozási/antitröszt döntések a Services árbevételt ronthatják; az AI-asszisztensek átvehetik a platformkontrollt, gyengítve az iPhone ökoszisztéma-előnyét; Kína-kitettség (kereslet, gyártás, geopolitika, vámok); emelkedő memóriaköltségek és a CEO-váltás (Cook → Ternus) végrehajtási kockázata",
   "s": 84,
   "sec": "Technology - Consumer Electronics",
@@ -49,11 +49,13 @@
    "MacRumors Q3 2026 összefoglaló",
    "StockAnalysis statisztika 2026-09",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Low",
-  "bb": 189,
+  "bb": 135,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/AMD",
   "cur": "USD",
@@ -77,7 +79,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 30,
+  "mos": 50,
   "n": "Advanced Micro Devices",
   "p": [
    60,
@@ -87,7 +89,7 @@
    50
   ],
   "pr": 606.33,
-  "r": "Avoid: a szűk moat és a gyors data center-növekedés ellenére a 606,33 USD-s ár (~80x 2026-os várható EPS) több mint kétszerese a ~270 USD-s konzervatív belső értéknek.",
+  "r": "Avoid: a javuló szűk moat és a gyors data center-növekedés ellenére a 606,33 USD-s ár több mint kétszerese a ~270 USD-s fair value-nak és négyszerese a nagyon magas bizonytalanság miatti 135 USD-s vételi szintnek.",
   "risks": "Az Instinct GPU-k nem törik meg az NVIDIA CUDA-dominanciáját; hiperskálázói saját chipek és ARM-alapú szerverprocesszorok; AI-capex ciklus fordulása; TSMC-függőség és exportkorlátozások",
   "s": 62,
   "sec": "Semiconductors - CPUs & AI Accelerators",
@@ -101,11 +103,13 @@
    "AMD Q4 & FY2025 press release (2026-02-03)",
    "AMD Q2 2026 earnings slides",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Positive",
+  "u": "Very High"
  },
  {
   "ai": "Medium",
-  "bb": 168,
+  "bb": 147,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/AMZN",
   "cur": "USD",
@@ -129,7 +133,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "Amazon.com, Inc.",
   "p": [
    80,
@@ -139,7 +143,7 @@
    70
   ],
   "pr": 251.34,
-  "r": "Hold: a széles moat (AWS +37%, logisztikai skála, Prime) vitathatatlan, de a 251,34 USD-s ár kb. 20%-kal a konzervatív ~210 USD-s belső érték és jóval a 168 USD-s vételi ár felett van, így új pénzzel nem érdemes most vásárolni.",
+  "r": "Hold: a széles moat (AWS +37%, logisztikai skála, Prime, hirdetés) tartós, de a 251,34 USD-s ár kb. 20%-kal a ~210 USD-s fair value és jóval a közepes bizonytalanság miatti 147 USD-s vételi szint felett van, így új pénzzel most nem érdemes vásárolni.",
   "risks": "A 220 Mrd USD-s 2026-os capex és a negatív TTM FCF (kb. -8–12 Mrd USD) alacsony AI-megtérülés esetén tartósan rontja a tőkehozamot; AWS piaci részesedésvesztés a Microsoft Azure és Google Cloud javára; AI-ügynökök általi vásárlás megkerülheti az Amazon keresési/hirdetési ökoszisztémáját; szabályozói és trösztellenes (FTC, EU DMA) lépések",
   "s": 85,
   "sec": "Internet Retail / Cloud Computing",
@@ -153,11 +157,13 @@
    "TradingKey Q2 2026 elemzés",
    "StockAnalysis statisztika 2026-09",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Low",
-  "bb": 1000,
+  "bb": 875,
   "c": "High",
   "ch": "https://finance.yahoo.com/chart/ASML",
   "cur": "USD",
@@ -181,7 +187,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "ASML Holding N.V. (ADR)",
   "p": [
    92,
@@ -191,7 +197,7 @@
    92
   ],
   "pr": 1815.54,
-  "r": "Avoid: az EUV-monopólium világelső moatot ad, de az 1815,54 USD-s ár ~45%-kal a konzervatív ~1250 USD-s belső érték felett van, a 1000 USD-s vételi szint messze van.",
+  "r": "Avoid: az EUV-monopólium világelső, stabil moatot ad, de az 1815,54 USD-s ár ~45%-kal a ~1250 USD-s fair value felett van, a 30%-os diszkonttal számolt 875 USD-s vételi szint pedig messze van.",
   "risks": "A félvezető-capex ciklus (AI/HBM beruházások) visszaesése 2027–2028-ban; holland/amerikai exportkorlátozások szigorodása Kínára (a nettó árbevétel ~20%-a); a High-NA EUV lassabb elterjedése vagy vevőkoncentráció (TSMC, Samsung, Intel); tartósan magas értékeltség (~40x+ előretekintő P/E) ciklikus üzletre",
   "s": 93,
   "sec": "Technology - Semiconductor Equipment",
@@ -205,11 +211,13 @@
    "ASML Q2 2026 earnings call átirat (Motley Fool)",
    "StockAnalysis konszenzus 2026-09",
    "Trading Economics EUR/USD 2026-09-30"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Low",
-  "bb": 250.4,
+  "bb": 187.8,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/AVGO",
   "cur": "USD",
@@ -233,7 +241,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 40,
   "n": "Broadcom Inc.",
   "p": [
    80,
@@ -243,7 +251,7 @@
    75
   ],
   "pr": 353.08,
-  "r": "Hold: a széles moat (egyedi AI ASIC-ek, hálózati chipek, VMware) és a kiváló FCF-generálás mellett a 353,08 USD-s ár kb. 13%-kal a ~313 USD-s konzervatív belső érték és jóval a 250 USD-s vételi ár felett van.",
+  "r": "Hold: az erősödő széles moat (egyedi AI ASIC-ek, hálózati chipek, VMware) mellett a 353,08 USD-s ár kb. 13%-kal a ~313 USD-s fair value felett és jóval a magas bizonytalanság miatti 187,8 USD-s vételi szint felett van.",
   "risks": "Koncentrált hiperskálázói ügyfélkör (Google, Meta, OpenAI) – egy nagy XPU-program elvesztése; AI-capex ciklus fordulása; VMware-ügyfelek elvándorlása az árazás miatt; magas adósság (59,4 Mrd USD) és jelentős SBC",
   "s": 82,
   "sec": "Semiconductors - Custom AI ASICs & Infrastructure Software",
@@ -257,11 +265,13 @@
    "Broadcom Q4 & FY2025 press release",
    "Broadcom Q3 FY2026 earnings call",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Positive",
+  "u": "High"
  },
  {
   "ai": "High",
-  "bb": 159.25,
+  "bb": 147,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/BKNG",
   "cur": "USD",
@@ -285,7 +295,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 35,
+  "mos": 40,
   "n": "Booking Holdings Inc.",
   "p": [
    75,
@@ -295,7 +305,7 @@
    40
   ],
   "pr": 162.84,
-  "r": "Accumulate: a 2026 áprilisi 25:1 split utáni 162,84 USD-s ár jóval a ~245 USD-s konzervatív belső érték alatt és alig a 159 USD-s vételi szint felett van, de az AI-ágensek (pl. Meta Muse) okozta disintermediációs kockázat miatt csak fokozatos vétel indokolt.",
+  "r": "Accumulate: a 162,84 USD-s ár ~34%-kal a ~245 USD-s fair value alatt van, de a magas (AI-ágens) bizonytalanság miatti 147 USD-s vételi szint felett, ezért csak fokozatos, kis pozícióépítés indokolt.",
   "risks": "AI-ágensek (Meta Muse, OpenAI, Google) megkerülhetik az OTA-kat és elvehetik az ügyfélkapcsolatot; a Google-függő marketing költségeinek emelkedése; utazási kereslet visszaesése recesszió vagy geopolitikai sokk esetén; EU DMA/szabályozói lépések a paritásklauzulák ellen, negatív saját tőke mellett növekvő eladósodottság",
   "s": 72,
   "sec": "Consumer Cyclical - Travel Services (Online Travel Agency)",
@@ -311,11 +321,13 @@
    "StockAnalysis pénzügyi adatok TTM 2026-06",
    "StockAnalysis konszenzus 2026-09",
    "Motley Fool 2026-09-23 (Meta Muse)"
-  ]
+  ],
+  "mt": "Negative",
+  "u": "High"
  },
  {
   "ai": "Low",
-  "bb": 22.5,
+  "bb": 21,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/DTE.DE",
   "cur": "EUR",
@@ -339,7 +351,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 25,
+  "mos": 30,
   "n": "Deutsche Telekom AG",
   "p": [
    55,
@@ -349,7 +361,7 @@
    72
   ],
   "pr": 26.11,
-  "r": "Hold: a szűk moat (T-Mobile US, európai hálózati skála) és a 26,11 EUR-os ár a ~30 EUR-os konzervatív belső érték alatt van, de még nem éri el a 22,5 EUR-os vételi szintet.",
+  "r": "Hold: a szűk moat (T-Mobile US, európai hálózati skála) mellett a 26,11 EUR-os ár ~13%-kal a ~30 EUR-os fair value alatt van, de a magas tőkeáttétel miatti 30%-os diszkonttal számolt 21 EUR-os vételi szintet még nem éri el.",
   "risks": "Magas nettó adósság (138,4 Mrd EUR lízinggel, H1 2026); az amerikai T-Mobile US versenyének élesedése és a kisebbségi érdekeltség miatt a csoport-FCF-nek csak egy része jut a DTE-részvényeseknek; európai szabályozás és spektrumköltségek; a T-Mobile US árfolyamától való függés",
   "s": 62,
   "sec": "Telecom Services",
@@ -363,11 +375,13 @@
    "Telekom IR konszenzus 2026-06",
    "ad-hoc-news analyst konszenzus 2026-09",
    "Deutsche Telekom Q2 2026 earnings call"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "High",
-  "bb": 282.4,
+  "bb": 211.8,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/GOOGL",
   "cur": "USD",
@@ -391,7 +405,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 40,
   "n": "Alphabet Inc. (Class A)",
   "p": [
    88,
@@ -401,7 +415,7 @@
    60
   ],
   "pr": 351.35,
-  "r": "Hold: a széles moat és a gyorsuló Cloud-növekedés mellett a 351,35 USD-s ár nagyjából a konzervatív ~353 USD-s belső értéken áll, de a ~282 USD-s vételi ár felett, így nincs biztonsági sáv.",
+  "r": "Hold: a széles moat mellett a 351,35 USD-s ár gyakorlatilag a ~353 USD-s fair value-n áll (3 csillagos zóna), de a magas bizonytalanság (AI-keresési kockázat, rekord capex) miatt a vételi szint csak ~212 USD.",
   "risks": "A generatív AI-chatbotok elszívhatják a keresési forgalmat és hirdetési bevételt; a 180–190 Mrd USD-s 2026-os capex miatt a FCF negatívba fordult (Q2 2026: -5,9 Mrd USD) és részvénykibocsátás történt (~49,6 Mrd USD), a megtérülés bizonytalan; antitröszt-ítéletek (keresés, ad tech) és az Apple-megállapodás korlátozása; a TTM EPS-t (19,93 USD) egyszeri befektetési nyereség torzítja",
   "s": 82,
   "sec": "Communication Services - Internet Content & Information",
@@ -415,11 +429,13 @@
    "Search Engine Journal Q2 2026 FCF",
    "StockAnalysis statisztika 2026-09",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "High"
  },
  {
   "ai": "Low",
-  "bb": 62.9,
+  "bb": 59.2,
   "c": "High",
   "ch": "https://finance.yahoo.com/chart/KO",
   "cur": "USD",
@@ -443,7 +459,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 15,
+  "mos": 20,
   "n": "The Coca-Cola Company",
   "p": [
    95,
@@ -453,7 +469,7 @@
    65
   ],
   "pr": 86.84,
-  "r": "Hold: a világ egyik legerősebb márkájára épülő széles moat és a 2,12 USD-s osztalék vonzó, de a 86,84 USD-s ár (~26x TTM P/E) kb. 17%-kal a konzervatív ~74 USD-s belső érték felett van, így a 62,9 USD-s vételi ár messze van.",
+  "r": "Hold: a világ egyik legerősebb márkájára épülő széles, stabil moat és az alacsony bizonytalanság kiemelkedő, de a 86,84 USD-s ár (~26x TTM P/E) kb. 17%-kal a ~74 USD-s fair value felett van, messze az 59,2 USD-s vételi szinttől.",
   "risks": "GLP-1 fogyókúrás szerek és az egészségtudatosság miatt csökkenő cukros üdítőfogyasztás; tartósan erős dollár és feltörekvő piaci devizagyengülés; cukor-/csomagolási adók és szabályozás; a folyamatban lévő amerikai adóvita (IRS transzferár-ügy) jelentős egyszeri kifizetéssel járhat",
   "s": 86,
   "sec": "Beverages - Non-Alcoholic",
@@ -467,11 +483,13 @@
    "StockAnalysis statisztika 2026-09",
    "StockAnalysis konszenzus 2026-09",
    "Investing.com Q2 2026 call transcript"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Low"
  },
  {
   "ai": "Low",
-  "bb": 504,
+  "bb": 441,
   "c": "High",
   "ch": "https://finance.yahoo.com/chart/MA",
   "cur": "USD",
@@ -495,7 +513,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "Mastercard Incorporated",
   "p": [
    88,
@@ -505,7 +523,7 @@
    85
   ],
   "pr": 554.53,
-  "r": "Hold: a széles, hálózati hatáson alapuló moat kiemelkedő, de az 554,53 USD-s ár a ~630 USD-s konzervatív belső érték és az 504 USD-s vételi szint között van, így csak 504 USD alatt érdemes jelentősen venni.",
+  "r": "Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.",
   "risks": "Szabályozói nyomás az interchange díjakra (Credit Card Competition Act, EU/UK díjplafonok) és folyamatban lévő interchange perek; stabilcoinok, A2A/azonnali fizetési rendszerek (Pix, UPI, FedNow) térnyerése; a határon átnyúló forgalom lassulása gazdasági vagy geopolitikai sokk esetén; ágens-alapú (AI) kereskedelemben a tokenizációs szerep elvesztése",
   "s": 92,
   "sec": "Financial Services - Payment Networks",
@@ -519,11 +537,13 @@
    "Mastercard 10-K FY2025",
    "StockAnalysis pénzügyi adatok TTM 2026-06",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Medium",
-  "bb": 480,
+  "bb": 360,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/META",
   "cur": "USD",
@@ -547,7 +567,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 40,
   "n": "Meta Platforms, Inc.",
   "p": [
    70,
@@ -557,7 +577,7 @@
    40
   ],
   "pr": 735.9,
-  "r": "Hold: a hálózati hatásra épülő széles moat erős és a bevétel 28%-kal nő, de a 735,90 USD-s ár ~23%-kal a ~600 USD-s konzervatív belső érték felett van, miközben a 130–145 Mrd USD-s capex szinte nullára nyomta az FCF-et (2Q26: 0,78 Mrd USD).",
+  "r": "Hold: a hálózati hatásra épülő széles moat erős és a bevétel 28%-kal nő, de a 735,90 USD-s ár ~23%-kal a ~600 USD-s fair value felett van, a capex miatti magas bizonytalanság (40%-os diszkont) mellett a vételi szint csak 360 USD.",
   "risks": "Az AI-capex (2026: 130–145 Mrd USD) nem térül meg, tartósan alacsony FCF és felfüggesztett buyback; szabályozói kockázat (EU DMA, amerikai trösztperek, gyermekvédelmi perek); a Reality Labs veszteségei; AI-asszisztensek/új platformok elszívják a figyelmet és a hirdetési keretet",
   "s": 84,
   "sec": "Communication Services - Internet Content & Information",
@@ -570,11 +590,13 @@
    "Meta Q2 2026 8-K / sajtóközlemény (2026-07-29)",
    "CNBC Meta Q2 2026 (2026-07-29)",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "High"
  },
  {
   "ai": "Low",
-  "bb": 1925,
+  "bb": 2310,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/MOL.BD",
   "cur": "HUF",
@@ -598,7 +620,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 50,
+  "mos": 40,
   "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
   "p": [
    25,
@@ -608,7 +630,7 @@
    50
   ],
   "pr": 4974,
-  "r": "Avoid: moat nélküli, erősen ciklikus olajtársaságként a 4 974 Ft-os árfolyam a konzervatív ~3 850 Ft-os belső érték és az 1 925 Ft-os vételi szint felett van, a csúcs-finomítói marzsok beárazásával.",
+  "r": "Avoid: moat nélküli, erősen ciklikus olajtársaságként a 4 974 Ft-os árfolyam jóval a ~3 850 Ft-os fair value és a magas bizonytalanság miatti 2 310 Ft-os vételi szint felett van, a csúcs-finomítói marzsok beárazásával.",
   "risks": "Finomítói és petrolkémiai marzsok normalizálódása a 2026-os geopolitikai csúcs után; orosz kőolaj-ellátás, szankciók és a Barátság-vezeték kockázata; kormányzati beavatkozás (árrés-, árstop, különadók); üzemzavarok (Steam Cracker 1 2027-ig áll, AV3 tűz)",
   "s": 38,
   "sec": "Oil & Gas Integrated",
@@ -622,11 +644,13 @@
    "MOL Q2 2026 eredmény és earnings call (2026-08)",
    "Equilor MOL 2Q26 review (konszenzus 2026-08)",
    "VG – Concorde MOL célár és osztalék 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "High"
  },
  {
   "ai": "Low",
-  "bb": 399.2,
+  "bb": 349.3,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/MSFT",
   "cur": "USD",
@@ -650,7 +674,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "Microsoft Corporation",
   "p": [
    85,
@@ -660,7 +684,7 @@
    65
   ],
   "pr": 518.01,
-  "r": "Hold: a nagyon széles moat mellett az 518,01 USD-s ár nagyjából a konzervatív ~499 USD-s belső értéknél van, de jóval a ~399 USD-s vételi ár felett, így új vételre nincs biztonsági sáv.",
+  "r": "Hold: a széles, stabil moat mellett az 518,01 USD-s ár kb. 4%-kal a ~499 USD-s fair value felett, közel a méltányos értékhez van (3 csillagos zóna), de messze a ~349 USD-s vételi szint felett.",
   "risks": "A rekordméretű AI-capex (FY2026 ~116 Mrd USD) nem térül meg megfelelően, tartósan nyomva a FCF-et (FY2026 67 Mrd USD, -6,5%); az OpenAI-függőség és -kapcsolat változása; Azure-verseny (AWS, Google Cloud) és árverseny az AI-infrastruktúrában; antitröszt- és EU-szabályozási lépések",
   "s": 90,
   "sec": "Technology - Software Infrastructure",
@@ -674,7 +698,9 @@
    "StockTitan MSFT FY2026 pénzügyek",
    "StockAnalysis statisztika 2026-09",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Low",
@@ -712,7 +738,7 @@
    70
   ],
   "pr": 2540,
-  "r": "Hold: a szűk moatú, oligopol piacon működő, stabil FCF-et termelő Telekom 2 540 Ft-os árfolyama nagyjából a konzervatív ~2 500 Ft-os belső értéken áll, jóval az 1 750 Ft-os vételi szint felett.",
+  "r": "Hold: a szűk moatú, oligopol piacon stabil FCF-et termelő Telekom 2 540 Ft-os árfolyama nagyjából a ~2 500 Ft-os fair value-n áll, jóval az 1 750 Ft-os vételi szint felett.",
   "risks": "Magyar különadók és árszabályozás szigorodása; erősödő verseny az állami hátterű 4iG/One csoporttól Magyarországon és Észak-Macedóniában; növekvő eladósodottság (nettó adósság/EBITDA 0,86x) a nagy osztalék és visszavásárlás mellett; technológiai és spektrumbefektetési igények",
   "s": 58,
   "sec": "Telecom Services",
@@ -726,11 +752,13 @@
    "MBH Befektetési Bank elemzés 2026-08",
    "VG – HSBC célár és LSEG konszenzus 2026-09",
    "Pénzcentrum osztalékok 2026-04"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Low",
-  "bb": 130.4,
+  "bb": 81.5,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/NVDA",
   "cur": "USD",
@@ -754,7 +782,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 50,
   "n": "NVIDIA Corporation",
   "p": [
    85,
@@ -764,7 +792,7 @@
    55
   ],
   "pr": 230.8,
-  "r": "Hold: a széles moat (CUDA-ökoszisztéma, full-stack platform) vitathatatlan, de a 230,80 USD-s ár kb. 40%-kal a konzervatív ~163 USD-s belső érték és jóval a 130 USD-s vételi ár felett van, így új pozícióra nem ad biztonsági sávot.",
+  "r": "Hold: a széles moat (CUDA-ökoszisztéma, full-stack platform, tartósan ROIC > WACC) vitathatatlan, de a 230,80 USD-s ár kb. 40%-kal a ~163 USD-s fair value felett és messze a nagyon magas bizonytalanság miatti 81,5 USD-s vételi szint felett van, így új pozícióra nincs biztonsági sáv.",
   "risks": "Ciklikus AI-capex visszaesés a hiperskálázóknál; saját chipek (TPU, Trainium, MTIA) és AMD versenye nyomja a margint; munkatőke-romlás (vevőkövetelés 63 Mrd USD, DSO 60 nap, 279 Mrd USD beszerzési kötelezettség); exportkorlátozások Kína felé",
   "s": 88,
   "sec": "Semiconductors - AI Accelerators",
@@ -778,11 +806,13 @@
    "NVIDIA 10-K FY2026",
    "Yahoo Finance FCF elemzés 2026-08",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Very High"
  },
  {
   "ai": "Low",
-  "bb": 0.4,
+  "bb": 0.2,
   "c": "Low",
   "ch": "https://finance.yahoo.com/chart/OCGN",
   "cur": "USD",
@@ -806,7 +836,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 50,
+  "mos": 75,
   "n": "Ocugen, Inc.",
   "p": [
    30,
@@ -816,7 +846,7 @@
    10
   ],
   "pr": 1.02,
-  "r": "Avoid: moat nélküli, bináris kimenetelű génterápiás biotech, amelynek 1,02 USD-s ára a ~0,80 USD-s konzervatív belső érték felett és messze a 0,40 USD-s vételi szint felett van.",
+  "r": "Avoid: moat nélküli, bináris kimenetelű génterápiás biotech, amelynek 1,02 USD-s ára a ~0,80 USD-s konzervatív fair value felett és messze a 75%-os diszkontú 0,20 USD-s vételi szint felett van.",
   "risks": "Az OCU400 fázis 3 (topline 2027 Q1) vagy az OCU410ST (2027 Q2) sikertelensége; folyamatos veszteség (Q2 2026: -24,9 M USD) és további hígítás, 130 M USD átváltható kötvény; FDA-engedélyezési és gyártási kockázat; nincs érdemi bevétel (Q2 2026: 1,5 M USD)",
   "s": 14,
   "sec": "Biotechnology",
@@ -830,11 +860,13 @@
    "Ocugen 10-Q Q2 2026 (SEC)",
    "WallStreetZen konszenzus 2026-09",
    "Ocugen Q2 2026 earnings call"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Extreme"
  },
  {
   "ai": "Medium",
-  "bb": 28700,
+  "bb": 24600,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/OTP.BD",
   "cur": "HUF",
@@ -858,7 +890,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 30,
+  "mos": 40,
   "n": "OTP Bank Nyrt.",
   "p": [
    62,
@@ -868,7 +900,7 @@
    55
   ],
   "pr": 42700,
-  "r": "Hold: a szűk moatú, magas ROE-jú bank 42 700 Ft-os árfolyama a konzervatív ~41 000 Ft-os belső érték közelében, jóval a 28 700 Ft-os vételi szint felett van, így új vételre nincs biztonsági sáv.",
+  "r": "Hold: a szűk moatú (tartósan a tőkeköltség feletti ROE-t hozó) bank 42 700 Ft-os árfolyama a ~41 000 Ft-os becsült fair value közelében, de messze a magas bizonytalanság miatti 24 600 Ft-os vételi szint felett van, így új vételre nincs biztonsági sáv.",
   "risks": "Orosz leánybank kockázata (2025-ben a profit ~18%-a, osztalék-hazautalás blokkolva, kivonulás csak nagy veszteséggel); magyar különadók, kamatstop és szektorális beavatkozások; a ~2 Mrd EUR-s Luminor-akvizíció integrációs és tőke-kockázata; erős forint és kamatcsökkentés miatti marzs- és profiterózió (Q2 2026 korrigált profit -13% éves alapon)",
   "s": 62,
   "sec": "Banks - Regional (CEE)",
@@ -882,7 +914,9 @@
    "OTP Q2 2026 eredmény (novekedes.hu, 2026-08)",
    "VG – Luminor célárak és LSEG konszenzus 2026-07",
    "Pénzcentrum – OTP orosz kivonulás 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "High"
  },
  {
   "ai": "Low",
@@ -920,7 +954,7 @@
    45
   ],
   "pr": 12330,
-  "r": "Hold: a szűk moat (Vraylar-jogdíj, nőgyógyászati portfólió) és ~10x P/E vonzó, de a 12 330 HUF-os ár közel van a konzervatív ~13 500 HUF-os belső értékhez és jóval a 9 450 HUF-os vételi szint felett.",
+  "r": "Hold: a szűk moat (Vraylar-jogdíj, nőgyógyászati portfólió) mellett a 12 330 HUF-os ár csak ~9%-kal van a ~13 500 HUF-os fair value alatt, messze a 9 450 HUF-os (30%-os diszkontú) vételi szint felett.",
   "risks": "Vraylar amerikai szabadalmi lejárata (~2029) és a jogdíjbevétel kiesése; tartósan erős forint (H1 2026-ban ~9 pp árfolyam-ellenszél, 27 Mrd HUF árfolyamveszteség); a Vraylar-utód RGH-932 és a pipeline kudarca; magyar különadók és gyógyszerár-szabályozás",
   "s": 58,
   "sec": "Drug Manufacturers - Specialty & Generic",
@@ -935,11 +969,13 @@
    "Erste Market elemzés 2026-09 (célár 14 945 HUF)",
    "Stocksguide konszenzus 2026-09",
    "Pénzcentrum osztalékkonszenzus 2026-03"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "ai": "Medium",
-  "bb": 27,
+  "bb": 22.5,
   "c": "Low",
   "ch": "https://finance.yahoo.com/chart/SPCX",
   "cur": "USD",
@@ -963,7 +999,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 40,
+  "mos": 50,
   "n": "Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX)",
   "p": [
    60,
@@ -973,7 +1009,7 @@
    72
   ],
   "pr": 151.54,
-  "r": "Avoid: az újrafelhasználható rakéták költségelőnye és a Starlink skálája valódi moat, de a 151,54 USD-s ár (~2 000 Mrd USD piaci érték, ~45x 2026-os árbevétel) sokszorosa a konzervatív ~45 USD-s belső értéknek, miközben az FCF erősen negatív.",
+  "r": "Avoid: az újrafelhasználható rakéták költségelőnye és a gyorsuló Starlink-skála erősödő szűk moatot ad, de a 151,54 USD-s ár (~2 000 Mrd USD piaci érték) többszöröse a ~45 USD-s fair value-nak és a nagyon magas bizonytalanság miatti 22,5 USD-s vételi szintnek, miközben az FCF erősen negatív.",
   "risks": "Óriási AI-capex (H1 2026: 28,5 Mrd USD, FCF kb. -31 Mrd USD) és a xAI-szegmens megtérülésének bizonytalansága; kulcsember-kockázat és Elon Musk érdekkonfliktusai, kettős részvényosztályú irányítás; Starlink-verseny (Amazon Kuiper, kínai konstellációk) és spektrum-/geopolitikai szabályozás; a Starship-program csúszása vagy balesete",
   "s": 64,
   "sec": "Aerospace & Defense / Satellite Communications / AI",
@@ -987,11 +1023,13 @@
    "CNBC SpaceX Q2 2026 live updates",
    "StockAnalysis konszenzus 2026-09",
    "Yahoo Finance SPCX 2026-09"
-  ]
+  ],
+  "mt": "Positive",
+  "u": "Very High"
  },
  {
   "ai": "Low",
-  "bb": 320,
+  "bb": 280,
   "c": "Medium",
   "ch": "https://finance.yahoo.com/chart/TSM",
   "cur": "USD",
@@ -1015,7 +1053,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
   "p": [
    75,
@@ -1025,7 +1063,7 @@
    80
   ],
   "pr": 459.53,
-  "r": "Hold: a széles moat és a rekordnövekedés (2Q26 nettó profit +77%) kiváló, de a 459,53 USD-s ár kb. 15%-kal a konzervatív ~400 USD-s belső érték felett van, így nincs biztonsági sáv – vásárlás csak 320 USD alatt.",
+  "r": "Hold: a széles és erősödő moat (2 nm-es vezető szerep, 67,7%-os bruttó marzs) kiváló, de a 459,53 USD-s ár kb. 15%-kal a ~400 USD-s fair value felett van, a Morningstar-stílusú 30%-os diszkonttal számolt 280 USD-s vételi szinttől pedig messze.",
   "risks": "Tajvani geopolitikai kockázat (Kína–Tajvan konfliktus, blokád); az AI-capex ciklus megfordulása és túlkapacitás a 60–64 Mrd USD-s 2026-os capex után; amerikai vámok/exportkorlátozások és a tengerentúli gyárak alacsonyabb marzsa; Intel/Samsung előrelépés a 2 nm alatti csomópontokon",
   "s": 90,
   "sec": "Technology - Semiconductors",
@@ -1039,11 +1077,13 @@
    "TSMC 2Q26 earnings call / capex 60–64 Mrd USD (Zacks, 2026-07)",
    "TSMC igazgatósági döntés NT$7 osztalék (6-K, 2026-08)",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Positive",
+  "u": "Medium"
  },
  {
   "ai": "Low",
-  "bb": 267.2,
+  "bb": 233.8,
   "c": "High",
   "ch": "https://finance.yahoo.com/chart/V",
   "cur": "USD",
@@ -1067,7 +1107,7 @@
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
   },
-  "mos": 20,
+  "mos": 30,
   "n": "Visa Inc.",
   "p": [
    90,
@@ -1077,7 +1117,7 @@
    86
   ],
   "pr": 360.45,
-  "r": "Hold: a világ legnagyobb fizetési hálózatának széles moatja vitathatatlan, de a 360,45 USD-s ár kissé a ~334 USD-s konzervatív belső érték felett és jóval a 267 USD-s vételi szint felett van.",
+  "r": "Hold: a széles és stabil moat ellenére a 360,45 USD-s ár kissé a ~334 USD-s fair value felett és jóval a közepes bizonytalansághoz tartozó 233,80 USD-s vételi szint felett van.",
   "risks": "Az amerikai DOJ debitkártya-monopólium pere és az interchange MDL perek (TTM-ben is céltartalék-képzés); szabályozói díjplafonok (Credit Card Competition Act, EU); stabilcoinok és A2A/azonnali fizetések térnyerése; a határon átnyúló forgalom lassulása",
   "s": 93,
   "sec": "Financial Services - Payment Networks",
@@ -1091,7 +1131,9 @@
    "Visa 10-K FY2025",
    "StockAnalysis pénzügyi adatok TTM 2026-06",
    "StockAnalysis konszenzus 2026-09"
-  ]
+  ],
+  "mt": "Stable",
+  "u": "Medium"
  },
  {
   "id": "PEP",
@@ -1111,20 +1153,21 @@
    70
   ],
   "sec": "Consumer Defensive",
-  "r": "Hold – erős márkák és disztribúció, de az ár (128,69 USD) a konzervatív belső érték (125 USD) fölött van, a biztonsági ráta nem adott.",
-  "risks": "Az észak-amerikai Frito-Lay volumen- és árrésnyomás, az egészségtudatos fogyasztás és GLP-1 hatás, valamint a magas osztalékkifizetés mellett lassuló szabad cash flow-növekedés.",
-  "ivb": "Owner-earnings alapon: kb. 9,28 Mrd USD TTM szabad cash flow (~6,5–6,8 USD/részvény, a részvényszám becslés) 8% hozam és 3% tartós növekedés mellett ≈125 USD; a nettó adósságot pontosan nem ellenőriztem.",
+  "r": "Hold: az erős márkák és a Frito-Lay disztribúciós skálája széles moatot adnak (ROIC ~19%), a 128,02 USD-s ár kb. 5%-kal a ~135 USD-s fair value alatt van, de a 108 USD-s vételi szinttől még messze, így tartásra alkalmas, vételre nem.",
+  "risks": "Az észak-amerikai Frito-Lay volumen- és árrésnyomása; egészségtudatos fogyasztás és GLP-1 szerek hatása a snack- és üdítőfogyasztásra; magas, kb. 42,5 Mrd USD-s nettó adósság mellett a FCF-et meghaladó osztalék (5,92 USD/részvény) és lassuló FCF-növekedés; aktivista nyomás alatti portfólió-átalakítás végrehajtási kockázata",
+  "ivb": "Owner earnings: 9,28 Mrd USD TTM FCF / 1,36 Mrd részvény ≈ 6,8 USD/részvény, 3% tartós növekedés és 8% diszkontráta (Gordon ≈ 140 USD), a 2026-os 8,56 USD-s konszenzus EPS × 16 (≈ 137 USD) eredménnyel keresztellenőrizve és a 42,5 Mrd USD-s nettó adósság miatt lefelé kerekítve ≈ 135 USD.",
   "srcs": [
-   "Yahoo Finance",
-   "StockAnalysis",
-   "PepsiCo Q2 2026 earnings release"
+   "PepsiCo Q2 2026 eredményközlemény",
+   "StockAnalysis statisztika 2026-09",
+   "StockAnalysis konszenzus 2026-09",
+   "Yahoo Finance PEP 2026-09"
   ],
   "d": "2026-09-30",
   "ch": "https://finance.yahoo.com/chart/PEP",
   "pr": 128.69,
   "tp": 151.09,
-  "iv": 125,
-  "bb": 100,
+  "iv": 135,
+  "bb": 108,
   "mos": 20,
   "f": "Adequate",
   "cur": "USD",
@@ -1142,7 +1185,9 @@
    "d": "2026-09-30",
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
-  }
+  },
+  "mt": "Stable",
+  "u": "Low"
  },
  {
   "id": "ZS",
@@ -1162,7 +1207,7 @@
    62
   ],
   "sec": "Software - Cybersecurity",
-  "r": "Avoid: a szűk moat és a kiváló növekedés ellenére a 199,39 USD-s ár jóval a konzervatív ~115 USD-s belső érték felett van, a biztonsági ráhagyás (~80 USD) messze.",
+  "r": "Avoid: a szűk, stabil moat és az erős növekedés ellenére a 202,25 USD-s ár kb. 76%-kal a ~115 USD-s konzervatív fair value felett van, messze a magas bizonytalansághoz tartozó ~69 USD-s vételi szinttől.",
   "risks": "Magas részvényalapú kompenzáció (GAAP veszteség), erős verseny a Palo Alto/Microsoft/Cloudflare felől, valamint az AI-alapú biztonsági átalakulás és a Red Canary-integráció kockázata; az FCF-marzs FY27-re is csak ~23%.",
   "ivb": "Owner earnings ≈ az FY2026 szabad cash flow (779 M USD) durva 50%-a az SBC miatt (SBC pontos összegét nem ellenőriztem), ~160 M részvényre, 15% növekedés 10 évig, 10% diszkontráta, 22x záró szorzó; a nettó készpénz (~1,7 Mrd USD) figyelembe véve is kb. 115 USD.",
   "srcs": [
@@ -1170,15 +1215,15 @@
    "Zscaler IR",
    "Benzinga",
    "S&P Global/StockAnalysis konszenzus",
-   "Investing.com"
+   "StockAnalysis statisztika 2026-09"
   ],
   "d": "2026-09-30",
   "ch": "https://finance.yahoo.com/chart/ZS",
   "pr": 199.39,
   "tp": 208.86,
   "iv": 115,
-  "bb": 80.5,
-  "mos": 30,
+  "bb": 69,
+  "mos": 40,
   "f": "Strong",
   "cur": "USD",
   "mk": {
@@ -1195,6 +1240,8 @@
    "d": "2026-09-30",
    "at": "2026-09-30T17:11:54.178Z",
    "src": "Yahoo Finance"
-  }
+  },
+  "mt": "Stable",
+  "u": "High"
  }
 ]
