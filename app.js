@@ -65,7 +65,7 @@ function pick() {
 
 function drawQ() {
   $("#t2").textContent = CD.length ? `Új cég (${CD.length} kész)` : "Új cég";
-  $("#qs").innerHTML = (RQ.length ? `<div class="res"><b>Folyamatban lévő kérések</b>${RQ.map((r) => `<div class="k"><span>${esc(r.q)}</span><span>egy órán belül kész</span></div>`).join("")}</div>` : "") +
+  $("#qs").innerHTML = (RQ.length ? `<div class="res"><b>Folyamatban lévő kérések</b>${RQ.map((r) => `<div class="k"><span>${esc(r.q)}</span><span>pár percen belül kész</span></div>`).join("")}</div>` : "") +
     CD.map((c0) => { const c = derive(c0); return `<div class="res"><b>${esc(c.n)} (${esc(c.t)})</b> ${chip(c.m)} ${chip(c.v)} ${c.tr ? chip(c.tr) : ""}
 <div class="dg" style="margin-top:10px"><div>${pillars(c.p)}</div>
 <div><div class="k"><span>Score</span><span>${c.s}</span></div><div class="k"><span>Ár${c.mk.d ? ` (${esc(c.mk.d)})` : ""}</span><span>${mon(c.px, c.cur)}</span></div><div class="k"><span>Belső érték</span><span>${mon(c.iv, c.cur)}</span></div><div class="k"><span>Buy Below (MoS ${c.mos}%)</span><span>${mon(c.bb, c.cur)}</span></div><div class="k"><span>Ár vs IV</span><span>${pct(c.pv)}</span></div><div class="k"><span>Célár</span><span>${mon(c.tp, c.cur)}</span></div><div class="k"><span>Pénzügyi erő</span>${chip(c.f)}</div><div class="k"><span>AI-kockázat</span>${chip(c.ai)}</div></div></div>

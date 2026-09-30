@@ -49,5 +49,5 @@ if (action === "felvétel") {
   await save("data/companies.json", next);
   await reply(`Töröltem a listáról: ${id}. Az oldal 1–2 percen belül frissül.`);
 } else if (action === "elemzés") {
-  await reply(`Rögzítettem az elemzési kérést: **${arg}**. Claude egy órán belül (7 és 22 óra között) elkészíti, és az oldal „Új cég” fülén jóváhagyásra vár.`, false);
+  await reply(`Rögzítettem az elemzési kérést: **${arg}**. Claude pár percen belül elkészíti, és az oldal „Új cég” fülén jóváhagyásra vár.`, false);
 }
