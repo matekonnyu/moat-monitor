@@ -24,7 +24,10 @@ const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés|Frissítés)\s*:\s*(.+?)\
 let PENDING = [], pollT = null, lastPendingCount = 0;
 async function act(title) {
   if (!TOKEN) {
-    if (!confirm("Ez a művelet csak a Moat Monitor tulajdonosának engedélyezett.\n\nEbben a böngészőben nincs megadva GitHub-kulcs, ezért a GitHub oldalán kell megerősíteni (a tulajdonos fiókjával bejelentkezve). Más felhasználó kérését a rendszer nem hajtja végre.\n\nMegnyitod a GitHubot?")) return;
+    const own = /^(Felvétel|Elvetés|Törlés)/i.test(title);
+    const msg = own ? "Ez a művelet csak a Moat Monitor tulajdonosának engedélyezett, más felhasználó kérését a rendszer nem hajtja végre.\n\nMegnyitod a GitHubot a megerősítéshez?"
+      : "A kérést a GitHubon kell elküldeni (ingyenes GitHub-fiókkal): a megnyíló oldalon kattints a „Create” gombra. Utána pár percen belül lefut.\n\nMegnyitod a GitHubot?";
+    if (!confirm(msg)) return;
     window.open(issueUrl(title), "_blank", "noopener"); return;
   }
   if (PENDING.some((p) => p.title.toLowerCase() == title.toLowerCase())) { flash("Ez a kérés már folyamatban van, várd meg, amíg lefut."); return; }

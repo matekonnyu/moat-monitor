@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   analyze:
-    if: github.event_name == 'workflow_dispatch' || (startsWith(github.event.issue.title, 'Elemzés:') && github.event.issue.user.login == github.repository_owner)
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'Elemzés:')
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -32,9 +32,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
           NUM: ${{ github.event.issue.number || inputs.issue }}
-        run: |
-          node -e 'fetch(`https://api.github.com/repos/${process.env.REPO}/issues/${process.env.NUM}`,{headers:{Authorization:"Bearer "+process.env.GH_TOKEN}}).then(r=>r.json()).then(i=>{const ok=i.title&&/^\s*Elemzés\s*:/i.test(i.title)&&i.user.login===process.env.REPO.split("/")[0];require("fs").appendFileSync(process.env.GITHUB_OUTPUT,`num=${process.env.NUM}\nok=${ok}\ntitle=${(i.title||"").replace(/[\r\n]/g," ")}\n`)})'
-          cat "$GITHUB_OUTPUT"
+        run: node scripts/request-check.mjs
 
       - name: Kiinduló állapot
         run: cp data/candidates.json "$RUNNER_TEMP/orig.json"

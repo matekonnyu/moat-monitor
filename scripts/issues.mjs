@@ -19,13 +19,19 @@ const api = async (path, method = "GET", body) => {
 const reply = (text, close = true) =>
   Promise.all([api(`/issues/${issue.number}/comments`, "POST", { body: text }), close ? api(`/issues/${issue.number}`, "PATCH", { state: "closed" }) : null]);
 
-if (issue.user.login !== repo.owner.login) {
-  await reply("Ezt a kérést csak a repó tulajdonosa indíthatja.");
-  process.exit(0);
-}
 const m = issue.title.match(/^\s*(Felvétel|Elvetés|Törlés|Elemzés|Frissítés)\s*:\s*(.+?)\s*$/i);
 if (!m) process.exit(0);
 const action = m[1].toLowerCase(), arg = m[2].trim(), id = arg.toUpperCase();
+// Elemzést és árfolyam-frissítést bárki kérhet; a lista módosítása csak a tulajdonosé.
+const isOwner = issue.user.login === repo.owner.login;
+if (!isOwner && !["elemzés", "frissítés"].includes(action)) {
+  await reply("A lista módosítása (hozzáadás, elvetés, törlés) csak a tulajdonosnak engedélyezett.");
+  process.exit(0);
+}
+if (!isOwner && action === "elemzés") process.exit(0); // az analyze.yml ellenőrzi és válaszol
+if (!isOwner && action === "frissítés") {
+  try { const meta = JSON.parse(await readFile("data/meta.json", "utf8")); if (Date.now() - Date.parse(meta.refreshedAt) < 30 * 60e3) { await reply("Az árfolyamok az elmúlt 30 percben frissültek, most nincs szükség újabb frissítésre."); process.exit(0); } } catch {}
+}
 
 if (action === "elemzés") {
   // Az elemzést az analyze.yml workflow végzi.
