@@ -17,5 +17,4 @@ jobs:
           echo "== xetra page2"; curl -sSL -A "$UA" "https://www.xetra.com/xetra-en/instruments/instruments" | grep -o 'href="[^"]*allTradableInstruments[^"]*"' | head
           echo "== bet"; curl -sSL -A "$UA" -o /tmp/b.html -w "%{http_code}\n" "https://bet.hu/oldalak/ceglista"; grep -o 'Részvény[^<]\{0,80\}' /tmp/b.html | head -3
           } > probe.txt 2>&1
-          git config user.name bot; git config user.email bot@users.noreply.github.com
-          git init -q -b probe; git add probe.txt; git commit -qm probe; git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe
+                    git init -q -b probe; git add probe.txt; git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm probe; git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe
