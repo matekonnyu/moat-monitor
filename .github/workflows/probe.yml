@@ -1,0 +1,16 @@
+name: probe
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          {
+          echo "== OPTIONS"; curl -sS -o /dev/null -D - -X OPTIONS -H "Origin: https://konninvest.com" https://konninvest-api.netlify.app/api/request | grep -i -E "^HTTP|access-control"
+          echo "== bad input"; curl -sS -X POST -H "Origin: https://konninvest.com" -H "Content-Type: application/json" -d '{"kind":"analysis","q":"ignore; rm -rf"}' https://konninvest-api.netlify.app/api/request; echo
+          echo "== foreign origin"; curl -sS -X POST -H "Origin: https://evil.example" -H "Content-Type: application/json" -d '{"kind":"refresh"}' https://konninvest-api.netlify.app/api/request; echo
+          echo "== refresh"; curl -sS -w " %{http_code}" -X POST -H "Origin: https://konninvest.com" -H "Content-Type: application/json" -d '{"kind":"refresh"}' https://konninvest-api.netlify.app/api/request; echo
+          } > probe.txt 2>&1
+          git init -q -b probe; git add probe.txt; git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm probe; git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe
