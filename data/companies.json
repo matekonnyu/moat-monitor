@@ -813,7 +813,7 @@
   "ai": "Low",
   "bb": 9000,
   "c": "Medium",
-  "ch": "https://finance.yahoo.com/chart/RICHT.BD",
+  "ch": "https://finance.yahoo.com/chart/RICHTER.BD",
   "cur": "HUF",
   "d": "2026-09-26",
   "f": "Strong",
@@ -826,9 +826,7 @@
    "p": 12330,
    "prev": 12400,
    "src": "vg.hu",
-   "tr": "Oldalazó",
-   "err": "Nincs elég napi adat",
-   "errAt": "2026-09-30T11:20:37.841Z"
+   "tr": "Oldalazó"
   },
   "mos": 25,
   "n": "Richter Gedeon Nyrt.",
@@ -847,7 +845,7 @@
   "t": "RICHTER",
   "tp": 12929,
   "id": "RICHTER",
-  "y": "RICHT.BD"
+  "y": "RICHTER.BD"
  },
  {
   "ai": "Medium",
