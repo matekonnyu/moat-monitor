@@ -19,16 +19,26 @@ const issueUrl = (title, body = "") => `https://github.com/${OWNER}/${REPO}/issu
 // Háttérben futtatás: a tulajdonos egyszer megad egy GitHub-kulcsot (csak ebben a böngészőben tárolódik).
 let TOKEN = ""; try { TOKEN = localStorage.getItem("mm_gh_token") || ""; } catch {}
 const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
+const RELAY = "https://konninvest-api.netlify.app/api/request";
 const gh = (path, opt = {}) => fetch(API + path, { ...opt, headers: { Accept: "application/vnd.github+json", ...(TOKEN ? { Authorization: "Bearer " + TOKEN } : {}), ...(opt.body ? { "Content-Type": "application/json" } : {}), ...(opt.headers || {}) } });
 const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés|Frissítés)\s*:\s*(.+?)\s*$/i;
 let PENDING = [], pollT = null, lastPendingCount = 0;
 async function act(title) {
   if (!TOKEN) {
-    const own = /^(Felvétel|Elvetés|Törlés)/i.test(title);
-    const msg = own ? "Ez a művelet csak a Moat Monitor tulajdonosának engedélyezett, más felhasználó kérését a rendszer nem hajtja végre.\n\nMegnyitod a GitHubot a megerősítéshez?"
-      : "A kérést a GitHubon kell elküldeni (ingyenes GitHub-fiókkal): a megnyíló oldalon kattints a „Create” gombra. Utána pár percen belül lefut.\n\nMegnyitod a GitHubot?";
-    if (!confirm(msg)) return;
-    window.open(issueUrl(title), "_blank", "noopener"); return;
+    if (/^(Felvétel|Elvetés|Törlés)/i.test(title)) {
+      if (!confirm("Ez a művelet csak a Moat Monitor tulajdonosának engedélyezett, más felhasználó kérését a rendszer nem hajtja végre.\n\nMegnyitod a GitHubot a megerősítéshez?")) return;
+      window.open(issueUrl(title), "_blank", "noopener"); return;
+    }
+    // Elemzés és frissítés bárkinek: a konninvest közvetítőn keresztül, GitHub-fiók nélkül.
+    if (PENDING.some((p) => p.title.toLowerCase() == title.toLowerCase())) { flash("Ez a kérés már folyamatban van, várd meg, amíg lefut."); return; }
+    const m = title.match(/^\s*Elemzés\s*:\s*(.+)$/i);
+    try {
+      const r = await fetch(RELAY, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(m ? { kind: "analysis", q: m[1].trim() } : { kind: "refresh" }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) { flash(j.error || "Nem sikerült elküldeni a kérést, próbáld újra később."); return; }
+      flash(""); PENDING.push({ n: j.number, title, at: Date.now() }); renderPending(); poll(true);
+    } catch (e) { flash("A kérés-közvetítő most nem érhető el, próbáld újra később."); }
+    return;
   }
   if (PENDING.some((p) => p.title.toLowerCase() == title.toLowerCase())) { flash("Ez a kérés már folyamatban van, várd meg, amíg lefut."); return; }
   document.querySelectorAll("[data-act]").forEach((b) => { if (b.dataset.act == title) b.disabled = true; });
