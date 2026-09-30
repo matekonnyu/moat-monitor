@@ -23,7 +23,7 @@ if (issue.user.login !== repo.owner.login) {
   await reply("Ezt a kérést csak a repó tulajdonosa indíthatja.");
   process.exit(0);
 }
-const m = issue.title.match(/^\s*(Felvétel|Elvetés|Törlés|Elemzés)\s*:\s*(.+?)\s*$/i);
+const m = issue.title.match(/^\s*(Felvétel|Elvetés|Törlés|Elemzés|Frissítés)\s*:\s*(.+?)\s*$/i);
 if (!m) process.exit(0);
 const action = m[1].toLowerCase(), arg = m[2].trim(), id = arg.toUpperCase();
 
@@ -38,6 +38,7 @@ const save = (f, d) => writeFile(f, JSON.stringify(d, null, 1) + "\n");
 
 // Egy módosítás a friss adatokon; visszaadja a választ, vagy {skip} ha nincs mit menteni.
 async function apply() {
+  if (action === "frissítés") return { refresh: true, text: "Frissítettem az árfolyamokat és a trendeket. Az oldal 1–2 percen belül frissül." };
   const companies = await load("data/companies.json");
   const candidates = await load("data/candidates.json");
   if (action === "felvétel") {
@@ -71,8 +72,9 @@ for (let attempt = 1; attempt <= 4; attempt++) {
   sh("git fetch -q origin main && git reset -q --hard origin/main");
   const res = await apply();
   if (res.skip) { await reply(res.text); process.exit(0); }
-  if (action === "felvétel") { try { sh("node scripts/refresh.mjs"); } catch {} }
+  if (action === "felvétel" || res.refresh) { try { sh("node scripts/refresh.mjs"); } catch {} }
   sh("git add data");
+  if (!sh("git status --porcelain data").trim()) { await reply(res.text); process.exit(0); }
   sh(`git commit -qm ${JSON.stringify(issue.title)}`);
   try { sh("git push -q origin HEAD:main"); await reply(res.text); process.exit(0); }
   catch (e) { last = String(e.stderr || e.message).slice(-300); console.error("push", attempt, last); await new Promise((r) => setTimeout(r, 3000 * attempt)); }

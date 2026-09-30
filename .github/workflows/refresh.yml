@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: data-write
+  group: refresh
   cancel-in-progress: false
 
 jobs:
@@ -20,12 +20,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node scripts/refresh.mjs
-      - name: Commit
+      - name: Frissítés és mentés (ütközésnél újrapróbálja)
         run: |
           git config user.name "moat-monitor-bot"
           git config user.email "moat-monitor-bot@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet || git commit -m "Napi árfolyamfrissítés $(date -u +%F)"
-          git pull --rebase
-          git push
+          for n in 1 2 3 4; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            node scripts/refresh.mjs || { echo "refresh hiba"; sleep 20; continue; }
+            git add data
+            git diff --cached --quiet && exit 0
+            git commit -qm "Napi árfolyamfrissítés $(date -u +%F)"
+            git push -q origin HEAD:main && exit 0
+            echo "push ütközés, újra ($n)"; sleep $((n*5))
+          done
+          exit 1

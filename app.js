@@ -18,7 +18,7 @@ const issueUrl = (title, body = "") => `https://github.com/${OWNER}/${REPO}/issu
 let TOKEN = ""; try { TOKEN = localStorage.getItem("mm_gh_token") || ""; } catch {}
 const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
 const gh = (path, opt = {}) => fetch(API + path, { ...opt, headers: { Accept: "application/vnd.github+json", ...(TOKEN ? { Authorization: "Bearer " + TOKEN } : {}), ...(opt.body ? { "Content-Type": "application/json" } : {}), ...(opt.headers || {}) } });
-const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés)\s*:\s*(.+?)\s*$/i;
+const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés|Frissítés)\s*:\s*(.+?)\s*$/i;
 let PENDING = [], pollT = null, lastPendingCount = 0;
 async function act(title) {
   if (!TOKEN) { window.open(issueUrl(title), "_blank", "noopener"); return; }
@@ -35,7 +35,7 @@ async function act(title) {
 function flash(t) { $("#msg").textContent = t; $("#msg").hidden = !t; }
 function ago(ms) { const m = Math.round((Date.now() - ms) / 60000); return m < 1 ? "most" : m + " perce"; }
 function renderPending() {
-  const lbl = { "elemzés": "Elemzés fut", "felvétel": "Hozzáadás folyamatban", "elvetés": "Elvetés folyamatban", "törlés": "Törlés folyamatban" };
+  const lbl = { "elemzés": "Elemzés fut", "felvétel": "Hozzáadás folyamatban", "elvetés": "Elvetés folyamatban", "törlés": "Törlés folyamatban", "frissítés": "Árfolyamfrissítés fut" };
   const html = PENDING.map((p) => { const m = p.title.match(ACT); return `<div class="k"><span><span class="spin"></span>${esc(lbl[m[1].toLowerCase()] || "Fut")}: <b>${esc(m[2])}</b></span><span>${ago(p.at)}${m[1].toLowerCase() == "elemzés" ? ", kb. 3–8 perc" : ", kb. 1 perc"}</span></div>`; }).join("");
   for (const id of ["#run1", "#run2"]) { $(id).innerHTML = html ? `<div class="res">${html}</div>` : ""; }
 }
@@ -141,6 +141,7 @@ $("#tb").addEventListener("keydown", (e) => { if (e.key == "Enter") tog(e); });
 function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#t1").classList.toggle("on", v == 1); $("#t2").classList.toggle("on", v == 2); }
 $("#t1").onclick = () => show(1); $("#t2").onclick = () => show(2);
 $("#go").onclick = () => { const q = $("#an").value.trim(); if (!q) { $("#an").focus(); return; } act("Elemzés: " + q); $("#an").value = ""; };
+$("#rf").addEventListener("click", () => act("Frissítés: most"));
 $("#qs").addEventListener("click", (e) => { if (e.target.dataset.act) act(e.target.dataset.act); });
 function drawTok() {
   $("#tokst").textContent = TOKEN ? "Be van állítva: a gombok a háttérben futnak, átirányítás nélkül." : "Nincs beállítva: a gombok egy GitHub-oldalt nyitnak meg.";
