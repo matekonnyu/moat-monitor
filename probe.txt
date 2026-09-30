@@ -1,0 +1,11 @@
+== OPTIONS
+HTTP/2 204 
+access-control-allow-headers: Content-Type
+access-control-allow-methods: POST, OPTIONS
+access-control-allow-origin: https://konninvest.com
+== bad input
+{"error":"Csak cégnevet vagy tickert adj meg (legfeljebb 60 karakter, 6 szó, speciális jelek nélkül)."}
+== foreign origin
+{"error":"Ismeretlen forrás."}
+== refresh
+{"number":18,"title":"Frissítés: most"} 201
