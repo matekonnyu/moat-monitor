@@ -40,6 +40,9 @@ jobs:
           node -e 'fetch(`https://api.github.com/repos/${process.env.REPO}/issues/${process.env.NUM}`,{headers:{Authorization:"Bearer "+process.env.GH_TOKEN}}).then(r=>r.json()).then(i=>{const ok=i.title&&/^\s*Elemzés\s*:/i.test(i.title)&&i.user.login===process.env.REPO.split("/")[0];require("fs").appendFileSync(process.env.GITHUB_OUTPUT,`num=${process.env.NUM}\nok=${ok}\ntitle=${(i.title||"").replace(/[\r\n]/g," ")}\n`)})'
           cat "$GITHUB_OUTPUT"
 
+      - name: Kiinduló állapot
+        run: cp data/candidates.json "$RUNNER_TEMP/orig.json"
+
       - name: Claude elemez
         id: claude
         if: steps.req.outputs.ok == 'true'
@@ -82,7 +85,16 @@ jobs:
           git fetch -q origin main && git checkout -q -f -B main origin/main
           git clean -fdq -e .analysis-error
           if cmp -s "$RUNNER_TEMP/cand.json" data/candidates.json; then comment "Az elemzés nem készült el (Claude nem írt eredményt, lépés: $CLAUDE_OUTCOME). Nyiss új kérést, vagy szólj Claude-nak a chatben."; exit 1; fi
-          cp "$RUNNER_TEMP/cand.json" data/candidates.json
+          merge() { node -e '
+            const fs=require("fs"),t=process.env.RUNNER_TEMP;
+            const orig=JSON.parse(fs.readFileSync(t+"/orig.json","utf8")),mine=JSON.parse(fs.readFileSync(t+"/cand.json","utf8"));
+            const base=JSON.parse(fs.readFileSync("data/candidates.json","utf8"));
+            const o=new Map(orig.map(c=>[c.id,JSON.stringify(c)]));
+            const fresh=mine.filter(c=>o.get(c.id)!==JSON.stringify(c));
+            const ids=new Set(fresh.map(c=>c.id));
+            fs.writeFileSync("data/candidates.json",JSON.stringify([...base.filter(c=>!ids.has(c.id)),...fresh],null,1)+"\n");
+            console.log("új elemzés:",fresh.map(c=>c.id).join(", "));'; }
+          merge
           node scripts/refresh.mjs
           git config user.name "moat-monitor-bot"
           git config user.email "moat-monitor-bot@users.noreply.github.com"
@@ -92,7 +104,8 @@ jobs:
           ok=0
           for n in 1 2 3; do
             if git push origin main 2> "$RUNNER_TEMP/push.err"; then ok=1; break; fi
-            cat "$RUNNER_TEMP/push.err"; sleep 3; git pull -q --rebase origin main
+            cat "$RUNNER_TEMP/push.err"; sleep 3
+            git reset -q --hard origin/main; git pull -q origin main; merge; node scripts/refresh.mjs; git add data; git commit -qm "Elemzés kész (#$ISSUE)"
           done
           if [ "$ok" != 1 ]; then comment "Az elemzés elkészült, de a mentés nem sikerült: $(tail -n 3 "$RUNNER_TEMP/push.err")"; exit 1; fi
           git log --oneline -1
