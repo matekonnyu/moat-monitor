@@ -1,3 +1,5 @@
+// Ha a böngésző régi (gyorsítótárazott) index.html-t adott az új app.js mellé, egyszer újratöltjük frissen.
+if (!document.getElementById("nnew")) { let n = 0; try { n = +sessionStorage.getItem("mm_rl") || 0; sessionStorage.setItem("mm_rl", n + 1); } catch {} if (n < 2) location.replace(location.pathname + "?v=" + Date.now()); }
 // Moat Monitor – statikus oldal. Adat: data/*.json (GitHub Actions frissíti).
 // A gombok előre kitöltött GitHub issue-t nyitnak; a feldolgozást a repó workflow-i végzik.
 const $ = (s) => document.querySelector(s);
