@@ -6,7 +6,7 @@
 
 Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat score legalább 70, van moat, Buy/Accumulate ajánlás, legalább 3 csillag, és a 200 napos trend emelkedő, vagy az 50 és 200 napos trend sem csökkenő).
 
-## Követett cégek (24)
+## Követett cégek (30)
 
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
@@ -17,14 +17,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 | Taiwan Semiconductor Manufacturing Company Limited (ADR) | TSM | $456,19 | $552,26 | +21,1% | Emelkedő / Emelkedő / Emelkedő | $400,00 | $280,00 | +14,0% | ★★★☆☆ Korrekt ár | Wide | 90 | 78 | -12 | Hold |
 | NVIDIA Corporation | NVDA | $228,38 | $327,70 | +43,5% | Emelkedő / Emelkedő / Emelkedő | $163,00 | $81,50 | +40,1% | ★★☆☆☆ Drága | Wide | 88 | 70 | -18 | Hold |
 | The Coca-Cola Company | KO | $86,08 | $94,70 | +10,0% | Csökkenő / Oldalazó / Emelkedő | $74,00 | $59,20 | +16,3% | ★★☆☆☆ Drága | Wide | 86 | 78 | -8 | Hold |
+| Eli Lilly and Company | LLY | $1150 | $1329 | +15,5% | – / – / – | $820,00 | $574,00 | +40,3% | ★☆☆☆☆ Drága | Wide | 86 | 70 | -16 | Avoid |
 | Amazon.com, Inc. | AMZN | $249,15 | $329,54 | +32,3% | Csökkenő / Csökkenő / Emelkedő | $210,00 | $147,00 | +18,6% | ★★☆☆☆ Drága | Wide | 85 | 78 | -7 | Hold |
 | Apple Inc. | AAPL | $333,02 | $328,22 | -1,4% | Oldalazó / Emelkedő / Emelkedő | $206,00 | $144,20 | +61,7% | ★☆☆☆☆ Drága | Wide | 84 | 70 | -14 | Avoid |
 | Meta Platforms, Inc. | META | $725,18 | $793,91 | +9,5% | Emelkedő / Emelkedő / Oldalazó | $600,00 | $360,00 | +20,9% | ★★★☆☆ Korrekt ár | Wide | 84 | 78 | -6 | Hold |
 | Broadcom Inc. | AVGO | $351,19 | $531,85 | +51,4% | Csökkenő / Csökkenő / Oldalazó | $313,00 | $187,80 | +12,2% | ★★★☆☆ Korrekt ár | Wide | 82 | 78 | -4 | Hold |
 | Alphabet Inc. (Class A) | GOOGL | $344,08 | $429,46 | +24,8% | Oldalazó / Oldalazó / Emelkedő | $353,00 | $211,80 | -2,5% | ★★★☆☆ Korrekt ár | Wide | 82 | 92 | +10 | Hold |
 | PepsiCo, Inc. | PEP | $126,72 | $151,09 | +19,2% | Csökkenő / Csökkenő / Csökkenő | $135,00 | $108,00 | -6,1% | ★★★☆☆ Korrekt ár | Wide | 80 | 80 | 0 | Hold |
+| Stryker Corporation | SYK | $272,96 | $367,80 | +34,7% | – / – / – | $309,00 | $216,30 | -11,7% | ★★★☆☆ Korrekt ár | Wide | 80 | 92 | +12 | Accumulate |
 | Booking Holdings Inc. | BKNG | $162,91 | $238,78 | +46,6% | Csökkenő / Csökkenő / Oldalazó | $245,00 | $147,00 | -33,5% | ★★★★☆ Alulértékelt | Narrow | 72 | 65 | -7 | Accumulate |
+| CRH plc | CRH | $81,68 | $133,18 | +63,1% | – / – / – | $74,00 | $51,80 | +10,4% | ★★★☆☆ Korrekt ár | Narrow | 68 | 51 | -17 | Hold |
 | Zscaler, Inc. | ZS | $199,42 | $208,86 | +4,7% | Emelkedő / Emelkedő / Emelkedő | $115,00 | $69,00 | +73,4% | ★☆☆☆☆ Drága | Narrow | 66 | 55 | -11 | Avoid |
+| Wells Fargo & Company | WFC | $80,28 | $100,54 | +25,2% | – / – / – | $110,00 | $77,00 | -27,0% | ★★★★☆ Alulértékelt | Narrow | 66 | 77 | +11 | Accumulate |
 | Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) | SPCX | $150,86 | $222,42 | +47,4% | Emelkedő / Emelkedő / – | $45,00 | $22,50 | +235,2% | ★☆☆☆☆ Drága | Narrow | 64 | 43 | -21 | Avoid |
 | Advanced Micro Devices | AMD | $611,76 | $618,51 | +1,1% | Emelkedő / Emelkedő / Emelkedő | $270,00 | $135,00 | +126,6% | ★☆☆☆☆ Drága | Narrow | 62 | 55 | -7 | Avoid |
 | Deutsche Telekom AG | DTE | 26,21 € | 35,84 € | +36,7% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -12,6% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
@@ -32,7 +36,9 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 | Magyar Telekom Nyrt. | MTELEKOM | 2544 Ft | 2923 Ft | +14,9% | Oldalazó / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +1,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
 | Richter Gedeon Nyrt. | RICHTER | 12 370 Ft | 13 800 Ft | +11,6% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -8,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
 | Seagate Technology Holdings plc | STX | $922,34 | $1125 | +22,0% | Emelkedő / Emelkedő / Emelkedő | $300,00 | $150,00 | +207,4% | ★☆☆☆☆ Drága | Narrow | 50 | 43 | -7 | Avoid |
+| Vistra Corp. | VST | $139,75 | $212,79 | +52,3% | – / – / – | $87,00 | $52,20 | +60,6% | ★☆☆☆☆ Drága | None | 48 | 23 | -25 | Avoid |
 | MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 4900 Ft | 4440 Ft | -9,4% | Csökkenő / Oldalazó / Emelkedő | 3850 Ft | 2310 Ft | +27,3% | ★★★☆☆ Korrekt ár | None | 38 | 43 | +5 | Avoid |
+| United Airlines Holdings, Inc. | UAL | $111,78 | $156,35 | +39,9% | – / – / – | $63,00 | $37,80 | +77,4% | ★☆☆☆☆ Drága | None | 38 | 23 | -15 | Avoid |
 | Ocugen, Inc. | OCGN | $1,03 | $9,17 | +790,3% | Csökkenő / Csökkenő / Csökkenő | $0,80 | $0,20 | +28,7% | ★★★☆☆ Korrekt ár | None | 14 | 18 | +4 | Avoid |
 
 ## Cégenkénti részletek
@@ -121,6 +127,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Belső érték alapja: Normalizált owner earnings a 2026-os 12,4 Mrd USD-s FCF-iránymutatás alapján ≈ 2,9 USD/részvény (4,3 Mrd részvény), 5% tartós növekedéssel és 9% diszkontrátával (Gordon-modell ≈ 76 USD), a 2026-os 3,30 USD-s EPS × 22 (≈ 73 USD) eredménnyel keresztellenőrizve.
 - Források: Coca-Cola Q2 2026 8-K / BusinessWire (2026-07-28); StockAnalysis statisztika 2026-09; StockAnalysis konszenzus 2026-09; Investing.com Q2 2026 call transcript
 
+### Eli Lilly and Company (LLY)
+
+- Szektor: Healthcare - Drug Manufacturers; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Moat: Wide (score 86, trend: Positive); pillérek: immateriális javak 95, váltási költség 60, hálózati hatás 20, költségelőny 70, hatékony méret 65
+- Értékelés: ★☆☆☆☆ Drága; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
+- Árfolyam $1150 (–); belső érték $820,00; vételi szint $574,00 (biztonsági sáv 30%); konszenzus célár $1329
+- Trend 20/50/200 nap: – / – / –; változás 1 hó –, 6 hó –
+- Ajánlás: Avoid: a széles és erősödő moat ellenére az 1150 USD-s ár kb. 40%-kal a ~820 USD-s konzervatív belső érték felett van (1 csillagos zóna); a közepes bizonytalansághoz tartozó vételi szint ~574 USD.
+- Kockázatok: A GLP-1 gyógyszerek (Zepbound, Mounjaro) árnyomása a kormányzati megállapodások és a Novo Nordisk versenye miatt; a magas értékeltség (~39x P/E) tökéletes végrehajtást áraz be; orforglipron és pipeline-kockázat, szabadalmi lejáratok; nagy kapacitásbővítési beruházás és ~45 Mrd USD nettó adósság
+- Belső érték alapja: Normalizált owner earnings ~22 Mrd USD (OCF 28,1 Mrd − fenntartó capex; a 9,9 Mrd-os capex nagy része növekedési) ≈ 24,7 USD/részvény, 12% növekedés 10 évig, 9% diszkontráta, 18x záró szorzó, mínusz ~50,7 USD/részvény nettó adósság.
+- Források: StockAnalysis statisztika 2026-10-01; Fierce Pharma: Lilly 2026 kilátások; Lilly IR: megállapodás az USA kormányával; Alpha Vantage áttekintés 2026-10-01
+
 ### Amazon.com, Inc. (AMZN)
 
 - Szektor: Internet Retail / Cloud Computing; lista: Követett; elemzés dátuma: 2026-09-30
@@ -193,6 +211,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Belső érték alapja: Owner earnings: 9,28 Mrd USD TTM FCF / 1,36 Mrd részvény ≈ 6,8 USD/részvény, 3% tartós növekedés és 8% diszkontráta (Gordon ≈ 140 USD), a 2026-os 8,56 USD-s konszenzus EPS × 16 (≈ 137 USD) eredménnyel keresztellenőrizve és a 42,5 Mrd USD-s nettó adósság miatt lefelé kerekítve ≈ 135 USD.
 - Források: PepsiCo Q2 2026 eredményközlemény; StockAnalysis statisztika 2026-09; StockAnalysis konszenzus 2026-09; Yahoo Finance PEP 2026-09
 
+### Stryker Corporation (SYK)
+
+- Szektor: Healthcare - Medical Devices; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Moat: Wide (score 80, trend: Stable); pillérek: immateriális javak 80, váltási költség 85, hálózati hatás 40, költségelőny 65, hatékony méret 55
+- Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
+- Árfolyam $272,96 (–); belső érték $309,00; vételi szint $216,30 (biztonsági sáv 30%); konszenzus célár $367,80
+- Trend 20/50/200 nap: – / – / –; változás 1 hó –, 6 hó –
+- Ajánlás: Accumulate: a 272,96 USD-s ár kb. 12%-kal a ~309 USD-s belső érték alatt van, de a ~216 USD-s vételi szint felett; a széles moat stabil, a 2026-os kibertámadás hatása átmenetinek tűnik.
+- Kockázatok: A 2026-os kibertámadás elhúzódó hatása a szállításokra és ügyfélkapcsolatokra; kórházi beruházások lassulása és árnyomás; ~12 Mrd USD nettó adósság akvizíciók után; elemzői célár-csökkentések, gyengülő növekedési momentum
+- Belső érték alapja: Owner earnings ≈ TTM FCF 4,70 Mrd USD ≈ 12,25 USD/részvény, 8% növekedés 10 évig, 9% diszkontráta, 20x záró szorzó, mínusz ~31,2 USD/részvény nettó adósság.
+- Források: StockAnalysis statisztika 2026-10-01; TIKR: Stryker Q1 2026 esés; Investing.com Q1 2026 earnings call; Alpha Vantage áttekintés 2026-10-01
+
 ### Booking Holdings Inc. (BKNG)
 
 - Szektor: Consumer Cyclical - Travel Services (Online Travel Agency); lista: Követett; elemzés dátuma: 2026-09-30
@@ -205,6 +235,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Belső érték alapja: Owner earnings ≈ TTM FCF 9,5 Mrd USD mínusz 0,6 Mrd SBC ≈ 8,9 Mrd USD (~11,8 USD/split utáni részvény ~760 M részvényen), 8% növekedés 10 évig, 10% diszkontráta, 15x záró szorzó (AI-kockázat miatt alacsonyabb), levonva a ~3,4 Mrd USD nettó adósságot.
 - Források: Booking Holdings Q2 2026 earnings release (2026-07); Booking Holdings 8-K 25:1 split (2026); Booking Holdings 10-K FY2025; StockAnalysis pénzügyi adatok TTM 2026-06; StockAnalysis konszenzus 2026-09; Motley Fool 2026-09-23 (Meta Muse)
 
+### CRH plc (CRH)
+
+- Szektor: Basic Materials - Building Materials; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Moat: Narrow (score 68, trend: Stable); pillérek: immateriális javak 40, váltási költség 30, hálózati hatás 10, költségelőny 75, hatékony méret 80
+- Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Adequate; AI-kockázat: Low
+- Árfolyam $81,68 (–); belső érték $74,00; vételi szint $51,80 (biztonsági sáv 30%); konszenzus célár $133,18
+- Trend 20/50/200 nap: – / – / –; változás 1 hó –, 6 hó –
+- Ajánlás: Hold: a 81,68 USD-s ár kb. 10%-kal a ~74 USD-s konzervatív belső érték felett van, a ~52 USD-s vételi szinttől messze; a csökkenő árfolyamtrend miatt érdemes kivárni.
+- Kockázatok: Gyengülő építőipari kereslet és magasabb kamatok (Treasury-hozamok) az USA-ban és Európában; akvizíciós integrációs kockázat és ~16,8 Mrd USD nettó adósság; energia- és szállítási költségek; az infrastruktúra-költés (IIJA) kifutása utáni keresletcsökkenés
+- Belső érték alapja: Normalizált owner earnings ~3,3 Mrd USD (TTM FCF 2,77 Mrd, OCF 5,42 Mrd − fenntartó capex) ≈ 5,0 USD/részvény, 6% növekedés 10 évig, 9% diszkontráta, 15x záró szorzó, mínusz ~25,2 USD/részvény nettó adósság.
+- Források: StockAnalysis statisztika 2026-10-01; CRH 2026-os FY guidance (2026-08); QuiverQuant: CRH árfolyamesés okai; Alpha Vantage áttekintés 2026-10-01
+
 ### Zscaler, Inc. (ZS)
 
 - Szektor: Software - Cybersecurity; lista: Jelölt; elemzés dátuma: 2026-09-30
@@ -216,6 +258,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Kockázatok: Magas részvényalapú kompenzáció (GAAP veszteség), erős verseny a Palo Alto/Microsoft/Cloudflare felől, valamint az AI-alapú biztonsági átalakulás és a Red Canary-integráció kockázata; az FCF-marzs FY27-re is csak ~23%.
 - Belső érték alapja: Owner earnings ≈ az FY2026 szabad cash flow (779 M USD) durva 50%-a az SBC miatt (SBC pontos összegét nem ellenőriztem), ~160 M részvényre, 15% növekedés 10 évig, 10% diszkontráta, 22x záró szorzó; a nettó készpénz (~1,7 Mrd USD) figyelembe véve is kb. 115 USD.
 - Források: Zscaler FY2026 Q4 8-K (SEC); Zscaler IR; Benzinga; S&P Global/StockAnalysis konszenzus; StockAnalysis statisztika 2026-09
+
+### Wells Fargo & Company (WFC)
+
+- Szektor: Financial Services - Banks Diversified; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Moat: Narrow (score 66, trend: Positive); pillérek: immateriális javak 60, váltási költség 70, hálózati hatás 45, költségelőny 65, hatékony méret 55
+- Értékelés: ★★★★☆ Alulértékelt; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Medium
+- Árfolyam $80,28 (–); belső érték $110,00; vételi szint $77,00 (biztonsági sáv 30%); konszenzus célár $100,54
+- Trend 20/50/200 nap: – / – / –; változás 1 hó –, 6 hó –
+- Ajánlás: Accumulate: a 80,28 USD-s ár kb. 27%-kal a ~110 USD-s belső érték alatt van, de még kicsit a ~77 USD-s vételi szint felett; az eszközplafon megszűnése után a 17–18%-os ROTCE-cél a fő hajtóerő.
+- Kockázatok: Hitelezési veszteségek növekedése gazdasági lassulásnál (kereskedelmi ingatlan, fogyasztói hitelek); kamatcsökkentés miatt szűkülő nettó kamatmarzs; a ROTCE-cél elérésének csúszása, elemzői célár-csökkentések; szabályozási és megfelelési kockázat a korábbi botrányok után
+- Belső érték alapja: Bankként a normalizált EPS-t vettem owner earningsnek: ~7,0 USD/részvény (TTM EPS 6,88, forward ~7,4), 5% növekedés 10 évig, 9% diszkontráta, 11x záró szorzó; a ~6%-os buyback-hozam nincs külön beárazva.
+- Források: StockAnalysis statisztika 2026-10-01; Yahoo Finance / Zacks: WFC ROTCE 17–18% cél; Alpha Vantage áttekintés 2026-10-01
 
 ### Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) (SPCX)
 
@@ -301,6 +355,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Belső érték alapja: Normalizált ~2,5–3 Mrd USD szabad cash flow (FY2026 FCF 3,1 Mrd USD, ~232 M részvény, ~1,9 Mrd USD nettó adósság) ciklusos, csúcsmarzs nélküli ~18x szorzóval számolva; a konszenzus EPS-becsléseket (FY27 ~35,8 USD) nem építettem be.
 - Források: Seagate FY2026 Q4 press release (SEC 8-K), Seagate 10-K FY2026, 24/7 Wall St. (2026-09-27), S&P Global konszenzus
 
+### Vistra Corp. (VST)
+
+- Szektor: Utilities - Independent Power Producers; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Moat: None (score 48, trend: Stable); pillérek: immateriális javak 35, váltási költség 30, hálózati hatás 10, költségelőny 60, hatékony méret 60
+- Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: Low
+- Árfolyam $139,75 (–); belső érték $87,00; vételi szint $52,20 (biztonsági sáv 40%); konszenzus célár $212,79
+- Trend 20/50/200 nap: – / – / –; változás 1 hó –, 6 hó –
+- Ajánlás: Avoid: a 139,75 USD-s ár kb. 60%-kal a ~87 USD-s konzervatív belső érték felett van; az adatközpont-áramigény már be van árazva, a magas bizonytalansághoz tartozó vételi szint ~52 USD.
+- Kockázatok: Áramár-ingadozás és földgázár-kitettség a kereskedelmi (merchant) termelésben; ~20 Mrd USD nettó adósság (D/E ~3,7); az AI-adatközpont áramkereslet lassulása vagy csúszó szerződések; szabályozói beavatkozás (ERCOT, PJM kapacitáspiac)
+- Belső érték alapja: Normalizált owner earnings ~3,0 Mrd USD (TTM FCF 2,26 Mrd, növekedési capex előtt magasabb) ≈ 8,9 USD/részvény, 5% növekedés 10 évig, 9% diszkontráta, 12x záró szorzó, mínusz ~59,8 USD/részvény nettó adósság.
+- Források: StockAnalysis statisztika 2026-10-01; Yahoo Finance: Vistra 31%-os esés; Alpha Vantage áttekintés 2026-10-01
+
 ### MOL Magyar Olaj- és Gázipari Nyrt. (MOL)
 
 - Szektor: Oil & Gas Integrated; lista: Követett; elemzés dátuma: 2026-09-30
@@ -312,6 +378,18 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Kockázatok: Finomítói és petrolkémiai marzsok normalizálódása a 2026-os geopolitikai csúcs után; orosz kőolaj-ellátás, szankciók és a Barátság-vezeték kockázata; kormányzati beavatkozás (árrés-, árstop, különadók); üzemzavarok (Steam Cracker 1 2027-ig áll, AV3 tűz)
 - Belső érték alapja: Normalizált owner earnings ≈ 1,0 Mrd USD (2025: 2,8 Mrd USD működési CF – 1,7 Mrd USD capex, a 2026-os csúcs-EBITDA nélkül), ~760 M forgalomban lévő részvény, ~325 HUF/USD árfolyam feltételezésével ~428 Ft/részvény, 9x ciklikus szorzó ≈ 3 850 Ft.
 - Források: MOL Q4 2025 earnings call (2026-02); MOL Q2 2026 eredmény és earnings call (2026-08); Equilor MOL 2Q26 review (konszenzus 2026-08); VG – Concorde MOL célár és osztalék 2026-09
+
+### United Airlines Holdings, Inc. (UAL)
+
+- Szektor: Industrials - Airlines; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Moat: None (score 38, trend: Stable); pillérek: immateriális javak 45, váltási költség 25, hálózati hatás 30, költségelőny 35, hatékony méret 40
+- Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: Low
+- Árfolyam $111,78 (–); belső érték $63,00; vételi szint $37,80 (biztonsági sáv 40%); konszenzus célár $156,35
+- Trend 20/50/200 nap: – / – / –; változás 1 hó –, 6 hó –
+- Ajánlás: Avoid: a 111,78 USD-s ár kb. 77%-kal a ~63 USD-s konzervatív belső érték felett van; ciklikus, tőkeigényes iparág tartós versenyelőny nélkül, a magas bizonytalansághoz tartozó vételi szint ~37,8 USD.
+- Kockázatok: Üzemanyagár-sokk (a cég 2026-ra közel 6 Mrd USD többletköltséget vár); recesszió vagy keresletcsökkenés a prémium és üzleti utazásban; magas eladósodottság (~17 Mrd USD nettó adósság) és nagy repülőgép-beruházási igény; szakszervezeti bérmegállapodások és Boeing-szállítási csúszások
+- Belső érték alapja: Normalizált owner earnings ~2,8 Mrd USD (TTM FCF 2,54 Mrd USD, OCF 8,91 Mrd − capex 6,37 Mrd) ≈ 8,6 USD/részvény, 4% növekedés 10 évig, 9% diszkontráta, 9x záró szorzó, mínusz ~52,5 USD/részvény nettó adósság.
+- Források: United Q2 2026 eredmény (2026-07-15); StockAnalysis statisztika 2026-10-01; Alpha Vantage áttekintés 2026-10-01
 
 ### Ocugen, Inc. (OCGN)
 
