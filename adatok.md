@@ -1,6 +1,6 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-09-30 záró (Yahoo Finance). Frissítve: 2026-10-01T05:48:05.048Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-01 záró (Yahoo Finance). Frissítve: 2026-10-01T08:37:50.002Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
@@ -27,12 +27,12 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 | Zscaler, Inc. | ZS | $199,42 | $208,86 | +4,7% | Emelkedő / Emelkedő / Emelkedő | $115,00 | $69,00 | +73,4% | ★☆☆☆☆ Drága | Narrow | 66 | 55 | -11 | Avoid |
 | Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) | SPCX | $150,86 | $222,42 | +47,4% | Emelkedő / Emelkedő / – | $45,00 | $22,50 | +235,2% | ★☆☆☆☆ Drága | Narrow | 64 | 43 | -21 | Avoid |
 | Advanced Micro Devices | AMD | $611,76 | $618,51 | +1,1% | Emelkedő / Emelkedő / Emelkedő | $270,00 | $135,00 | +126,6% | ★☆☆☆☆ Drága | Narrow | 62 | 55 | -7 | Avoid |
-| Deutsche Telekom AG | DTE | 26,40 € | 35,84 € | +35,8% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -12,0% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
-| OTP Bank Nyrt. | OTP | 43 800 Ft | 44 872 Ft | +2,4% | Csökkenő / Oldalazó / Emelkedő | 41 000 Ft | 24 600 Ft | +6,8% | ★★★☆☆ Korrekt ár | Narrow | 62 | 70 | +8 | Hold |
-| Magyar Telekom Nyrt. | MTELEKOM | 2540 Ft | 2923 Ft | +15,1% | Oldalazó / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +1,6% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
-| Richter Gedeon Nyrt. | RICHTER | 12 330 Ft | 13 800 Ft | +11,9% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -8,7% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
+| Deutsche Telekom AG | DTE | 25,81 € | 35,84 € | +38,9% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -14,0% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
+| OTP Bank Nyrt. | OTP | 41 930 Ft | 44 872 Ft | +7,0% | Csökkenő / Csökkenő / Emelkedő | 41 000 Ft | 24 600 Ft | +2,3% | ★★★☆☆ Korrekt ár | Narrow | 62 | 70 | +8 | Hold |
+| Magyar Telekom Nyrt. | MTELEKOM | 2544 Ft | 2923 Ft | +14,9% | Oldalazó / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +1,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
+| Richter Gedeon Nyrt. | RICHTER | 12 370 Ft | 13 800 Ft | +11,6% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -8,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
 | Seagate Technology Holdings plc | STX | $922,34 | $1125 | +22,0% | Emelkedő / Emelkedő / Emelkedő | $300,00 | $150,00 | +207,4% | ★☆☆☆☆ Drága | Narrow | 50 | 43 | -7 | Avoid |
-| MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 5050 Ft | 4440 Ft | -12,1% | Csökkenő / Emelkedő / Emelkedő | 3850 Ft | 2310 Ft | +31,2% | ★★☆☆☆ Drága | None | 38 | 35 | -3 | Avoid |
+| MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 4980 Ft | 4440 Ft | -10,8% | Csökkenő / Emelkedő / Emelkedő | 3850 Ft | 2310 Ft | +29,4% | ★★☆☆☆ Drága | None | 38 | 43 | +5 | Avoid |
 | Ocugen, Inc. | OCGN | $1,03 | $9,17 | +790,3% | Csökkenő / Csökkenő / Csökkenő | $0,80 | $0,20 | +28,7% | ★★★☆☆ Korrekt ár | None | 14 | 18 | +4 | Avoid |
 
 ## Cégenkénti részletek
@@ -246,8 +246,8 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Szektor: Telecom Services; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 55, váltási költség 55, hálózati hatás 30, költségelőny 60, hatékony méret 72
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Adequate; AI-kockázat: Low
-- Árfolyam 26,40 € (2026-09-29); belső érték 30,00 €; vételi szint 21,00 € (biztonsági sáv 30%); konszenzus célár 35,84 €
-- Trend 20/50/200 nap: Csökkenő / Csökkenő / Csökkenő; változás 1 hó -7,0%, 6 hó -17,1%
+- Árfolyam 25,81 € (2026-10-01); belső érték 30,00 €; vételi szint 21,00 € (biztonsági sáv 30%); konszenzus célár 35,84 €
+- Trend 20/50/200 nap: Csökkenő / Csökkenő / Csökkenő; változás 1 hó -9,3%, 6 hó -16,2%
 - Ajánlás: Hold: a szűk moat (T-Mobile US, európai hálózati skála) mellett a 26,11 EUR-os ár ~13%-kal a ~30 EUR-os fair value alatt van, de a magas tőkeáttétel miatti 30%-os diszkonttal számolt 21 EUR-os vételi szintet még nem éri el.
 - Kockázatok: Magas nettó adósság (138,4 Mrd EUR lízinggel, H1 2026); az amerikai T-Mobile US versenyének élesedése és a kisebbségi érdekeltség miatt a csoport-FCF-nek csak egy része jut a DTE-részvényeseknek; európai szabályozás és spektrumköltségek; a T-Mobile US árfolyamától való függés
 - Belső érték alapja: 2026-os guidance szerinti ~2,20 EUR korrigált EPS (FCF AL ~20 Mrd EUR a T-Mobile US kisebbségi részesedése előtt) × 13,5x konzervatív szorzó, alacsony egyszámjegyű növekedéssel → ~30 EUR/részvény.
@@ -258,8 +258,8 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Szektor: Banks - Regional (CEE); lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 62, váltási költség 58, hálózati hatás 35, költségelőny 68, hatékony méret 55
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: High; pénzügyi erő: Strong; AI-kockázat: Medium
-- Árfolyam 43 800 Ft (2026-09-29); belső érték 41 000 Ft; vételi szint 24 600 Ft (biztonsági sáv 40%); konszenzus célár 44 872 Ft
-- Trend 20/50/200 nap: Csökkenő / Oldalazó / Emelkedő; változás 1 hó -3,2%, 6 hó +21,5%
+- Árfolyam 41 930 Ft (2026-10-01); belső érték 41 000 Ft; vételi szint 24 600 Ft (biztonsági sáv 40%); konszenzus célár 44 872 Ft
+- Trend 20/50/200 nap: Csökkenő / Csökkenő / Emelkedő; változás 1 hó -5,5%, 6 hó +19,7%
 - Ajánlás: Hold: a szűk moatú (tartósan a tőkeköltség feletti ROE-t hozó) bank 42 700 Ft-os árfolyama a ~41 000 Ft-os becsült fair value közelében, de messze a magas bizonytalanság miatti 24 600 Ft-os vételi szint felett van, így új vételre nincs biztonsági sáv.
 - Kockázatok: Orosz leánybank kockázata (2025-ben a profit ~18%-a, osztalék-hazautalás blokkolva, kivonulás csak nagy veszteséggel); magyar különadók, kamatstop és szektorális beavatkozások; a ~2 Mrd EUR-s Luminor-akvizíció integrációs és tőke-kockázata; erős forint és kamatcsökkentés miatti marzs- és profiterózió (Q2 2026 korrigált profit -13% éves alapon)
 - Belső érték alapja: A 2025-ös 4 434 Ft-os hígított EPS-ből az orosz profitrész felét levonva ~4 050 Ft normalizált owner earnings, ~258,6 M részvény, 10x konzervatív szorzó (~12% tőkeköltség, mérsékelt növekedés) ≈ 41 000 Ft/részvény; a friss 2026-os éves EPS még nem ismert.
@@ -270,8 +270,8 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Szektor: Telecom Services; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 58, trend: Stable); pillérek: immateriális javak 55, váltási költség 60, hálózati hatás 35, költségelőny 55, hatékony méret 70
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
-- Árfolyam 2540 Ft (2026-09-29); belső érték 2500 Ft; vételi szint 1750 Ft (biztonsági sáv 30%); konszenzus célár 2923 Ft
-- Trend 20/50/200 nap: Oldalazó / Csökkenő / Emelkedő; változás 1 hó +0,4%, 6 hó +22,7%
+- Árfolyam 2544 Ft (2026-09-30); belső érték 2500 Ft; vételi szint 1750 Ft (biztonsági sáv 30%); konszenzus célár 2923 Ft
+- Trend 20/50/200 nap: Oldalazó / Csökkenő / Emelkedő; változás 1 hó -1,3%, 6 hó +22,9%
 - Ajánlás: Hold: a szűk moatú, oligopol piacon stabil FCF-et termelő Telekom 2 540 Ft-os árfolyama nagyjából a ~2 500 Ft-os fair value-n áll, jóval az 1 750 Ft-os vételi szint felett.
 - Kockázatok: Magyar különadók és árszabályozás szigorodása; erősödő verseny az állami hátterű 4iG/One csoporttól Magyarországon és Észak-Macedóniában; növekvő eladósodottság (nettó adósság/EBITDA 0,86x) a nagy osztalék és visszavásárlás mellett; technológiai és spektrumbefektetési igények
 - Belső érték alapja: Owner earnings ≈ a 2026-ra jelzett min. 200 Mrd Ft-os FCF AL (H1: 90,5 Mrd Ft), ~865 M részvény, ~231 Ft/részvény, 11x szorzó (kb. 9% részvényhozam-elvárás, alacsony növekedés), szabályozási diszkonttal ≈ 2 500 Ft.
@@ -282,8 +282,8 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Szektor: Drug Manufacturers - Specialty & Generic; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 58, trend: Stable); pillérek: immateriális javak 68, váltási költség 40, hálózati hatás 10, költségelőny 55, hatékony méret 45
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
-- Árfolyam 12 330 Ft (2026-09-29); belső érték 13 500 Ft; vételi szint 9450 Ft (biztonsági sáv 30%); konszenzus célár 13 800 Ft
-- Trend 20/50/200 nap: Csökkenő / Oldalazó / Emelkedő; változás 1 hó -6,1%, 6 hó +4,1%
+- Árfolyam 12 370 Ft (2026-09-30); belső érték 13 500 Ft; vételi szint 9450 Ft (biztonsági sáv 30%); konszenzus célár 13 800 Ft
+- Trend 20/50/200 nap: Csökkenő / Oldalazó / Emelkedő; változás 1 hó -5,6%, 6 hó +3,8%
 - Ajánlás: Hold: a szűk moat (Vraylar-jogdíj, nőgyógyászati portfólió) mellett a 12 330 HUF-os ár csak ~9%-kal van a ~13 500 HUF-os fair value alatt, messze a 9 450 HUF-os (30%-os diszkontú) vételi szint felett.
 - Kockázatok: Vraylar amerikai szabadalmi lejárata (~2029) és a jogdíjbevétel kiesése; tartósan erős forint (H1 2026-ban ~9 pp árfolyam-ellenszél, 27 Mrd HUF árfolyamveszteség); a Vraylar-utód RGH-932 és a pipeline kudarca; magyar különadók és gyógyszerár-szabályozás
 - Belső érték alapja: Normalizált owner earnings ≈ 230 Mrd HUF (FY2025 nettó profit 232 Mrd, FCF 250 Mrd HUF, a Vraylar-szabadalomlejárat miatt növekedés nélkül), 11x szorzó, ~186 M részvény → ~13 500 HUF/részvény.
@@ -306,8 +306,8 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Szektor: Oil & Gas Integrated; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: None (score 38, trend: Stable); pillérek: immateriális javak 25, váltási költség 30, hálózati hatás 10, költségelőny 55, hatékony méret 50
 - Értékelés: ★★☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Strong; AI-kockázat: Low
-- Árfolyam 5050 Ft (2026-09-29); belső érték 3850 Ft; vételi szint 2310 Ft (biztonsági sáv 40%); konszenzus célár 4440 Ft
-- Trend 20/50/200 nap: Csökkenő / Emelkedő / Emelkedő; változás 1 hó -0,1%, 6 hó +27,3%
+- Árfolyam 4980 Ft (2026-10-01); belső érték 3850 Ft; vételi szint 2310 Ft (biztonsági sáv 40%); konszenzus célár 4440 Ft
+- Trend 20/50/200 nap: Csökkenő / Emelkedő / Emelkedő; változás 1 hó -0,2%, 6 hó +24,1%
 - Ajánlás: Avoid: moat nélküli, erősen ciklikus olajtársaságként a 4 974 Ft-os árfolyam jóval a ~3 850 Ft-os fair value és a magas bizonytalanság miatti 2 310 Ft-os vételi szint felett van, a csúcs-finomítói marzsok beárazásával.
 - Kockázatok: Finomítói és petrolkémiai marzsok normalizálódása a 2026-os geopolitikai csúcs után; orosz kőolaj-ellátás, szankciók és a Barátság-vezeték kockázata; kormányzati beavatkozás (árrés-, árstop, különadók); üzemzavarok (Steam Cracker 1 2027-ig áll, AV3 tűz)
 - Belső érték alapja: Normalizált owner earnings ≈ 1,0 Mrd USD (2025: 2,8 Mrd USD működési CF – 1,7 Mrd USD capex, a 2026-os csúcs-EBITDA nélkül), ~760 M forgalomban lévő részvény, ~325 HUF/USD árfolyam feltételezésével ~428 Ft/részvény, 9x ciklikus szorzó ≈ 3 850 Ft.
@@ -327,5 +327,5 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 
 ## Jóváhagyásra váró elemzések (2)
 
-- 4iG Nyrt. (4IG): None moat, ★★☆☆☆ Drága, árfolyam 1576 Ft, belső érték 1000 Ft. Avoid: az 1589 HUF-os ár kb. 59%-kal a ~1000 HUF-os, durva becslésű belső érték felett van, messze az 500 HUF-os vételi szinttől, a magas tőkeáttétel és az állami átvilágítás pedig nagy bizonytalanságot jelent.
+- 4iG Nyrt. (4IG): None moat, ★★☆☆☆ Drága, árfolyam 1600 Ft, belső érték 1000 Ft. Avoid: az 1589 HUF-os ár kb. 59%-kal a ~1000 HUF-os, durva becslésű belső érték felett van, messze az 500 HUF-os vételi szinttől, a magas tőkeáttétel és az állami átvilágítás pedig nagy bizonytalanságot jelent.
 - Morgan Stanley (MS): Narrow moat, ★★★☆☆ Korrekt ár, árfolyam $188,08, belső érték $150,00. Hold: a 188,08 USD-s ár kb. 25%-kal a ~150 USD-s konzervatív belső érték felett van, távol a 90 USD-s vételi szinttől, de a Wide-közeli wealth management franchise és a 26,6%-os ROTCE miatt minőségi tartás.
