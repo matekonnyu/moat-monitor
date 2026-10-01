@@ -1,5 +1,5 @@
 {
- "at": "2026-10-01T13:21:33.470Z",
+ "at": "2026-10-01T13:22:15.817Z",
  "pick": null,
  "c": {
   "AAPL": {
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 25.81,
+   "px": 26.21,
    "bb": 21,
    "cur": "EUR"
   },
@@ -114,11 +114,11 @@
   },
   "MOL": {
    "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
-   "trM": "Emelkedő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4980,
+   "px": 4900,
    "bb": 2310,
    "cur": "HUF"
   },
