@@ -1,0 +1,246 @@
+{
+ "at": "2026-10-01T13:21:33.470Z",
+ "pick": null,
+ "c": {
+  "AAPL": {
+   "n": "Apple Inc.",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 333.02,
+   "bb": 144.2,
+   "cur": "USD"
+  },
+  "AMD": {
+   "n": "Advanced Micro Devices",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 611.76,
+   "bb": 135,
+   "cur": "USD"
+  },
+  "AMZN": {
+   "n": "Amazon.com, Inc.",
+   "trM": "Csökkenő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 249.15,
+   "bb": 147,
+   "cur": "USD"
+  },
+  "ASML": {
+   "n": "ASML Holding N.V. (ADR)",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 1811.67,
+   "bb": 875,
+   "cur": "USD"
+  },
+  "AVGO": {
+   "n": "Broadcom Inc.",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
+   "rw": "Hold",
+   "below": false,
+   "px": 351.19,
+   "bb": 187.8,
+   "cur": "USD"
+  },
+  "BKNG": {
+   "n": "Booking Holdings Inc.",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
+   "rw": "Accumulate",
+   "below": false,
+   "px": 162.91,
+   "bb": 147,
+   "cur": "USD"
+  },
+  "DTE": {
+   "n": "Deutsche Telekom AG",
+   "trM": "Csökkenő",
+   "trL": "Csökkenő",
+   "rw": "Hold",
+   "below": false,
+   "px": 25.81,
+   "bb": 21,
+   "cur": "EUR"
+  },
+  "GOOGL": {
+   "n": "Alphabet Inc. (Class A)",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 344.08,
+   "bb": 211.8,
+   "cur": "USD"
+  },
+  "KO": {
+   "n": "The Coca-Cola Company",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 86.08,
+   "bb": 59.2,
+   "cur": "USD"
+  },
+  "MA": {
+   "n": "Mastercard Incorporated",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 551.47,
+   "bb": 441,
+   "cur": "USD"
+  },
+  "META": {
+   "n": "Meta Platforms, Inc.",
+   "trM": "Emelkedő",
+   "trL": "Oldalazó",
+   "rw": "Hold",
+   "below": false,
+   "px": 725.18,
+   "bb": 360,
+   "cur": "USD"
+  },
+  "MOL": {
+   "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 4980,
+   "bb": 2310,
+   "cur": "HUF"
+  },
+  "MSFT": {
+   "n": "Microsoft Corporation",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 512.9,
+   "bb": 349.3,
+   "cur": "USD"
+  },
+  "MTELEKOM": {
+   "n": "Magyar Telekom Nyrt.",
+   "trM": "Csökkenő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 2544,
+   "bb": 1750,
+   "cur": "HUF"
+  },
+  "NVDA": {
+   "n": "NVIDIA Corporation",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 228.38,
+   "bb": 81.5,
+   "cur": "USD"
+  },
+  "OCGN": {
+   "n": "Ocugen, Inc.",
+   "trM": "Csökkenő",
+   "trL": "Csökkenő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 1.03,
+   "bb": 0.2,
+   "cur": "USD"
+  },
+  "OTP": {
+   "n": "OTP Bank Nyrt.",
+   "trM": "Csökkenő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 41930,
+   "bb": 24600,
+   "cur": "HUF"
+  },
+  "RICHTER": {
+   "n": "Richter Gedeon Nyrt.",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 12370,
+   "bb": 9450,
+   "cur": "HUF"
+  },
+  "SPCX": {
+   "n": "Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX)",
+   "trM": "Emelkedő",
+   "trL": null,
+   "rw": "Avoid",
+   "below": false,
+   "px": 150.86,
+   "bb": 22.5,
+   "cur": "USD"
+  },
+  "TSM": {
+   "n": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 456.19,
+   "bb": 280,
+   "cur": "USD"
+  },
+  "V": {
+   "n": "Visa Inc.",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 359.33,
+   "bb": 233.8,
+   "cur": "USD"
+  },
+  "PEP": {
+   "n": "PepsiCo, Inc.",
+   "trM": "Csökkenő",
+   "trL": "Csökkenő",
+   "rw": "Hold",
+   "below": false,
+   "px": 126.72,
+   "bb": 108,
+   "cur": "USD"
+  },
+  "ZS": {
+   "n": "Zscaler, Inc.",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 199.42,
+   "bb": 69,
+   "cur": "USD"
+  },
+  "STX": {
+   "n": "Seagate Technology Holdings plc",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 922.34,
+   "bb": 150,
+   "cur": "USD"
+  }
+ }
+}

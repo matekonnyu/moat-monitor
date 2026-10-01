@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: refresh
@@ -21,12 +22,16 @@ jobs:
         with:
           node-version: 20
       - name: Frissítés és mentés (ütközésnél újrapróbálja)
+        env:
+          SIGNAL_OUT: ${{ runner.temp }}/signal.json
         run: |
           git config user.name "moat-monitor-bot"
           git config user.email "moat-monitor-bot@users.noreply.github.com"
           for n in 1 2 3 4; do
             git fetch -q origin main && git reset -q --hard origin/main
+            rm -f "$SIGNAL_OUT"
             node scripts/refresh.mjs || { echo "refresh hiba"; sleep 20; continue; }
+            node scripts/signals.mjs || echo "jelzés hiba"
             git add data adatok.md adatok.json adatok.csv llms.txt index.html
             git diff --cached --quiet && exit 0
             git commit -qm "Napi árfolyamfrissítés $(date -u +%F)"
@@ -34,3 +39,13 @@ jobs:
             echo "push ütközés, újra ($n)"; sleep $((n*5))
           done
           exit 1
+      - name: Jelzés trend- vagy ajánlásváltáskor (GitHub issue → e-mail értesítés)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SIGNAL_OUT: ${{ runner.temp }}/signal.json
+        run: |
+          [ -f "$SIGNAL_OUT" ] || { echo "Nincs változás."; exit 0; }
+          node -e 'const s=require(process.env.SIGNAL_OUT);require("fs").writeFileSync("t.txt",s.title);require("fs").writeFileSync("b.md",s.body)'
+          gh label create jelzes --color FBCA04 --description "Trend- vagy ajánlásváltás" -R "$GITHUB_REPOSITORY" 2>/dev/null || true
+          gh issue create -R "$GITHUB_REPOSITORY" --title "$(cat t.txt)" --body-file b.md --label jelzes

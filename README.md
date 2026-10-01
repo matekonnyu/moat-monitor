@@ -8,3 +8,6 @@ Moat-minőség, belső érték és napi árfolyamtrend a követett részvényekr
 - **Elemzés:** az `Elemzés:` kéréseket Claude egy reggeli ütemezett feladatban dolgozza fel, és a kész elemzést a `data/candidates.json`-ba írja.
 
 Kutatási eszköz, nem befektetési tanács.
+
+## Jelzések (trend- és ajánlásváltás)
+A napi frissítés után a `scripts/signals.mjs` összeveti a figyelőlista papírjait az előző napi állapottal. Ha egy papír középtávú vagy hosszú távú (200 napos) trendje megfordul, változik az ajánlása (Buy/Accumulate/Hold/Avoid), az ár átlépi a vételi szintet, vagy másik papír lesz a Mai ajánlat, a workflow `jelzes` címkéjű GitHub issue-t nyit – erről a GitHub e-mailben értesít. Napló: `data/signals.json`, állapot: `data/signals-state.json`.
