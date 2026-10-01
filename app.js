@@ -237,6 +237,27 @@ $("#toksave").onclick = async () => {
   tokMsg("Mentve, működik. Mostantól a gombok a háttérben futnak.", true);
 };
 $("#tokdel").onclick = () => { TOKEN = ""; try { localStorage.removeItem("mm_gh_token"); } catch {} drawTok(); tokMsg("A kulcsot töröltem ebből a böngészőből.", true); };
+// Jelzések: trend- vagy ajánlásváltás az elmúlt 7 napban (data/signals.json, a napi frissítés írja).
+function sigTone(c) {
+  const t = String(c.to || "");
+  if (c.kind.includes("trend")) return K[t] || "";
+  if (c.kind == "Ajánlás") return /Buy|Accumulate/.test(t) ? "g" : /Hold/.test(t) ? "a" : "r";
+  if (c.kind == "Vételi szint") return /alá/.test(t) ? "g" : "a";
+  return t && t != "nincs" ? "g" : "a";
+}
+function drawSig(S) {
+  const el = $("#sig"), lim = new Date(Date.now() - 7 * 864e5).toLocaleDateString("sv-SE", { timeZone: "Europe/Budapest" });
+  const a = (S || []).filter((c) => c.d >= lim);
+  if (!a.length) { el.hidden = true; return; }
+  const last = a[0].d, now = a.filter((c) => c.d == last), old = a.filter((c) => c.d != last);
+  const nm = (id) => (C.find((r) => r.id == id) || {}).n || "";
+  const li = (c) => { const tr = c.kind.includes("trend"), f = (x) => (tr && ARW[x] ? ARW[x] + " " : "") + x;
+    return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id || "")}</b> ${esc(c.n || nm(c.id))}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b>${c.px != null ? ` <span class="sgd">· ár ${esc(c.px)} ${esc(c.cur || "")}${c.bb ? `, vételi szint ${esc(c.bb)}` : ""}</span>` : ""}</span>${old.length && c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; };
+  el.innerHTML = `<h2>Jelzések · ${esc(last)}</h2><p class="sgs">${now.length} változás a figyelőlistán: trendváltás, ajánlásváltás, vételi szint átlépése vagy új Mai ajánlat.</p><ul>${now.map(li).join("")}</ul>`
+    + (old.length ? `<details><summary>Korábbi jelzések (7 nap, ${old.length})</summary><ul>${old.map(li).join("")}</ul></details>` : "");
+  el.hidden = false;
+}
+
 drawTok();
 
 async function getJSON(p) { const r = await fetch(p + "?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) throw new Error(p); return r.json(); }
@@ -244,6 +265,7 @@ async function getJSON(p) { const r = await fetch(p + "?t=" + Date.now(), { cach
   try {
     [C, CD] = await Promise.all([getJSON("data/companies.json"), getJSON("data/candidates.json")]);
     try { META = await getJSON("data/meta.json"); } catch {}
+    getJSON("data/signals.json").then(drawSig).catch(() => {});
     const ds = C.map((r) => r.mk?.d).filter(Boolean).sort();
     const when = META.refreshedAt ? new Date(META.refreshedAt).toLocaleString("hu-HU", { dateStyle: "medium", timeStyle: "short" }) : null;
     $("#st").textContent = (ds.length ? `Árak: ${ds[ds.length - 1]} záró.` : "") + (when ? ` Utolsó frissítés: ${when}.` : "") + (META.fail ? ` ${META.fail} papírnál nem sikerült.` : "");
