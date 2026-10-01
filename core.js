@@ -23,9 +23,10 @@ function derive(o) {
   const rw = (String(o.r || "").match(/^\s*(Buy|Accumulate|Hold|Avoid)/i) || [])[1] || (/\bhold\b/i.test(o.r || "") ? "Hold" : "");
   return { ...o, mk, px, pv, up, v, mpa, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: st ?? ({ Undervalued: 4, Fair: 3, Expensive: 2 }[v] || 0), st, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
 }
-// Mai ajánlat: moat score >= 70, van moat, Buy/Accumulate, nem drága, az 50 és 200 napos trend nem csökkenő; a vételi szinthez legközelebbi.
+// Mai ajánlat: moat score >= 70, van moat, Buy/Accumulate, nem drága, és trend: vagy a 200 napos (hosszú távú) emelkedő – ilyenkor a rövid/közép táv eshet –,
+// vagy az 50 és a 200 napos sem csökkenő. Közülük a vételi szinthez legközelebbi.
 function pickOf(all) {
   const buy = (r) => /^\s*(buy|accumulate)/i.test(r.r || "");
-  return all.filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő" && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
+  return all.filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && (r.trL == "Emelkedő" || (r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő")) && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
 }
 if (typeof module !== "undefined") module.exports = { trends, valuation, UD, stars, derive, pickOf };

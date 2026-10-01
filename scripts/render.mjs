@@ -57,7 +57,7 @@ const L = [];
 L.push(`# konninvest Moat Monitor – adatok`, "");
 L.push(`Árak: ${asOf} záró (Yahoo Finance). Frissítve: ${META.refreshedAt || "–"}. Forrás: ${SITE}. Módszertan: ${SITE}/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: ${SITE}/adatok.json, ${SITE}/adatok.csv. Kutatási eszköz, nem befektetési tanács.`, "");
 L.push(`## Mai ajánlat`, "");
-L.push(pick ? `${pick.n} (${pick.t}) – ${pick.m} moat, ${st(pick)} (${HU[pick.v]}), árfolyam ${mon(pick.px, pick.cur)}, belső érték ${mon(pick.iv, pick.cur)}, vételi szint ${mon(pick.bb, pick.cur)}, trend 20/50/200: ${tr3t(pick)}. ${pick.r || ""}` : "Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat score legalább 70, van moat, Buy/Accumulate ajánlás, legalább 3 csillag, az 50 és 200 napos trend nem csökkenő).", "");
+L.push(pick ? `${pick.n} (${pick.t}) – ${pick.m} moat, ${st(pick)} (${HU[pick.v]}), árfolyam ${mon(pick.px, pick.cur)}, belső érték ${mon(pick.iv, pick.cur)}, vételi szint ${mon(pick.bb, pick.cur)}, trend 20/50/200: ${tr3t(pick)}. ${pick.r || ""}` : "Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat score legalább 70, van moat, Buy/Accumulate ajánlás, legalább 3 csillag, és a 200 napos trend emelkedő, vagy az 50 és 200 napos trend sem csökkenő).", "");
 L.push(`## Követett cégek (${sorted.length})`, "");
 L.push("| Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |");
 L.push("| --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |");

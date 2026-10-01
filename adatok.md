@@ -4,7 +4,7 @@
 
 ## Mai ajánlat
 
-Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat score legalább 70, van moat, Buy/Accumulate ajánlás, legalább 3 csillag, az 50 és 200 napos trend nem csökkenő).
+Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat score legalább 70, van moat, Buy/Accumulate ajánlás, legalább 3 csillag, és a 200 napos trend emelkedő, vagy az 50 és 200 napos trend sem csökkenő).
 
 ## Követett cégek (24)
 
