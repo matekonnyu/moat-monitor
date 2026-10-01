@@ -1,6 +1,39 @@
 [
  {
   "d": "2026-10-01",
+  "id": "GOOGL",
+  "n": "Alphabet Inc. (Class A)",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Csökkenő",
+  "px": 338.24,
+  "bb": 211.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-01",
+  "id": "GOOGL",
+  "n": "Alphabet Inc. (Class A)",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 338.24,
+  "bb": 211.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-01",
+  "id": "OTP",
+  "n": "OTP Bank Nyrt.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 39980,
+  "bb": 24600,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-01",
   "id": "MOL",
   "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
   "kind": "Középtávú trend",

@@ -1,5 +1,5 @@
 {
- "at": "2026-10-01T13:22:15.817Z",
+ "at": "2026-10-01T21:11:34.410Z",
  "pick": null,
  "c": {
   "AAPL": {
@@ -8,7 +8,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 333.02,
+   "px": 330.32,
    "bb": 144.2,
    "cur": "USD"
   },
@@ -18,7 +18,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 611.76,
+   "px": 615.73,
    "bb": 135,
    "cur": "USD"
   },
@@ -28,7 +28,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 249.15,
+   "px": 248.23,
    "bb": 147,
    "cur": "USD"
   },
@@ -38,7 +38,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1811.67,
+   "px": 1808.49,
    "bb": 875,
    "cur": "USD"
   },
@@ -48,7 +48,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 351.19,
+   "px": 343.64,
    "bb": 187.8,
    "cur": "USD"
   },
@@ -58,7 +58,7 @@
    "trL": "Oldalazó",
    "rw": "Accumulate",
    "below": false,
-   "px": 162.91,
+   "px": 160.28,
    "bb": 147,
    "cur": "USD"
   },
@@ -68,17 +68,17 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.21,
+   "px": 26.07,
    "bb": 21,
    "cur": "EUR"
   },
   "GOOGL": {
    "n": "Alphabet Inc. (Class A)",
-   "trM": "Oldalazó",
-   "trL": "Emelkedő",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 344.08,
+   "px": 338.24,
    "bb": 211.8,
    "cur": "USD"
   },
@@ -88,7 +88,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 86.08,
+   "px": 86.1,
    "bb": 59.2,
    "cur": "USD"
   },
@@ -98,7 +98,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 551.47,
+   "px": 550,
    "bb": 441,
    "cur": "USD"
   },
@@ -108,7 +108,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 725.18,
+   "px": 725.93,
    "bb": 360,
    "cur": "USD"
   },
@@ -118,7 +118,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4900,
+   "px": 4830,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -128,7 +128,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 512.9,
+   "px": 512.8,
    "bb": 349.3,
    "cur": "USD"
   },
@@ -148,7 +148,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 228.38,
+   "px": 230.86,
    "bb": 81.5,
    "cur": "USD"
   },
@@ -158,17 +158,17 @@
    "trL": "Csökkenő",
    "rw": "Avoid",
    "below": false,
-   "px": 1.03,
+   "px": 1,
    "bb": 0.2,
    "cur": "USD"
   },
   "OTP": {
    "n": "OTP Bank Nyrt.",
    "trM": "Csökkenő",
-   "trL": "Emelkedő",
+   "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 41930,
+   "px": 39980,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -188,7 +188,7 @@
    "trL": null,
    "rw": "Avoid",
    "below": false,
-   "px": 150.86,
+   "px": 148.07,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -198,7 +198,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 456.19,
+   "px": 459.2,
    "bb": 280,
    "cur": "USD"
   },
@@ -208,7 +208,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 359.33,
+   "px": 359.85,
    "bb": 233.8,
    "cur": "USD"
   },
@@ -218,7 +218,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 126.72,
+   "px": 125.6,
    "bb": 108,
    "cur": "USD"
   },
@@ -228,7 +228,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 199.42,
+   "px": 198.78,
    "bb": 69,
    "cur": "USD"
   },
@@ -238,8 +238,68 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 922.34,
+   "px": 945.57,
    "bb": 150,
+   "cur": "USD"
+  },
+  "UAL": {
+   "n": "United Airlines Holdings, Inc.",
+   "trM": "Csökkenő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 111.78,
+   "bb": 37.8,
+   "cur": "USD"
+  },
+  "WFC": {
+   "n": "Wells Fargo & Company",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
+   "rw": "Accumulate",
+   "below": false,
+   "px": 80.25,
+   "bb": 77,
+   "cur": "USD"
+  },
+  "LLY": {
+   "n": "Eli Lilly and Company",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 1149.85,
+   "bb": 574,
+   "cur": "USD"
+  },
+  "CRH": {
+   "n": "CRH plc",
+   "trM": "Csökkenő",
+   "trL": "Csökkenő",
+   "rw": "Hold",
+   "below": false,
+   "px": 81.7,
+   "bb": 51.8,
+   "cur": "USD"
+  },
+  "VST": {
+   "n": "Vistra Corp.",
+   "trM": "Csökkenő",
+   "trL": "Csökkenő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 139.75,
+   "bb": 52.2,
+   "cur": "USD"
+  },
+  "SYK": {
+   "n": "Stryker Corporation",
+   "trM": "Csökkenő",
+   "trL": "Csökkenő",
+   "rw": "Accumulate",
+   "below": false,
+   "px": 272.96,
+   "bb": 216.3,
    "cur": "USD"
   }
  }
