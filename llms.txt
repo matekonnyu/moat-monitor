@@ -1,0 +1,13 @@
+# konninvest Moat Monitor
+
+> Magyar nyelvű részvénykutatási oldal: a követett cégek versenyelőnye (Morningstar-moat), becsült belső értéke, vételi szintje, Morningstar-módszerű csillagos értékelése és 20/50/200 napos árfolyamtrendje. Minden reggel frissül. Kutatási eszköz, nem befektetési tanács.
+
+Az oldal (https://konninvest.com) JavaScripttel jelenik meg; ugyanazok az adatok JavaScript nélkül is elérhetők:
+
+- [Adatok Markdownban](https://konninvest.com/adatok.md): Mai ajánlat, a teljes táblázat és cégenkénti részletek (kockázatok, források).
+- [Adatok JSON-ban](https://konninvest.com/adatok.json): minden mező és számított érték (csillag, MPA score, trendek), magyar mezőnevekkel.
+- [Adatok CSV-ben](https://konninvest.com/adatok.csv): a táblázat egy sor / cég formában.
+- [Módszertan](https://konninvest.com/MODSZERTAN.md): moat, belső érték, bizonytalanság, csillagok, MPA score, trend, Mai ajánlat szabályai.
+- Nyers adatfájlok: https://konninvest.com/data/companies.json, https://konninvest.com/data/candidates.json, https://konninvest.com/data/meta.json
+
+Árak dátuma: 2026-09-30. Cégek száma: 24.

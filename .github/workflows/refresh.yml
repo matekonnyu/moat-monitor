@@ -27,7 +27,7 @@ jobs:
           for n in 1 2 3 4; do
             git fetch -q origin main && git reset -q --hard origin/main
             node scripts/refresh.mjs || { echo "refresh hiba"; sleep 20; continue; }
-            git add data
+            git add data adatok.md adatok.json adatok.csv llms.txt index.html
             git diff --cached --quiet && exit 0
             git commit -qm "Napi árfolyamfrissítés $(date -u +%F)"
             git push -q origin HEAD:main && exit 0

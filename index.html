@@ -5,6 +5,9 @@
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Moat Monitor · konninvest</title>
+<meta name="description" content="Morningstar-moat, belső érték, csillagos értékelés és árfolyamtrend a követett részvényekre. Gépi olvasásra: /adatok.md, /adatok.json, /adatok.csv, /llms.txt.">
+<link rel="alternate" type="text/markdown" href="adatok.md" title="Adatok Markdownban">
+<link rel="alternate" type="application/json" href="adatok.json" title="Adatok JSON-ban">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%233d5066'/><stop offset='1' stop-color='%232c3e50'/></linearGradient></defs><rect width='32' height='32' rx='6.4' fill='url(%23g)'/><g stroke='white' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round' fill='none'><path d='M10.1 5.4V25.8'/><path d='M10.1 21.7 14.1 16.9 22.5 25.4'/><path d='M17.5 20.4 22.7 12.7'/></g><circle cx='22.7' cy='12.7' r='2.35' fill='%23c8a96a' stroke='white' stroke-width='1.1'/></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@500;600;700&display=swap">
 <style>
@@ -154,7 +157,9 @@ th,td{padding:9px 7px}
 <div class="status"><span id="st">Adatok betöltése...</span><button class="btn" id="rf" data-act="Frissítés: most">Árak frissítése most</button></div>
 <p class="note r" id="msg" hidden></p>
 <div id="run1"></div>
-<section class="pk2" id="pk" hidden></section>
+<section class="pk2" id="pk"><!--SSR-PK-->
+<h2>Ma nincs ajánlat</h2><p>Egyik cég sem felel meg egyszerre minden feltételnek.</p>
+<!--/SSR-PK--></section>
 <div class="bar">
 <input id="q" type="search" placeholder="Keresés: név, ticker, szektor" aria-label="Keresés">
 <select id="fm" aria-label="Moat"><option value="">Minden moat</option><option>Wide</option><option>Narrow</option><option>None</option></select>
@@ -166,7 +171,32 @@ th,td{padding:9px 7px}
 <thead><tr id="hd">
 <th data-k="n">Cég</th><th data-k="px">Árfolyam</th><th data-k="tp">Célár</th><th data-k="up">Potenciál</th><th data-k="to" title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th data-k="iv">Belső érték</th><th data-k="bb">Vételi szint</th><th data-k="pv">Ár vs IV</th><th data-k="vo">Értékelés</th><th data-k="mo">Moat</th><th data-k="s">Moat score</th><th data-k="mpa" title="Buffett–Munger / MPA: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30)">MPA score</th><th data-k="gap" title="MPA score − Moat score">Eltérés</th><th data-k="rk">Elemzés</th>
 </tr></thead>
-<tbody id="tb"></tbody>
+<tbody id="tb"><!--SSR-TB-->
+<tr><td>ASML Holding N.V. (ADR) (ASML)</td><td>$1812</td><td>$2116</td><td>+16,8%</td><td>↑ ↑ ↑</td><td>$1250</td><td>$875,00</td><td>+44,9%</td><td>★☆☆☆☆ Drága</td><td>Wide</td><td>93</td><td>70</td><td>-23</td><td>Avoid</td></tr>
+<tr><td>Visa Inc. (V)</td><td>$359,33</td><td>$419,36</td><td>+16,7%</td><td>↓ → ↑</td><td>$334,00</td><td>$233,80</td><td>+7,6%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>93</td><td>85</td><td>-8</td><td>Hold</td></tr>
+<tr><td>Mastercard Incorporated (MA)</td><td>$551,47</td><td>$666,71</td><td>+20,9%</td><td>↓ → ↑</td><td>$630,00</td><td>$441,00</td><td>-12,5%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>92</td><td>92</td><td>0</td><td>Hold</td></tr>
+<tr><td>Microsoft Corporation (MSFT)</td><td>$512,90</td><td>$577,26</td><td>+12,5%</td><td>↑ ↑ ↑</td><td>$499,00</td><td>$349,30</td><td>+2,8%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>90</td><td>85</td><td>-5</td><td>Hold</td></tr>
+<tr><td>Taiwan Semiconductor Manufacturing Company Limited (ADR) (TSM)</td><td>$456,19</td><td>$552,26</td><td>+21,1%</td><td>↑ ↑ ↑</td><td>$400,00</td><td>$280,00</td><td>+14,0%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>90</td><td>78</td><td>-12</td><td>Hold</td></tr>
+<tr><td>NVIDIA Corporation (NVDA)</td><td>$228,38</td><td>$327,70</td><td>+43,5%</td><td>↑ ↑ ↑</td><td>$163,00</td><td>$81,50</td><td>+40,1%</td><td>★★☆☆☆ Drága</td><td>Wide</td><td>88</td><td>70</td><td>-18</td><td>Hold</td></tr>
+<tr><td>The Coca-Cola Company (KO)</td><td>$86,08</td><td>$94,70</td><td>+10,0%</td><td>↓ → ↑</td><td>$74,00</td><td>$59,20</td><td>+16,3%</td><td>★★☆☆☆ Drága</td><td>Wide</td><td>86</td><td>78</td><td>-8</td><td>Hold</td></tr>
+<tr><td>Amazon.com, Inc. (AMZN)</td><td>$249,15</td><td>$329,54</td><td>+32,3%</td><td>↓ ↓ ↑</td><td>$210,00</td><td>$147,00</td><td>+18,6%</td><td>★★☆☆☆ Drága</td><td>Wide</td><td>85</td><td>78</td><td>-7</td><td>Hold</td></tr>
+<tr><td>Apple Inc. (AAPL)</td><td>$333,02</td><td>$328,22</td><td>-1,4%</td><td>→ ↑ ↑</td><td>$206,00</td><td>$144,20</td><td>+61,7%</td><td>★☆☆☆☆ Drága</td><td>Wide</td><td>84</td><td>70</td><td>-14</td><td>Avoid</td></tr>
+<tr><td>Meta Platforms, Inc. (META)</td><td>$725,18</td><td>$793,91</td><td>+9,5%</td><td>↑ ↑ →</td><td>$600,00</td><td>$360,00</td><td>+20,9%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>84</td><td>78</td><td>-6</td><td>Hold</td></tr>
+<tr><td>Broadcom Inc. (AVGO)</td><td>$351,19</td><td>$531,85</td><td>+51,4%</td><td>↓ ↓ →</td><td>$313,00</td><td>$187,80</td><td>+12,2%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>82</td><td>78</td><td>-4</td><td>Hold</td></tr>
+<tr><td>Alphabet Inc. (Class A) (GOOGL)</td><td>$344,08</td><td>$429,46</td><td>+24,8%</td><td>→ → ↑</td><td>$353,00</td><td>$211,80</td><td>-2,5%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>82</td><td>92</td><td>10</td><td>Hold</td></tr>
+<tr><td>PepsiCo, Inc. (PEP)</td><td>$126,72</td><td>$151,09</td><td>+19,2%</td><td>↓ ↓ ↓</td><td>$135,00</td><td>$108,00</td><td>-6,1%</td><td>★★★☆☆ Korrekt ár</td><td>Wide</td><td>80</td><td>80</td><td>0</td><td>Hold</td></tr>
+<tr><td>Booking Holdings Inc. (BKNG)</td><td>$162,91</td><td>$238,78</td><td>+46,6%</td><td>↓ ↓ →</td><td>$245,00</td><td>$147,00</td><td>-33,5%</td><td>★★★★☆ Alulértékelt</td><td>Narrow</td><td>72</td><td>65</td><td>-7</td><td>Accumulate</td></tr>
+<tr><td>Zscaler, Inc. (ZS)</td><td>$199,42</td><td>$208,86</td><td>+4,7%</td><td>↑ ↑ ↑</td><td>$115,00</td><td>$69,00</td><td>+73,4%</td><td>★☆☆☆☆ Drága</td><td>Narrow</td><td>66</td><td>55</td><td>-11</td><td>Avoid</td></tr>
+<tr><td>Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) (SPCX)</td><td>$150,86</td><td>$222,42</td><td>+47,4%</td><td>↑ ↑ –</td><td>$45,00</td><td>$22,50</td><td>+235,2%</td><td>★☆☆☆☆ Drága</td><td>Narrow</td><td>64</td><td>43</td><td>-21</td><td>Avoid</td></tr>
+<tr><td>Advanced Micro Devices (AMD)</td><td>$611,76</td><td>$618,51</td><td>+1,1%</td><td>↑ ↑ ↑</td><td>$270,00</td><td>$135,00</td><td>+126,6%</td><td>★☆☆☆☆ Drága</td><td>Narrow</td><td>62</td><td>55</td><td>-7</td><td>Avoid</td></tr>
+<tr><td>Deutsche Telekom AG (DTE)</td><td>26,40 €</td><td>35,84 €</td><td>+35,8%</td><td>↓ ↓ ↓</td><td>30,00 €</td><td>21,00 €</td><td>-12,0%</td><td>★★★☆☆ Korrekt ár</td><td>Narrow</td><td>62</td><td>65</td><td>3</td><td>Hold</td></tr>
+<tr><td>OTP Bank Nyrt. (OTP)</td><td>43 800 Ft</td><td>44 872 Ft</td><td>+2,4%</td><td>↓ → ↑</td><td>41 000 Ft</td><td>24 600 Ft</td><td>+6,8%</td><td>★★★☆☆ Korrekt ár</td><td>Narrow</td><td>62</td><td>70</td><td>8</td><td>Hold</td></tr>
+<tr><td>Magyar Telekom Nyrt. (MTELEKOM)</td><td>2540 Ft</td><td>2923 Ft</td><td>+15,1%</td><td>→ ↓ ↑</td><td>2500 Ft</td><td>1750 Ft</td><td>+1,6%</td><td>★★★☆☆ Korrekt ár</td><td>Narrow</td><td>58</td><td>70</td><td>12</td><td>Hold</td></tr>
+<tr><td>Richter Gedeon Nyrt. (RICHTER)</td><td>12 330 Ft</td><td>13 800 Ft</td><td>+11,9%</td><td>↓ → ↑</td><td>13 500 Ft</td><td>9450 Ft</td><td>-8,7%</td><td>★★★☆☆ Korrekt ár</td><td>Narrow</td><td>58</td><td>77</td><td>19</td><td>Hold</td></tr>
+<tr><td>Seagate Technology Holdings plc (STX)</td><td>$922,34</td><td>$1125</td><td>+22,0%</td><td>↑ ↑ ↑</td><td>$300,00</td><td>$150,00</td><td>+207,4%</td><td>★☆☆☆☆ Drága</td><td>Narrow</td><td>50</td><td>43</td><td>-7</td><td>Avoid</td></tr>
+<tr><td>MOL Magyar Olaj- és Gázipari Nyrt. (MOL)</td><td>5050 Ft</td><td>4440 Ft</td><td>-12,1%</td><td>↓ ↑ ↑</td><td>3850 Ft</td><td>2310 Ft</td><td>+31,2%</td><td>★★☆☆☆ Drága</td><td>None</td><td>38</td><td>35</td><td>-3</td><td>Avoid</td></tr>
+<tr><td>Ocugen, Inc. (OCGN)</td><td>$1,03</td><td>$9,17</td><td>+790,3%</td><td>↓ ↓ ↓</td><td>$0,80</td><td>$0,20</td><td>+28,7%</td><td>★★★☆☆ Korrekt ár</td><td>None</td><td>14</td><td>18</td><td>4</td><td>Avoid</td></tr>
+<!--/SSR-TB--></tbody>
 </table></div>
 </section>
 
@@ -194,8 +224,9 @@ th,td{padding:9px 7px}
 </details>
 </section>
 
-<footer id="mod"><b>Módszertan (Morningstar-gyakorlat).</b> <b>Moat:</b> Wide, ha nagyon valószínű, hogy a cég 10 évig a tőkeköltsége felett keres (ROIC &gt; WACC), és inkább igen, mint nem, hogy 20 évig is; Narrow, ha inkább igen, mint nem, hogy legalább 10 évig; None, ha egyik sem. Mellette a moat trend (erősödő / stabil / gyengülő) és az öt moat-forrás pontszáma. <b>Értékelés (csillagok):</b> az árfolyam és a becsült belső érték (fair value) aránya a Morningstar bizonytalansági besorolása szerint: 5 csillag, ha az ár legalább 20% (alacsony), 30% (közepes), 40% (magas), 50% (nagyon magas) vagy 75% (extrém bizonytalanság) diszkonttal forog; 1 csillag 25% / 35% / 55% / 75% / 300% prémium felett; a 2–4 csillag a köztes sávok. A <b>vételi szint</b> az 5 csillagos ár. A <b>MPA score</b> a Buffett–Munger szemlélet összesítője: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30); az <b>Eltérés</b> = MPA score − Moat score. <b>Trend</b> három időtávon: 20 nap (az ár a 20 napos átlag felett/alatt ±1%), 50 nap (Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van, Csökkenő, ha fordítva), 200 nap (Emelkedő, ha az ár és az SMA50 is a 200 napos átlag felett van). A napi ajánlat csak vételi ajánlású, nem drága, és közép- és hosszú távon nem csökkenő trendű cég lehet. Árfolyam: Yahoo Finance napi záró. A cégelemzések internetes forrásokból készülnek (a források a részletekben). Kutatási eszköz, nem befektetési tanács.</footer>
+<footer id="mod"><b>Módszertan (Morningstar-gyakorlat).</b> <b>Moat:</b> Wide, ha nagyon valószínű, hogy a cég 10 évig a tőkeköltsége felett keres (ROIC &gt; WACC), és inkább igen, mint nem, hogy 20 évig is; Narrow, ha inkább igen, mint nem, hogy legalább 10 évig; None, ha egyik sem. Mellette a moat trend (erősödő / stabil / gyengülő) és az öt moat-forrás pontszáma. <b>Értékelés (csillagok):</b> az árfolyam és a becsült belső érték (fair value) aránya a Morningstar bizonytalansági besorolása szerint: 5 csillag, ha az ár legalább 20% (alacsony), 30% (közepes), 40% (magas), 50% (nagyon magas) vagy 75% (extrém bizonytalanság) diszkonttal forog; 1 csillag 25% / 35% / 55% / 75% / 300% prémium felett; a 2–4 csillag a köztes sávok. A <b>vételi szint</b> az 5 csillagos ár. A <b>MPA score</b> a Buffett–Munger szemlélet összesítője: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30); az <b>Eltérés</b> = MPA score − Moat score. <b>Trend</b> három időtávon: 20 nap (az ár a 20 napos átlag felett/alatt ±1%), 50 nap (Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van, Csökkenő, ha fordítva), 200 nap (Emelkedő, ha az ár és az SMA50 is a 200 napos átlag felett van). A napi ajánlat csak vételi ajánlású, nem drága, és közép- és hosszú távon nem csökkenő trendű cég lehet. Árfolyam: Yahoo Finance napi záró. A cégelemzések internetes forrásokból készülnek (a források a részletekben). Kutatási eszköz, nem befektetési tanács. Gépi olvasásra (AI-ügynököknek): <a href="adatok.md">adatok.md</a> · <a href="adatok.json">adatok.json</a> · <a href="adatok.csv">adatok.csv</a> · <a href="llms.txt">llms.txt</a>.</footer>
 </main>
-<script src="app.js?v=20261001c"></script>
+<script src="core.js?v=20261001d"></script>
+<script src="app.js?v=20261001d"></script>
 </body>
 </html>

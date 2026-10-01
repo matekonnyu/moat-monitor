@@ -79,8 +79,9 @@ for (let attempt = 1; attempt <= 4; attempt++) {
   const res = await apply();
   if (res.skip) { await reply(res.text); process.exit(0); }
   if (action === "felvétel" || res.refresh) { try { sh("node scripts/refresh.mjs"); } catch {} }
-  sh("git add data");
-  if (!sh("git status --porcelain data").trim()) { await reply(res.text); process.exit(0); }
+  else { try { sh("node scripts/render.mjs"); } catch {} }
+  sh("git add data adatok.md adatok.json adatok.csv llms.txt index.html");
+  if (!sh("git status --porcelain data adatok.md adatok.json adatok.csv llms.txt index.html").trim()) { await reply(res.text); process.exit(0); }
   sh(`git commit -qm ${JSON.stringify(issue.title)}`);
   try { sh("git push -q origin HEAD:main"); await reply(res.text); process.exit(0); }
   catch (e) { last = String(e.stderr || e.message).slice(-300); console.error("push", attempt, last); await new Promise((r) => setTimeout(r, 3000 * attempt)); }

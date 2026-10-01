@@ -82,3 +82,6 @@ for (const f of FILES) {
 }
 await writeFile("data/meta.json", JSON.stringify({ refreshedAt: at, ok, fail }, null, 1) + "\n");
 console.log(`Frissítve: ${ok}, hiba: ${fail}`);
+
+// Gépi (AI-olvasható) kiadás frissítése: adatok.md / .json / .csv, llms.txt, előre beírt index.html
+try { await import("./render.mjs"); } catch (e) { console.error("render:", e.message); }
