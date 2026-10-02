@@ -124,6 +124,7 @@ function draw() {
 }
 
 // Napi ajánlat: Buy/Accumulate/Hold ajánlás (nem Avoid), nem drága, trend nem lefelé, score ≥ 70, van moat; a Buy Below-hoz legközelebbi.
+let pkOpen = false; // a Mai ajánlat alapból összecsukva
 function pick() {
   const all = C.map(derive);
   const c = pickOf(all);
@@ -148,9 +149,11 @@ function pick() {
   $("#pk").innerHTML = `<div class="pkh"><span class="pkl">Mai ajánlat · ${day}</span>${c.v ? `<span class="bdg ${K[c.v] || ""}">${HU[c.v] || esc(c.v)}</span>` : ""}</div>
 <h2>${esc(c.n)} <span class="tk">${esc(c.t)}</span></h2>
 <p class="pks">${esc(c.m)} moat · ${esc(c.sec || "")} · az ár a vételi szint ${gb <= 0 ? "alatt" : "felett"}</p>
-<div class="mts">${tile("Árfolyam", mon(c.px, c.cur))}${tile("Belső érték (IV)", mon(c.iv, c.cur))}${tile("Vételi szint", mon(c.bb, c.cur))}${tile("Ár vs IV", pct(c.pv), col(c.pv, true))}${tile("Konszenzus célár", mon(c.tp, c.cur))}${tile("Potenciál a célárig", pct(c.up), col(c.up))}${tile("Score / Moat", `${c.s} / ${esc(c.m)}`)}${tile("Trend 20 / 50 / 200", trT, "tt")}</div>
-<div class="why"><div><h3>Miért most?</h3><ul>${why.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h3>Kockázatok</h3><ul class="rk">${risks.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div></div>
-<button class="pkb" type="button" id="pkd" data-id="${esc(c.id)}">Részletek →</button>`;
+<div class="mts">${tile("Árfolyam", mon(c.px, c.cur))}${tile("Konszenzus célár", mon(c.tp, c.cur))}${tile("Potenciál a célárig", pct(c.up), col(c.up))}${tile("Trend 20 / 50 / 200", trT, "tt")}</div>
+<div id="pkx"${pkOpen ? "" : " hidden"}><div class="mts">${tile("Belső érték (IV)", mon(c.iv, c.cur))}${tile("Vételi szint", mon(c.bb, c.cur))}${tile("Ár vs IV", pct(c.pv), col(c.pv, true))}${tile("Score / Moat", `${c.s} / ${esc(c.m)}`)}</div>
+<div class="why"><div><h3>Miért most?</h3><ul>${why.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h3>Kockázatok</h3><ul class="rk">${risks.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div></div></div>
+<button class="pkt" type="button" id="pkt" aria-expanded="${pkOpen}" aria-controls="pkx">${pkOpen ? "Kevesebb ▴" : "Több ▾"}</button> <button class="pkb" type="button" id="pkd" data-id="${esc(c.id)}">Részletek →</button>`;
+  $("#pkt").onclick = () => { pkOpen = !pkOpen; $("#pkx").hidden = !pkOpen; $("#pkt").textContent = pkOpen ? "Kevesebb ▴" : "Több ▾"; $("#pkt").setAttribute("aria-expanded", pkOpen); };
   $("#pkd").onclick = () => { ["#q", "#fm", "#fl", "#ft"].forEach((q) => { $(q).value = ""; }); open.add(c.id); draw(); const tr = document.querySelector(`tr.row[data-id="${CSS.escape(c.id)}"]`); if (tr) tr.scrollIntoView({ behavior: "smooth", block: "center" }); };
 }
 
