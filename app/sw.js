@@ -1,8 +1,8 @@
 // konninvest Moat Monitor – service worker
 // Az alkalmazás héja offline is elérhető; az adatok hálózat-először töltődnek, hiba esetén a cache-ből.
-const SHELL = "ki-shell-v2";
+const SHELL = "ki-shell-v3";
 const DATA = "ki-data-v1";
-const SHELL_FILES = ["./", "index.html", "manifest.webmanifest", "icon.svg", "icon-maskable.svg"];
+const SHELL_FILES = ["./", "index.html", "manifest.webmanifest", "icon.svg", "icon-maskable.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "icon-maskable-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => c.addAll(SHELL_FILES)).then(() => self.skipWaiting()));
