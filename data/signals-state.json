@@ -1,6 +1,6 @@
 {
- "at": "2026-10-02T05:48:22.555Z",
- "pick": null,
+ "at": "2026-10-02T07:16:55.043Z",
+ "pick": "MA",
  "c": {
   "AAPL": {
    "n": "Apple Inc.",
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.11,
+   "px": 26.08,
    "bb": 21,
    "cur": "EUR"
   },

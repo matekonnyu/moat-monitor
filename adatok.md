@@ -1,10 +1,10 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-01 záró (Yahoo Finance). Frissítve: 2026-10-02T05:48:06.470Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-02T07:16:38.909Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
-Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat score legalább 70, van moat, Buy/Accumulate ajánlás, legalább 3 csillag, és a 200 napos trend emelkedő, vagy az 50 és 200 napos trend sem csökkenő).
+Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfolyam $550,00, belső érték $630,00, vételi szint $441,00, trend 20/50/200: Csökkenő / Oldalazó / Emelkedő. Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 
 ## Követett cégek (30)
 
@@ -31,7 +31,7 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 | Wells Fargo & Company | WFC | $80,25 | $100,54 | +25,3% | Csökkenő / Csökkenő / Oldalazó | $110,00 | $77,00 | -27,0% | ★★★★☆ Alulértékelt | Narrow | 66 | 77 | +11 | Accumulate |
 | Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) | SPCX | $148,07 | $222,42 | +50,2% | Csökkenő / Emelkedő / – | $45,00 | $22,50 | +229,0% | ★☆☆☆☆ Drága | Narrow | 64 | 43 | -21 | Avoid |
 | Advanced Micro Devices | AMD | $615,73 | $618,51 | +0,5% | Emelkedő / Emelkedő / Emelkedő | $270,00 | $135,00 | +128,0% | ★☆☆☆☆ Drága | Narrow | 62 | 55 | -7 | Avoid |
-| Deutsche Telekom AG | DTE | 26,11 € | 35,84 € | +37,3% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -13,0% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
+| Deutsche Telekom AG | DTE | 26,08 € | 35,84 € | +37,4% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -13,1% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
 | OTP Bank Nyrt. | OTP | 42 700 Ft | 44 872 Ft | +5,1% | Csökkenő / Csökkenő / Emelkedő | 41 000 Ft | 24 600 Ft | +4,1% | ★★★☆☆ Korrekt ár | Narrow | 62 | 70 | +8 | Hold |
 | Magyar Telekom Nyrt. | MTELEKOM | 2544 Ft | 2923 Ft | +14,9% | Oldalazó / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +1,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
 | Richter Gedeon Nyrt. | RICHTER | 12 370 Ft | 13 800 Ft | +11,6% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -8,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
@@ -300,8 +300,8 @@ Ma nincs ajánlat: egyik cég sem felel meg egyszerre minden feltételnek (moat 
 - Szektor: Telecom Services; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 55, váltási költség 55, hálózati hatás 30, költségelőny 60, hatékony méret 72
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Adequate; AI-kockázat: Low
-- Árfolyam 26,11 € (2026-09-30); belső érték 30,00 €; vételi szint 21,00 € (biztonsági sáv 30%); konszenzus célár 35,84 €
-- Trend 20/50/200 nap: Csökkenő / Csökkenő / Csökkenő; változás 1 hó -8,0%, 6 hó -15,1%
+- Árfolyam 26,08 € (2026-10-02); belső érték 30,00 €; vételi szint 21,00 € (biztonsági sáv 30%); konszenzus célár 35,84 €
+- Trend 20/50/200 nap: Csökkenő / Csökkenő / Csökkenő; változás 1 hó -8,3%, 6 hó -15,3%
 - Ajánlás: Hold: a szűk moat (T-Mobile US, európai hálózati skála) mellett a 26,11 EUR-os ár ~13%-kal a ~30 EUR-os fair value alatt van, de a magas tőkeáttétel miatti 30%-os diszkonttal számolt 21 EUR-os vételi szintet még nem éri el.
 - Kockázatok: Magas nettó adósság (138,4 Mrd EUR lízinggel, H1 2026); az amerikai T-Mobile US versenyének élesedése és a kisebbségi érdekeltség miatt a csoport-FCF-nek csak egy része jut a DTE-részvényeseknek; európai szabályozás és spektrumköltségek; a T-Mobile US árfolyamától való függés
 - Belső érték alapja: 2026-os guidance szerinti ~2,20 EUR korrigált EPS (FCF AL ~20 Mrd EUR a T-Mobile US kisebbségi részesedése előtt) × 13,5x konzervatív szorzó, alacsony egyszámjegyű növekedéssel → ~30 EUR/részvény.

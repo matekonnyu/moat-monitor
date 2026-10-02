@@ -1,6 +1,14 @@
 [
  {
   "d": "2026-10-02",
+  "id": "MA",
+  "n": "Mastercard Incorporated",
+  "kind": "Mai ajánlat",
+  "from": "nincs",
+  "to": "MA"
+ },
+ {
+  "d": "2026-10-02",
   "id": "MOL",
   "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
   "kind": "Középtávú trend",
