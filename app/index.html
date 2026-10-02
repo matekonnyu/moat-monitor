@@ -2145,7 +2145,7 @@ function dailyChecks(c){
   return [
     ["Moat score legalább 70", c.moat_score>=70, String(c.moat_score==null?"–":c.moat_score)],
     ["Van moat (Wide vagy Narrow)", !!c.moat && c.moat!=="None", c.moat||"–"],
-    ["Buy vagy Accumulate ajánlás", c.ajanlas==="Buy"||c.ajanlas==="Accumulate", c.ajanlas||"–"],
+    ["Buy, Accumulate vagy Hold ajánlás", c.ajanlas==="Buy"||c.ajanlas==="Accumulate"||c.ajanlas==="Hold", c.ajanlas||"–"],
     ["Nem drága (legalább 3 csillag)", c.csillag>=3, (c.csillag||0)+" ★"],
     ["Trend: 200 napos emelkedő, vagy 50 és 200 sem csökkenő", trendOk, (t.nap50||"–")+" · "+(t.nap200||"–")]
   ];
@@ -2332,7 +2332,7 @@ function viewMethod(){
     '<h3 style="margin-top:16px">Csillagszámító</h3><div class="calc"><label for="c-fv">Belső érték<input id="c-fv" type="number" inputmode="decimal" value="100" min="0" step="any"></label><label for="c-px">Árfolyam<input id="c-px" type="number" inputmode="decimal" value="82" min="0" step="any"></label><label for="c-unc">Bizonytalanság<select id="c-unc">'+Object.keys(TH).map(function(k){return '<option value="'+k+'"'+(k==="Medium"?" selected":"")+">"+HU.bizonytalansag[k]+"</option>";}).join("")+'</select></label></div><div class="calc-out" id="calc-out"></div></div>'+
   '<div class="card"><h3>MPA score</h3><p>Moat (Wide 40, Narrow 25, None 5) + pénzügyi erő (Strong 30, Adequate 18, Weak 5) + ár (vételi szint alatt 30; belső érték alatt 22; 0–10% felett 15; 10–30% felett 8; 30% felett 0). <b>Eltérés</b> = MPA score − moat score.</p></div>'+
   '<div class="card"><h3>Trend</h3><p><b>20 nap:</b> ár az SMA20-hoz képest ±1%. <b>50 nap:</b> ár vs SMA50 és EMA20 vs EMA50. <b>200 nap:</b> ár és SMA50 vs SMA200. Yahoo Finance napi záróárakból, minden reggel.</p></div>'+
-  '<div class="card"><h3>Mai ajánlat</h3><p>Moat score legalább 70, van moat, Buy vagy Accumulate ajánlás, legalább 3 csillag, és vagy a 200 napos trend emelkedő, vagy az 50 és a 200 napos sem csökkenő. Ezek közül a vételi szinthez legközelebbi ár nyer.</p></div>'+
+  '<div class="card"><h3>Mai ajánlat</h3><p>Moat score legalább 70, van moat, Buy, Accumulate vagy Hold ajánlás (Avoid nem), legalább 3 csillag, és vagy a 200 napos trend emelkedő, vagy az 50 és a 200 napos sem csökkenő. Ezek közül a vételi szinthez legközelebbi ár nyer.</p></div>'+
   '<div class="ext"><a href="https://konninvest.com/MODSZERTAN.md" target="_blank" rel="noopener">Teljes módszertan ↗</a><a href="https://konninvest.com" target="_blank" rel="noopener">konninvest.com ↗</a></div>'+
   '<p class="disc">Kutatási eszköz, nem befektetési tanács.</p></div>';
 }

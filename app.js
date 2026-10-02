@@ -123,7 +123,7 @@ function draw() {
   pick();
 }
 
-// Napi ajánlat: vételi ajánlás, nem drága, trend nem lefelé, score ≥ 70, van moat; a Buy Below-hoz legközelebbi.
+// Napi ajánlat: Buy/Accumulate/Hold ajánlás (nem Avoid), nem drága, trend nem lefelé, score ≥ 70, van moat; a Buy Below-hoz legközelebbi.
 function pick() {
   const all = C.map(derive);
   const c = pickOf(all);
