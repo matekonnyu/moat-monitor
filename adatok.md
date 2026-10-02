@@ -46,7 +46,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### ASML Holding N.V. (ADR) (ASML)
 
-- Szektor: Technology - Semiconductor Equipment; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Technology - Semiconductor Equipment; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Wide (score 93, trend: Stable); pillérek: immateriális javak 92, váltási költség 88, hálózati hatás 30, költségelőny 82, hatékony méret 92
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $1808 (2026-10-01); belső érték $1250; vételi szint $875,00 (biztonsági sáv 30%); konszenzus célár $2116
@@ -124,7 +124,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### The Coca-Cola Company (KO)
 
-- Szektor: Beverages - Non-Alcoholic; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Beverages - Non-Alcoholic; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Wide (score 86, trend: Stable); pillérek: immateriális javak 95, váltási költség 20, hálózati hatás 40, költségelőny 75, hatékony méret 65
 - Értékelés: ★★☆☆☆ Drága; bizonytalanság: Low; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $86,10 (2026-10-01); belső érték $74,00; vételi szint $59,20 (biztonsági sáv 20%); konszenzus célár $94,70
@@ -137,7 +137,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Eli Lilly and Company (LLY)
 
-- Szektor: Healthcare - Drug Manufacturers; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Szektor: Healthcare - Drug Manufacturers; lista: Követett; elemzés dátuma: 2026-10-01
 - Moat: Wide (score 86, trend: Positive); pillérek: immateriális javak 95, váltási költség 60, hálózati hatás 20, költségelőny 70, hatékony méret 65
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $1150 (2026-10-01); belső érték $820,00; vételi szint $574,00 (biztonsági sáv 30%); konszenzus célár $1329
@@ -215,7 +215,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### PepsiCo, Inc. (PEP)
 
-- Szektor: Consumer Defensive; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Consumer Defensive; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Wide (score 80, trend: Stable); pillérek: immateriális javak 88, váltási költség 30, hálózati hatás 45, költségelőny 75, hatékony méret 70
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Low; pénzügyi erő: Adequate; AI-kockázat: Low
 - Árfolyam $125,60 (2026-10-01); belső érték $135,00; vételi szint $108,00 (biztonsági sáv 20%); konszenzus célár $151,09
@@ -228,7 +228,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Stryker Corporation (SYK)
 
-- Szektor: Healthcare - Medical Devices; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Szektor: Healthcare - Medical Devices; lista: Követett; elemzés dátuma: 2026-10-01
 - Moat: Wide (score 80, trend: Stable); pillérek: immateriális javak 80, váltási költség 85, hálózati hatás 40, költségelőny 65, hatékony méret 55
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $272,96 (2026-10-01); belső érték $309,00; vételi szint $216,30 (biztonsági sáv 30%); konszenzus célár $367,80
@@ -254,7 +254,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### CRH plc (CRH)
 
-- Szektor: Basic Materials - Building Materials; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Szektor: Basic Materials - Building Materials; lista: Követett; elemzés dátuma: 2026-10-01
 - Moat: Narrow (score 68, trend: Stable); pillérek: immateriális javak 40, váltási költség 30, hálózati hatás 10, költségelőny 75, hatékony méret 80
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Adequate; AI-kockázat: Low
 - Árfolyam $81,70 (2026-10-01); belső érték $74,00; vételi szint $51,80 (biztonsági sáv 30%); konszenzus célár $133,18
@@ -267,7 +267,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Zscaler, Inc. (ZS)
 
-- Szektor: Software - Cybersecurity; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Software - Cybersecurity; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 66, trend: Stable); pillérek: immateriális javak 45, váltási költség 72, hálózati hatás 60, költségelőny 55, hatékony méret 62
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Strong; AI-kockázat: Medium
 - Árfolyam $198,78 (2026-10-01); belső érték $115,00; vételi szint $69,00 (biztonsági sáv 40%); konszenzus célár $208,86
@@ -280,7 +280,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Wells Fargo & Company (WFC)
 
-- Szektor: Financial Services - Banks Diversified; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Szektor: Financial Services - Banks Diversified; lista: Követett; elemzés dátuma: 2026-10-01
 - Moat: Narrow (score 66, trend: Positive); pillérek: immateriális javak 60, váltási költség 70, hálózati hatás 45, költségelőny 65, hatékony méret 55
 - Értékelés: ★★★★☆ Alulértékelt; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Medium
 - Árfolyam $80,25 (2026-10-01); belső érték $110,00; vételi szint $77,00 (biztonsági sáv 30%); konszenzus célár $100,54
@@ -293,7 +293,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) (SPCX)
 
-- Szektor: Aerospace & Defense / Satellite Communications / AI; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Aerospace & Defense / Satellite Communications / AI; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 64, trend: Positive); pillérek: immateriális javak 60, váltási költség 45, hálózati hatás 35, költségelőny 88, hatékony méret 72
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: Very High; pénzügyi erő: Adequate; AI-kockázat: Medium
 - Árfolyam $148,07 (2026-10-01); belső érték $45,00; vételi szint $22,50 (biztonsági sáv 50%); konszenzus célár $222,42
@@ -345,7 +345,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Morgan Stanley (MS)
 
-- Szektor: Financial Services - Capital Markets; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Financial Services - Capital Markets; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 70, váltási költség 65, hálózati hatás 25, költségelőny 30, hatékony méret 60
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: High; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $188,01 (2026-10-01); belső érték $150,00; vételi szint $90,00 (biztonsági sáv 40%); konszenzus célár $235,81
@@ -384,7 +384,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Seagate Technology Holdings plc (STX)
 
-- Szektor: Technology – Data Storage; lista: Jelölt; elemzés dátuma: 2026-09-30
+- Szektor: Technology – Data Storage; lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 50, trend: Stable); pillérek: immateriális javak 25, váltási költség 20, hálózati hatás 0, költségelőny 50, hatékony méret 65
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: Very High; pénzügyi erő: Adequate; AI-kockázat: Low
 - Árfolyam $945,57 (2026-10-01); belső érték $300,00; vételi szint $150,00 (biztonsági sáv 50%); konszenzus célár $1125
@@ -397,7 +397,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### Vistra Corp. (VST)
 
-- Szektor: Utilities - Independent Power Producers; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Szektor: Utilities - Independent Power Producers; lista: Követett; elemzés dátuma: 2026-10-01
 - Moat: None (score 48, trend: Stable); pillérek: immateriális javak 35, váltási költség 30, hálózati hatás 10, költségelőny 60, hatékony méret 60
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: Low
 - Árfolyam $139,75 (2026-10-01); belső érték $87,00; vételi szint $52,20 (biztonsági sáv 40%); konszenzus célár $212,79
@@ -423,7 +423,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 
 ### United Airlines Holdings, Inc. (UAL)
 
-- Szektor: Industrials - Airlines; lista: Jelölt; elemzés dátuma: 2026-10-01
+- Szektor: Industrials - Airlines; lista: Követett; elemzés dátuma: 2026-10-01
 - Moat: None (score 38, trend: Stable); pillérek: immateriális javak 45, váltási költség 25, hálózati hatás 30, költségelőny 35, hatékony méret 40
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: Low
 - Árfolyam $111,78 (2026-10-01); belső érték $63,00; vételi szint $37,80 (biztonsági sáv 40%); konszenzus célár $156,35

@@ -62,7 +62,7 @@ async function apply() {
     if (i < 0) return { skip: true, text: companies.some((c) => c.id === id) ? `Már a listán van: ${id}.` : `Nem találom a jóváhagyásra váró elemzések között: ${id}` };
     const [c] = candidates.splice(i, 1);
     const old = companies.findIndex((x) => x.id === id);
-    c.l = old >= 0 ? companies[old].l : "Jelölt";
+    c.l = "Követett"; // a listára felvett cég mindig követett; a "Jelölt" csak a jóváhagyásra váró elemzéseké
     if (old >= 0) companies[old] = c; else companies.push(c);
     await save("data/companies.json", companies);
     await save("data/candidates.json", candidates);
