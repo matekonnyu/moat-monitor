@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T07:16:55.043Z",
+ "at": "2026-10-02T07:19:04.494Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -26,7 +26,7 @@
    "n": "Amazon.com, Inc.",
    "trM": "Csökkenő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Avoid",
    "below": false,
    "px": 248.23,
    "bb": 147,
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.08,
+   "px": 26.06,
    "bb": 21,
    "cur": "EUR"
   },
@@ -86,7 +86,7 @@
    "n": "The Coca-Cola Company",
    "trM": "Oldalazó",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Avoid",
    "below": false,
    "px": 86.1,
    "bb": 59.2,
@@ -146,7 +146,7 @@
    "n": "NVIDIA Corporation",
    "trM": "Emelkedő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Avoid",
    "below": false,
    "px": 230.86,
    "bb": 81.5,
@@ -296,7 +296,7 @@
    "n": "Stryker Corporation",
    "trM": "Csökkenő",
    "trL": "Csökkenő",
-   "rw": "Accumulate",
+   "rw": "Hold",
    "below": false,
    "px": 272.96,
    "bb": 216.3,

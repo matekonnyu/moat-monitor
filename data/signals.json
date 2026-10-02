@@ -1,6 +1,50 @@
 [
  {
   "d": "2026-10-02",
+  "id": "AMZN",
+  "n": "Amazon.com, Inc.",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Kerülendő (Avoid)",
+  "px": 248.23,
+  "bb": 147,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-02",
+  "id": "KO",
+  "n": "The Coca-Cola Company",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Kerülendő (Avoid)",
+  "px": 86.1,
+  "bb": 59.2,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-02",
+  "id": "NVDA",
+  "n": "NVIDIA Corporation",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Kerülendő (Avoid)",
+  "px": 230.86,
+  "bb": 81.5,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-02",
+  "id": "SYK",
+  "n": "Stryker Corporation",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 272.96,
+  "bb": 216.3,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-02",
   "id": "MA",
   "n": "Mastercard Incorporated",
   "kind": "Mai ajánlat",
