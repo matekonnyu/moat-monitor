@@ -107,5 +107,11 @@ const pk = pick ? `<h2>Mai ajánlat: ${esc(pick.n)} (${esc(pick.t)})</h2><p>${es
 const swap = (h, a, b, inner) => { const i = h.indexOf(a), j = h.indexOf(b); return i < 0 || j < 0 ? h : h.slice(0, i + a.length) + "\n" + inner + "\n" + h.slice(j); };
 html = swap(html, "<!--SSR-TB-->", "<!--/SSR-TB-->", rows);
 html = swap(html, "<!--SSR-PK-->", "<!--/SSR-PK-->", pk);
+// Gyorsítótár: a core.js / app.js verziója a tartalmuk hash-e, így módosításkor a böngésző biztosan az újat tölti be.
+const { createHash } = await import("node:crypto");
+for (const fn of ["core.js", "app.js"]) {
+  const v = createHash("sha1").update(await readFile(fn)).digest("hex").slice(0, 10);
+  html = html.replace(new RegExp(`(src="${fn.replace(".", "\\.")})\\?v=[^"]*"`), `$1?v=${v}"`);
+}
 await writeFile("index.html", html);
 console.log(`Gépi kiadás kész: ${C.length} cég, ajánlat: ${pick ? pick.id : "nincs"}`);
