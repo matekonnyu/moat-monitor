@@ -1,0 +1,16 @@
+{
+  "name": "konninvest Moat Monitor",
+  "short_name": "konninvest",
+  "description": "Moat-minőség, belső érték és árfolyamtrend a követett cégekre.",
+  "lang": "hu",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F5F4",
+  "theme_color": "#0B6E66",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
