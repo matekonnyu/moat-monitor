@@ -79,7 +79,7 @@ for (const r of sorted) {
 }
 if (CD.length) {
   L.push(`## Jóváhagyásra váró elemzések (${CD.length})`, "");
-  for (const r of CD) L.push(`- ${r.n} (${r.t}): ${r.m || "–"} moat, ${st(r)} ${HU[r.v] || ""}, árfolyam ${mon(r.px, r.cur)}, belső érték ${mon(r.iv, r.cur)}. ${md(r.r || "")}`);
+  for (const r of CD) L.push(`- ${r.n} (${r.t}): ${r.m || "–"} moat, ${st(r)} ${HU[r.v] || ""}, árfolyam ${mon(r.px, r.cur)}, belső érték ${mon(r.iv, r.cur)}, célár ${mon(r.tp, r.cur)}, potenciál ${pct(r.up)}. ${md(r.r || "")}`);
   L.push("");
 }
 await writeFile("adatok.md", L.join("\n"));
