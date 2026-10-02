@@ -45,12 +45,25 @@ if (prev && prev.c) {
   }
 }
 await writeFile(STATE, JSON.stringify({ at: new Date().toISOString(), pick: pick?.id || null, c: now }, null, 1) + "\n");
-if (!changes.length) { console.log(prev ? "Nincs trend- vagy ajánlásváltás." : "Kiinduló állapot rögzítve."); process.exit(0); }
 
-// Ajánlásváltásból cégenként csak a legfrissebb marad a naplóban; a Mai ajánlat nem jelzés.
-const newRec = new Set(changes.filter((c) => c.kind === "Ajánlás").map((c) => c.id));
-const log = (await read(LOG, [])).filter((c) => c.kind !== "Mai ajánlat" && !(c.kind === "Ajánlás" && newRec.has(c.id)));
-await writeFile(LOG, JSON.stringify([...changes, ...log].slice(0, 300), null, 1) + "\n");
+// Napló tömörítése: cégenként és jelzésfajtánként (pl. MOL · Középtávú trend) csak a legfrissebb jelzés marad,
+// a régebbi azonos jelzés törlődik. Ha ugyanazon a napon többször változott, egy sorba vonja össze
+// (a nap első "előtte" állapotától a legutolsó "most" állapotig); ha napon belül visszaállt, a jelzés eltűnik.
+// A Mai ajánlat változása nem jelzés.
+function compact(list) {
+  const seen = new Map(), out = [];
+  for (const c of list) { // legújabb elöl
+    if (!c || !c.id || c.kind === "Mai ajánlat") continue;
+    const key = c.id + "|" + c.kind, n = seen.get(key);
+    if (!n) { const x = { ...c }; seen.set(key, x); out.push(x); }
+    else if (n.d === c.d) n.from = c.from;
+  }
+  return out.filter((c) => c.from !== c.to);
+}
+const old = await read(LOG, []);
+const log = compact([...changes, ...old]).slice(0, 300);
+if (changes.length || JSON.stringify(log) !== JSON.stringify(old)) await writeFile(LOG, JSON.stringify(log, null, 1) + "\n");
+if (!changes.length) { console.log(prev ? "Nincs trend- vagy ajánlásváltás." : "Kiinduló állapot rögzítve."); process.exit(0); }
 console.log(`Jelzés: ${changes.length} változás`);
 
 if (process.env.SIGNAL_OUT) {

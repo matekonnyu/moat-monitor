@@ -1,28 +1,6 @@
 [
  {
   "d": "2026-10-02",
-  "id": "MOL",
-  "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
-  "kind": "Középtávú trend",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
-  "px": 4840,
-  "bb": 2310,
-  "cur": "HUF"
- },
- {
-  "d": "2026-10-02",
-  "id": "OTP",
-  "n": "OTP Bank Nyrt.",
-  "kind": "Hosszú távú trend (200 nap)",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
-  "px": 40600,
-  "bb": 24600,
-  "cur": "HUF"
- },
- {
-  "d": "2026-10-02",
   "id": "SYK",
   "n": "Stryker Corporation",
   "kind": "Ajánlás",
@@ -31,28 +9,6 @@
   "px": 272.96,
   "bb": 216.3,
   "cur": "USD"
- },
- {
-  "d": "2026-10-02",
-  "id": "MOL",
-  "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
-  "kind": "Középtávú trend",
-  "from": "Oldalazó",
-  "to": "Emelkedő",
-  "px": 4974,
-  "bb": 2310,
-  "cur": "HUF"
- },
- {
-  "d": "2026-10-02",
-  "id": "OTP",
-  "n": "OTP Bank Nyrt.",
-  "kind": "Hosszú távú trend (200 nap)",
-  "from": "Oldalazó",
-  "to": "Emelkedő",
-  "px": 42700,
-  "bb": 24600,
-  "cur": "HUF"
  },
  {
   "d": "2026-10-01",
@@ -75,27 +31,5 @@
   "px": 338.24,
   "bb": 211.8,
   "cur": "USD"
- },
- {
-  "d": "2026-10-01",
-  "id": "OTP",
-  "n": "OTP Bank Nyrt.",
-  "kind": "Hosszú távú trend (200 nap)",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
-  "px": 39980,
-  "bb": 24600,
-  "cur": "HUF"
- },
- {
-  "d": "2026-10-01",
-  "id": "MOL",
-  "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
-  "kind": "Középtávú trend",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
-  "px": 4900,
-  "bb": 2310,
-  "cur": "HUF"
  }
 ]

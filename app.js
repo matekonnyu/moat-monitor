@@ -250,7 +250,8 @@ function sigTone(c) {
 }
 function drawSig(S) {
   const el = $("#sig"), lim = new Date(Date.now() - 7 * 864e5).toLocaleDateString("sv-SE", { timeZone: "Europe/Budapest" });
-  const a = (S || []).filter((c) => c.d >= lim);
+  const seen = new Set(); // cégenként és jelzésfajtánként csak a legfrissebb
+  const a = (S || []).filter((c) => c.d >= lim && c.kind != "Mai ajánlat" && !seen.has(c.id + "|" + c.kind) && seen.add(c.id + "|" + c.kind));
   if (!a.length) { el.hidden = true; return; }
   const last = a[0].d, now = a.filter((c) => c.d == last), old = a.filter((c) => c.d != last);
   const nm = (id) => (C.find((r) => r.id == id) || {}).n || "";
