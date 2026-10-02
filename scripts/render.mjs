@@ -38,7 +38,7 @@ const pub = (r) => ({
   csillag: r.st ?? null, ertekeles: HU[r.v] || r.v || null, bizonytalansag: r.u ?? null,
   moat: r.m, moat_trend: r.mt ?? null, moat_score: r.s, moat_pillerek: r.p ? { immaterialis_javak: r.p[0], valtasi_koltseg: r.p[1], halozati_hatas: r.p[2], koltsegelony: r.p[3], hatekony_meret: r.p[4] } : null,
   mpa_score: r.mpa, elteres: r.gap, penzugyi_ero: r.f ?? null, ai_kockazat: r.ai ?? null, bizonyossag: r.c ?? null,
-  ajanlas: r.rw || null, ajanlas_szoveg: r.r || null, kockazatok: r.risks || null, belso_ertek_alapja: r.ivb || null, forrasok: r.srcs || null, elemzes_datuma: r.d || null,
+  ajanlas: r.rw || null, ajanlas_elemzeskor: r.rw0 || null, ajanlas_szoveg: r.r || null, kockazatok: r.risks || null, belso_ertek_alapja: r.ivb || null, forrasok: r.srcs || null, elemzes_datuma: r.d || null,
 });
 await writeFile("adatok.json", JSON.stringify({
   forras: SITE, leiras: "konninvest Moat Monitor – a követett cégek moat-, értékelési és trendadatai. Kutatási eszköz, nem befektetési tanács.",
@@ -70,7 +70,8 @@ for (const r of sorted) {
   L.push(`- Értékelés: ${st(r)} ${HU[r.v] || ""}; bizonytalanság: ${r.u || "–"}; pénzügyi erő: ${r.f || "–"}; AI-kockázat: ${r.ai || "–"}`);
   L.push(`- Árfolyam ${mon(r.px, r.cur)} (${r.mk.d || "–"}); belső érték ${mon(r.iv, r.cur)}; vételi szint ${mon(r.bb, r.cur)} (biztonsági sáv ${r.mos ?? "–"}%); konszenzus célár ${mon(r.tp, r.cur)}`);
   L.push(`- Trend 20/50/200 nap: ${tr3t(r)}; változás 1 hó ${pct(r.mk.ch1m)}, 6 hó ${pct(r.mk.ch6m)}`);
-  if (r.r) L.push(`- Ajánlás: ${md(r.r)}`);
+  L.push(`- Aktuális ajánlás (mai ár alapján): ${r.rw || "–"}${r.rw0 && r.rw0 !== r.rw ? ` (elemzéskor: ${r.rw0})` : ""}`);
+  if (r.r) L.push(`- Elemzés: ${md(r.r)}`);
   if (r.risks) L.push(`- Kockázatok: ${md(r.risks)}`);
   if (r.ivb) L.push(`- Belső érték alapja: ${md(r.ivb)}`);
   if (r.srcs) L.push(`- Források: ${[].concat(r.srcs).map(md).join("; ")}`);

@@ -20,13 +20,18 @@ function derive(o) {
   const st = stars(px, o.iv, o.u);
   const v = st ? (st >= 4 ? "Undervalued" : st == 3 ? "Fair" : "Expensive") : pv == null ? o.v : valuation(pv);
   const mpa = o.m ? ({ Wide: 40, Narrow: 25 }[o.m] ?? 5) + ({ Strong: 30, Adequate: 18, Weak: 5 }[o.f] ?? 5) + (pv == null ? 0 : o.bb > 0 && px <= o.bb ? 30 : pv < 0 ? 22 : pv <= 10 ? 15 : pv <= 30 ? 8 : 0) : null;
-  const rw = (String(o.r || "").match(/^\s*(Buy|Accumulate|Hold|Avoid)/i) || [])[1] || (/\bhold\b/i.test(o.r || "") ? "Hold" : "");
-  return { ...o, mk, px, pv, up, v, mpa, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: st ?? ({ Undervalued: 4, Fair: 3, Expensive: 2 }[v] || 0), st, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
+  // Elemzéskori ajánlás (az elemzés szövegéből) – csak tájékoztató.
+  const rw0 = (String(o.r || "").match(/^\s*(Buy|Accumulate|Hold|Avoid)/i) || [])[1] || (/\bhold\b/i.test(o.r || "") ? "Hold" : "");
+  // Aktuális ajánlás: minden árfrissítéskor a csillagból (ár / belső érték) számolva:
+  // 5★ Buy, 4★ Accumulate, 3★ Hold, 1–2★ Avoid; moat nélküli cég legfeljebb Hold, és ha az elemzés Avoid volt, Avoid marad. Csillag híján az elemzéskori.
+  let rw = st ? (st >= 5 ? "Buy" : st == 4 ? "Accumulate" : st == 3 ? "Hold" : "Avoid") : rw0;
+  if (o.m == "None") rw = /^avoid$/i.test(rw0) ? "Avoid" : (rw == "Buy" || rw == "Accumulate") ? "Hold" : rw;
+  return { ...o, mk, px, pv, up, v, mpa, rw0, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: st ?? ({ Undervalued: 4, Fair: 3, Expensive: 2 }[v] || 0), st, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
 }
-// Mai ajánlat: moat score >= 70, van moat, Buy/Accumulate/Hold (nem Avoid), nem drága, és trend: vagy a 200 napos (hosszú távú) emelkedő – ilyenkor a rövid/közép táv eshet –,
+// Mai ajánlat: moat score >= 70, van moat, aktuális ajánlás Buy/Accumulate/Hold (nem Avoid), nem drága, és trend: vagy a 200 napos (hosszú távú) emelkedő – ilyenkor a rövid/közép táv eshet –,
 // vagy az 50 és a 200 napos sem csökkenő. Közülük a vételi szinthez legközelebbi.
 function pickOf(all) {
-  const buy = (r) => /^\s*(buy|accumulate|hold)/i.test(r.r || "");
+  const buy = (r) => /^(buy|accumulate|hold)$/i.test(r.rw || "");
   return all.filter((r) => r.s >= 70 && r.m != "None" && r.bb > 0 && r.px > 0 && (r.trL == "Emelkedő" || (r.trM && r.trM != "Csökkenő" && r.trL != "Csökkenő")) && buy(r) && r.v != "Expensive").sort((a, b) => a.px / a.bb - b.px / b.bb)[0];
 }
 if (typeof module !== "undefined") module.exports = { trends, valuation, UD, stars, derive, pickOf };
