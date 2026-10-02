@@ -4,10 +4,10 @@ V,Visa Inc.,V,USD,359.85,2026-10-01,419.36,16.54,Csökkenő,Oldalazó,Emelkedő,
 MA,Mastercard Incorporated,MA,USD,550,2026-10-01,666.71,21.22,Csökkenő,Oldalazó,Emelkedő,630,441,-12.7,3,Korrekt ár,Medium,Wide,Stable,92,92,0,Hold
 MSFT,Microsoft Corporation,MSFT,USD,512.8,2026-10-01,577.26,12.57,Emelkedő,Emelkedő,Emelkedő,499,349.3,2.77,3,Korrekt ár,Medium,Wide,Stable,90,85,-5,Hold
 TSM,Taiwan Semiconductor Manufacturing Company Limited (ADR),TSM,USD,459.2,2026-10-01,552.26,20.27,Emelkedő,Emelkedő,Emelkedő,400,280,14.8,3,Korrekt ár,Medium,Wide,Positive,90,78,-12,Hold
-NVDA,NVIDIA Corporation,NVDA,USD,230.86,2026-10-01,327.7,41.95,Emelkedő,Emelkedő,Emelkedő,163,81.5,41.63,2,Drága,Very High,Wide,Stable,88,70,-18,Avoid
-KO,The Coca-Cola Company,KO,USD,86.1,2026-10-01,94.7,9.99,Csökkenő,Oldalazó,Emelkedő,74,59.2,16.35,2,Drága,Low,Wide,Stable,86,78,-8,Avoid
+NVDA,NVIDIA Corporation,NVDA,USD,230.86,2026-10-01,327.7,41.95,Emelkedő,Emelkedő,Emelkedő,163,81.5,41.63,2,Drága,Very High,Wide,Stable,88,70,-18,Hold
+KO,The Coca-Cola Company,KO,USD,86.1,2026-10-01,94.7,9.99,Csökkenő,Oldalazó,Emelkedő,74,59.2,16.35,2,Drága,Low,Wide,Stable,86,78,-8,Hold
 LLY,Eli Lilly and Company,LLY,USD,1149.85,2026-10-01,1328.83,15.57,Oldalazó,Oldalazó,Emelkedő,820,574,40.23,1,Drága,Medium,Wide,Positive,86,70,-16,Avoid
-AMZN,"Amazon.com, Inc.",AMZN,USD,248.23,2026-10-01,329.54,32.76,Csökkenő,Csökkenő,Emelkedő,210,147,18.2,2,Drága,Medium,Wide,Stable,85,78,-7,Avoid
+AMZN,"Amazon.com, Inc.",AMZN,USD,248.23,2026-10-01,329.54,32.76,Csökkenő,Csökkenő,Emelkedő,210,147,18.2,2,Drága,Medium,Wide,Stable,85,78,-7,Hold
 AAPL,Apple Inc.,AAPL,USD,330.32,2026-10-01,328.22,-0.64,Oldalazó,Emelkedő,Emelkedő,206,144.2,60.35,1,Drága,Medium,Wide,Stable,84,70,-14,Avoid
 META,"Meta Platforms, Inc.",META,USD,725.93,2026-10-01,793.91,9.36,Emelkedő,Emelkedő,Oldalazó,600,360,20.99,3,Korrekt ár,High,Wide,Stable,84,78,-6,Hold
 AVGO,Broadcom Inc.,AVGO,USD,343.64,2026-10-01,531.85,54.77,Csökkenő,Csökkenő,Oldalazó,313,187.8,9.79,3,Korrekt ár,High,Wide,Positive,82,85,3,Hold
@@ -20,7 +20,7 @@ ZS,"Zscaler, Inc.",ZS,USD,198.78,2026-10-01,208.86,5.07,Emelkedő,Emelkedő,Emel
 WFC,Wells Fargo & Company,WFC,USD,80.25,2026-10-01,100.54,25.28,Csökkenő,Csökkenő,Oldalazó,110,77,-27.05,4,Alulértékelt,Medium,Narrow,Positive,66,77,11,Accumulate
 SPCX,"Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX)",SPCX,USD,148.07,2026-10-01,222.42,50.21,Csökkenő,Emelkedő,,45,22.5,229.04,1,Drága,Very High,Narrow,Positive,64,43,-21,Avoid
 AMD,Advanced Micro Devices,AMD,USD,615.73,2026-10-01,618.51,0.45,Emelkedő,Emelkedő,Emelkedő,270,135,128.05,1,Drága,Very High,Narrow,Positive,62,55,-7,Avoid
-DTE,Deutsche Telekom AG,DTE,EUR,26.06,2026-10-02,35.84,37.53,Csökkenő,Csökkenő,Csökkenő,30,21,-13.13,3,Korrekt ár,Medium,Narrow,Stable,62,65,3,Hold
+DTE,Deutsche Telekom AG,DTE,EUR,26.13,2026-10-02,35.84,37.16,Csökkenő,Csökkenő,Csökkenő,30,21,-12.9,3,Korrekt ár,Medium,Narrow,Stable,62,65,3,Hold
 OTP,OTP Bank Nyrt.,OTP,HUF,42700,2026-09-30,44872,5.09,Csökkenő,Csökkenő,Emelkedő,41000,24600,4.15,3,Korrekt ár,High,Narrow,Stable,62,70,8,Hold
 MTELEKOM,Magyar Telekom Nyrt.,MTELEKOM,HUF,2544,2026-09-30,2923,14.9,Oldalazó,Csökkenő,Emelkedő,2500,1750,1.76,3,Korrekt ár,Medium,Narrow,Stable,58,70,12,Hold
 RICHTER,Richter Gedeon Nyrt.,RICHTER,HUF,12370,2026-09-30,13800,11.56,Csökkenő,Oldalazó,Emelkedő,13500,9450,-8.37,3,Korrekt ár,Medium,Narrow,Stable,58,77,19,Hold
