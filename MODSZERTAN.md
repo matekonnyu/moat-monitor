@@ -34,7 +34,7 @@ Ez a Moat Monitor hivatalos módszertana (2026-09-30-tól). Minden elemzés – 
 
 ## 5. Trend és napi ajánlat
 - Trend 20 napon (ár vs SMA20 ±1%), 50 napon (ár vs SMA50 és EMA20 vs EMA50), 200 napon (ár és SMA50 vs SMA200); Yahoo Finance napi záróárakból, minden reggel.
-- **Ajánlás (Buy / Accumulate / Hold / Avoid):** minden napi árfrissítéskor újraszámolódik az aktuális árból a csillag alapján: 5 csillag Buy, 4 csillag Accumulate, 3 csillag Hold, 1–2 csillag Avoid. Moat nélküli (None) cég legfeljebb Hold, és ha az elemzés Avoidot adott, Avoid marad. Az elemzés szövege az elemzés napján készült; a részleteknél látszik, ha az elemzéskori ajánlás eltér a mostanitól.
+- **Ajánlás (Buy / Accumulate / Hold / Avoid):** minden napi árfrissítéskor újraszámolódik az aktuális árból a csillag alapján: 5 csillag Buy, 4 csillag Accumulate, 2–3 csillag Hold, 1 csillag Avoid. Moat nélküli (None) cég legfeljebb Hold, és ha az elemzés Avoidot adott, Avoid marad. Az elemzés szövege az elemzés napján készült; a részleteknél látszik, ha az elemzéskori ajánlás eltér a mostanitól.
 - **Mai ajánlat:** moat score legalább 70, van moat, Buy, Accumulate vagy Hold ajánlás (Avoid nem), nem drága (legalább 3 csillag), és a trend: vagy a 200 napos (hosszú távú) trend emelkedő – ilyenkor a rövid vagy középtávú trend lehet csökkenő is –, vagy az 50 és a 200 napos trend sem csökkenő. Ezek közül a vételi szinthez legközelebbi ár.
 
 Kutatási eszköz, nem befektetési tanács.
