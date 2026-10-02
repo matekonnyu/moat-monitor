@@ -1,6 +1,28 @@
 [
  {
   "d": "2026-10-02",
+  "id": "MOL",
+  "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
+  "kind": "Középtávú trend",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 4840,
+  "bb": 2310,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-02",
+  "id": "OTP",
+  "n": "OTP Bank Nyrt.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 40600,
+  "bb": 24600,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-02",
   "id": "SYK",
   "n": "Stryker Corporation",
   "kind": "Ajánlás",

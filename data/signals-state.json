@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T07:32:39.024Z",
+ "at": "2026-10-02T09:46:05.561Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.13,
+   "px": 26.4,
    "bb": 21,
    "cur": "EUR"
   },
@@ -114,11 +114,11 @@
   },
   "MOL": {
    "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
-   "trM": "Emelkedő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4974,
+   "px": 4840,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -138,7 +138,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 2544,
+   "px": 2560,
    "bb": 1750,
    "cur": "HUF"
   },
@@ -165,10 +165,10 @@
   "OTP": {
    "n": "OTP Bank Nyrt.",
    "trM": "Csökkenő",
-   "trL": "Emelkedő",
+   "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 42700,
+   "px": 40600,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -178,7 +178,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 12370,
+   "px": 12400,
    "bb": 9450,
    "cur": "HUF"
   },
