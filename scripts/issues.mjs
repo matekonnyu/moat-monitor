@@ -16,8 +16,18 @@ const api = async (path, method = "GET", body) => {
   });
   if (!r.ok) console.error(method, path, r.status, await r.text());
 };
-const reply = (text, close = true) =>
-  Promise.all([api(`/issues/${issue.number}/comments`, "POST", { body: text }), close ? api(`/issues/${issue.number}`, "PATCH", { state: "closed" }) : null]);
+const replyOne = (n, text, close = true) =>
+  Promise.all([api(`/issues/${n}/comments`, "POST", { body: text }), close ? api(`/issues/${n}`, "PATCH", { state: "closed" }) : null]);
+const reply = async (text, close = true) => {
+  await replyOne(issue.number, text, close);
+  // Ugyanazzal a címmel nyitva maradt ikerkérések (pl. dupla kattintás) lezárása, hogy ne ragadjanak „fut” állapotban.
+  if (!close) return;
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo.full_name}/issues?state=open&per_page=100`, { headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, Accept: "application/vnd.github+json" } });
+    const open = r.ok ? await r.json() : [];
+    for (const o of open) if (!o.pull_request && o.number !== issue.number && o.title.trim().toLowerCase() === issue.title.trim().toLowerCase()) await replyOne(o.number, text);
+  } catch (e) { console.error("ikerkérések:", e.message); }
+};
 
 const m = issue.title.match(/^\s*(Felvétel|Elvetés|Törlés|Elemzés|Frissítés)\s*:\s*(.+?)\s*$/i);
 if (!m) process.exit(0);

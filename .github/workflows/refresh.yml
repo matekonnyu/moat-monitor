@@ -39,6 +39,15 @@ jobs:
             echo "push ütközés, újra ($n)"; sleep $((n*5))
           done
           exit 1
+      - name: Beragadt „Frissítés:” kérések lezárása (a frissítés lefutott)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" --jq '.[] | select(.pull_request == null) | select(.title | test("^\\s*Frissítés\\s*:"; "i")) | .number' | while read -r n; do
+            gh api -X POST "repos/$GITHUB_REPOSITORY/issues/$n/comments" -f body="Frissítettem az árfolyamokat és a trendeket." >/dev/null || true
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/$n" -f state=closed >/dev/null || true
+          done
       - name: Jelzés trend- vagy ajánlásváltáskor (GitHub issue → e-mail értesítés)
         if: success()
         env:
