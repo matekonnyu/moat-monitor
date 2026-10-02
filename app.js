@@ -253,7 +253,7 @@ function drawSig(S) {
   const nm = (id) => (C.find((r) => r.id == id) || {}).n || "";
   const li = (c) => { const tr = c.kind.includes("trend"), f = (x) => (tr && ARW[x] ? ARW[x] + " " : "") + x;
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id || "")}</b> ${esc(c.n || nm(c.id))}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b>${c.px != null ? ` <span class="sgd">· ár ${esc(c.px)} ${esc(c.cur || "")}${c.bb ? `, vételi szint ${esc(c.bb)}` : ""}</span>` : ""}</span>${old.length && c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; };
-  el.innerHTML = `<h2>Jelzések · ${esc(last)}</h2><p class="sgs">${now.length} változás a figyelőlistán: trendváltás, ajánlásváltás, vételi szint átlépése vagy új Mai ajánlat.</p><ul>${now.map(li).join("")}</ul>`
+  el.innerHTML = `<h2>Jelzések · ${esc(last)}</h2><p class="sgs">${now.length} változás a figyelőlistán: trendváltás, ajánlásváltás, vagy a vételi szint átlépése.</p><ul>${now.map(li).join("")}</ul>`
     + (old.length ? `<details><summary>Korábbi jelzések (7 nap, ${old.length})</summary><ul>${old.map(li).join("")}</ul></details>` : "");
   el.hidden = false;
 }

@@ -2,9 +2,8 @@
 // és rögzíti, ha egy papír trendet vált vagy a vételi ajánlata változik.
 // Figyelt jellemzők:
 //   - középtávú trend (mk.tr: ár vs SMA50, EMA20 vs EMA50) és hosszú távú trend (SMA50/SMA200)
-//   - ajánlás (Buy / Accumulate / Hold / Avoid – az elemzés r mezőjéből)
+//   - ajánlás (Buy / Accumulate / Hold / Avoid – a mai árból számolva; a naplóban cégenként csak a legfrissebb)
 //   - vételi szint: az ár a vételi szint (bb) alá esett vagy fölé ment
-//   - Mai ajánlat: melyik papír a nap ajánlata
 // Állapot: data/signals-state.json, napló: data/signals.json.
 // Ha van változás, az issue szövegét a SIGNAL_OUT fájlba írja (a workflow ebből nyit GitHub issue-t → e-mail értesítés).
 // Futtatja: .github/workflows/refresh.yml a napi frissítés után.
@@ -44,13 +43,13 @@ if (prev && prev.c) {
     if (a.below != null && b.below != null && a.below !== b.below)
       add("Vételi szint", b.below ? "a vételi szint alatt" : "a vételi szint felett", a.below ? "a vételi szint alá esett" : "a vételi szint fölé ment");
   }
-  const pp = prev.pick || null, np = pick?.id || null;
-  if (pp !== np) changes.push({ d: today, id: np || pp, n: (now[np] || now[pp] || {}).n || "", kind: "Mai ajánlat", from: pp || "nincs", to: np || "nincs" });
 }
 await writeFile(STATE, JSON.stringify({ at: new Date().toISOString(), pick: pick?.id || null, c: now }, null, 1) + "\n");
 if (!changes.length) { console.log(prev ? "Nincs trend- vagy ajánlásváltás." : "Kiinduló állapot rögzítve."); process.exit(0); }
 
-const log = await read(LOG, []);
+// Ajánlásváltásból cégenként csak a legfrissebb marad a naplóban; a Mai ajánlat nem jelzés.
+const newRec = new Set(changes.filter((c) => c.kind === "Ajánlás").map((c) => c.id));
+const log = (await read(LOG, [])).filter((c) => c.kind !== "Mai ajánlat" && !(c.kind === "Ajánlás" && newRec.has(c.id)));
 await writeFile(LOG, JSON.stringify([...changes, ...log].slice(0, 300), null, 1) + "\n");
 console.log(`Jelzés: ${changes.length} változás`);
 
