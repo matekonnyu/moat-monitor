@@ -152,6 +152,16 @@ th,td{padding:9px 7px}
 .sig li:first-child{border-top:0}.sig .sgk{color:var(--mut);font-size:12px;min-width:150px}.sig .sgv{flex:1 1 220px}.sig .sgv b{padding:1px 8px;border-radius:999px;font-size:13px}
 .sig .sgd{color:var(--mut);font-size:12px}.sig details{margin-top:8px;font-size:13px}.sig summary{cursor:pointer;color:var(--mut)}
 @media (max-width:560px){.sig .sgk{min-width:0;width:100%}}
+/* Portfólió */
+.pfn .lk{width:.72em;height:.72em}#npf.unl .lk{display:none}
+.pfb.on{color:var(--g);border-color:var(--g)}.pfb{color:var(--ink)}
+.pfl{max-width:520px}.pfl h2,#pfdlg h2{font-size:16px;margin:0 0 10px}
+table.pft{min-width:640px}.pft td,.pft th{white-space:nowrap}.pft td:first-child{white-space:normal}
+.pft tr.pfhit td{background:var(--goldb)}.pft .pfnew{color:var(--gold);font-weight:600}
+.pft .del{margin-top:0}
+#pfdlg{border:1px solid var(--line2);border-radius:10px;background:var(--card);color:var(--ink);padding:18px;width:min(92vw,380px)}
+#pfdlg::backdrop{background:rgba(0,0,0,.45)}#pfdlg input[type=password]{width:100%;margin-bottom:8px}#pfdlg .fm{margin:10px 0 0}
+label.note{display:flex;gap:6px;align-items:center}label.note input{min-height:0}
 </style>
 </head>
 <body>
@@ -159,6 +169,7 @@ th,td{padding:9px 7px}
 <a class="brand" href="./" aria-label="konninvest – Moat Monitor"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--lt1)"/><stop offset="1" style="stop-color:var(--lt2)"/></linearGradient></defs><rect width="32" height="32" rx="6.4" fill="url(#lg)"/><g stroke="var(--lk)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M10.1 5.4V25.8"/><path d="M10.1 21.7 14.1 16.9 22.5 25.4"/><path d="M17.5 20.4 22.7 12.7"/></g><circle cx="22.7" cy="12.7" r="2.35" fill="var(--ld)" stroke="var(--lr)" stroke-width="1.1"/></svg><span>konn<b>invest</b></span></a>
 <button class="navl opt" id="nlist" type="button">Táblázat</button>
 <a class="navl opt" href="#mod">Módszertan</a>
+<button class="navl pfn" id="npf" type="button"><span class="lk" aria-hidden="true"></span>Portfólió<span class="nb" id="npfc" hidden></span></button>
 <button class="navl strong" id="nnew" type="button">+ Új cég elemzése<span class="nb" id="nqc" hidden></span></button>
 <button class="thm" id="thm" type="button" aria-label="Világos / sötét téma" title="Világos / sötét téma"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 2a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
 </div></header>
@@ -247,9 +258,21 @@ th,td{padding:9px 7px}
 </details>
 </section>
 
+<section id="v3" hidden>
+<div class="status"><span>Saját portfólió: az árak, a célár, a trend és az ajánlás a főlistával együtt frissül.</span><button class="btn" id="pflockbtn" type="button" hidden>Zárolás</button></div>
+<p id="pfmsg" hidden></p>
+<div id="pfbox"></div>
+</section>
+<dialog id="pfdlg"><form method="dialog"><h2><span class="lk" aria-hidden="true"></span>Portfólió jelszó</h2>
+<input id="pfdpw" type="password" placeholder="Jelszó" aria-label="Jelszó" autocomplete="current-password">
+<label class="note"><input type="checkbox" id="pfdkeep"> Emlékezzen rám ezen az eszközön</label>
+<p class="note r" id="pfdmsg" hidden></p>
+<div class="fm"><button class="btn pri" id="pfdok">Megnyitás</button><button class="btn" id="pfdno">Mégse</button></div></form></dialog>
+
 <footer id="mod"><b>Módszertan (Morningstar-gyakorlat).</b> <b>Moat:</b> Wide, ha nagyon valószínű, hogy a cég 10 évig a tőkeköltsége felett keres (ROIC &gt; WACC), és inkább igen, mint nem, hogy 20 évig is; Narrow, ha inkább igen, mint nem, hogy legalább 10 évig; None, ha egyik sem. Mellette a moat trend (erősödő / stabil / gyengülő) és az öt moat-forrás pontszáma. <b>Értékelés (csillagok):</b> az árfolyam és a becsült belső érték (fair value) aránya a Morningstar bizonytalansági besorolása szerint: 5 csillag, ha az ár legalább 20% (alacsony), 30% (közepes), 40% (magas), 50% (nagyon magas) vagy 75% (extrém bizonytalanság) diszkonttal forog; 1 csillag 25% / 35% / 55% / 75% / 300% prémium felett; a 2–4 csillag a köztes sávok. A <b>vételi szint</b> az 5 csillagos ár. A <b>MPA score</b> a Buffett–Munger szemlélet összesítője: moat (40) + pénzügyi erő (30) + ár a belső értékhez képest (30); az <b>Eltérés</b> = MPA score − Moat score. <b>Trend</b> három időtávon: 20 nap (az ár a 20 napos átlag felett/alatt ±1%), 50 nap (Emelkedő, ha az ár az SMA50 felett és az EMA20 az EMA50 felett van, Csökkenő, ha fordítva), 200 nap (Emelkedő, ha az ár és az SMA50 is a 200 napos átlag felett van). Az <b>ajánlás</b> minden árfrissítéskor a csillagból számolódik: 5★ Buy, 4★ Accumulate, 2–3★ Hold, 1★ Avoid (moat nélkül legfeljebb Hold, Avoid elemzésnél Avoid). A napi ajánlat csak Buy, Accumulate vagy Hold ajánlású (nem Avoid), nem drága cég lehet, amelynek a 200 napos trendje emelkedő (rövid távon eshet), vagy az 50 és 200 napos trendje sem csökkenő. Árfolyam: Yahoo Finance napi záró. A cégelemzések internetes forrásokból készülnek (a források a részletekben). Kutatási eszköz, nem befektetési tanács. Gépi olvasásra (AI-ügynököknek): <a href="adatok.md">adatok.md</a> · <a href="adatok.json">adatok.json</a> · <a href="adatok.csv">adatok.csv</a> · <a href="llms.txt">llms.txt</a>.</footer>
 </main>
 <script src="core.js?v=fa7bd35715"></script>
-<script src="app.js?v=a59d9a341e"></script>
+<script src="app.js?v=242260ea56"></script>
+<script src="portfolio.js?v=ccb0f1a01a"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 // A weboldal gombjai GitHub issue-t nyitnak; ez a szkript hajtja végre őket.
-// Címformátumok: "Felvétel: TICKER", "Elvetés: TICKER", "Törlés: TICKER", "Elemzés: szöveg"
+// Címformátumok: "Felvétel: TICKER", "Elvetés: TICKER", "Törlés: TICKER", "Elemzés: szöveg",
+// "Portfólió: mentés" (a törzsben a titkosított portfólió; a szkript nem tudja visszafejteni, csak eltárolja).
 // Csak a repó tulajdonosától érkező issue-kat dolgozza fel.
 // A módosítást a legfrissebb main ágon végzi, feltölti (ütközésnél újrapróbálja), és csak sikeres mentés után válaszol.
 import { readFile, writeFile } from "node:fs/promises";
@@ -29,7 +30,7 @@ const reply = async (text, close = true) => {
   } catch (e) { console.error("ikerkérések:", e.message); }
 };
 
-const m = issue.title.match(/^\s*(Felvétel|Elvetés|Törlés|Elemzés|Frissítés)\s*:\s*(.+?)\s*$/i);
+const m = issue.title.match(/^\s*(Felvétel|Elvetés|Törlés|Elemzés|Frissítés|Portfólió)\s*:\s*(.+?)\s*$/i);
 if (!m) process.exit(0);
 const action = m[1].toLowerCase(), arg = m[2].trim(), id = arg.toUpperCase();
 // Elemzést és árfolyam-frissítést bárki kérhet; a lista módosítása csak a tulajdonosé.
@@ -43,6 +44,14 @@ if (!isOwner && action === "frissítés") {
   try { const meta = JSON.parse(await readFile("data/meta.json", "utf8")); if (Date.now() - Date.parse(meta.refreshedAt) < 30 * 60e3) { await reply("Az árfolyamok az elmúlt 30 percben frissültek, most nincs szükség újabb frissítésre."); process.exit(0); } } catch {}
 }
 
+// Portfólió: a már lezárt (ikerként feldolgozott) kérést nem dolgozzuk fel újra.
+if (action === "portfólió") {
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo.full_name}/issues/${issue.number}`, { headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, Accept: "application/vnd.github+json" } });
+    if (r.ok && (await r.json()).state === "closed") process.exit(0);
+  } catch {}
+}
+
 if (action === "elemzés") {
   // Az elemzést az analyze.yml workflow végzi.
   await reply(`Rögzítettem az elemzési kérést: **${arg}**. Claude pár percen belül elkészíti, és az oldal „Új cég” fülén jóváhagyásra vár.`, false);
@@ -53,7 +62,36 @@ const load = async (f) => JSON.parse(await readFile(f, "utf8"));
 const save = (f, d) => writeFile(f, JSON.stringify(d, null, 1) + "\n");
 
 // Egy módosítás a friss adatokon; visszaadja a választ, vagy {skip} ha nincs mit menteni.
+// A titkosított portfólió (data/portfolio.enc.json) érvényessége: csak a várt mezők, base64, ésszerű méret.
+const B64 = /^[A-Za-z0-9+/]+={0,2}$/;
+function pfParse(body) {
+  try {
+    const e = JSON.parse(String(body || "").trim());
+    if (e && e.v === 1 && Number.isInteger(e.it) && e.it >= 100000 && typeof e.at === "string" && !isNaN(Date.parse(e.at))
+      && [e.salt, e.iv, e.ct].every((x) => typeof x === "string" && B64.test(x)) && e.ct.length < 50000)
+      return { v: 1, at: e.at, it: e.it, salt: e.salt, iv: e.iv, ct: e.ct };
+  } catch {}
+  return null;
+}
+async function pfLatest() {
+  // A legfrissebb nyitott "Portfólió:" kérés (a tulajdonostól) nyer: a törzse mindig a teljes listát tartalmazza.
+  const all = [issue];
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo.full_name}/issues?state=open&per_page=100`, { headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, Accept: "application/vnd.github+json" } });
+    if (r.ok) for (const o of await r.json()) if (!o.pull_request && o.number !== issue.number && o.user?.login === repo.owner.login && /^\s*Portfólió\s*:/i.test(o.title)) all.push(o);
+  } catch {}
+  return all.map((o) => pfParse(o.body)).filter(Boolean).sort((a, b) => (a.at < b.at ? 1 : -1))[0] || null;
+}
+
 async function apply() {
+  if (action === "portfólió") {
+    const env = await pfLatest();
+    if (!env) return { skip: true, text: "A portfólió mentése nem sikerült: a kérés nem tartalmaz érvényes titkosított adatot. Mentsd újra az oldalon." };
+    let cur = null; try { cur = JSON.parse(await readFile("data/portfolio.enc.json", "utf8")); } catch {}
+    if (cur && cur.at >= env.at) return { skip: true, text: "A portfólió már a legfrissebb állapotban van." };
+    await save("data/portfolio.enc.json", env);
+    return { text: "A portfólió mentve (titkosítva). Az oldal 1–2 percen belül frissül." };
+  }
   if (action === "frissítés") return { refresh: true, text: "Frissítettem az árfolyamokat és a trendeket. Az oldal 1–2 percen belül frissül." };
   const companies = await load("data/companies.json");
   const candidates = await load("data/candidates.json");
@@ -89,7 +127,7 @@ for (let attempt = 1; attempt <= 4; attempt++) {
   const res = await apply();
   if (res.skip) { await reply(res.text); process.exit(0); }
   if (action === "felvétel" || res.refresh) { try { sh("node scripts/refresh.mjs"); } catch {} }
-  else { try { sh("node scripts/render.mjs"); } catch {} }
+  else if (action !== "portfólió") { try { sh("node scripts/render.mjs"); } catch {} }
   sh("git add data adatok.md adatok.json adatok.csv llms.txt index.html");
   if (!sh("git status --porcelain data adatok.md adatok.json adatok.csv llms.txt index.html").trim()) { await reply(res.text); process.exit(0); }
   sh(`git commit -qm ${JSON.stringify(issue.title)}`);

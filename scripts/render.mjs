@@ -109,7 +109,7 @@ html = swap(html, "<!--SSR-TB-->", "<!--/SSR-TB-->", rows);
 html = swap(html, "<!--SSR-PK-->", "<!--/SSR-PK-->", pk);
 // Gyorsítótár: a core.js / app.js verziója a tartalmuk hash-e, így módosításkor a böngésző biztosan az újat tölti be.
 const { createHash } = await import("node:crypto");
-for (const fn of ["core.js", "app.js"]) {
+for (const fn of ["core.js", "app.js", "portfolio.js"]) {
   const v = createHash("sha1").update(await readFile(fn)).digest("hex").slice(0, 10);
   html = html.replace(new RegExp(`(src="${fn.replace(".", "\\.")})\\?v=[^"]*"`), `$1?v=${v}"`);
 }

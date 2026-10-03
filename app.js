@@ -21,7 +21,7 @@ let TOKEN = ""; try { TOKEN = localStorage.getItem("mm_gh_token") || ""; } catch
 const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
 const RELAY = "https://konninvest-api.netlify.app/api/request";
 const gh = (path, opt = {}) => fetch(API + path, { ...opt, headers: { Accept: "application/vnd.github+json", ...(TOKEN ? { Authorization: "Bearer " + TOKEN } : {}), ...(opt.body ? { "Content-Type": "application/json" } : {}), ...(opt.headers || {}) } });
-const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés|Frissítés)\s*:\s*(.+?)\s*$/i;
+const ACT = /^\s*(Elemzés|Felvétel|Elvetés|Törlés|Frissítés|Portfólió)\s*:\s*(.+?)\s*$/i;
 let PENDING = [], pollT = null, lastPendingCount = 0;
 async function act(title) {
   if (!TOKEN) {
@@ -53,8 +53,8 @@ async function act(title) {
 function flash(t) { $("#msg").textContent = t; $("#msg").hidden = !t; }
 function ago(ms) { const m = Math.round((Date.now() - ms) / 60000); return m < 1 ? "most" : m + " perce"; }
 function renderPending() {
-  const lbl = { "elemzés": "Elemzés fut", "felvétel": "Hozzáadás folyamatban", "elvetés": "Elvetés folyamatban", "törlés": "Törlés folyamatban", "frissítés": "Árfolyamfrissítés fut" };
-  const html = PENDING.map((p) => { const m = p.title.match(ACT); return `<div class="k"><span><span class="spin"></span>${esc(lbl[m[1].toLowerCase()] || "Fut")}: <b>${esc(m[2])}</b></span><span>${ago(p.at)}${m[1].toLowerCase() == "elemzés" ? ", kb. 3–8 perc" : ", kb. 1 perc"}</span></div>`; }).join("");
+  const lbl = { "elemzés": "Elemzés fut", "felvétel": "Hozzáadás folyamatban", "elvetés": "Elvetés folyamatban", "törlés": "Törlés folyamatban", "frissítés": "Árfolyamfrissítés fut", "portfólió": "Portfólió mentése" };
+  const html = PENDING.map((p) => { const m = p.title.match(ACT); return `<div class="k"><span><span class="spin"></span>${esc(lbl[m[1].toLowerCase()] || "Fut")}${m[1].toLowerCase() == "portfólió" ? "" : `: <b>${esc(m[2])}</b>`}</span><span>${ago(p.at)}${m[1].toLowerCase() == "elemzés" ? ", kb. 3–8 perc" : ", kb. 1 perc"}</span></div>`; }).join("");
   for (const id of ["#run1", "#run2"]) { $(id).innerHTML = html ? `<div class="res">${html}</div>` : ""; }
 }
 async function poll(soon) {
@@ -77,7 +77,7 @@ async function reload() {
   try {
     const raw = async (f) => { if (TOKEN) { const r = await gh("/contents/" + f, { headers: { Accept: "application/vnd.github.raw+json" } }); if (r.ok) return r.json(); } return getJSON(f); };
     [C, CD] = await Promise.all([raw("data/companies.json"), raw("data/candidates.json")]);
-    draw(); drawQ();
+    draw(); drawQ(); if (typeof pfDraw == "function") pfDraw();
   } catch {}
 }
 
@@ -92,7 +92,7 @@ const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</s
 
 function detail(r) {
   const mk = r.mk;
-  return `<tr class="d"><td colspan="14"><div class="dg"><div>${pillars(r.p)}<p class="rec"><b>Aktuális ajánlás: ${esc(r.rw || "–")}</b> (a mai ár alapján)${r.rw0 && r.rw0 !== r.rw ? ` · elemzéskor: ${esc(r.rw0)}` : ""}</p><p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}${r.srcs ? `<p class="rec note">Források: ${esc([].concat(r.srcs).join(", "))}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button></div>
+  return `<tr class="d"><td colspan="14"><div class="dg"><div>${pillars(r.p)}<p class="rec"><b>Aktuális ajánlás: ${esc(r.rw || "–")}</b> (a mai ár alapján)${r.rw0 && r.rw0 !== r.rw ? ` · elemzéskor: ${esc(r.rw0)}` : ""}</p><p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}${r.srcs ? `<p class="rec note">Források: ${esc([].concat(r.srcs).join(", "))}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button> ${typeof pfBtn == "function" ? pfBtn(r) : ""}</div>
 <div><div class="k"><span>Záróár dátuma</span><span>${esc(mk.d || r.d || "–")}</span></div>
 <div class="k"><span>Napi változás</span><span>${mk.prev ? pct((mk.p / mk.prev - 1) * 100) : "–"}</span></div>
 <div class="k"><span>Trend (20 / 50 / 200 nap)</span><span>${esc(r.trS || "–")} / ${esc(r.trM || "–")} / ${esc(r.trL || "–")}</span></div>
@@ -168,13 +168,13 @@ ${c.added ? `<p class="rec note">Ha nem veszed fel a listára, ${new Date(Date.p
 }
 
 $("#hd").addEventListener("click", (e) => { const k = e.target.dataset.k; if (!k) return; sd = sk == k ? -sd : (k == "n" ? 1 : -1); sk = k; draw(); });
-const tog = (e) => { if (e.target.dataset.act) { e.stopPropagation(); if (!e.target.dataset.act.startsWith("Törlés") || confirm("Törlöd a listáról?")) act(e.target.dataset.act); return; } const tr = e.target.closest("tr.row"); if (!tr || e.target.closest("a")) return; const id = tr.dataset.id; open.has(id) ? open.delete(id) : open.add(id); draw(); };
+const tog = (e) => { if (e.target.dataset.act) { e.stopPropagation(); if (!e.target.dataset.act.startsWith("Törlés") || confirm(typeof pfHas == "function" && pfHas(e.target.dataset.act.replace(/^Törlés:\s*/, "")) ? "Ez a cég a portfóliódban is szerepel. Ha törlöd a figyelőlistáról, a portfólióban sem frissül tovább. Törlöd?" : "Törlöd a listáról?")) act(e.target.dataset.act); return; } const tr = e.target.closest("tr.row"); if (!tr || e.target.closest("a")) return; const id = tr.dataset.id; open.has(id) ? open.delete(id) : open.add(id); draw(); };
 $("#tb").addEventListener("click", tog);
 $("#tb").addEventListener("keydown", (e) => { if (e.key == "Enter") tog(e); });
 ["#q", "#fm", "#fl", "#ft"].forEach((s) => $(s).addEventListener("input", draw));
-function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#nlist").classList.toggle("on", v == 1); $("#nnew").classList.toggle("on", v == 2); document.body.classList.toggle("v2", v == 2); }
+function show(v) { $("#v1").hidden = v != 1; $("#v2").hidden = v != 2; $("#v3").hidden = v != 3; $("#nlist").classList.toggle("on", v == 1); $("#nnew").classList.toggle("on", v == 2); $("#npf").classList.toggle("on", v == 3); document.body.classList.toggle("v2", v == 2); }
 $(".brand").onclick = (e) => { e.preventDefault(); show(1); scrollTo(0, 0); };
-$("#nnew").onclick = () => { show(2); scrollTo(0, 0); }; $("#nlist").onclick = () => { show(1); scrollTo(0, 0); };
+$("#nnew").onclick = () => { show(2); scrollTo(0, 0); }; $("#npf").onclick = () => { show(3); scrollTo(0, 0); }; $("#nlist").onclick = () => { show(1); scrollTo(0, 0); };
 show(1);
 { const root = document.documentElement; try { const t = localStorage.getItem("mm_theme"); if (t) root.dataset.theme = t; } catch {}
   $("#thm").onclick = () => { const dark = root.dataset.theme ? root.dataset.theme == "dark" : matchMedia("(prefers-color-scheme: dark)").matches; root.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("mm_theme", root.dataset.theme); } catch {} }; }
@@ -273,6 +273,6 @@ async function getJSON(p) { const r = await fetch(p + "?t=" + Date.now(), { cach
     const ds = C.map((r) => r.mk?.d).filter(Boolean).sort();
     const when = META.refreshedAt ? new Date(META.refreshedAt).toLocaleString("hu-HU", { dateStyle: "medium", timeStyle: "short" }) : null;
     $("#st").textContent = (ds.length ? `Árak: ${ds[ds.length - 1]} záró.` : "") + (when ? ` Utolsó frissítés: ${when}.` : "") + (META.fail ? ` ${META.fail} papírnál nem sikerült.` : "");
-    draw(); drawQ(); poll(true);
+    draw(); drawQ(); poll(true); if (typeof pfDraw == "function") pfDraw();
   } catch (e) { $("#st").textContent = "Az adatok betöltése nem sikerült. Töltsd újra az oldalt."; }
 })();
