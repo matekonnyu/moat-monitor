@@ -1,12 +1,12 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:43:18.219Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:45:22.480Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
 Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfolyam $552,26, belső érték $630,00, vételi szint $441,00, trend 20/50/200: Csökkenő / Oldalazó / Emelkedő. Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 
-## Követett cégek (32)
+## Követett cégek (33)
 
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
@@ -41,6 +41,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Vistra Corp. | VST | $140,02 | $212,79 | +52,0% | Csökkenő / Csökkenő / Csökkenő | $87,00 | $52,20 | +60,9% | ★☆☆☆☆ Drága | None | 48 | 23 | -25 | Avoid |
 | MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 4852 Ft | 4440 Ft | -8,5% | Csökkenő / Oldalazó / Emelkedő | 3850 Ft | 2310 Ft | +26,0% | ★★★☆☆ Korrekt ár | None | 38 | 43 | +5 | Avoid |
 | United Airlines Holdings, Inc. | UAL | $112,51 | $156,35 | +39,0% | Emelkedő / Csökkenő / Emelkedő | $63,00 | $37,80 | +78,6% | ★☆☆☆☆ Drága | None | 38 | 23 | -15 | Avoid |
+| BridgeBio Pharma, Inc. | BBIO | $67,25 | $109,10 | +62,2% | Csökkenő / Csökkenő / Oldalazó | $45,00 | $22,50 | +49,4% | ★★☆☆☆ Drága | None | 35 | 23 | -12 | Avoid |
 | Ocugen, Inc. | OCGN | $1,02 | $9,17 | +799,0% | Csökkenő / Csökkenő / Csökkenő | $0,80 | $0,20 | +27,5% | ★★★☆☆ Korrekt ár | None | 14 | 18 | +4 | Avoid |
 
 ## Cégenkénti részletek
@@ -448,6 +449,19 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Normalizált owner earnings ~2,8 Mrd USD (TTM FCF 2,54 Mrd USD, OCF 8,91 Mrd − capex 6,37 Mrd) ≈ 8,6 USD/részvény, 4% növekedés 10 évig, 9% diszkontráta, 9x záró szorzó, mínusz ~52,5 USD/részvény nettó adósság.
 - Források: United Q2 2026 eredmény (2026-07-15); StockAnalysis statisztika 2026-10-01; Alpha Vantage áttekintés 2026-10-01
 
+### BridgeBio Pharma, Inc. (BBIO)
+
+- Szektor: Healthcare - Biotechnology; lista: Követett; elemzés dátuma: 2026-10-03
+- Moat: None (score 35, trend: Stable); pillérek: immateriális javak 45, váltási költség 20, hálózati hatás 0, költségelőny 10, hatékony méret 15
+- Értékelés: ★★☆☆☆ Drága; bizonytalanság: Very High; pénzügyi erő: Adequate; AI-kockázat: Low
+- Árfolyam $67,25 (2026-10-02); belső érték $45,00; vételi szint $22,50 (biztonsági sáv 50%); konszenzus célár $109,10
+- Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -12,1%, 6 hó -8,1%
+- Aktuális ajánlás (mai ár alapján): Avoid
+- Elemzés: Avoid: a 67,25 USD-s ár kb. 49%-kal a ~45 USD-s konzervatív belső érték felett és messze a ~22,5 USD-s vételi szinttől van, a cég még veszteséges, moat nélküli, pipeline-kimenetelre épülő biotech.
+- Kockázatok: Az Attruby (ATTR-CM) erős versenyben van az Alnylam, Pfizer és Intellia termékeivel, az ár- és térítési nyomás (MFN, IRA) rontja a bevételt; az infigratinib és más pipeline-jelöltek klinikai/FDA kudarca bináris kockázat; a veszteség (Q2 2026: -152 M USD) és az elhígulás (1 Mrd USD preferált tőke) miatt a finanszírozási igény magas; szabadalmi és jogi viták
+- Belső érték alapja: Negatív FCF és nyereség híján nem DCF-ből: a ~1 Mrd USD-s 2026-os konszenzus árbevételből (Attruby Q2: 222,4 M USD) ~6x konzervatív árbevétel-szorzóval, a hígulást és a bináris pipeline-kockázatot levonva, kb. 45 USD/részvény (pontos FCF és nettó adósság nem volt fellelhető).
+- Források: BridgeBio Q2 2026 eredményközlemény (GlobeNewswire, 2026-08-10); StockAnalysis.com BBIO (2026-10-02); Simply Wall St BBIO forecast; TradingView News Q2 2026
+
 ### Ocugen, Inc. (OCGN)
 
 - Szektor: Biotechnology; lista: Követett; elemzés dátuma: 2026-09-30
@@ -461,8 +475,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (3)
+## Jóváhagyásra váró elemzések (2)
 
 - Pfizer Inc. (PFE): Narrow moat, ★★☆☆☆ Drága, árfolyam $27,80, belső érték $22,00, célár $28,88, potenciál +3,9%. Hold: a 28,12 USD-s ár kb. 28%-kal a ~22 USD-s konzervatív belső érték felett van és messze a ~15,4 USD-s vételi szinttől, a 6%-os osztalékhozam és a szerény P/E ellenére a szabadalmi lejáratok miatt nincs árbiztonsági ráhagyás.
 - Intel Corporation (INTC): None moat, ★☆☆☆☆ Drága, árfolyam $119,33, belső érték $35,00, célár $108,49, potenciál -9,1%. Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.
-- BridgeBio Pharma, Inc. (BBIO): None moat, ★★☆☆☆ Drága, árfolyam $67,25, belső érték $45,00, célár $109,10, potenciál +62,2%. Avoid: a 67,25 USD-s ár kb. 49%-kal a ~45 USD-s konzervatív belső érték felett és messze a ~22,5 USD-s vételi szinttől van, a cég még veszteséges, moat nélküli, pipeline-kimenetelre épülő biotech.

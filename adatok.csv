@@ -30,4 +30,5 @@ STX,Seagate Technology Holdings plc,STX,USD,848.99,2026-10-02,1125,32.51,Csökke
 VST,Vistra Corp.,VST,USD,140.02,2026-10-02,212.79,51.97,Csökkenő,Csökkenő,Csökkenő,87,52.2,60.94,1,Drága,High,None,Stable,48,23,-25,Avoid
 MOL,MOL Magyar Olaj- és Gázipari Nyrt.,MOL,HUF,4852,2026-10-02,4440,-8.49,Csökkenő,Oldalazó,Emelkedő,3850,2310,26.03,3,Korrekt ár,High,None,Stable,38,43,5,Avoid
 UAL,"United Airlines Holdings, Inc.",UAL,USD,112.51,2026-10-02,156.35,38.97,Emelkedő,Csökkenő,Emelkedő,63,37.8,78.59,1,Drága,High,None,Stable,38,23,-15,Avoid
+BBIO,"BridgeBio Pharma, Inc.",BBIO,USD,67.25,2026-10-02,109.1,62.23,Csökkenő,Csökkenő,Oldalazó,45,22.5,49.44,2,Drága,Very High,None,Stable,35,23,-12,Avoid
 OCGN,"Ocugen, Inc.",OCGN,USD,1.02,2026-10-02,9.17,799.02,Csökkenő,Csökkenő,Csökkenő,0.8,0.2,27.5,3,Korrekt ár,Extreme,None,Stable,14,18,4,Avoid

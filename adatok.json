@@ -3,7 +3,7 @@
  "leiras": "konninvest Moat Monitor – a követett cégek moat-, értékelési és trendadatai. Kutatási eszköz, nem befektetési tanács.",
  "modszertan": "https://konninvest.com/MODSZERTAN.md",
  "arak_datuma": "2026-10-02",
- "frissitve": "2026-10-03T12:43:18.219Z",
+ "frissitve": "2026-10-03T12:45:22.480Z",
  "mai_ajanlat": "MA",
  "cegek": [
   {
@@ -1768,6 +1768,63 @@
    "elemzes_datuma": "2026-10-01"
   },
   {
+   "id": "BBIO",
+   "nev": "BridgeBio Pharma, Inc.",
+   "ticker": "BBIO",
+   "yahoo": "BBIO",
+   "lista": "Követett",
+   "szektor": "Healthcare - Biotechnology",
+   "penznem": "USD",
+   "arfolyam": 67.25,
+   "arfolyam_datum": "2026-10-02",
+   "celar": 109.1,
+   "potencial_szazalek": 62.23,
+   "trend": {
+    "nap20": "Csökkenő",
+    "nap50": "Csökkenő",
+    "nap200": "Oldalazó"
+   },
+   "sma20": 68.98,
+   "sma50": 76.32,
+   "sma200": 73.58,
+   "valtozas_1ho": -12.09,
+   "valtozas_6ho": -8.07,
+   "belso_ertek": 45,
+   "veteli_szint": 22.5,
+   "biztonsagi_sav_szazalek": 50,
+   "ar_vs_belso_ertek_szazalek": 49.44,
+   "csillag": 2,
+   "ertekeles": "Drága",
+   "bizonytalansag": "Very High",
+   "moat": "None",
+   "moat_trend": "Stable",
+   "moat_score": 35,
+   "moat_pillerek": {
+    "immaterialis_javak": 45,
+    "valtasi_koltseg": 20,
+    "halozati_hatas": 0,
+    "koltsegelony": 10,
+    "hatekony_meret": 15
+   },
+   "mpa_score": 23,
+   "elteres": -12,
+   "penzugyi_ero": "Adequate",
+   "ai_kockazat": "Low",
+   "bizonyossag": "Low",
+   "ajanlas": "Avoid",
+   "ajanlas_elemzeskor": "Avoid",
+   "ajanlas_szoveg": "Avoid: a 67,25 USD-s ár kb. 49%-kal a ~45 USD-s konzervatív belső érték felett és messze a ~22,5 USD-s vételi szinttől van, a cég még veszteséges, moat nélküli, pipeline-kimenetelre épülő biotech.",
+   "kockazatok": "Az Attruby (ATTR-CM) erős versenyben van az Alnylam, Pfizer és Intellia termékeivel, az ár- és térítési nyomás (MFN, IRA) rontja a bevételt; az infigratinib és más pipeline-jelöltek klinikai/FDA kudarca bináris kockázat; a veszteség (Q2 2026: -152 M USD) és az elhígulás (1 Mrd USD preferált tőke) miatt a finanszírozási igény magas; szabadalmi és jogi viták",
+   "belso_ertek_alapja": "Negatív FCF és nyereség híján nem DCF-ből: a ~1 Mrd USD-s 2026-os konszenzus árbevételből (Attruby Q2: 222,4 M USD) ~6x konzervatív árbevétel-szorzóval, a hígulást és a bináris pipeline-kockázatot levonva, kb. 45 USD/részvény (pontos FCF és nettó adósság nem volt fellelhető).",
+   "forrasok": [
+    "BridgeBio Q2 2026 eredményközlemény (GlobeNewswire, 2026-08-10)",
+    "StockAnalysis.com BBIO (2026-10-02)",
+    "Simply Wall St BBIO forecast",
+    "TradingView News Q2 2026"
+   ],
+   "elemzes_datuma": "2026-10-03"
+  },
+  {
    "id": "OCGN",
    "nev": "Ocugen, Inc.",
    "ticker": "OCGN",
@@ -1940,63 +1997,6 @@
     "Yahoo Finance INTC"
    ],
    "elemzes_datuma": "2026-10-02"
-  },
-  {
-   "id": "BBIO",
-   "nev": "BridgeBio Pharma, Inc.",
-   "ticker": "BBIO",
-   "yahoo": "BBIO",
-   "lista": "Jelölt",
-   "szektor": "Healthcare - Biotechnology",
-   "penznem": "USD",
-   "arfolyam": 67.25,
-   "arfolyam_datum": "2026-10-02",
-   "celar": 109.1,
-   "potencial_szazalek": 62.23,
-   "trend": {
-    "nap20": "Csökkenő",
-    "nap50": "Csökkenő",
-    "nap200": "Oldalazó"
-   },
-   "sma20": 68.98,
-   "sma50": 76.32,
-   "sma200": 73.58,
-   "valtozas_1ho": -12.09,
-   "valtozas_6ho": -8.07,
-   "belso_ertek": 45,
-   "veteli_szint": 22.5,
-   "biztonsagi_sav_szazalek": 50,
-   "ar_vs_belso_ertek_szazalek": 49.44,
-   "csillag": 2,
-   "ertekeles": "Drága",
-   "bizonytalansag": "Very High",
-   "moat": "None",
-   "moat_trend": "Stable",
-   "moat_score": 35,
-   "moat_pillerek": {
-    "immaterialis_javak": 45,
-    "valtasi_koltseg": 20,
-    "halozati_hatas": 0,
-    "koltsegelony": 10,
-    "hatekony_meret": 15
-   },
-   "mpa_score": 23,
-   "elteres": -12,
-   "penzugyi_ero": "Adequate",
-   "ai_kockazat": "Low",
-   "bizonyossag": "Low",
-   "ajanlas": "Avoid",
-   "ajanlas_elemzeskor": "Avoid",
-   "ajanlas_szoveg": "Avoid: a 67,25 USD-s ár kb. 49%-kal a ~45 USD-s konzervatív belső érték felett és messze a ~22,5 USD-s vételi szinttől van, a cég még veszteséges, moat nélküli, pipeline-kimenetelre épülő biotech.",
-   "kockazatok": "Az Attruby (ATTR-CM) erős versenyben van az Alnylam, Pfizer és Intellia termékeivel, az ár- és térítési nyomás (MFN, IRA) rontja a bevételt; az infigratinib és más pipeline-jelöltek klinikai/FDA kudarca bináris kockázat; a veszteség (Q2 2026: -152 M USD) és az elhígulás (1 Mrd USD preferált tőke) miatt a finanszírozási igény magas; szabadalmi és jogi viták",
-   "belso_ertek_alapja": "Negatív FCF és nyereség híján nem DCF-ből: a ~1 Mrd USD-s 2026-os konszenzus árbevételből (Attruby Q2: 222,4 M USD) ~6x konzervatív árbevétel-szorzóval, a hígulást és a bináris pipeline-kockázatot levonva, kb. 45 USD/részvény (pontos FCF és nettó adósság nem volt fellelhető).",
-   "forrasok": [
-    "BridgeBio Q2 2026 eredményközlemény (GlobeNewswire, 2026-08-10)",
-    "StockAnalysis.com BBIO (2026-10-02)",
-    "Simply Wall St BBIO forecast",
-    "TradingView News Q2 2026"
-   ],
-   "elemzes_datuma": "2026-10-03"
   }
  ]
 }
