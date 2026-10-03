@@ -49,7 +49,7 @@
    "ch1m": -4.2,
    "ch6m": -1.84,
    "d": "2026-10-02",
-   "at": "2026-10-03T12:35:41.425Z",
+   "at": "2026-10-03T12:43:18.219Z",
    "src": "Yahoo Finance"
   },
   "added": "2026-10-02T11:03:36.082Z"
@@ -105,9 +105,64 @@
    "ch1m": 32.52,
    "ch6m": 136.86,
    "d": "2026-10-02",
-   "at": "2026-10-03T12:35:41.425Z",
+   "at": "2026-10-03T12:43:18.219Z",
    "src": "Yahoo Finance"
   },
   "added": "2026-10-02T12:36:24.355Z"
+ },
+ {
+  "id": "BBIO",
+  "n": "BridgeBio Pharma, Inc.",
+  "t": "BBIO",
+  "y": "BBIO",
+  "l": "Jelölt",
+  "m": "None",
+  "s": 35,
+  "ai": "Low",
+  "c": "Low",
+  "p": [
+   45,
+   20,
+   0,
+   10,
+   15
+  ],
+  "sec": "Healthcare - Biotechnology",
+  "r": "Avoid: a 67,25 USD-s ár kb. 49%-kal a ~45 USD-s konzervatív belső érték felett és messze a ~22,5 USD-s vételi szinttől van, a cég még veszteséges, moat nélküli, pipeline-kimenetelre épülő biotech.",
+  "risks": "Az Attruby (ATTR-CM) erős versenyben van az Alnylam, Pfizer és Intellia termékeivel, az ár- és térítési nyomás (MFN, IRA) rontja a bevételt; az infigratinib és más pipeline-jelöltek klinikai/FDA kudarca bináris kockázat; a veszteség (Q2 2026: -152 M USD) és az elhígulás (1 Mrd USD preferált tőke) miatt a finanszírozási igény magas; szabadalmi és jogi viták",
+  "mt": "Stable",
+  "u": "Very High",
+  "ivb": "Negatív FCF és nyereség híján nem DCF-ből: a ~1 Mrd USD-s 2026-os konszenzus árbevételből (Attruby Q2: 222,4 M USD) ~6x konzervatív árbevétel-szorzóval, a hígulást és a bináris pipeline-kockázatot levonva, kb. 45 USD/részvény (pontos FCF és nettó adósság nem volt fellelhető).",
+  "srcs": [
+   "BridgeBio Q2 2026 eredményközlemény (GlobeNewswire, 2026-08-10)",
+   "StockAnalysis.com BBIO (2026-10-02)",
+   "Simply Wall St BBIO forecast",
+   "TradingView News Q2 2026"
+  ],
+  "d": "2026-10-03",
+  "ch": "https://finance.yahoo.com/chart/BBIO",
+  "pr": 67.25,
+  "tp": 109.1,
+  "iv": 45,
+  "mos": 50,
+  "bb": 22.5,
+  "f": "Adequate",
+  "cur": "USD",
+  "mk": {
+   "p": 67.25,
+   "prev": 66.91,
+   "sma20": 68.98,
+   "sma50": 76.32,
+   "sma200": 73.58,
+   "ema20": 69.2,
+   "ema50": 73.06,
+   "tr": "Csökkenő",
+   "ch1m": -12.09,
+   "ch6m": -8.07,
+   "d": "2026-10-02",
+   "at": "2026-10-03T12:43:18.219Z",
+   "src": "Yahoo Finance"
+  },
+  "added": "2026-10-03T12:43:18.219Z"
  }
 ]

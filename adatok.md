@@ -1,6 +1,6 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:35:41.425Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:43:18.219Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
@@ -461,7 +461,8 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (2)
+## Jóváhagyásra váró elemzések (3)
 
 - Pfizer Inc. (PFE): Narrow moat, ★★☆☆☆ Drága, árfolyam $27,80, belső érték $22,00, célár $28,88, potenciál +3,9%. Hold: a 28,12 USD-s ár kb. 28%-kal a ~22 USD-s konzervatív belső érték felett van és messze a ~15,4 USD-s vételi szinttől, a 6%-os osztalékhozam és a szerény P/E ellenére a szabadalmi lejáratok miatt nincs árbiztonsági ráhagyás.
 - Intel Corporation (INTC): None moat, ★☆☆☆☆ Drága, árfolyam $119,33, belső érték $35,00, célár $108,49, potenciál -9,1%. Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.
+- BridgeBio Pharma, Inc. (BBIO): None moat, ★★☆☆☆ Drága, árfolyam $67,25, belső érték $45,00, célár $109,10, potenciál +62,2%. Avoid: a 67,25 USD-s ár kb. 49%-kal a ~45 USD-s konzervatív belső érték felett és messze a ~22,5 USD-s vételi szinttől van, a cég még veszteséges, moat nélküli, pipeline-kimenetelre épülő biotech.
