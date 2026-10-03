@@ -1,0 +1,38 @@
+name: Elmaradt elemzések újrapróbálása
+
+# Óránként megkeresi a 30 percnél régebbi, még nyitott "Elemzés:" issue-kat,
+# és mindegyikre újraindítja az "Azonnali elemzés (Claude)" workflow-t (analyze.yml).
+# Egy kérést legfeljebb kétszer próbál újra (a sikertelen futások kommentjeit számolja), hogy ne pörögjön végtelenül.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  issues: read
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Elmaradt kérések újraindítása
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          node --input-type=module -e '
+            const { REPO, GH_TOKEN } = process.env;
+            const api = (p, o = {}) => fetch(`https://api.github.com/repos/${REPO}${p}`, { ...o, headers: { Authorization: "Bearer " + GH_TOKEN, Accept: "application/vnd.github+json", "Content-Type": "application/json" } });
+            const issues = await (await api("/issues?state=open&per_page=50")).json();
+            const cutoff = Date.now() - 30 * 60 * 1000;
+            const running = await (await api("/actions/workflows/analyze.yml/runs?status=in_progress&per_page=20")).json();
+            if ((running.total_count || 0) > 0) { console.log("Fut még elemzés, most kihagyom."); process.exit(0); }
+            const todo = issues.filter(i => !i.pull_request && /^\s*Elemzés\s*:/i.test(i.title) && new Date(i.created_at).getTime() < cutoff && i.comments < 2).slice(0, 5);
+            if (!todo.length) { console.log("Nincs elmaradt kérés."); process.exit(0); }
+            for (const i of todo) {
+              const r = await api("/actions/workflows/analyze.yml/dispatches", { method: "POST", body: JSON.stringify({ ref: "main", inputs: { issue: String(i.number) } }) });
+              console.log(`#${i.number} ${i.title} → újraindítva (${r.status})`);
+            }
+          '
