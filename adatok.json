@@ -3,7 +3,7 @@
  "leiras": "konninvest Moat Monitor – a követett cégek moat-, értékelési és trendadatai. Kutatási eszköz, nem befektetési tanács.",
  "modszertan": "https://konninvest.com/MODSZERTAN.md",
  "arak_datuma": "2026-10-02",
- "frissitve": "2026-10-03T13:46:50.169Z",
+ "frissitve": "2026-10-03T13:47:22.508Z",
  "mai_ajanlat": "MA",
  "cegek": [
   {
@@ -1712,6 +1712,64 @@
    "elemzes_datuma": "2026-10-01"
   },
   {
+   "id": "INTC",
+   "nev": "Intel Corporation",
+   "ticker": "INTC",
+   "yahoo": "INTC",
+   "lista": "Követett",
+   "szektor": "Technology - Semiconductors",
+   "penznem": "USD",
+   "arfolyam": 119.33,
+   "arfolyam_datum": "2026-10-02",
+   "celar": 108.49,
+   "potencial_szazalek": -9.08,
+   "trend": {
+    "nap20": "Emelkedő",
+    "nap50": "Emelkedő",
+    "nap200": "Emelkedő"
+   },
+   "sma20": 111.64,
+   "sma50": 100.87,
+   "sma200": 81.18,
+   "valtozas_1ho": 32.52,
+   "valtozas_6ho": 136.86,
+   "belso_ertek": 35,
+   "veteli_szint": 17.5,
+   "biztonsagi_sav_szazalek": 50,
+   "ar_vs_belso_ertek_szazalek": 240.94,
+   "csillag": 1,
+   "ertekeles": "Drága",
+   "bizonytalansag": "Very High",
+   "moat": "None",
+   "moat_trend": "Stable",
+   "moat_score": 40,
+   "moat_pillerek": {
+    "immaterialis_javak": 45,
+    "valtasi_koltseg": 25,
+    "halozati_hatas": 15,
+    "koltsegelony": 30,
+    "hatekony_meret": 60
+   },
+   "mpa_score": 23,
+   "elteres": -17,
+   "penzugyi_ero": "Adequate",
+   "ai_kockazat": "Medium",
+   "bizonyossag": "Low",
+   "ajanlas": "Avoid",
+   "ajanlas_elemzeskor": "Avoid",
+   "ajanlas_szoveg": "Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.",
+   "kockazatok": "A 14A node külső ügyfélnyerése még nem igazolt (a külső foundry-bevétel Q2-ben csak 293 M USD); negatív korrigált szabad cash flow (Q2: -8,4 Mrd USD) és tőkeigényes gyárépítés; a TSMC-vel szembeni technológiai és költséghátrány; az árfolyam messze a konszenzus célár (~108 USD) felett jár, a GAAP eredményt nem pénzmozgással járó állami részesedés-átértékelés torzítja",
+   "belso_ertek_alapja": "Becslés: normalizált, nem GAAP EPS ~1,3–1,5 USD (Q2 0,42, Q3 irányadás 0,38) x konzervatív ~25x szorzó ≈ 35 USD; a szabad cash flow negatív, a pontos részvényszámot és nettó adósságot nem ellenőriztem, ezért a belső értéket nem fújtuk fel.",
+   "forrasok": [
+    "Intel Q2 2026 earnings release (intc.com / SEC 8-K)",
+    "MarketBeat INTC forecast (2026-10-01)",
+    "money365.market Intel Q2 2026 analízis",
+    "404k Research Intel Q2 2026 deep dive",
+    "Yahoo Finance INTC"
+   ],
+   "elemzes_datuma": "2026-10-02"
+  },
+  {
    "id": "MOL",
    "nev": "MOL Magyar Olaj- és Gázipari Nyrt.",
    "ticker": "MOL",
@@ -1939,64 +1997,5 @@
    "elemzes_datuma": "2026-09-30"
   }
  ],
- "jovahagyasra_var": [
-  {
-   "id": "INTC",
-   "nev": "Intel Corporation",
-   "ticker": "INTC",
-   "yahoo": "INTC",
-   "lista": "Jelölt",
-   "szektor": "Technology - Semiconductors",
-   "penznem": "USD",
-   "arfolyam": 119.33,
-   "arfolyam_datum": "2026-10-02",
-   "celar": 108.49,
-   "potencial_szazalek": -9.08,
-   "trend": {
-    "nap20": "Emelkedő",
-    "nap50": "Emelkedő",
-    "nap200": "Emelkedő"
-   },
-   "sma20": 111.64,
-   "sma50": 100.87,
-   "sma200": 81.18,
-   "valtozas_1ho": 32.52,
-   "valtozas_6ho": 136.86,
-   "belso_ertek": 35,
-   "veteli_szint": 17.5,
-   "biztonsagi_sav_szazalek": 50,
-   "ar_vs_belso_ertek_szazalek": 240.94,
-   "csillag": 1,
-   "ertekeles": "Drága",
-   "bizonytalansag": "Very High",
-   "moat": "None",
-   "moat_trend": "Stable",
-   "moat_score": 40,
-   "moat_pillerek": {
-    "immaterialis_javak": 45,
-    "valtasi_koltseg": 25,
-    "halozati_hatas": 15,
-    "koltsegelony": 30,
-    "hatekony_meret": 60
-   },
-   "mpa_score": 23,
-   "elteres": -17,
-   "penzugyi_ero": "Adequate",
-   "ai_kockazat": "Medium",
-   "bizonyossag": "Low",
-   "ajanlas": "Avoid",
-   "ajanlas_elemzeskor": "Avoid",
-   "ajanlas_szoveg": "Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.",
-   "kockazatok": "A 14A node külső ügyfélnyerése még nem igazolt (a külső foundry-bevétel Q2-ben csak 293 M USD); negatív korrigált szabad cash flow (Q2: -8,4 Mrd USD) és tőkeigényes gyárépítés; a TSMC-vel szembeni technológiai és költséghátrány; az árfolyam messze a konszenzus célár (~108 USD) felett jár, a GAAP eredményt nem pénzmozgással járó állami részesedés-átértékelés torzítja",
-   "belso_ertek_alapja": "Becslés: normalizált, nem GAAP EPS ~1,3–1,5 USD (Q2 0,42, Q3 irányadás 0,38) x konzervatív ~25x szorzó ≈ 35 USD; a szabad cash flow negatív, a pontos részvényszámot és nettó adósságot nem ellenőriztem, ezért a belső értéket nem fújtuk fel.",
-   "forrasok": [
-    "Intel Q2 2026 earnings release (intc.com / SEC 8-K)",
-    "MarketBeat INTC forecast (2026-10-01)",
-    "money365.market Intel Q2 2026 analízis",
-    "404k Research Intel Q2 2026 deep dive",
-    "Yahoo Finance INTC"
-   ],
-   "elemzes_datuma": "2026-10-02"
-  }
- ]
+ "jovahagyasra_var": []
 }

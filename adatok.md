@@ -1,12 +1,12 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T13:46:50.169Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T13:47:22.508Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
 Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfolyam $552,26, belső érték $630,00, vételi szint $441,00, trend 20/50/200: Csökkenő / Oldalazó / Emelkedő. Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 
-## Követett cégek (34)
+## Követett cégek (35)
 
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
@@ -40,6 +40,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Pfizer Inc. | PFE | $27,80 | $28,88 | +3,9% | Oldalazó / Emelkedő / Emelkedő | $22,00 | $15,40 | +26,4% | ★★☆☆☆ Drága | Narrow | 55 | 51 | -4 | Hold |
 | Seagate Technology Holdings plc | STX | $848,99 | $1125 | +32,5% | Csökkenő / Oldalazó / Emelkedő | $300,00 | $150,00 | +183,0% | ★☆☆☆☆ Drága | Narrow | 50 | 43 | -7 | Avoid |
 | Vistra Corp. | VST | $140,02 | $212,79 | +52,0% | Csökkenő / Csökkenő / Csökkenő | $87,00 | $52,20 | +60,9% | ★☆☆☆☆ Drága | None | 48 | 23 | -25 | Avoid |
+| Intel Corporation | INTC | $119,33 | $108,49 | -9,1% | Emelkedő / Emelkedő / Emelkedő | $35,00 | $17,50 | +240,9% | ★☆☆☆☆ Drága | None | 40 | 23 | -17 | Avoid |
 | MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 4852 Ft | 4440 Ft | -8,5% | Csökkenő / Oldalazó / Emelkedő | 3850 Ft | 2310 Ft | +26,0% | ★★★☆☆ Korrekt ár | None | 38 | 43 | +5 | Avoid |
 | United Airlines Holdings, Inc. | UAL | $112,51 | $156,35 | +39,0% | Emelkedő / Csökkenő / Emelkedő | $63,00 | $37,80 | +78,6% | ★☆☆☆☆ Drága | None | 38 | 23 | -15 | Avoid |
 | BridgeBio Pharma, Inc. | BBIO | $67,25 | $109,10 | +62,2% | Csökkenő / Csökkenő / Oldalazó | $45,00 | $22,50 | +49,4% | ★★☆☆☆ Drága | None | 35 | 23 | -12 | Avoid |
@@ -437,6 +438,19 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Normalizált owner earnings ~3,0 Mrd USD (TTM FCF 2,26 Mrd, növekedési capex előtt magasabb) ≈ 8,9 USD/részvény, 5% növekedés 10 évig, 9% diszkontráta, 12x záró szorzó, mínusz ~59,8 USD/részvény nettó adósság.
 - Források: StockAnalysis statisztika 2026-10-01; Yahoo Finance: Vistra 31%-os esés; Alpha Vantage áttekintés 2026-10-01
 
+### Intel Corporation (INTC)
+
+- Szektor: Technology - Semiconductors; lista: Követett; elemzés dátuma: 2026-10-02
+- Moat: None (score 40, trend: Stable); pillérek: immateriális javak 45, váltási költség 25, hálózati hatás 15, költségelőny 30, hatékony méret 60
+- Értékelés: ★☆☆☆☆ Drága; bizonytalanság: Very High; pénzügyi erő: Adequate; AI-kockázat: Medium
+- Árfolyam $119,33 (2026-10-02); belső érték $35,00; vételi szint $17,50 (biztonsági sáv 50%); konszenzus célár $108,49
+- Trend 20/50/200 nap: Emelkedő / Emelkedő / Emelkedő; változás 1 hó +32,5%, 6 hó +136,9%
+- Aktuális ajánlás (mai ár alapján): Avoid
+- Elemzés: Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.
+- Kockázatok: A 14A node külső ügyfélnyerése még nem igazolt (a külső foundry-bevétel Q2-ben csak 293 M USD); negatív korrigált szabad cash flow (Q2: -8,4 Mrd USD) és tőkeigényes gyárépítés; a TSMC-vel szembeni technológiai és költséghátrány; az árfolyam messze a konszenzus célár (~108 USD) felett jár, a GAAP eredményt nem pénzmozgással járó állami részesedés-átértékelés torzítja
+- Belső érték alapja: Becslés: normalizált, nem GAAP EPS ~1,3–1,5 USD (Q2 0,42, Q3 irányadás 0,38) x konzervatív ~25x szorzó ≈ 35 USD; a szabad cash flow negatív, a pontos részvényszámot és nettó adósságot nem ellenőriztem, ezért a belső értéket nem fújtuk fel.
+- Források: Intel Q2 2026 earnings release (intc.com / SEC 8-K); MarketBeat INTC forecast (2026-10-01); money365.market Intel Q2 2026 analízis; 404k Research Intel Q2 2026 deep dive; Yahoo Finance INTC
+
 ### MOL Magyar Olaj- és Gázipari Nyrt. (MOL)
 
 - Szektor: Oil & Gas Integrated; lista: Követett; elemzés dátuma: 2026-09-30
@@ -488,7 +502,3 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Kockázatok: Az OCU400 fázis 3 (topline 2027 Q1) vagy az OCU410ST (2027 Q2) sikertelensége; folyamatos veszteség (Q2 2026: -24,9 M USD) és további hígítás, 130 M USD átváltható kötvény; FDA-engedélyezési és gyártási kockázat; nincs érdemi bevétel (Q2 2026: 1,5 M USD)
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
-
-## Jóváhagyásra váró elemzések (1)
-
-- Intel Corporation (INTC): None moat, ★☆☆☆☆ Drága, árfolyam $119,33, belső érték $35,00, célár $108,49, potenciál -9,1%. Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.
