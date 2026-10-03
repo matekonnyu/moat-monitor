@@ -25,10 +25,10 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Alphabet Inc. (Class A) | GOOGL | $343,50 | $429,46 | +25,0% | Oldalazó / Csökkenő / Emelkedő | $353,00 | $211,80 | -2,7% | ★★★☆☆ Korrekt ár | Wide | 82 | 92 | +10 | Accumulate |
 | PepsiCo, Inc. | PEP | $125,89 | $151,09 | +20,0% | Csökkenő / Csökkenő / Csökkenő | $135,00 | $108,00 | -6,7% | ★★★☆☆ Korrekt ár | Wide | 80 | 80 | 0 | Hold |
 | Stryker Corporation | SYK | $275,43 | $367,80 | +33,5% | Oldalazó / Csökkenő / Csökkenő | $309,00 | $216,30 | -10,9% | ★★★☆☆ Korrekt ár | Wide | 80 | 92 | +12 | Hold |
-| Booking Holdings Inc. | BKNG | $159,02 | $238,78 | +50,2% | Csökkenő / Csökkenő / Oldalazó | $245,00 | $147,00 | -35,1% | ★★★★☆ Alulértékelt | Narrow | 72 | 65 | -7 | Buy |
+| Booking Holdings Inc. | BKNG | $159,02 | $238,78 | +50,2% | Csökkenő / Csökkenő / Oldalazó | $245,00 | $147,00 | -35,1% | ★★★★☆ Alulértékelt | Narrow | 72 | 65 | -7 | Hold |
 | CRH plc | CRH | $81,94 | $133,18 | +62,5% | Csökkenő / Csökkenő / Csökkenő | $74,00 | $51,80 | +10,7% | ★★★☆☆ Korrekt ár | Narrow | 68 | 51 | -17 | Hold |
 | Zscaler, Inc. | ZS | $196,60 | $208,86 | +6,2% | Emelkedő / Emelkedő / Emelkedő | $115,00 | $69,00 | +71,0% | ★☆☆☆☆ Drága | Narrow | 66 | 55 | -11 | Avoid |
-| Wells Fargo & Company | WFC | $80,45 | $100,54 | +25,0% | Csökkenő / Csökkenő / Oldalazó | $110,00 | $77,00 | -26,9% | ★★★★☆ Alulértékelt | Narrow | 66 | 77 | +11 | Buy |
+| Wells Fargo & Company | WFC | $80,45 | $100,54 | +25,0% | Csökkenő / Csökkenő / Oldalazó | $110,00 | $77,00 | -26,9% | ★★★★☆ Alulértékelt | Narrow | 66 | 77 | +11 | Hold |
 | Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) | SPCX | $158,96 | $222,42 | +39,9% | Emelkedő / Emelkedő / – | $45,00 | $22,50 | +253,2% | ★☆☆☆☆ Drága | Narrow | 64 | 43 | -21 | Avoid |
 | Advanced Micro Devices | AMD | $633,91 | $618,51 | -2,4% | Emelkedő / Emelkedő / Emelkedő | $270,00 | $135,00 | +134,8% | ★☆☆☆☆ Drága | Narrow | 62 | 55 | -7 | Avoid |
 | Deutsche Telekom AG | DTE | 26,56 € | 35,84 € | +34,9% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -11,5% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
@@ -250,7 +250,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★★☆ Alulértékelt; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: High
 - Árfolyam $159,02 (2026-10-02); belső érték $245,00; vételi szint $147,00 (biztonsági sáv 40%); konszenzus célár $238,78
 - Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -20,3%, 6 hó -5,2%
-- Aktuális ajánlás (mai ár alapján): Buy (elemzéskor: Accumulate)
+- Aktuális ajánlás (mai ár alapján): Hold (elemzéskor: Accumulate)
 - Elemzés: Accumulate: a 162,84 USD-s ár ~34%-kal a ~245 USD-s fair value alatt van, de a magas (AI-ágens) bizonytalanság miatti 147 USD-s vételi szint felett, ezért csak fokozatos, kis pozícióépítés indokolt.
 - Kockázatok: AI-ágensek (Meta Muse, OpenAI, Google) megkerülhetik az OTA-kat és elvehetik az ügyfélkapcsolatot; a Google-függő marketing költségeinek emelkedése; utazási kereslet visszaesése recesszió vagy geopolitikai sokk esetén; EU DMA/szabályozói lépések a paritásklauzulák ellen, negatív saját tőke mellett növekvő eladósodottság
 - Belső érték alapja: Owner earnings ≈ TTM FCF 9,5 Mrd USD mínusz 0,6 Mrd SBC ≈ 8,9 Mrd USD (~11,8 USD/split utáni részvény ~760 M részvényen), 8% növekedés 10 évig, 10% diszkontráta, 15x záró szorzó (AI-kockázat miatt alacsonyabb), levonva a ~3,4 Mrd USD nettó adósságot.
@@ -289,7 +289,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★★☆ Alulértékelt; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Medium
 - Árfolyam $80,45 (2026-10-02); belső érték $110,00; vételi szint $77,00 (biztonsági sáv 30%); konszenzus célár $100,54
 - Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -9,9%, 6 hó -0,2%
-- Aktuális ajánlás (mai ár alapján): Buy (elemzéskor: Accumulate)
+- Aktuális ajánlás (mai ár alapján): Hold (elemzéskor: Accumulate)
 - Elemzés: Accumulate: a 80,28 USD-s ár kb. 27%-kal a ~110 USD-s belső érték alatt van, de még kicsit a ~77 USD-s vételi szint felett; az eszközplafon megszűnése után a 17–18%-os ROTCE-cél a fő hajtóerő.
 - Kockázatok: Hitelezési veszteségek növekedése gazdasági lassulásnál (kereskedelmi ingatlan, fogyasztói hitelek); kamatcsökkentés miatt szűkülő nettó kamatmarzs; a ROTCE-cél elérésének csúszása, elemzői célár-csökkentések; szabályozási és megfelelési kockázat a korábbi botrányok után
 - Belső érték alapja: Bankként a normalizált EPS-t vettem owner earningsnek: ~7,0 USD/részvény (TTM EPS 6,88, forward ~7,4), 5% növekedés 10 évig, 9% diszkontráta, 11x záró szorzó; a ~6%-os buyback-hozam nincs külön beárazva.

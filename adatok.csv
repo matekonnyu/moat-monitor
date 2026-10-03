@@ -14,10 +14,10 @@ AVGO,Broadcom Inc.,AVGO,USD,355.14,2026-10-02,531.85,49.76,Oldalazó,Csökkenő,
 GOOGL,Alphabet Inc. (Class A),GOOGL,USD,343.5,2026-10-02,429.46,25.02,Oldalazó,Csökkenő,Emelkedő,353,211.8,-2.69,3,Korrekt ár,High,Wide,Stable,82,92,10,Accumulate
 PEP,"PepsiCo, Inc.",PEP,USD,125.89,2026-10-02,151.09,20.02,Csökkenő,Csökkenő,Csökkenő,135,108,-6.75,3,Korrekt ár,Low,Wide,Stable,80,80,0,Hold
 SYK,Stryker Corporation,SYK,USD,275.43,2026-10-02,367.8,33.54,Oldalazó,Csökkenő,Csökkenő,309,216.3,-10.86,3,Korrekt ár,Medium,Wide,Stable,80,92,12,Hold
-BKNG,Booking Holdings Inc.,BKNG,USD,159.02,2026-10-02,238.78,50.16,Csökkenő,Csökkenő,Oldalazó,245,147,-35.09,4,Alulértékelt,High,Narrow,Negative,72,65,-7,Buy
+BKNG,Booking Holdings Inc.,BKNG,USD,159.02,2026-10-02,238.78,50.16,Csökkenő,Csökkenő,Oldalazó,245,147,-35.09,4,Alulértékelt,High,Narrow,Negative,72,65,-7,Hold
 CRH,CRH plc,CRH,USD,81.94,2026-10-02,133.18,62.53,Csökkenő,Csökkenő,Csökkenő,74,51.8,10.73,3,Korrekt ár,Medium,Narrow,Stable,68,51,-17,Hold
 ZS,"Zscaler, Inc.",ZS,USD,196.6,2026-10-02,208.86,6.24,Emelkedő,Emelkedő,Emelkedő,115,69,70.96,1,Drága,High,Narrow,Stable,66,55,-11,Avoid
-WFC,Wells Fargo & Company,WFC,USD,80.45,2026-10-02,100.54,24.97,Csökkenő,Csökkenő,Oldalazó,110,77,-26.86,4,Alulértékelt,Medium,Narrow,Positive,66,77,11,Buy
+WFC,Wells Fargo & Company,WFC,USD,80.45,2026-10-02,100.54,24.97,Csökkenő,Csökkenő,Oldalazó,110,77,-26.86,4,Alulértékelt,Medium,Narrow,Positive,66,77,11,Hold
 SPCX,"Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX)",SPCX,USD,158.96,2026-10-02,222.42,39.92,Emelkedő,Emelkedő,,45,22.5,253.24,1,Drága,Very High,Narrow,Positive,64,43,-21,Avoid
 AMD,Advanced Micro Devices,AMD,USD,633.91,2026-10-02,618.51,-2.43,Emelkedő,Emelkedő,Emelkedő,270,135,134.78,1,Drága,Very High,Narrow,Positive,62,55,-7,Avoid
 DTE,Deutsche Telekom AG,DTE,EUR,26.56,2026-10-02,35.84,34.94,Csökkenő,Csökkenő,Csökkenő,30,21,-11.47,3,Korrekt ár,Medium,Narrow,Stable,62,65,3,Hold
