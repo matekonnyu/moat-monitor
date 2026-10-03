@@ -49,7 +49,7 @@
    "ch1m": -4.2,
    "ch6m": -1.84,
    "d": "2026-10-02",
-   "at": "2026-10-03T12:34:16.973Z",
+   "at": "2026-10-03T12:35:41.425Z",
    "src": "Yahoo Finance"
   },
   "added": "2026-10-02T11:03:36.082Z"
@@ -105,64 +105,9 @@
    "ch1m": 32.52,
    "ch6m": 136.86,
    "d": "2026-10-02",
-   "at": "2026-10-03T12:34:16.973Z",
+   "at": "2026-10-03T12:35:41.425Z",
    "src": "Yahoo Finance"
   },
   "added": "2026-10-02T12:36:24.355Z"
- },
- {
-  "id": "IFX.DE",
-  "n": "Infineon Technologies AG",
-  "t": "IFX",
-  "y": "IFX.DE",
-  "l": "Jelölt",
-  "m": "Narrow",
-  "s": 62,
-  "ai": "Low",
-  "c": "Medium",
-  "p": [
-   45,
-   60,
-   10,
-   55,
-   60
-  ],
-  "sec": "Semiconductors",
-  "r": "Avoid: a 64,64 EUR-s ár kb. 149%-kal a ~26 EUR-s konzervatív belső érték felett és messze a ~15,6 EUR-s vételi szint felett van, a power-félvezető moat és az AI-adatközponti lendület ellenére a ciklikus normalizált cash flow nem indokolja.",
-  "risks": "Ciklikus autóipari és ipari kereslet ingadozása, kínai árverseny (SiC, Si power); magas beruházási igény és az ams OSRAM szenzorüzlet felvásárlásának integrációs/pénzügyi terhe; a magas értékeltség (trailing P/E ~70, forward ~25) az AI-várakozások csalódása esetén; vám- és geopolitikai kockázatok",
-  "mt": "Stable",
-  "u": "High",
-  "ivb": "Becslés: a FY2026 korrigált szabad cash flow irányadás (~1,85 Mrd EUR) alapján ~1,7 Mrd EUR normalizált owner earnings x 20 szorzó, ~1,31 Mrd részvényre elosztva ≈ 26 EUR; a nettó adósság és a pontos részvényszám nem volt egyértelműen fellelhető.",
-  "srcs": [
-   "Infineon Q3 FY2026 sajtóközlemény (2026-08-05)",
-   "StockAnalysis.com ETR:IFX (2026-10-02)",
-   "Yahoo Finance Q3 FY2026 earnings call",
-   "Stockopedia / valueinvesting.io konszenzus"
-  ],
-  "d": "2026-10-03",
-  "ch": "https://finance.yahoo.com/chart/IFX.DE",
-  "pr": 64.64,
-  "tp": 86.74,
-  "iv": 26,
-  "mos": 40,
-  "f": "Adequate",
-  "cur": "EUR",
-  "mk": {
-   "p": 64.64,
-   "prev": 59.42,
-   "sma20": 57.68,
-   "sma50": 58.26,
-   "sma200": 55.61,
-   "ema20": 58.34,
-   "ema50": 59.63,
-   "tr": "Oldalazó",
-   "ch1m": 16.41,
-   "ch6m": 51.06,
-   "d": "2026-10-02",
-   "at": "2026-10-03T12:34:16.973Z",
-   "src": "Yahoo Finance"
-  },
-  "bb": 15.6,
-  "added": "2026-10-03T12:34:16.973Z"
  }
 ]

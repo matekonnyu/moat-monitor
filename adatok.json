@@ -3,7 +3,7 @@
  "leiras": "konninvest Moat Monitor – a követett cégek moat-, értékelési és trendadatai. Kutatási eszköz, nem befektetési tanács.",
  "modszertan": "https://konninvest.com/MODSZERTAN.md",
  "arak_datuma": "2026-10-02",
- "frissitve": "2026-10-03T12:34:16.973Z",
+ "frissitve": "2026-10-03T12:35:41.425Z",
  "mai_ajanlat": "MA",
  "cegek": [
   {
@@ -1375,6 +1375,63 @@
    "elemzes_datuma": "2026-09-30"
   },
   {
+   "id": "IFX.DE",
+   "nev": "Infineon Technologies AG",
+   "ticker": "IFX",
+   "yahoo": "IFX.DE",
+   "lista": "Követett",
+   "szektor": "Semiconductors",
+   "penznem": "EUR",
+   "arfolyam": 64.64,
+   "arfolyam_datum": "2026-10-02",
+   "celar": 86.74,
+   "potencial_szazalek": 34.19,
+   "trend": {
+    "nap20": "Emelkedő",
+    "nap50": "Oldalazó",
+    "nap200": "Emelkedő"
+   },
+   "sma20": 57.68,
+   "sma50": 58.26,
+   "sma200": 55.61,
+   "valtozas_1ho": 16.41,
+   "valtozas_6ho": 51.06,
+   "belso_ertek": 26,
+   "veteli_szint": 15.6,
+   "biztonsagi_sav_szazalek": 40,
+   "ar_vs_belso_ertek_szazalek": 148.62,
+   "csillag": 1,
+   "ertekeles": "Drága",
+   "bizonytalansag": "High",
+   "moat": "Narrow",
+   "moat_trend": "Stable",
+   "moat_score": 62,
+   "moat_pillerek": {
+    "immaterialis_javak": 45,
+    "valtasi_koltseg": 60,
+    "halozati_hatas": 10,
+    "koltsegelony": 55,
+    "hatekony_meret": 60
+   },
+   "mpa_score": 43,
+   "elteres": -19,
+   "penzugyi_ero": "Adequate",
+   "ai_kockazat": "Low",
+   "bizonyossag": "Medium",
+   "ajanlas": "Avoid",
+   "ajanlas_elemzeskor": "Avoid",
+   "ajanlas_szoveg": "Avoid: a 64,64 EUR-s ár kb. 149%-kal a ~26 EUR-s konzervatív belső érték felett és messze a ~15,6 EUR-s vételi szint felett van, a power-félvezető moat és az AI-adatközponti lendület ellenére a ciklikus normalizált cash flow nem indokolja.",
+   "kockazatok": "Ciklikus autóipari és ipari kereslet ingadozása, kínai árverseny (SiC, Si power); magas beruházási igény és az ams OSRAM szenzorüzlet felvásárlásának integrációs/pénzügyi terhe; a magas értékeltség (trailing P/E ~70, forward ~25) az AI-várakozások csalódása esetén; vám- és geopolitikai kockázatok",
+   "belso_ertek_alapja": "Becslés: a FY2026 korrigált szabad cash flow irányadás (~1,85 Mrd EUR) alapján ~1,7 Mrd EUR normalizált owner earnings x 20 szorzó, ~1,31 Mrd részvényre elosztva ≈ 26 EUR; a nettó adósság és a pontos részvényszám nem volt egyértelműen fellelhető.",
+   "forrasok": [
+    "Infineon Q3 FY2026 sajtóközlemény (2026-08-05)",
+    "StockAnalysis.com ETR:IFX (2026-10-02)",
+    "Yahoo Finance Q3 FY2026 earnings call",
+    "Stockopedia / valueinvesting.io konszenzus"
+   ],
+   "elemzes_datuma": "2026-10-03"
+  },
+  {
    "id": "MTELEKOM",
    "nev": "Magyar Telekom Nyrt.",
    "ticker": "MTELEKOM",
@@ -1883,63 +1940,6 @@
     "Yahoo Finance INTC"
    ],
    "elemzes_datuma": "2026-10-02"
-  },
-  {
-   "id": "IFX.DE",
-   "nev": "Infineon Technologies AG",
-   "ticker": "IFX",
-   "yahoo": "IFX.DE",
-   "lista": "Jelölt",
-   "szektor": "Semiconductors",
-   "penznem": "EUR",
-   "arfolyam": 64.64,
-   "arfolyam_datum": "2026-10-02",
-   "celar": 86.74,
-   "potencial_szazalek": 34.19,
-   "trend": {
-    "nap20": "Emelkedő",
-    "nap50": "Oldalazó",
-    "nap200": "Emelkedő"
-   },
-   "sma20": 57.68,
-   "sma50": 58.26,
-   "sma200": 55.61,
-   "valtozas_1ho": 16.41,
-   "valtozas_6ho": 51.06,
-   "belso_ertek": 26,
-   "veteli_szint": 15.6,
-   "biztonsagi_sav_szazalek": 40,
-   "ar_vs_belso_ertek_szazalek": 148.62,
-   "csillag": 1,
-   "ertekeles": "Drága",
-   "bizonytalansag": "High",
-   "moat": "Narrow",
-   "moat_trend": "Stable",
-   "moat_score": 62,
-   "moat_pillerek": {
-    "immaterialis_javak": 45,
-    "valtasi_koltseg": 60,
-    "halozati_hatas": 10,
-    "koltsegelony": 55,
-    "hatekony_meret": 60
-   },
-   "mpa_score": 43,
-   "elteres": -19,
-   "penzugyi_ero": "Adequate",
-   "ai_kockazat": "Low",
-   "bizonyossag": "Medium",
-   "ajanlas": "Avoid",
-   "ajanlas_elemzeskor": "Avoid",
-   "ajanlas_szoveg": "Avoid: a 64,64 EUR-s ár kb. 149%-kal a ~26 EUR-s konzervatív belső érték felett és messze a ~15,6 EUR-s vételi szint felett van, a power-félvezető moat és az AI-adatközponti lendület ellenére a ciklikus normalizált cash flow nem indokolja.",
-   "kockazatok": "Ciklikus autóipari és ipari kereslet ingadozása, kínai árverseny (SiC, Si power); magas beruházási igény és az ams OSRAM szenzorüzlet felvásárlásának integrációs/pénzügyi terhe; a magas értékeltség (trailing P/E ~70, forward ~25) az AI-várakozások csalódása esetén; vám- és geopolitikai kockázatok",
-   "belso_ertek_alapja": "Becslés: a FY2026 korrigált szabad cash flow irányadás (~1,85 Mrd EUR) alapján ~1,7 Mrd EUR normalizált owner earnings x 20 szorzó, ~1,31 Mrd részvényre elosztva ≈ 26 EUR; a nettó adósság és a pontos részvényszám nem volt egyértelműen fellelhető.",
-   "forrasok": [
-    "Infineon Q3 FY2026 sajtóközlemény (2026-08-05)",
-    "StockAnalysis.com ETR:IFX (2026-10-02)",
-    "Yahoo Finance Q3 FY2026 earnings call",
-    "Stockopedia / valueinvesting.io konszenzus"
-   ],
-   "elemzes_datuma": "2026-10-03"
   }
  ]
 }

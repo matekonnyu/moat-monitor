@@ -23,6 +23,7 @@ AMD,Advanced Micro Devices,AMD,USD,633.91,2026-10-02,618.51,-2.43,Emelkedő,Emel
 DTE,Deutsche Telekom AG,DTE,EUR,26.56,2026-10-02,35.84,34.94,Csökkenő,Csökkenő,Csökkenő,30,21,-11.47,3,Korrekt ár,Medium,Narrow,Stable,62,65,3,Hold
 OTP,OTP Bank Nyrt.,OTP,HUF,40250,2026-10-02,44872,11.48,Csökkenő,Csökkenő,Oldalazó,41000,24600,-1.83,3,Korrekt ár,High,Narrow,Stable,62,77,15,Hold
 MS,Morgan Stanley,MS,USD,190.31,2026-10-02,235.81,23.91,Csökkenő,Csökkenő,Oldalazó,150,90,26.87,3,Korrekt ár,High,Narrow,Stable,62,63,1,Hold
+IFX.DE,Infineon Technologies AG,IFX,EUR,64.64,2026-10-02,86.74,34.19,Emelkedő,Oldalazó,Emelkedő,26,15.6,148.62,1,Drága,High,Narrow,Stable,62,43,-19,Avoid
 MTELEKOM,Magyar Telekom Nyrt.,MTELEKOM,HUF,2520,2026-10-02,2923,15.99,Csökkenő,Csökkenő,Emelkedő,2500,1750,0.8,3,Korrekt ár,Medium,Narrow,Stable,58,70,12,Hold
 RICHTER,Richter Gedeon Nyrt.,RICHTER,HUF,12230,2026-10-02,13800,12.84,Csökkenő,Oldalazó,Emelkedő,13500,9450,-9.41,3,Korrekt ár,Medium,Narrow,Stable,58,77,19,Hold
 STX,Seagate Technology Holdings plc,STX,USD,848.99,2026-10-02,1125,32.51,Csökkenő,Oldalazó,Emelkedő,300,150,183,1,Drága,Very High,Narrow,Stable,50,43,-7,Avoid

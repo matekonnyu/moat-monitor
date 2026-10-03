@@ -1,12 +1,12 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:34:16.973Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:35:41.425Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
 Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfolyam $552,26, belső érték $630,00, vételi szint $441,00, trend 20/50/200: Csökkenő / Oldalazó / Emelkedő. Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 
-## Követett cégek (31)
+## Követett cégek (32)
 
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
@@ -34,6 +34,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Deutsche Telekom AG | DTE | 26,56 € | 35,84 € | +34,9% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -11,5% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
 | OTP Bank Nyrt. | OTP | 40 250 Ft | 44 872 Ft | +11,5% | Csökkenő / Csökkenő / Oldalazó | 41 000 Ft | 24 600 Ft | -1,8% | ★★★☆☆ Korrekt ár | Narrow | 62 | 77 | +15 | Hold |
 | Morgan Stanley | MS | $190,31 | $235,81 | +23,9% | Csökkenő / Csökkenő / Oldalazó | $150,00 | $90,00 | +26,9% | ★★★☆☆ Korrekt ár | Narrow | 62 | 63 | +1 | Hold |
+| Infineon Technologies AG | IFX | 64,64 € | 86,74 € | +34,2% | Emelkedő / Oldalazó / Emelkedő | 26,00 € | 15,60 € | +148,6% | ★☆☆☆☆ Drága | Narrow | 62 | 43 | -19 | Avoid |
 | Magyar Telekom Nyrt. | MTELEKOM | 2520 Ft | 2923 Ft | +16,0% | Csökkenő / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +0,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
 | Richter Gedeon Nyrt. | RICHTER | 12 230 Ft | 13 800 Ft | +12,8% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -9,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
 | Seagate Technology Holdings plc | STX | $848,99 | $1125 | +32,5% | Csökkenő / Oldalazó / Emelkedő | $300,00 | $150,00 | +183,0% | ★☆☆☆☆ Drága | Narrow | 50 | 43 | -7 | Avoid |
@@ -356,6 +357,19 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Normalizált ~11 USD/részvény éves eredmény (a 12,38 USD TTM EPS és a ciklikus átlag közötti konzervatív érték) x 13,5 szorzó, ≈150 USD, a 67,80 USD könyv szerinti és 53,18 USD tangible book értékkel egybevetve; bankoknál a szabad cash flow nem értelmezhető.
 - Források: Morgan Stanley 2Q26 earnings release (SEC 8-K, 2026-07); StockAnalysis.com (ár, P/E, konszenzus célár, 2026-09-30); MarketBeat / Public.com (elemzői konszenzus)
 
+### Infineon Technologies AG (IFX)
+
+- Szektor: Semiconductors; lista: Követett; elemzés dátuma: 2026-10-03
+- Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 45, váltási költség 60, hálózati hatás 10, költségelőny 55, hatékony méret 60
+- Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: Low
+- Árfolyam 64,64 € (2026-10-02); belső érték 26,00 €; vételi szint 15,60 € (biztonsági sáv 40%); konszenzus célár 86,74 €
+- Trend 20/50/200 nap: Emelkedő / Oldalazó / Emelkedő; változás 1 hó +16,4%, 6 hó +51,1%
+- Aktuális ajánlás (mai ár alapján): Avoid
+- Elemzés: Avoid: a 64,64 EUR-s ár kb. 149%-kal a ~26 EUR-s konzervatív belső érték felett és messze a ~15,6 EUR-s vételi szint felett van, a power-félvezető moat és az AI-adatközponti lendület ellenére a ciklikus normalizált cash flow nem indokolja.
+- Kockázatok: Ciklikus autóipari és ipari kereslet ingadozása, kínai árverseny (SiC, Si power); magas beruházási igény és az ams OSRAM szenzorüzlet felvásárlásának integrációs/pénzügyi terhe; a magas értékeltség (trailing P/E ~70, forward ~25) az AI-várakozások csalódása esetén; vám- és geopolitikai kockázatok
+- Belső érték alapja: Becslés: a FY2026 korrigált szabad cash flow irányadás (~1,85 Mrd EUR) alapján ~1,7 Mrd EUR normalizált owner earnings x 20 szorzó, ~1,31 Mrd részvényre elosztva ≈ 26 EUR; a nettó adósság és a pontos részvényszám nem volt egyértelműen fellelhető.
+- Források: Infineon Q3 FY2026 sajtóközlemény (2026-08-05); StockAnalysis.com ETR:IFX (2026-10-02); Yahoo Finance Q3 FY2026 earnings call; Stockopedia / valueinvesting.io konszenzus
+
 ### Magyar Telekom Nyrt. (MTELEKOM)
 
 - Szektor: Telecom Services; lista: Követett; elemzés dátuma: 2026-09-30
@@ -447,8 +461,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (3)
+## Jóváhagyásra váró elemzések (2)
 
 - Pfizer Inc. (PFE): Narrow moat, ★★☆☆☆ Drága, árfolyam $27,80, belső érték $22,00, célár $28,88, potenciál +3,9%. Hold: a 28,12 USD-s ár kb. 28%-kal a ~22 USD-s konzervatív belső érték felett van és messze a ~15,4 USD-s vételi szinttől, a 6%-os osztalékhozam és a szerény P/E ellenére a szabadalmi lejáratok miatt nincs árbiztonsági ráhagyás.
 - Intel Corporation (INTC): None moat, ★☆☆☆☆ Drága, árfolyam $119,33, belső érték $35,00, célár $108,49, potenciál -9,1%. Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.
-- Infineon Technologies AG (IFX): Narrow moat, ★☆☆☆☆ Drága, árfolyam 64,64 €, belső érték 26,00 €, célár 86,74 €, potenciál +34,2%. Avoid: a 64,64 EUR-s ár kb. 149%-kal a ~26 EUR-s konzervatív belső érték felett és messze a ~15,6 EUR-s vételi szint felett van, a power-félvezető moat és az AI-adatközponti lendület ellenére a ciklikus normalizált cash flow nem indokolja.
