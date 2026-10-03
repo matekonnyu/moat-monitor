@@ -138,8 +138,23 @@ function pfSignals() {
   return (PF_SIG || []).filter((c) => ids.has(c.id) && c.d >= lim && (c.kind.includes("trend") || c.kind == "Ajánlás")
     && !seen.has(c.id + "|" + c.kind) && seen.add(c.id + "|" + c.kind));
 }
+// Célár-közelség: a mai árfolyam 2%-on belül van a saját célárhoz, vagy már elérte (a böngészőben számolva,
+// mert a saját célár titkosítva van; minden árfrissítés után újraszámolódik).
+const PF_NEAR = 2;
+function pfNear() {
+  if (!PF) return [];
+  const out = [];
+  for (const x of PF.ids) {
+    const c = C.find((r) => r.id == x.id); if (!c || !(x.my > 0)) continue;
+    const r = derive(c), need = pfNeed(x.my, r.px);
+    if (need == null || need >= PF_NEAR) continue;
+    out.push({ id: r.id, n: r.n, d: r.mk.d || "", need, my: x.my, px: r.px, cur: r.cur,
+      kind: need <= 0 ? "Célár elérve" : "Célár közel", to: need <= 0 ? `elérte a saját célárat (${mon(x.my, r.cur)})` : `${pct(need)} kell a saját célárig (${mon(x.my, r.cur)})` });
+  }
+  return out.sort((a, b) => a.need - b.need);
+}
 function pfBadge() {
-  const n = pfSignals().length, b = $("#npfc");
+  const n = pfSignals().length + pfNear().length, b = $("#npfc");
   b.hidden = !n; b.textContent = n || ""; b.title = n ? n + " jelzés a portfólióban (7 nap)" : "";
 }
 
@@ -175,16 +190,17 @@ function pfDraw() {
   }
   $("#pflockbtn").hidden = false;
   const RC = { buy: "g", accumulate: "g", hold: "a", avoid: "r" };
-  const sig = pfSignals(), last = sig[0]?.d;
-  const hit = new Map(); for (const s of sig) if (s.d == last) hit.set(s.id, (hit.get(s.id) || []).concat(s.kind));
+  const sig = pfSignals(), last = sig[0]?.d, near = pfNear();
+  const hit = new Map(); for (const s of [...near, ...sig.filter((s) => s.d == last)]) hit.set(s.id, (hit.get(s.id) || []).concat(s.kind));
   const rows = PF.ids.map((x) => { const c = C.find((r) => r.id == x.id); return c ? derive(c) : { id: x.id, n: x.id, missing: true }; })
     .sort((a, b) => String(a.n).localeCompare(String(b.n), "hu"));
-  const sigHtml = sig.length ? `<section class="sig"><h2>Portfólió-jelzések · ${esc(last)}</h2><p class="sgs">Trend- vagy ajánlásváltás a portfólió papírjainál (az elmúlt 7 nap).</p><ul>${sig.map((c) => {
+  const nearHtml = near.map((c) => `<li class="pfnear"><span class="sgv"><b class="g">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">🎯 ${esc(c.kind)}</span><span class="sgv">ár ${esc(mon(c.px, c.cur))} → <b class="g">${esc(c.to)}</b></span></li>`).join("");
+  const sigHtml = sig.length || near.length ? `<section class="sig"><h2>Portfólió-jelzések${last ? " · " + esc(last) : ""}</h2><p class="sgs">Saját célár 2%-on belül, valamint trend- vagy ajánlásváltás a portfólió papírjainál (az elmúlt 7 nap).</p><ul>${nearHtml}${sig.map((c) => {
     const tr = c.kind.includes("trend"), f = (v) => (tr && ARW[v] ? ARW[v] + " " : "") + v;
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b></span>${c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; }).join("")}</ul></section>` : "";
   box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr><th>Cég</th><th>Árfolyam</th><th>Célár</th><th>Potenciál</th><th title="Saját célár – kattints a mezőbe és írd be">Saját célár</th><th title="Ennyi százalékos emelkedés kell a mai árfolyamtól a saját célárig">Szükséges emelkedés</th><th title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th>Elemzés</th><th></th></tr></thead><tbody>${rows.map((r) => r.missing
     ? `<tr><td><b>${esc(r.id)}</b><small>Már nincs a figyelőlistán, ezért nem frissül.</small></td><td colspan="7">–</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`
-    : `<tr${hit.has(r.id) ? ` class="pfhit" title="Ma változott: ${esc(hit.get(r.id).join(", "))}"` : ""}><td><b>${esc(r.n)}</b><small>${esc(r.t)}${hit.has(r.id) ? ` · <span class="pfnew">változott: ${esc(hit.get(r.id).join(", ").toLowerCase())}</span>` : ""}</small></td>
+    : `<tr${hit.has(r.id) ? ` class="pfhit" title="Jelzés: ${esc(hit.get(r.id).join(", "))}"` : ""}><td><b>${esc(r.n)}</b><small>${esc(r.t)}${hit.has(r.id) ? ` · <span class="pfnew">${esc(hit.get(r.id).join(", ").toLowerCase())}</span>` : ""}</small></td>
 <td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : ""}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td>${pfMyCells(r)}<td>${tri(r)}</td>
 <td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`).join("")}</tbody></table></div>`
     : `<div class="res"><p>A portfólió üres. A Táblázat fülön nyisd le egy cég sorát, és nyomd meg a <b>+ Portfólióba</b> gombot.</p></div>`);
@@ -216,7 +232,7 @@ $("#pfbox").addEventListener("change", async (e) => {
   if (my == null) delete x.my; else x.my = my;
   // Több mező gyors kitöltésekor egyetlen mentés.
   // Gépelés közben (másik mezőben) nem rajzolja újra a táblát.
-  const later = () => { pfMyT = setTimeout(() => document.activeElement?.classList?.contains("pfin") ? later() : pfSave("Saját célár mentve.", false), 1200); };
+  const later = () => { pfMyT = setTimeout(() => document.activeElement?.classList?.contains("pfin") ? later() : pfSave("Saját célár mentve.", false).then(pfDraw), 1200); };
   clearTimeout(pfMyT); later();
 });
 $("#pfbox").addEventListener("keydown", (e) => { if (e.target.dataset.pfmy && e.key == "Enter") e.target.blur(); });
