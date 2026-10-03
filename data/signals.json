@@ -1,5 +1,38 @@
 [
  {
+  "d": "2026-10-03",
+  "id": "GOOGL",
+  "n": "Alphabet Inc. (Class A)",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 343.5,
+  "bb": 211.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-03",
+  "id": "STX",
+  "n": "Seagate Technology Holdings plc",
+  "kind": "Középtávú trend",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 848.99,
+  "bb": 150,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-03",
+  "id": "LLY",
+  "n": "Eli Lilly and Company",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Csökkenő",
+  "px": 1142.85,
+  "bb": 574,
+  "cur": "USD"
+ },
+ {
   "d": "2026-10-02",
   "id": "SYK",
   "n": "Stryker Corporation",
@@ -17,17 +50,6 @@
   "kind": "Középtávú trend",
   "from": "Oldalazó",
   "to": "Csökkenő",
-  "px": 338.24,
-  "bb": 211.8,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-01",
-  "id": "GOOGL",
-  "n": "Alphabet Inc. (Class A)",
-  "kind": "Hosszú távú trend (200 nap)",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
   "px": 338.24,
   "bb": 211.8,
   "cur": "USD"

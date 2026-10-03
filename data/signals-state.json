@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T09:46:05.561Z",
+ "at": "2026-10-03T05:50:57.340Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -8,7 +8,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 330.32,
+   "px": 333.69,
    "bb": 144.2,
    "cur": "USD"
   },
@@ -18,7 +18,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 615.73,
+   "px": 633.91,
    "bb": 135,
    "cur": "USD"
   },
@@ -28,7 +28,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 248.23,
+   "px": 251.52,
    "bb": 147,
    "cur": "USD"
   },
@@ -38,7 +38,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1808.49,
+   "px": 1867.31,
    "bb": 875,
    "cur": "USD"
   },
@@ -48,7 +48,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 343.64,
+   "px": 355.14,
    "bb": 187.8,
    "cur": "USD"
   },
@@ -58,7 +58,7 @@
    "trL": "Oldalazó",
    "rw": "Accumulate",
    "below": false,
-   "px": 160.28,
+   "px": 159.02,
    "bb": 147,
    "cur": "USD"
   },
@@ -68,17 +68,17 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.4,
+   "px": 26.07,
    "bb": 21,
    "cur": "EUR"
   },
   "GOOGL": {
    "n": "Alphabet Inc. (Class A)",
    "trM": "Csökkenő",
-   "trL": "Oldalazó",
+   "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 338.24,
+   "px": 343.5,
    "bb": 211.8,
    "cur": "USD"
   },
@@ -88,7 +88,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 86.1,
+   "px": 85.65,
    "bb": 59.2,
    "cur": "USD"
   },
@@ -98,7 +98,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 550,
+   "px": 552.26,
    "bb": 441,
    "cur": "USD"
   },
@@ -108,7 +108,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 725.93,
+   "px": 728.08,
    "bb": 360,
    "cur": "USD"
   },
@@ -118,7 +118,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4840,
+   "px": 4830,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -128,7 +128,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 512.8,
+   "px": 517.53,
    "bb": 349.3,
    "cur": "USD"
   },
@@ -148,7 +148,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 230.86,
+   "px": 233.95,
    "bb": 81.5,
    "cur": "USD"
   },
@@ -158,7 +158,7 @@
    "trL": "Csökkenő",
    "rw": "Avoid",
    "below": false,
-   "px": 1,
+   "px": 1.02,
    "bb": 0.2,
    "cur": "USD"
   },
@@ -168,7 +168,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 40600,
+   "px": 39980,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -188,7 +188,7 @@
    "trL": null,
    "rw": "Avoid",
    "below": false,
-   "px": 148.07,
+   "px": 158.96,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -198,7 +198,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 459.2,
+   "px": 472.78,
    "bb": 280,
    "cur": "USD"
   },
@@ -208,7 +208,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 359.85,
+   "px": 360.66,
    "bb": 233.8,
    "cur": "USD"
   },
@@ -218,7 +218,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 125.6,
+   "px": 125.89,
    "bb": 108,
    "cur": "USD"
   },
@@ -228,17 +228,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 198.78,
+   "px": 196.6,
    "bb": 69,
    "cur": "USD"
   },
   "STX": {
    "n": "Seagate Technology Holdings plc",
-   "trM": "Emelkedő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 945.57,
+   "px": 848.99,
    "bb": 150,
    "cur": "USD"
   },
@@ -248,7 +248,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 111.78,
+   "px": 112.51,
    "bb": 37.8,
    "cur": "USD"
   },
@@ -258,17 +258,17 @@
    "trL": "Oldalazó",
    "rw": "Accumulate",
    "below": false,
-   "px": 80.25,
+   "px": 80.45,
    "bb": 77,
    "cur": "USD"
   },
   "LLY": {
    "n": "Eli Lilly and Company",
-   "trM": "Oldalazó",
+   "trM": "Csökkenő",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1149.85,
+   "px": 1142.85,
    "bb": 574,
    "cur": "USD"
   },
@@ -278,7 +278,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 81.7,
+   "px": 81.94,
    "bb": 51.8,
    "cur": "USD"
   },
@@ -288,7 +288,7 @@
    "trL": "Csökkenő",
    "rw": "Avoid",
    "below": false,
-   "px": 139.75,
+   "px": 140.02,
    "bb": 52.2,
    "cur": "USD"
   },
@@ -298,8 +298,18 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 272.96,
+   "px": 275.43,
    "bb": 216.3,
+   "cur": "USD"
+  },
+  "MS": {
+   "n": "Morgan Stanley",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
+   "rw": "Hold",
+   "below": false,
+   "px": 190.31,
+   "bb": 90,
    "cur": "USD"
   }
  }
