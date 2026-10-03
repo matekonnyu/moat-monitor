@@ -26,6 +26,7 @@ MS,Morgan Stanley,MS,USD,190.31,2026-10-02,235.81,23.91,Csökkenő,Csökkenő,Ol
 IFX.DE,Infineon Technologies AG,IFX,EUR,64.64,2026-10-02,86.74,34.19,Emelkedő,Oldalazó,Emelkedő,26,15.6,148.62,1,Drága,High,Narrow,Stable,62,43,-19,Avoid
 MTELEKOM,Magyar Telekom Nyrt.,MTELEKOM,HUF,2520,2026-10-02,2923,15.99,Csökkenő,Csökkenő,Emelkedő,2500,1750,0.8,3,Korrekt ár,Medium,Narrow,Stable,58,70,12,Hold
 RICHTER,Richter Gedeon Nyrt.,RICHTER,HUF,12230,2026-10-02,13800,12.84,Csökkenő,Oldalazó,Emelkedő,13500,9450,-9.41,3,Korrekt ár,Medium,Narrow,Stable,58,77,19,Hold
+PFE,Pfizer Inc.,PFE,USD,27.8,2026-10-02,28.88,3.88,Oldalazó,Emelkedő,Emelkedő,22,15.4,26.36,2,Drága,Medium,Narrow,Negative,55,51,-4,Hold
 STX,Seagate Technology Holdings plc,STX,USD,848.99,2026-10-02,1125,32.51,Csökkenő,Oldalazó,Emelkedő,300,150,183,1,Drága,Very High,Narrow,Stable,50,43,-7,Avoid
 VST,Vistra Corp.,VST,USD,140.02,2026-10-02,212.79,51.97,Csökkenő,Csökkenő,Csökkenő,87,52.2,60.94,1,Drága,High,None,Stable,48,23,-25,Avoid
 MOL,MOL Magyar Olaj- és Gázipari Nyrt.,MOL,HUF,4852,2026-10-02,4440,-8.49,Csökkenő,Oldalazó,Emelkedő,3850,2310,26.03,3,Korrekt ár,High,None,Stable,38,43,5,Avoid

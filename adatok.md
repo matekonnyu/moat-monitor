@@ -1,12 +1,12 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T12:45:22.480Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-02 záró (Yahoo Finance). Frissítve: 2026-10-03T13:46:50.169Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
 Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfolyam $552,26, belső érték $630,00, vételi szint $441,00, trend 20/50/200: Csökkenő / Oldalazó / Emelkedő. Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 
-## Követett cégek (33)
+## Követett cégek (34)
 
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
@@ -37,6 +37,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Infineon Technologies AG | IFX | 64,64 € | 86,74 € | +34,2% | Emelkedő / Oldalazó / Emelkedő | 26,00 € | 15,60 € | +148,6% | ★☆☆☆☆ Drága | Narrow | 62 | 43 | -19 | Avoid |
 | Magyar Telekom Nyrt. | MTELEKOM | 2520 Ft | 2923 Ft | +16,0% | Csökkenő / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +0,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
 | Richter Gedeon Nyrt. | RICHTER | 12 230 Ft | 13 800 Ft | +12,8% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -9,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
+| Pfizer Inc. | PFE | $27,80 | $28,88 | +3,9% | Oldalazó / Emelkedő / Emelkedő | $22,00 | $15,40 | +26,4% | ★★☆☆☆ Drága | Narrow | 55 | 51 | -4 | Hold |
 | Seagate Technology Holdings plc | STX | $848,99 | $1125 | +32,5% | Csökkenő / Oldalazó / Emelkedő | $300,00 | $150,00 | +183,0% | ★☆☆☆☆ Drága | Narrow | 50 | 43 | -7 | Avoid |
 | Vistra Corp. | VST | $140,02 | $212,79 | +52,0% | Csökkenő / Csökkenő / Csökkenő | $87,00 | $52,20 | +60,9% | ★☆☆☆☆ Drága | None | 48 | 23 | -25 | Avoid |
 | MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 4852 Ft | 4440 Ft | -8,5% | Csökkenő / Oldalazó / Emelkedő | 3850 Ft | 2310 Ft | +26,0% | ★★★☆☆ Korrekt ár | None | 38 | 43 | +5 | Avoid |
@@ -397,6 +398,19 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Normalizált owner earnings ≈ 230 Mrd HUF (FY2025 nettó profit 232 Mrd, FCF 250 Mrd HUF, a Vraylar-szabadalomlejárat miatt növekedés nélkül), 11x szorzó, ~186 M részvény → ~13 500 HUF/részvény.
 - Források: Richter FY2025 gyorsjelentés (2026-02); Richter Q2/H1 2026 gyorsjelentés (2026-08); Erste Market elemzés 2026-09 (célár 14 945 HUF); Stocksguide konszenzus 2026-09; Pénzcentrum osztalékkonszenzus 2026-03
 
+### Pfizer Inc. (PFE)
+
+- Szektor: Healthcare - Drug Manufacturers; lista: Követett; elemzés dátuma: 2026-10-02
+- Moat: Narrow (score 55, trend: Negative); pillérek: immateriális javak 70, váltási költség 40, hálózati hatás 10, költségelőny 50, hatékony méret 55
+- Értékelés: ★★☆☆☆ Drága; bizonytalanság: Medium; pénzügyi erő: Adequate; AI-kockázat: Low
+- Árfolyam $27,80 (2026-10-02); belső érték $22,00; vételi szint $15,40 (biztonsági sáv 30%); konszenzus célár $28,88
+- Trend 20/50/200 nap: Oldalazó / Emelkedő / Emelkedő; változás 1 hó -4,2%, 6 hó -1,8%
+- Aktuális ajánlás (mai ár alapján): Hold
+- Elemzés: Hold: a 28,12 USD-s ár kb. 28%-kal a ~22 USD-s konzervatív belső érték felett van és messze a ~15,4 USD-s vételi szinttől, a 6%-os osztalékhozam és a szerény P/E ellenére a szabadalmi lejáratok miatt nincs árbiztonsági ráhagyás.
+- Kockázatok: Szabadalmi lejáratok (Eliquis, Ibrance, Xtandi, Prevnar) és a COVID-termékek hanyatlása miatt csökkenő árbevétel; az akvizíciók (Seagen, Metsera) és az R&D-pipeline sikertelensége, magas nettó adósság; amerikai gyógyszerár-szabályozás (MFN, Medicare tárgyalások) és vámok; jogi ügyek (pl. Florida AG COVID-vakcina per); az osztalék fedezete gyenge GAAP eredmény mellett
+- Belső érték alapja: Szabad cash flow és nettó adósság pontos értéke nem volt fellelhető, ezért becslés: a 2026-os korrigált EPS-irányadás (2,80–3,00 USD) kb. 25%-os leszámításával ~2,2 USD normalizált owner earnings x 10 szorzó ≈ 22 USD.
+- Források: Pfizer Q2 2026 eredményközlemény (SEC 8-K, 2026-08-04); StockAnalysis.com PFE (2026-10-01); StockAnalysis.com PFE forecast (S&P Global konszenzus); Investing.com Q2 2026 earnings call
+
 ### Seagate Technology Holdings plc (STX)
 
 - Szektor: Technology – Data Storage; lista: Követett; elemzés dátuma: 2026-09-30
@@ -475,7 +489,6 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (2)
+## Jóváhagyásra váró elemzések (1)
 
-- Pfizer Inc. (PFE): Narrow moat, ★★☆☆☆ Drága, árfolyam $27,80, belső érték $22,00, célár $28,88, potenciál +3,9%. Hold: a 28,12 USD-s ár kb. 28%-kal a ~22 USD-s konzervatív belső érték felett van és messze a ~15,4 USD-s vételi szinttől, a 6%-os osztalékhozam és a szerény P/E ellenére a szabadalmi lejáratok miatt nincs árbiztonsági ráhagyás.
 - Intel Corporation (INTC): None moat, ★☆☆☆☆ Drága, árfolyam $119,33, belső érték $35,00, célár $108,49, potenciál -9,1%. Avoid: a 120 USD-os ár több mint háromszorosa a ~35 USD-os konzervatív belső értéknek és messze a 17,5 USD-os vételi szint felett van, miközben a külső foundry-bevétel még bizonyítatlan és a korrigált szabad cash flow negatív.

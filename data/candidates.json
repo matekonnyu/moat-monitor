@@ -1,60 +1,5 @@
 [
  {
-  "id": "PFE",
-  "n": "Pfizer Inc.",
-  "t": "PFE",
-  "y": "PFE",
-  "l": "Jelölt",
-  "m": "Narrow",
-  "s": 55,
-  "ai": "Low",
-  "c": "Medium",
-  "p": [
-   70,
-   40,
-   10,
-   50,
-   55
-  ],
-  "sec": "Healthcare - Drug Manufacturers",
-  "r": "Hold: a 28,12 USD-s ár kb. 28%-kal a ~22 USD-s konzervatív belső érték felett van és messze a ~15,4 USD-s vételi szinttől, a 6%-os osztalékhozam és a szerény P/E ellenére a szabadalmi lejáratok miatt nincs árbiztonsági ráhagyás.",
-  "risks": "Szabadalmi lejáratok (Eliquis, Ibrance, Xtandi, Prevnar) és a COVID-termékek hanyatlása miatt csökkenő árbevétel; az akvizíciók (Seagen, Metsera) és az R&D-pipeline sikertelensége, magas nettó adósság; amerikai gyógyszerár-szabályozás (MFN, Medicare tárgyalások) és vámok; jogi ügyek (pl. Florida AG COVID-vakcina per); az osztalék fedezete gyenge GAAP eredmény mellett",
-  "mt": "Negative",
-  "u": "Medium",
-  "ivb": "Szabad cash flow és nettó adósság pontos értéke nem volt fellelhető, ezért becslés: a 2026-os korrigált EPS-irányadás (2,80–3,00 USD) kb. 25%-os leszámításával ~2,2 USD normalizált owner earnings x 10 szorzó ≈ 22 USD.",
-  "srcs": [
-   "Pfizer Q2 2026 eredményközlemény (SEC 8-K, 2026-08-04)",
-   "StockAnalysis.com PFE (2026-10-01)",
-   "StockAnalysis.com PFE forecast (S&P Global konszenzus)",
-   "Investing.com Q2 2026 earnings call"
-  ],
-  "d": "2026-10-02",
-  "ch": "https://finance.yahoo.com/chart/PFE",
-  "pr": 28.12,
-  "tp": 28.88,
-  "iv": 22,
-  "bb": 15.4,
-  "mos": 30,
-  "f": "Adequate",
-  "cur": "USD",
-  "mk": {
-   "p": 27.8,
-   "prev": 28.12,
-   "sma20": 28.01,
-   "sma50": 27.33,
-   "sma200": 26.4,
-   "ema20": 28.07,
-   "ema50": 27.43,
-   "tr": "Emelkedő",
-   "ch1m": -4.2,
-   "ch6m": -1.84,
-   "d": "2026-10-02",
-   "at": "2026-10-03T12:45:22.480Z",
-   "src": "Yahoo Finance"
-  },
-  "added": "2026-10-02T11:03:36.082Z"
- },
- {
   "id": "INTC",
   "n": "Intel Corporation",
   "t": "INTC",
@@ -105,7 +50,7 @@
    "ch1m": 32.52,
    "ch6m": 136.86,
    "d": "2026-10-02",
-   "at": "2026-10-03T12:45:22.480Z",
+   "at": "2026-10-03T13:46:50.169Z",
    "src": "Yahoo Finance"
   },
   "added": "2026-10-02T12:36:24.355Z"
