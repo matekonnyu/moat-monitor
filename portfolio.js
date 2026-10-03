@@ -5,6 +5,7 @@
 // csak a titkosított adat van; a scripts/issues.mjs (csak a tulajdonos kérésére) beírja a fájlba.
 // Az árak, a célár, a trend és az ajánlás a főlista (data/companies.json) napi frissítéséből jönnek,
 // a jelzések a data/signals.json-ból (trend- és ajánlásváltás).
+// Saját célár: papíronként a titkosított listában (my); a szükséges emelkedés = saját célár / árfolyam − 1.
 const PF_FILE = "data/portfolio.enc.json", PF_ITER = 250000, PF_TITLE = "Portfólió: mentés";
 const b64 = (u8) => btoa(String.fromCharCode(...new Uint8Array(u8)));
 const unb64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
@@ -67,10 +68,10 @@ async function pfCreate(pw, keep) {
 }
 function pfLock() { PF = null; PF_KEY = null; pfStore.del("mm_pf_k"); pfDraw(); if (typeof draw == "function" && C.length) draw(); }
 
-async function pfSave(okText) {
+async function pfSave(okText, redraw = true) {
   const env = await pfEncrypt(PF);
   PF_ENV = env; try { localStorage.setItem("mm_pf_env", JSON.stringify(env)); } catch {}
-  pfDraw(); if (C.length) draw();
+  if (redraw) { pfDraw(); if (C.length) draw(); }
   const body = JSON.stringify(env);
   if (!TOKEN) {
     if (!confirm((okText ? okText + "\n\n" : "") + "A mentéshez megnyitom a GitHubot (a kérés csak titkosított adatot tartalmaz). Ott kattints a „Submit new issue” gombra.")) return;
@@ -181,14 +182,44 @@ function pfDraw() {
   const sigHtml = sig.length ? `<section class="sig"><h2>Portfólió-jelzések · ${esc(last)}</h2><p class="sgs">Trend- vagy ajánlásváltás a portfólió papírjainál (az elmúlt 7 nap).</p><ul>${sig.map((c) => {
     const tr = c.kind.includes("trend"), f = (v) => (tr && ARW[v] ? ARW[v] + " " : "") + v;
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b></span>${c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; }).join("")}</ul></section>` : "";
-  box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr><th>Cég</th><th>Árfolyam</th><th>Célár</th><th>Potenciál</th><th title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th>Elemzés</th><th></th></tr></thead><tbody>${rows.map((r) => r.missing
-    ? `<tr><td><b>${esc(r.id)}</b><small>Már nincs a figyelőlistán, ezért nem frissül.</small></td><td colspan="5">–</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`
+  box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr><th>Cég</th><th>Árfolyam</th><th>Célár</th><th>Potenciál</th><th title="Saját célár – kattints a mezőbe és írd be">Saját célár</th><th title="Ennyi százalékos emelkedés kell a mai árfolyamtól a saját célárig">Szükséges emelkedés</th><th title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th>Elemzés</th><th></th></tr></thead><tbody>${rows.map((r) => r.missing
+    ? `<tr><td><b>${esc(r.id)}</b><small>Már nincs a figyelőlistán, ezért nem frissül.</small></td><td colspan="7">–</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`
     : `<tr${hit.has(r.id) ? ` class="pfhit" title="Ma változott: ${esc(hit.get(r.id).join(", "))}"` : ""}><td><b>${esc(r.n)}</b><small>${esc(r.t)}${hit.has(r.id) ? ` · <span class="pfnew">változott: ${esc(hit.get(r.id).join(", ").toLowerCase())}</span>` : ""}</small></td>
-<td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : ""}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td><td>${tri(r)}</td>
+<td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : ""}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td>${pfMyCells(r)}<td>${tri(r)}</td>
 <td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`).join("")}</tbody></table></div>`
     : `<div class="res"><p>A portfólió üres. A Táblázat fülön nyisd le egy cég sorát, és nyomd meg a <b>+ Portfólióba</b> gombot.</p></div>`);
   pfBadge();
 }
+
+// Saját célár: szerkeszthető mező és a szükséges emelkedés.
+const pfMy = (id) => (PF?.ids.find((x) => x.id == id) || {}).my ?? null;
+function pfNeed(my, px) { return my > 0 && px > 0 ? (my / px - 1) * 100 : null; }
+function pfMyCells(r) {
+  const my = pfMy(r.id), need = pfNeed(my, r.px);
+  const cs = { USD: "$", EUR: "€", HUF: "Ft", GBP: "£" }[r.cur] || r.cur || "";
+  return `<td><span class="pfmy"><input class="pfin" data-pfmy="${esc(r.id)}" inputmode="decimal" value="${my == null ? "" : String(my).replace(".", ",")}" placeholder="–" aria-label="Saját célár: ${esc(r.n)}"><i>${esc(cs)}</i></span></td>`
+    + `<td class="pfneed ${need == null ? "" : need <= 0 ? "g" : ""}" data-pfneed="${esc(r.id)}">${need == null ? "–" : need <= 0 ? "Elérte ✓" : pct(need)}</td>`;
+}
+let pfMyT = null;
+$("#pfbox").addEventListener("input", (e) => {
+  const id = e.target.dataset.pfmy; if (!id) return;
+  const v = e.target.value.trim().replace(/\s/g, "").replace(",", "."), my = v === "" ? null : Number(v);
+  const r = C.find((c) => c.id == id), px = r ? derive(r).px : null, need = pfNeed(my, px), td = $(`[data-pfneed="${CSS.escape(id)}"]`);
+  e.target.classList.toggle("bad", v !== "" && !(my > 0));
+  if (td) { td.textContent = need == null ? "–" : need <= 0 ? "Elérte ✓" : pct(need); td.className = "pfneed " + (need != null && need <= 0 ? "g" : ""); }
+});
+$("#pfbox").addEventListener("change", async (e) => {
+  const id = e.target.dataset.pfmy; if (!id || !PF) return;
+  const v = e.target.value.trim().replace(/\s/g, "").replace(",", "."), my = v === "" ? null : Number(v);
+  if (v !== "" && !(my > 0)) { pfMsg("A saját célár pozitív szám legyen (pl. 650 vagy 650,5).", false); return; }
+  const x = PF.ids.find((y) => y.id == id); if (!x || (x.my ?? null) === my) return;
+  if (my == null) delete x.my; else x.my = my;
+  // Több mező gyors kitöltésekor egyetlen mentés.
+  // Gépelés közben (másik mezőben) nem rajzolja újra a táblát.
+  const later = () => { pfMyT = setTimeout(() => document.activeElement?.classList?.contains("pfin") ? later() : pfSave("Saját célár mentve.", false), 1200); };
+  clearTimeout(pfMyT); later();
+});
+$("#pfbox").addEventListener("keydown", (e) => { if (e.target.dataset.pfmy && e.key == "Enter") e.target.blur(); });
 
 $("#pfbox").addEventListener("click", async (e) => {
   const id = e.target.dataset.pfrm; if (!id) return;
