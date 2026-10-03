@@ -91,16 +91,22 @@ jobs:
             console.log("új elemzés:",fresh.map(c=>c.id).join(", "));'; }
           merge
           node scripts/refresh.mjs
+          # A frissített (árfolyammal kiegészített) elemzést megőrizzük: ütközéskor csak ezt fűzzük újra a friss main-re,
+          # a lassú árfolyamlekérés nélkül, így rövid az ablak, amíg más mentés közbeszólhat (pl. portfólió, felvétel).
+          node -e 'const fs=require("fs"),t=process.env.RUNNER_TEMP;const o=new Map(JSON.parse(fs.readFileSync(t+"/orig.json","utf8")).map(c=>[c.id,JSON.stringify(c)]));const mine=JSON.parse(fs.readFileSync(t+"/cand.json","utf8")).filter(c=>o.get(c.id)!==JSON.stringify(c)).map(c=>c.id);fs.writeFileSync(t+"/fresh.json",JSON.stringify(JSON.parse(fs.readFileSync("data/candidates.json","utf8")).filter(c=>mine.includes(c.id))))'
           git config user.name "moat-monitor-bot"
           git config user.email "moat-monitor-bot@users.noreply.github.com"
           git add data adatok.md adatok.json adatok.csv llms.txt index.html && git commit -qm "Elemzés kész (#$ISSUE)"
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git"
           git config --local --unset-all http.https://github.com/.extraheader || true
           ok=0
-          for n in 1 2 3; do
+          for n in 1 2 3 4 5 6 7 8; do
             if git push origin main 2> "$RUNNER_TEMP/push.err"; then ok=1; break; fi
-            cat "$RUNNER_TEMP/push.err"; sleep 3
-            git reset -q --hard origin/main; git pull -q origin main; merge; node scripts/refresh.mjs; git add data adatok.md adatok.json adatok.csv llms.txt index.html; git commit -qm "Elemzés kész (#$ISSUE)"
+            cat "$RUNNER_TEMP/push.err"; sleep $((n * 2 + RANDOM % 4))
+            git fetch -q origin main && git reset -q --hard origin/main
+            node -e 'const fs=require("fs"),t=process.env.RUNNER_TEMP;const fresh=JSON.parse(fs.readFileSync(t+"/fresh.json","utf8")),ids=new Set(fresh.map(c=>c.id));const base=JSON.parse(fs.readFileSync("data/candidates.json","utf8"));fs.writeFileSync("data/candidates.json",JSON.stringify([...base.filter(c=>!ids.has(c.id)),...fresh],null,1)+"\n")'
+            node scripts/render.mjs || true
+            git add data adatok.md adatok.json adatok.csv llms.txt index.html; git commit -qm "Elemzés kész (#$ISSUE)"
           done
           if [ "$ok" != 1 ]; then comment "Az elemzés elkészült, de a mentés nem sikerült: $(tail -n 3 "$RUNNER_TEMP/push.err")"; exit 1; fi
           git log --oneline -1
