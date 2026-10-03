@@ -23,8 +23,10 @@ function derive(o) {
   // Elemzéskori ajánlás (az elemzés szövegéből) – csak tájékoztató.
   const rw0 = (String(o.r || "").match(/^\s*(Buy|Accumulate|Hold|Avoid)/i) || [])[1] || (/\bhold\b/i.test(o.r || "") ? "Hold" : "");
   // Aktuális ajánlás: minden árfrissítéskor a csillagból (ár / belső érték) számolva:
-  // 5★ Buy, 4★ Accumulate, 2–3★ Hold, 1★ Avoid; moat nélküli cég legfeljebb Hold, és ha az elemzés Avoid volt, Avoid marad. Csillag híján az elemzéskori.
-  let rw = st ? (st >= 5 ? "Buy" : st == 4 ? "Accumulate" : st >= 2 ? "Hold" : "Avoid") : rw0;
+  // 4–5★ Buy; 3★ Accumulate, ha van moat, a 200 napos trend emelkedő és az elemzői célár legalább 10% potenciált ad, különben Hold;
+  // 2★ Hold, 1★ Avoid; moat nélküli cég legfeljebb Hold, és ha az elemzés Avoid volt, Avoid marad. Csillag híján az elemzéskori.
+  const tL = trends(mk).trL;
+  let rw = st ? (st >= 4 ? "Buy" : st == 3 ? (o.m && o.m != "None" && tL == "Emelkedő" && up != null && up >= 10 ? "Accumulate" : "Hold") : st == 2 ? "Hold" : "Avoid") : rw0;
   if (o.m == "None") rw = /^avoid$/i.test(rw0) ? "Avoid" : (rw == "Buy" || rw == "Accumulate") ? "Hold" : rw;
   return { ...o, mk, px, pv, up, v, mpa, rw0, gap: mpa != null && o.s != null ? mpa - o.s : null, rw, rk: { buy: 4, accumulate: 3, hold: 2, avoid: 1 }[rw.toLowerCase()] || 0, tr: mk.tr || null, ...trends(mk), mo: { Wide: 3, Narrow: 2, None: 1 }[o.m] || 0, vo: st ?? ({ Undervalued: 4, Fair: 3, Expensive: 2 }[v] || 0), st, to: { "Emelkedő": 3, "Oldalazó": 2, "Csökkenő": 1 }[mk.tr] || 0 };
 }

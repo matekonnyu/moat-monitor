@@ -11,9 +11,9 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
 | ASML Holding N.V. (ADR) | ASML | $1867 | $2116 | +13,3% | Emelkedő / Emelkedő / Emelkedő | $1250 | $875,00 | +49,4% | ★☆☆☆☆ Drága | Wide | 93 | 70 | -23 | Avoid |
-| Visa Inc. | V | $360,66 | $419,36 | +16,3% | Csökkenő / Oldalazó / Emelkedő | $334,00 | $233,80 | +8,0% | ★★★☆☆ Korrekt ár | Wide | 93 | 85 | -8 | Hold |
-| Mastercard Incorporated | MA | $552,26 | $666,71 | +20,7% | Csökkenő / Oldalazó / Emelkedő | $630,00 | $441,00 | -12,3% | ★★★☆☆ Korrekt ár | Wide | 92 | 92 | 0 | Hold |
-| Microsoft Corporation | MSFT | $517,53 | $577,26 | +11,5% | Emelkedő / Emelkedő / Emelkedő | $499,00 | $349,30 | +3,7% | ★★★☆☆ Korrekt ár | Wide | 90 | 85 | -5 | Hold |
+| Visa Inc. | V | $360,66 | $419,36 | +16,3% | Csökkenő / Oldalazó / Emelkedő | $334,00 | $233,80 | +8,0% | ★★★☆☆ Korrekt ár | Wide | 93 | 85 | -8 | Accumulate |
+| Mastercard Incorporated | MA | $552,26 | $666,71 | +20,7% | Csökkenő / Oldalazó / Emelkedő | $630,00 | $441,00 | -12,3% | ★★★☆☆ Korrekt ár | Wide | 92 | 92 | 0 | Accumulate |
+| Microsoft Corporation | MSFT | $517,53 | $577,26 | +11,5% | Emelkedő / Emelkedő / Emelkedő | $499,00 | $349,30 | +3,7% | ★★★☆☆ Korrekt ár | Wide | 90 | 85 | -5 | Accumulate |
 | Taiwan Semiconductor Manufacturing Company Limited (ADR) | TSM | $472,78 | $552,26 | +16,8% | Emelkedő / Emelkedő / Emelkedő | $400,00 | $280,00 | +18,2% | ★★☆☆☆ Drága | Wide | 90 | 78 | -12 | Hold |
 | NVIDIA Corporation | NVDA | $233,95 | $327,70 | +40,1% | Emelkedő / Emelkedő / Emelkedő | $163,00 | $81,50 | +43,5% | ★★☆☆☆ Drága | Wide | 88 | 70 | -18 | Hold |
 | The Coca-Cola Company | KO | $85,65 | $94,70 | +10,6% | Csökkenő / Oldalazó / Emelkedő | $74,00 | $59,20 | +15,7% | ★★☆☆☆ Drága | Wide | 86 | 78 | -8 | Hold |
@@ -22,21 +22,21 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Apple Inc. | AAPL | $333,69 | $328,22 | -1,6% | Oldalazó / Emelkedő / Emelkedő | $206,00 | $144,20 | +62,0% | ★☆☆☆☆ Drága | Wide | 84 | 70 | -14 | Avoid |
 | Meta Platforms, Inc. | META | $728,08 | $793,91 | +9,0% | Emelkedő / Emelkedő / Oldalazó | $600,00 | $360,00 | +21,3% | ★★★☆☆ Korrekt ár | Wide | 84 | 78 | -6 | Hold |
 | Broadcom Inc. | AVGO | $355,14 | $531,85 | +49,8% | Oldalazó / Csökkenő / Oldalazó | $313,00 | $187,80 | +13,5% | ★★★☆☆ Korrekt ár | Wide | 82 | 78 | -4 | Hold |
-| Alphabet Inc. (Class A) | GOOGL | $343,50 | $429,46 | +25,0% | Oldalazó / Csökkenő / Emelkedő | $353,00 | $211,80 | -2,7% | ★★★☆☆ Korrekt ár | Wide | 82 | 92 | +10 | Hold |
+| Alphabet Inc. (Class A) | GOOGL | $343,50 | $429,46 | +25,0% | Oldalazó / Csökkenő / Emelkedő | $353,00 | $211,80 | -2,7% | ★★★☆☆ Korrekt ár | Wide | 82 | 92 | +10 | Accumulate |
 | PepsiCo, Inc. | PEP | $125,89 | $151,09 | +20,0% | Csökkenő / Csökkenő / Csökkenő | $135,00 | $108,00 | -6,7% | ★★★☆☆ Korrekt ár | Wide | 80 | 80 | 0 | Hold |
 | Stryker Corporation | SYK | $275,43 | $367,80 | +33,5% | Oldalazó / Csökkenő / Csökkenő | $309,00 | $216,30 | -10,9% | ★★★☆☆ Korrekt ár | Wide | 80 | 92 | +12 | Hold |
-| Booking Holdings Inc. | BKNG | $159,02 | $238,78 | +50,2% | Csökkenő / Csökkenő / Oldalazó | $245,00 | $147,00 | -35,1% | ★★★★☆ Alulértékelt | Narrow | 72 | 65 | -7 | Accumulate |
+| Booking Holdings Inc. | BKNG | $159,02 | $238,78 | +50,2% | Csökkenő / Csökkenő / Oldalazó | $245,00 | $147,00 | -35,1% | ★★★★☆ Alulértékelt | Narrow | 72 | 65 | -7 | Buy |
 | CRH plc | CRH | $81,94 | $133,18 | +62,5% | Csökkenő / Csökkenő / Csökkenő | $74,00 | $51,80 | +10,7% | ★★★☆☆ Korrekt ár | Narrow | 68 | 51 | -17 | Hold |
 | Zscaler, Inc. | ZS | $196,60 | $208,86 | +6,2% | Emelkedő / Emelkedő / Emelkedő | $115,00 | $69,00 | +71,0% | ★☆☆☆☆ Drága | Narrow | 66 | 55 | -11 | Avoid |
-| Wells Fargo & Company | WFC | $80,45 | $100,54 | +25,0% | Csökkenő / Csökkenő / Oldalazó | $110,00 | $77,00 | -26,9% | ★★★★☆ Alulértékelt | Narrow | 66 | 77 | +11 | Accumulate |
+| Wells Fargo & Company | WFC | $80,45 | $100,54 | +25,0% | Csökkenő / Csökkenő / Oldalazó | $110,00 | $77,00 | -26,9% | ★★★★☆ Alulértékelt | Narrow | 66 | 77 | +11 | Buy |
 | Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) | SPCX | $158,96 | $222,42 | +39,9% | Emelkedő / Emelkedő / – | $45,00 | $22,50 | +253,2% | ★☆☆☆☆ Drága | Narrow | 64 | 43 | -21 | Avoid |
 | Advanced Micro Devices | AMD | $633,91 | $618,51 | -2,4% | Emelkedő / Emelkedő / Emelkedő | $270,00 | $135,00 | +134,8% | ★☆☆☆☆ Drága | Narrow | 62 | 55 | -7 | Avoid |
 | Deutsche Telekom AG | DTE | 26,56 € | 35,84 € | +34,9% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -11,5% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
 | OTP Bank Nyrt. | OTP | 40 250 Ft | 44 872 Ft | +11,5% | Csökkenő / Csökkenő / Oldalazó | 41 000 Ft | 24 600 Ft | -1,8% | ★★★☆☆ Korrekt ár | Narrow | 62 | 77 | +15 | Hold |
 | Morgan Stanley | MS | $190,31 | $235,81 | +23,9% | Csökkenő / Csökkenő / Oldalazó | $150,00 | $90,00 | +26,9% | ★★★☆☆ Korrekt ár | Narrow | 62 | 63 | +1 | Hold |
 | Infineon Technologies AG | IFX | 64,64 € | 86,74 € | +34,2% | Emelkedő / Oldalazó / Emelkedő | 26,00 € | 15,60 € | +148,6% | ★☆☆☆☆ Drága | Narrow | 62 | 43 | -19 | Avoid |
-| Magyar Telekom Nyrt. | MTELEKOM | 2520 Ft | 2923 Ft | +16,0% | Csökkenő / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +0,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Hold |
-| Richter Gedeon Nyrt. | RICHTER | 12 230 Ft | 13 800 Ft | +12,8% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -9,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Hold |
+| Magyar Telekom Nyrt. | MTELEKOM | 2520 Ft | 2923 Ft | +16,0% | Csökkenő / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +0,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Accumulate |
+| Richter Gedeon Nyrt. | RICHTER | 12 230 Ft | 13 800 Ft | +12,8% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -9,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Accumulate |
 | Pfizer Inc. | PFE | $27,80 | $28,88 | +3,9% | Oldalazó / Emelkedő / Emelkedő | $22,00 | $15,40 | +26,4% | ★★☆☆☆ Drága | Narrow | 55 | 51 | -4 | Hold |
 | Seagate Technology Holdings plc | STX | $848,99 | $1125 | +32,5% | Csökkenő / Oldalazó / Emelkedő | $300,00 | $150,00 | +183,0% | ★☆☆☆☆ Drága | Narrow | 50 | 43 | -7 | Avoid |
 | Vistra Corp. | VST | $140,02 | $212,79 | +52,0% | Csökkenő / Csökkenő / Csökkenő | $87,00 | $52,20 | +60,9% | ★☆☆☆☆ Drága | None | 48 | 23 | -25 | Avoid |
@@ -68,7 +68,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $360,66 (2026-10-02); belső érték $334,00; vételi szint $233,80 (biztonsági sáv 30%); konszenzus célár $419,36
 - Trend 20/50/200 nap: Csökkenő / Oldalazó / Emelkedő; változás 1 hó -4,7%, 6 hó +19,9%
-- Aktuális ajánlás (mai ár alapján): Hold
+- Aktuális ajánlás (mai ár alapján): Accumulate (elemzéskor: Hold)
 - Elemzés: Hold: a széles és stabil moat ellenére a 360,45 USD-s ár kissé a ~334 USD-s fair value felett és jóval a közepes bizonytalansághoz tartozó 233,80 USD-s vételi szint felett van.
 - Kockázatok: Az amerikai DOJ debitkártya-monopólium pere és az interchange MDL perek (TTM-ben is céltartalék-képzés); szabályozói díjplafonok (Credit Card Competition Act, EU); stabilcoinok és A2A/azonnali fizetések térnyerése; a határon átnyúló forgalom lassulása
 - Belső érték alapja: Owner earnings ≈ TTM FCF 21,0 Mrd USD mínusz 0,9 Mrd SBC ≈ 20,1 Mrd USD (~10,5 USD/részvény ~1,92 Mrd konvertált részvényen), 10% növekedés 10 évig, 9% diszkontráta, 20x záró szorzó, levonva a ~10,1 Mrd USD nettó adósságot.
@@ -81,7 +81,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $552,26 (2026-10-02); belső érték $630,00; vételi szint $441,00 (biztonsági sáv 30%); konszenzus célár $666,71
 - Trend 20/50/200 nap: Csökkenő / Oldalazó / Emelkedő; változás 1 hó -6,1%, 6 hó +11,9%
-- Aktuális ajánlás (mai ár alapján): Hold
+- Aktuális ajánlás (mai ár alapján): Accumulate (elemzéskor: Hold)
 - Elemzés: Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 - Kockázatok: Szabályozói nyomás az interchange díjakra (Credit Card Competition Act, EU/UK díjplafonok) és folyamatban lévő interchange perek; stabilcoinok, A2A/azonnali fizetési rendszerek (Pix, UPI, FedNow) térnyerése; a határon átnyúló forgalom lassulása gazdasági vagy geopolitikai sokk esetén; ágens-alapú (AI) kereskedelemben a tokenizációs szerep elvesztése
 - Belső érték alapja: Owner earnings ≈ TTM FCF 16,7 Mrd USD mínusz 0,6 Mrd SBC ≈ 16,1 Mrd USD (~18,4 USD/részvény ~876 M részvényen), 11% növekedés 10 évig, 9% diszkontráta, 20x záró szorzó, levonva a ~12,9 Mrd USD nettó adósságot.
@@ -94,7 +94,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam $517,53 (2026-10-02); belső érték $499,00; vételi szint $349,30 (biztonsági sáv 30%); konszenzus célár $577,26
 - Trend 20/50/200 nap: Emelkedő / Emelkedő / Emelkedő; változás 1 hó +4,2%, 6 hó +38,6%
-- Aktuális ajánlás (mai ár alapján): Hold
+- Aktuális ajánlás (mai ár alapján): Accumulate (elemzéskor: Hold)
 - Elemzés: Hold: a széles, stabil moat mellett az 518,01 USD-s ár kb. 4%-kal a ~499 USD-s fair value felett, közel a méltányos értékhez van (3 csillagos zóna), de messze a ~349 USD-s vételi szint felett.
 - Kockázatok: A rekordméretű AI-capex (FY2026 ~116 Mrd USD) nem térül meg megfelelően, tartósan nyomva a FCF-et (FY2026 67 Mrd USD, -6,5%); az OpenAI-függőség és -kapcsolat változása; Azure-verseny (AWS, Google Cloud) és árverseny az AI-infrastruktúrában; antitröszt- és EU-szabályozási lépések
 - Belső érték alapja: Normalizált owner earnings ~15,5 USD/részvény (FY2026 EPS 17,95 USD egyszeri tételek és a karbantartási capex feletti rész miatt csökkentve), 11% növekedés 10 évig, 9% diszkontráta, 18x záró szorzó, ~7 USD/részvény nettó adóssággal csökkentve.
@@ -211,7 +211,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: High; pénzügyi erő: Strong; AI-kockázat: High
 - Árfolyam $343,50 (2026-10-02); belső érték $353,00; vételi szint $211,80 (biztonsági sáv 40%); konszenzus célár $429,46
 - Trend 20/50/200 nap: Oldalazó / Csökkenő / Emelkedő; változás 1 hó +1,9%, 6 hó +16,1%
-- Aktuális ajánlás (mai ár alapján): Hold
+- Aktuális ajánlás (mai ár alapján): Accumulate (elemzéskor: Hold)
 - Elemzés: Hold: a széles moat mellett a 351,35 USD-s ár gyakorlatilag a ~353 USD-s fair value-n áll (3 csillagos zóna), de a magas bizonytalanság (AI-keresési kockázat, rekord capex) miatt a vételi szint csak ~212 USD.
 - Kockázatok: A generatív AI-chatbotok elszívhatják a keresési forgalmat és hirdetési bevételt; a 180–190 Mrd USD-s 2026-os capex miatt a FCF negatívba fordult (Q2 2026: -5,9 Mrd USD) és részvénykibocsátás történt (~49,6 Mrd USD), a megtérülés bizonytalan; antitröszt-ítéletek (keresés, ad tech) és az Apple-megállapodás korlátozása; a TTM EPS-t (19,93 USD) egyszeri befektetési nyereség torzítja
 - Belső érték alapja: Normalizált owner earnings ~10,5 USD/részvény (a 2026-os 11,81 USD-s konszenzus EPS mérsékelve, az egyszeri ~98 Mrd USD-s nyereség és a capex-teher miatt), 11% növekedés 10 évig, 9% diszkontráta, 18x záró szorzó, plusz ~10 USD/részvény nettó készpénz.
@@ -250,7 +250,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★★☆ Alulértékelt; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: High
 - Árfolyam $159,02 (2026-10-02); belső érték $245,00; vételi szint $147,00 (biztonsági sáv 40%); konszenzus célár $238,78
 - Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -20,3%, 6 hó -5,2%
-- Aktuális ajánlás (mai ár alapján): Accumulate
+- Aktuális ajánlás (mai ár alapján): Buy (elemzéskor: Accumulate)
 - Elemzés: Accumulate: a 162,84 USD-s ár ~34%-kal a ~245 USD-s fair value alatt van, de a magas (AI-ágens) bizonytalanság miatti 147 USD-s vételi szint felett, ezért csak fokozatos, kis pozícióépítés indokolt.
 - Kockázatok: AI-ágensek (Meta Muse, OpenAI, Google) megkerülhetik az OTA-kat és elvehetik az ügyfélkapcsolatot; a Google-függő marketing költségeinek emelkedése; utazási kereslet visszaesése recesszió vagy geopolitikai sokk esetén; EU DMA/szabályozói lépések a paritásklauzulák ellen, negatív saját tőke mellett növekvő eladósodottság
 - Belső érték alapja: Owner earnings ≈ TTM FCF 9,5 Mrd USD mínusz 0,6 Mrd SBC ≈ 8,9 Mrd USD (~11,8 USD/split utáni részvény ~760 M részvényen), 8% növekedés 10 évig, 10% diszkontráta, 15x záró szorzó (AI-kockázat miatt alacsonyabb), levonva a ~3,4 Mrd USD nettó adósságot.
@@ -289,7 +289,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★★☆ Alulértékelt; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Medium
 - Árfolyam $80,45 (2026-10-02); belső érték $110,00; vételi szint $77,00 (biztonsági sáv 30%); konszenzus célár $100,54
 - Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -9,9%, 6 hó -0,2%
-- Aktuális ajánlás (mai ár alapján): Accumulate
+- Aktuális ajánlás (mai ár alapján): Buy (elemzéskor: Accumulate)
 - Elemzés: Accumulate: a 80,28 USD-s ár kb. 27%-kal a ~110 USD-s belső érték alatt van, de még kicsit a ~77 USD-s vételi szint felett; az eszközplafon megszűnése után a 17–18%-os ROTCE-cél a fő hajtóerő.
 - Kockázatok: Hitelezési veszteségek növekedése gazdasági lassulásnál (kereskedelmi ingatlan, fogyasztói hitelek); kamatcsökkentés miatt szűkülő nettó kamatmarzs; a ROTCE-cél elérésének csúszása, elemzői célár-csökkentések; szabályozási és megfelelési kockázat a korábbi botrányok után
 - Belső érték alapja: Bankként a normalizált EPS-t vettem owner earningsnek: ~7,0 USD/részvény (TTM EPS 6,88, forward ~7,4), 5% növekedés 10 évig, 9% diszkontráta, 11x záró szorzó; a ~6%-os buyback-hozam nincs külön beárazva.
@@ -380,7 +380,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam 2520 Ft (2026-10-02); belső érték 2500 Ft; vételi szint 1750 Ft (biztonsági sáv 30%); konszenzus célár 2923 Ft
 - Trend 20/50/200 nap: Csökkenő / Csökkenő / Emelkedő; változás 1 hó -2,6%, 6 hó +22,0%
-- Aktuális ajánlás (mai ár alapján): Hold
+- Aktuális ajánlás (mai ár alapján): Accumulate (elemzéskor: Hold)
 - Elemzés: Hold: a szűk moatú, oligopol piacon stabil FCF-et termelő Telekom 2 540 Ft-os árfolyama nagyjából a ~2 500 Ft-os fair value-n áll, jóval az 1 750 Ft-os vételi szint felett.
 - Kockázatok: Magyar különadók és árszabályozás szigorodása; erősödő verseny az állami hátterű 4iG/One csoporttól Magyarországon és Észak-Macedóniában; növekvő eladósodottság (nettó adósság/EBITDA 0,86x) a nagy osztalék és visszavásárlás mellett; technológiai és spektrumbefektetési igények
 - Belső érték alapja: Owner earnings ≈ a 2026-ra jelzett min. 200 Mrd Ft-os FCF AL (H1: 90,5 Mrd Ft), ~865 M részvény, ~231 Ft/részvény, 11x szorzó (kb. 9% részvényhozam-elvárás, alacsony növekedés), szabályozási diszkonttal ≈ 2 500 Ft.
@@ -393,7 +393,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Medium; pénzügyi erő: Strong; AI-kockázat: Low
 - Árfolyam 12 230 Ft (2026-10-02); belső érték 13 500 Ft; vételi szint 9450 Ft (biztonsági sáv 30%); konszenzus célár 13 800 Ft
 - Trend 20/50/200 nap: Csökkenő / Oldalazó / Emelkedő; változás 1 hó -4,5%, 6 hó +3,3%
-- Aktuális ajánlás (mai ár alapján): Hold
+- Aktuális ajánlás (mai ár alapján): Accumulate (elemzéskor: Hold)
 - Elemzés: Hold: a szűk moat (Vraylar-jogdíj, nőgyógyászati portfólió) mellett a 12 330 HUF-os ár csak ~9%-kal van a ~13 500 HUF-os fair value alatt, messze a 9 450 HUF-os (30%-os diszkontú) vételi szint felett.
 - Kockázatok: Vraylar amerikai szabadalmi lejárata (~2029) és a jogdíjbevétel kiesése; tartósan erős forint (H1 2026-ban ~9 pp árfolyam-ellenszél, 27 Mrd HUF árfolyamveszteség); a Vraylar-utód RGH-932 és a pipeline kudarca; magyar különadók és gyógyszerár-szabályozás
 - Belső érték alapja: Normalizált owner earnings ≈ 230 Mrd HUF (FY2025 nettó profit 232 Mrd, FCF 250 Mrd HUF, a Vraylar-szabadalomlejárat miatt növekedés nélkül), 11x szorzó, ~186 M részvény → ~13 500 HUF/részvény.
