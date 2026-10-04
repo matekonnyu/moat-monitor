@@ -1,5 +1,93 @@
 [
  {
+  "d": "2026-10-04",
+  "id": "BKNG",
+  "n": "Booking Holdings Inc.",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 159.02,
+  "bb": 147,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "GOOGL",
+  "n": "Alphabet Inc. (Class A)",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 343.5,
+  "bb": 211.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "MA",
+  "n": "Mastercard Incorporated",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 552.26,
+  "bb": 441,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "MSFT",
+  "n": "Microsoft Corporation",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 517.53,
+  "bb": 349.3,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "MTELEKOM",
+  "n": "Magyar Telekom Nyrt.",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 2520,
+  "bb": 1750,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "RICHTER",
+  "n": "Richter Gedeon Nyrt.",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 12230,
+  "bb": 9450,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "V",
+  "n": "Visa Inc.",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 360.66,
+  "bb": 233.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-04",
+  "id": "WFC",
+  "n": "Wells Fargo & Company",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 80.45,
+  "bb": 77,
+  "cur": "USD"
+ },
+ {
   "d": "2026-10-03",
   "id": "GOOGL",
   "n": "Alphabet Inc. (Class A)",

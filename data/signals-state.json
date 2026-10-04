@@ -1,5 +1,5 @@
 {
- "at": "2026-10-03T05:50:57.340Z",
+ "at": "2026-10-04T11:08:39.810Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -56,7 +56,7 @@
    "n": "Booking Holdings Inc.",
    "trM": "Csökkenő",
    "trL": "Oldalazó",
-   "rw": "Accumulate",
+   "rw": "Hold",
    "below": false,
    "px": 159.02,
    "bb": 147,
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.07,
+   "px": 26.56,
    "bb": 21,
    "cur": "EUR"
   },
@@ -76,7 +76,7 @@
    "n": "Alphabet Inc. (Class A)",
    "trM": "Csökkenő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
    "px": 343.5,
    "bb": 211.8,
@@ -96,7 +96,7 @@
    "n": "Mastercard Incorporated",
    "trM": "Oldalazó",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
    "px": 552.26,
    "bb": 441,
@@ -118,7 +118,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4830,
+   "px": 4852,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -126,7 +126,7 @@
    "n": "Microsoft Corporation",
    "trM": "Emelkedő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
    "px": 517.53,
    "bb": 349.3,
@@ -136,9 +136,9 @@
    "n": "Magyar Telekom Nyrt.",
    "trM": "Csökkenő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
-   "px": 2560,
+   "px": 2520,
    "bb": 1750,
    "cur": "HUF"
   },
@@ -168,7 +168,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 39980,
+   "px": 40250,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -176,9 +176,9 @@
    "n": "Richter Gedeon Nyrt.",
    "trM": "Oldalazó",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
-   "px": 12400,
+   "px": 12230,
    "bb": 9450,
    "cur": "HUF"
   },
@@ -206,7 +206,7 @@
    "n": "Visa Inc.",
    "trM": "Oldalazó",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
    "px": 360.66,
    "bb": 233.8,
@@ -256,7 +256,7 @@
    "n": "Wells Fargo & Company",
    "trM": "Csökkenő",
    "trL": "Oldalazó",
-   "rw": "Accumulate",
+   "rw": "Hold",
    "below": false,
    "px": 80.45,
    "bb": 77,
@@ -310,6 +310,46 @@
    "below": false,
    "px": 190.31,
    "bb": 90,
+   "cur": "USD"
+  },
+  "IFX.DE": {
+   "n": "Infineon Technologies AG",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 64.64,
+   "bb": 15.6,
+   "cur": "EUR"
+  },
+  "BBIO": {
+   "n": "BridgeBio Pharma, Inc.",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
+   "rw": "Avoid",
+   "below": false,
+   "px": 67.25,
+   "bb": 22.5,
+   "cur": "USD"
+  },
+  "PFE": {
+   "n": "Pfizer Inc.",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Hold",
+   "below": false,
+   "px": 27.8,
+   "bb": 15.4,
+   "cur": "USD"
+  },
+  "INTC": {
+   "n": "Intel Corporation",
+   "trM": "Emelkedő",
+   "trL": "Emelkedő",
+   "rw": "Avoid",
+   "below": false,
+   "px": 119.33,
+   "bb": 17.5,
    "cur": "USD"
   }
  }
