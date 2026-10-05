@@ -503,7 +503,6 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (2)
+## Jóváhagyásra váró elemzések (1)
 
-- Zwack Unicum Nyrt. (ZWACK): Narrow moat, ★★☆☆☆ Drága, árfolyam 29 300 Ft, belső érték 20 000 Ft, célár –, potenciál –. Avoid: a Narrow moat (Unicum márka) és az erős mérleg ellenére a 29 300 HUF-os ár kb. 46%-kal a ~20 000 HUF-os belső érték felett van, a Diageo-képviselet 2027-es megszűnése miatt ~15%-kal alacsonyabb eredményt várnak, a vételi szint ~12 000 HUF.
 - Wizz Air Holdings Plc (WIZZ): None moat, ★★★☆☆ Korrekt ár, árfolyam 4580 Ft, belső érték 3400 Ft, célár 4700 Ft, potenciál +2,6%. Avoid: moat nélküli, erősen eladósodott fapados légitársaság, a 4 580 HUF-os ár kb. 35%-kal a ~3 400 HUF-os belső érték felett, messze az 1 700 HUF-os vételi szint fölött van.
