@@ -14,6 +14,7 @@ const unb64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 let PF = null;        // feloldva: { ids: [{ id, added }] }
 let PF_KEY = null, PF_SALT = null, PF_ENV = null, PF_SIG = [];
 const PF_OPEN = new Set(); // lenyitott sorok
+let PF_SK = "n", PF_SD = 1; // rendezés: oszlopkulcs és irány (1 növekvő, -1 csökkenő)
 const pfStore = { get(k) { try { return sessionStorage.getItem(k) || localStorage.getItem(k); } catch { return null; } },
   set(k, v, keep) { try { (keep ? localStorage : sessionStorage).setItem(k, v); } catch {} },
   del(k) { try { sessionStorage.removeItem(k); localStorage.removeItem(k); } catch {} } };
@@ -216,12 +217,20 @@ function pfDraw() {
   const pfKey = pfSigKey(sig, near), pfHid = sigHid("pf", pfKey);
   const hit = new Map(); if (!pfHid) for (const s of [...near, ...sig.filter((s) => s.d == last)]) hit.set(s.id, (hit.get(s.id) || []).concat(s.kind));
   const rows = PF.ids.map((x) => { const c = C.find((r) => r.id == x.id); return c ? derive(c) : { id: x.id, n: x.id, missing: true }; })
-    .sort((a, b) => String(a.n).localeCompare(String(b.n), "hu"));
+    .map((r) => r.missing ? r : { ...r, need: pfNeed(pfMy(r.id), r.px) })
+    .sort((a, b) => {
+      if (a.missing != b.missing) return a.missing ? 1 : -1;
+      if (PF_SK == "n") return String(a.n).localeCompare(String(b.n), "hu") * PF_SD;
+      const u = a[PF_SK], w = b[PF_SK];
+      if (u == null || w == null) return u == null && w == null ? String(a.n).localeCompare(String(b.n), "hu") : u == null ? 1 : -1; // üres érték mindig a végére
+      return (u - w) * PF_SD || String(a.n).localeCompare(String(b.n), "hu");
+    });
+  const th = (k, l, t = "") => `<th data-pfk="${k}"${t ? ` title="${t}"` : ""} class="${PF_SK == k ? "on" : ""}" aria-sort="${PF_SK == k ? (PF_SD > 0 ? "ascending" : "descending") : "none"}">${l}${PF_SK == k ? (PF_SD < 0 ? " ▼" : " ▲") : ""}</th>`;
   const nearHtml = near.map((c) => `<li class="pfnear"><span class="sgv"><b class="g">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">🎯 ${esc(c.kind)}</span><span class="sgv">ár ${esc(mon(c.px, c.cur))} → <b class="g">${esc(c.to)}</b></span></li>`).join("");
   const sigHtml = !(sig.length || near.length) ? "" : pfHid ? `<section class="sig min">${sigMin("pf", "Portfólió-jelzések", sig.length + near.length, last)}</section>` : `<section class="sig">${sigHead("pf", `Portfólió-jelzések${last ? " · " + esc(last) : ""}`, pfKey)}<p class="sgs">Saját célár 2%-on belül, valamint trend- vagy ajánlásváltás a portfólió papírjainál (az elmúlt 7 nap).</p><ul>${nearHtml}${sig.map((c) => {
     const tr = c.kind.includes("trend"), f = (v) => (tr && ARW[v] ? ARW[v] + " " : "") + v;
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b></span>${c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; }).join("")}</ul></section>`;
-  box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr><th>Cég</th><th>Árfolyam</th><th>Célár</th><th>Potenciál</th><th title="Saját célár – kattints a mezőbe és írd be">Saját célár</th><th title="Ennyi százalékos emelkedés kell a mai árfolyamtól a saját célárig">Szükséges emelkedés</th><th title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th>Elemzés</th><th></th></tr></thead><tbody>${rows.map((r) => r.missing
+  box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr>${th("n", "Cég")}<th class="ns">Árfolyam</th><th class="ns">Célár</th>${th("up", "Potenciál")}<th class="ns" title="Saját célár – kattints a mezőbe és írd be">Saját célár</th>${th("need", "Szükséges emelkedés", "Ennyi százalékos emelkedés kell a mai árfolyamtól a saját célárig")}${th("to", "Trend 20/50/200", "Rövid (20 nap), közép (50 nap), hosszú (200 nap); rendezés a 50 napos trend szerint")}${th("rk", "Elemzés", "Buy → Accumulate → Hold → Avoid")}<th class="ns"></th></tr></thead><tbody>${rows.map((r) => r.missing
     ? `<tr><td><b>${esc(r.id)}</b><small>Már nincs a figyelőlistán, ezért nem frissül.</small></td><td colspan="7">–</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`
     : `<tr class="row${hit.has(r.id) ? " pfhit" : ""}" tabindex="0" data-pfid="${esc(r.id)}" aria-expanded="${PF_OPEN.has(r.id)}"${hit.has(r.id) ? ` title="Jelzés: ${esc(hit.get(r.id).join(", "))}"` : ""}><td><b>${esc(r.n)}</b><small>${esc(r.t)}${hit.has(r.id) ? ` · <span class="pfnew">${esc(hit.get(r.id).join(", ").toLowerCase())}</span>` : ""}</small></td>
 <td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : ""}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td>${pfMyCells(r)}<td>${tri(r)}</td>
@@ -266,6 +275,13 @@ function pfTog(e) {
   const tr = e.target.closest("tr.row[data-pfid]"); if (!tr) return;
   const id = tr.dataset.pfid; PF_OPEN.has(id) ? PF_OPEN.delete(id) : PF_OPEN.add(id); pfDraw();
 }
+// Oszlopfejlécre kattintva rendez; ugyanarra újra kattintva megfordítja. A szöveg (Cég) növekvően, a számok elsőre:
+// szükséges emelkedés növekvően (legközelebbi célár elöl), a többi csökkenően (legjobb elöl).
+$("#pfbox").addEventListener("click", (e) => {
+  const h = e.target.closest("th[data-pfk]"); if (!h) return;
+  const k = h.dataset.pfk;
+  PF_SD = PF_SK == k ? -PF_SD : (k == "n" || k == "need" ? 1 : -1); PF_SK = k; pfDraw();
+});
 $("#pfbox").addEventListener("click", pfTog);
 $("#pfbox").addEventListener("keydown", (e) => { if (e.key == "Enter" && !e.target.dataset.pfmy) pfTog(e); });
 $("#pfbox").addEventListener("click", async (e) => {
