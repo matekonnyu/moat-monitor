@@ -502,7 +502,3 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Kockázatok: Az OCU400 fázis 3 (topline 2027 Q1) vagy az OCU410ST (2027 Q2) sikertelensége; folyamatos veszteség (Q2 2026: -24,9 M USD) és további hígítás, 130 M USD átváltható kötvény; FDA-engedélyezési és gyártási kockázat; nincs érdemi bevétel (Q2 2026: 1,5 M USD)
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
-
-## Jóváhagyásra váró elemzések (1)
-
-- Wizz Air Holdings Plc (WIZZ): None moat, ★★★☆☆ Korrekt ár, árfolyam 4580 Ft, belső érték 3400 Ft, célár 4700 Ft, potenciál +2,6%. Avoid: moat nélküli, erősen eladósodott fapados légitársaság, a 4 580 HUF-os ár kb. 35%-kal a ~3 400 HUF-os belső érték felett, messze az 1 700 HUF-os vételi szint fölött van.

@@ -1997,58 +1997,5 @@
    "elemzes_datuma": "2026-09-30"
   }
  ],
- "jovahagyasra_var": [
-  {
-   "id": "WIZZ",
-   "nev": "Wizz Air Holdings Plc",
-   "ticker": "WIZZ",
-   "yahoo": "WIZZ.BD",
-   "lista": "Jelölt",
-   "szektor": "Industrials (Airlines)",
-   "penznem": "HUF",
-   "arfolyam": 4580,
-   "arfolyam_datum": null,
-   "celar": 4700,
-   "potencial_szazalek": 2.62,
-   "trend": {
-    "nap20": null,
-    "nap50": null,
-    "nap200": null
-   },
-   "sma20": null,
-   "sma50": null,
-   "sma200": null,
-   "valtozas_1ho": null,
-   "valtozas_6ho": null,
-   "belso_ertek": 3400,
-   "veteli_szint": 1700,
-   "biztonsagi_sav_szazalek": 50,
-   "ar_vs_belso_ertek_szazalek": 34.71,
-   "csillag": 3,
-   "ertekeles": "Korrekt ár",
-   "bizonytalansag": "Very High",
-   "moat": "None",
-   "moat_trend": "Stable",
-   "moat_score": 30,
-   "moat_pillerek": {
-    "immaterialis_javak": 10,
-    "valtasi_koltseg": 15,
-    "halozati_hatas": 15,
-    "koltsegelony": 55,
-    "hatekony_meret": 25
-   },
-   "mpa_score": 10,
-   "elteres": -20,
-   "penzugyi_ero": "Weak",
-   "ai_kockazat": "Low",
-   "bizonyossag": "Medium",
-   "ajanlas": "Avoid",
-   "ajanlas_elemzeskor": "Avoid",
-   "ajanlas_szoveg": "Avoid: moat nélküli, erősen eladósodott fapados légitársaság, a 4 580 HUF-os ár kb. 35%-kal a ~3 400 HUF-os belső érték felett, messze az 1 700 HUF-os vételi szint fölött van.",
-   "kockazatok": "Üzemanyagár-volatilitás és fedezeti kitettség; magas nettó adósság (~4,9 Mrd EUR, 3,7x EBITDA) és tőkeigényes flottabővítés; Pratt & Whitney hajtóműprobléma miatt földön álló gépek, szállítási késések; geopolitikai kockázat (Közel-Kelet, Ukrajna), szabályozói és repülőtéri költségek, 2027-es első negyedéves veszteség (~198 M EUR)",
-   "belso_ertek_alapja": "Az FY2026-os közel nulla nettó eredményből (2,2 M EUR) és a Q1 FY27-es ~198 M EUR veszteségből normalizált, ciklikus jövedelmezőséget és ~4,9 Mrd EUR nettó adósságot feltételezve konzervatív becslés (~3 400 HUF/részvény); a szabad cash flow adatok forrásonként eltérőek, pontos FCF/részvény nem számolható megbízhatóan, az EPS és a P/E nem értelmezhető.",
-   "forrasok": "Wizz Air Final Results 2026-06-11 (RNS); stockanalysis.com; portfolio.hu; bet.hu; Yahoo Finance",
-   "elemzes_datuma": "2026-10-05"
-  }
- ]
+ "jovahagyasra_var": []
 }
