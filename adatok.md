@@ -1,6 +1,6 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-05 záró (Yahoo Finance). Frissítve: 2026-10-05T10:42:59.641Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-05 záró (Yahoo Finance). Frissítve: 2026-10-05T10:43:56.004Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
@@ -32,9 +32,9 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | Space Exploration Technologies Corp. (SpaceX, listed under ticker SPCX) | SPCX | $158,96 | $222,42 | +39,9% | Emelkedő / Emelkedő / – | $45,00 | $22,50 | +253,2% | ★☆☆☆☆ Drága | Narrow | 64 | 43 | -21 | Avoid |
 | Advanced Micro Devices | AMD | $633,91 | $618,51 | -2,4% | Emelkedő / Emelkedő / Emelkedő | $270,00 | $135,00 | +134,8% | ★☆☆☆☆ Drága | Narrow | 62 | 55 | -7 | Avoid |
 | Deutsche Telekom AG | DTE | 26,72 € | 35,84 € | +34,1% | Csökkenő / Csökkenő / Csökkenő | 30,00 € | 21,00 € | -10,9% | ★★★☆☆ Korrekt ár | Narrow | 62 | 65 | +3 | Hold |
-| OTP Bank Nyrt. | OTP | 40 370 Ft | 44 872 Ft | +11,2% | Csökkenő / Csökkenő / Oldalazó | 41 000 Ft | 24 600 Ft | -1,5% | ★★★☆☆ Korrekt ár | Narrow | 62 | 77 | +15 | Hold |
+| OTP Bank Nyrt. | OTP | 40 280 Ft | 44 872 Ft | +11,4% | Csökkenő / Csökkenő / Oldalazó | 41 000 Ft | 24 600 Ft | -1,8% | ★★★☆☆ Korrekt ár | Narrow | 62 | 77 | +15 | Hold |
 | Morgan Stanley | MS | $190,31 | $235,81 | +23,9% | Csökkenő / Csökkenő / Oldalazó | $150,00 | $90,00 | +26,9% | ★★★☆☆ Korrekt ár | Narrow | 62 | 63 | +1 | Hold |
-| Infineon Technologies AG | IFX | 63,80 € | 86,74 € | +36,0% | Emelkedő / Oldalazó / Emelkedő | 26,00 € | 15,60 € | +145,4% | ★☆☆☆☆ Drága | Narrow | 62 | 43 | -19 | Avoid |
+| Infineon Technologies AG | IFX | 63,83 € | 86,74 € | +35,9% | Emelkedő / Oldalazó / Emelkedő | 26,00 € | 15,60 € | +145,5% | ★☆☆☆☆ Drága | Narrow | 62 | 43 | -19 | Avoid |
 | Magyar Telekom Nyrt. | MTELEKOM | 2520 Ft | 2923 Ft | +16,0% | Csökkenő / Csökkenő / Emelkedő | 2500 Ft | 1750 Ft | +0,8% | ★★★☆☆ Korrekt ár | Narrow | 58 | 70 | +12 | Accumulate |
 | Richter Gedeon Nyrt. | RICHTER | 12 230 Ft | 13 800 Ft | +12,8% | Csökkenő / Oldalazó / Emelkedő | 13 500 Ft | 9450 Ft | -9,4% | ★★★☆☆ Korrekt ár | Narrow | 58 | 77 | +19 | Accumulate |
 | Pfizer Inc. | PFE | $27,80 | $28,88 | +3,9% | Oldalazó / Emelkedő / Emelkedő | $22,00 | $15,40 | +26,4% | ★★☆☆☆ Drága | Narrow | 55 | 51 | -4 | Hold |
@@ -339,8 +339,8 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Szektor: Banks - Regional (CEE); lista: Követett; elemzés dátuma: 2026-09-30
 - Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 62, váltási költség 58, hálózati hatás 35, költségelőny 68, hatékony méret 55
 - Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: High; pénzügyi erő: Strong; AI-kockázat: Medium
-- Árfolyam 40 370 Ft (2026-10-05); belső érték 41 000 Ft; vételi szint 24 600 Ft (biztonsági sáv 40%); konszenzus célár 44 872 Ft
-- Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -10,2%, 6 hó +8,4%
+- Árfolyam 40 280 Ft (2026-10-05); belső érték 41 000 Ft; vételi szint 24 600 Ft (biztonsági sáv 40%); konszenzus célár 44 872 Ft
+- Trend 20/50/200 nap: Csökkenő / Csökkenő / Oldalazó; változás 1 hó -10,4%, 6 hó +8,1%
 - Aktuális ajánlás (mai ár alapján): Hold
 - Elemzés: Hold: a szűk moatú (tartósan a tőkeköltség feletti ROE-t hozó) bank 42 700 Ft-os árfolyama a ~41 000 Ft-os becsült fair value közelében, de messze a magas bizonytalanság miatti 24 600 Ft-os vételi szint felett van, így új vételre nincs biztonsági sáv.
 - Kockázatok: Orosz leánybank kockázata (2025-ben a profit ~18%-a, osztalék-hazautalás blokkolva, kivonulás csak nagy veszteséggel); magyar különadók, kamatstop és szektorális beavatkozások; a ~2 Mrd EUR-s Luminor-akvizíció integrációs és tőke-kockázata; erős forint és kamatcsökkentés miatti marzs- és profiterózió (Q2 2026 korrigált profit -13% éves alapon)
@@ -365,8 +365,8 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Szektor: Semiconductors; lista: Követett; elemzés dátuma: 2026-10-03
 - Moat: Narrow (score 62, trend: Stable); pillérek: immateriális javak 45, váltási költség 60, hálózati hatás 10, költségelőny 55, hatékony méret 60
 - Értékelés: ★☆☆☆☆ Drága; bizonytalanság: High; pénzügyi erő: Adequate; AI-kockázat: Low
-- Árfolyam 63,80 € (2026-10-05); belső érték 26,00 €; vételi szint 15,60 € (biztonsági sáv 40%); konszenzus célár 86,74 €
-- Trend 20/50/200 nap: Emelkedő / Oldalazó / Emelkedő; változás 1 hó +12,2%, 6 hó +50,5%
+- Árfolyam 63,83 € (2026-10-05); belső érték 26,00 €; vételi szint 15,60 € (biztonsági sáv 40%); konszenzus célár 86,74 €
+- Trend 20/50/200 nap: Emelkedő / Oldalazó / Emelkedő; változás 1 hó +12,3%, 6 hó +50,6%
 - Aktuális ajánlás (mai ár alapján): Avoid
 - Elemzés: Avoid: a 64,64 EUR-s ár kb. 149%-kal a ~26 EUR-s konzervatív belső érték felett és messze a ~15,6 EUR-s vételi szint felett van, a power-félvezető moat és az AI-adatközponti lendület ellenére a ciklikus normalizált cash flow nem indokolja.
 - Kockázatok: Ciklikus autóipari és ipari kereslet ingadozása, kínai árverseny (SiC, Si power); magas beruházási igény és az ams OSRAM szenzorüzlet felvásárlásának integrációs/pénzügyi terhe; a magas értékeltség (trailing P/E ~70, forward ~25) az AI-várakozások csalódása esetén; vám- és geopolitikai kockázatok
@@ -503,7 +503,8 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (2)
+## Jóváhagyásra váró elemzések (3)
 
 - 4iG Nyrt. (4IG): None moat, ★★☆☆☆ Drága, árfolyam 1586 Ft, belső érték 1100 Ft, célár –, potenciál –. Avoid: az 1 589 HUF-os ár kb. 44%-kal a ~1 100 HUF-os konzervatív belső érték felett van, messze a ~550 HUF-os vételi szinttől, a magas tőkeáttétel (nettó adósság/EBITDA 3,7x) és a tartós moat hiánya mellett.
 - Zwack Unicum Nyrt. (ZWACK): Narrow moat, ★★☆☆☆ Drága, árfolyam 29 300 Ft, belső érték 20 000 Ft, célár –, potenciál –. Avoid: a Narrow moat (Unicum márka) és az erős mérleg ellenére a 29 300 HUF-os ár kb. 46%-kal a ~20 000 HUF-os belső érték felett van, a Diageo-képviselet 2027-es megszűnése miatt ~15%-kal alacsonyabb eredményt várnak, a vételi szint ~12 000 HUF.
+- Wizz Air Holdings Plc (WIZZ): None moat, ★★★☆☆ Korrekt ár, árfolyam 4580 Ft, belső érték 3400 Ft, célár 4700 Ft, potenciál +2,6%. Avoid: moat nélküli, erősen eladósodott fapados légitársaság, a 4 580 HUF-os ár kb. 35%-kal a ~3 400 HUF-os belső érték felett, messze az 1 700 HUF-os vételi szint fölött van.
