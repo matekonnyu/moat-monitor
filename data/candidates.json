@@ -1,1 +1,52 @@
-[]
+[
+ {
+  "id": "4IG",
+  "n": "4iG Nyrt.",
+  "t": "4IG",
+  "y": "4IG.BD",
+  "l": "Jelölt",
+  "m": "None",
+  "s": 34,
+  "ai": "Medium",
+  "c": "Medium",
+  "p": [
+   25,
+   35,
+   15,
+   30,
+   40
+  ],
+  "sec": "Communication Services",
+  "r": "Avoid: az 1 589 HUF-os ár kb. 44%-kal a ~1 100 HUF-os konzervatív belső érték felett van, messze a ~550 HUF-os vételi szinttől, a magas tőkeáttétel (nettó adósság/EBITDA 3,7x) és a tartós moat hiánya mellett.",
+  "risks": "Magas tőkeáttétel (nettó adósság/12 havi EBITDA 3,7x, BB- Scope besorolás) és jelentős refinanszírozási igény; a 2026 első félévi 21,9 milliárd Ft nyereség egyszeri/nem realizált tételekből (~46 milliárd Ft) származik, a korrigált eredmény -3,9 milliárd Ft; politikai/szabályozási kockázat (kormányváltás utáni átvilágítás, állami megrendelések, távközlési különadók); akvizíciós integráció és magas tőkeigény (távközlés, űr- és védelmi üzlet)",
+  "mt": "Stable",
+  "u": "Very High",
+  "ivb": "Az iv a 2025-ös korrigált (egyszeri és nem realizált tételektől megtisztított) 31,6 milliárd Ft eredményből és ~10x konzervatív szorzóból, ~290–299 millió részvényre számolt becslés (a részvényszám és a szabad cash flow nem volt egyértelműen megtalálható, ezért nem fújtam fel); konszenzus célárat nem találtam.",
+  "srcs": "4ig.hu H1 2026 gyorsjelentés; MNB közzétételek (H1 2026); vg.hu; hvg.hu; bet.hu; rankia.hu",
+  "d": "2026-10-05",
+  "ch": "https://finance.yahoo.com/chart/4IG.BD",
+  "pr": 1589,
+  "tp": null,
+  "iv": 1100,
+  "bb": 550,
+  "mos": 50,
+  "f": "Weak",
+  "cur": "HUF",
+  "mk": {
+   "p": 1586,
+   "prev": 1581,
+   "sma20": 1606,
+   "sma50": 1650.88,
+   "sma200": 2570.29,
+   "ema20": 1607.96,
+   "ema50": 1675.29,
+   "tr": "Csökkenő",
+   "ch1m": -3.29,
+   "ch6m": -37.8,
+   "d": "2026-10-05",
+   "at": "2026-10-05T10:42:24.652Z",
+   "src": "Yahoo Finance"
+  },
+  "added": "2026-10-05T10:42:24.652Z"
+ }
+]
