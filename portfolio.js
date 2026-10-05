@@ -13,6 +13,7 @@ const b64 = (u8) => btoa(String.fromCharCode(...new Uint8Array(u8)));
 const unb64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 let PF = null;        // feloldva: { ids: [{ id, added }] }
 let PF_KEY = null, PF_SALT = null, PF_ENV = null, PF_SIG = [];
+const PF_OPEN = new Set(); // lenyitott sorok
 const pfStore = { get(k) { try { return sessionStorage.getItem(k) || localStorage.getItem(k); } catch { return null; } },
   set(k, v, keep) { try { (keep ? localStorage : sessionStorage).setItem(k, v); } catch {} },
   del(k) { try { sessionStorage.removeItem(k); localStorage.removeItem(k); } catch {} } };
@@ -222,9 +223,9 @@ function pfDraw() {
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b></span>${c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; }).join("")}</ul></section>`;
   box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr><th>Cég</th><th>Árfolyam</th><th>Célár</th><th>Potenciál</th><th title="Saját célár – kattints a mezőbe és írd be">Saját célár</th><th title="Ennyi százalékos emelkedés kell a mai árfolyamtól a saját célárig">Szükséges emelkedés</th><th title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th>Elemzés</th><th></th></tr></thead><tbody>${rows.map((r) => r.missing
     ? `<tr><td><b>${esc(r.id)}</b><small>Már nincs a figyelőlistán, ezért nem frissül.</small></td><td colspan="7">–</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`
-    : `<tr${hit.has(r.id) ? ` class="pfhit" title="Jelzés: ${esc(hit.get(r.id).join(", "))}"` : ""}><td><b>${esc(r.n)}</b><small>${esc(r.t)}${hit.has(r.id) ? ` · <span class="pfnew">${esc(hit.get(r.id).join(", ").toLowerCase())}</span>` : ""}</small></td>
+    : `<tr class="row${hit.has(r.id) ? " pfhit" : ""}" tabindex="0" data-pfid="${esc(r.id)}" aria-expanded="${PF_OPEN.has(r.id)}"${hit.has(r.id) ? ` title="Jelzés: ${esc(hit.get(r.id).join(", "))}"` : ""}><td><b>${esc(r.n)}</b><small>${esc(r.t)}${hit.has(r.id) ? ` · <span class="pfnew">${esc(hit.get(r.id).join(", ").toLowerCase())}</span>` : ""}</small></td>
 <td>${mon(r.px, r.cur)}<small>${r.mk.d ? esc(r.mk.d) + " záró" : ""}</small></td><td>${mon(r.tp, r.cur)}</td><td class="${r.up == null ? "" : r.up > 0 ? "g" : "r"}">${pct(r.up)}</td>${pfMyCells(r)}<td>${tri(r)}</td>
-<td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>`).join("")}</tbody></table></div>`
+<td title="${esc(r.r)}">${r.rw ? `<span class="chip ${RC[r.rw.toLowerCase()]}">${esc(r.rw)}</span>` : "–"}</td><td><button class="del" data-pfrm="${esc(r.id)}" type="button">Eltávolítás</button></td></tr>${PF_OPEN.has(r.id) ? detail(r, 9, true) : ""}`).join("")}</tbody></table></div>`
     : `<div class="res"><p>A portfólió üres. A Táblázat fülön nyisd le egy cég sorát, és nyomd meg a <b>+ Portfólióba</b> gombot.</p></div>`);
   pfBadge();
 }
@@ -259,6 +260,14 @@ $("#pfbox").addEventListener("change", async (e) => {
 });
 $("#pfbox").addEventListener("keydown", (e) => { if (e.target.dataset.pfmy && e.key == "Enter") e.target.blur(); });
 
+// Sor lenyitása a részletekhez (mint a Táblázat fülön); a mezőkre, gombokra és linkekre kattintás nem nyit.
+function pfTog(e) {
+  if (e.target.closest("input, button, a, select")) return;
+  const tr = e.target.closest("tr.row[data-pfid]"); if (!tr) return;
+  const id = tr.dataset.pfid; PF_OPEN.has(id) ? PF_OPEN.delete(id) : PF_OPEN.add(id); pfDraw();
+}
+$("#pfbox").addEventListener("click", pfTog);
+$("#pfbox").addEventListener("keydown", (e) => { if (e.key == "Enter" && !e.target.dataset.pfmy) pfTog(e); });
 $("#pfbox").addEventListener("click", async (e) => {
   const id = e.target.dataset.pfrm; if (!id) return;
   if (confirm("Eltávolítod a portfólióból? (Például ha eladtad.)")) await pfRemove(id);

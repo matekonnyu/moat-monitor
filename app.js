@@ -90,9 +90,10 @@ const tri = (r) => r.trM || r.trS || r.trL ? `<span class="tri">${[["20 nap", r.
 const trTxt = (r) => `rövid ${(r.trS || "–").toLowerCase()}, közép ${(r.trM || "–").toLowerCase()}, hosszú ${(r.trL || "–").toLowerCase()}`;
 const pillars = (p) => (p || []).map((v, i) => `<div class="p"><span>${PL[i]}</span><div class="tr"><i style="width:${v}%"></i></div><span>${v}</span></div>`).join("");
 
-function detail(r) {
+// Lenyitott részletek; a Portfólió oldalon (pf) 9 oszlopon, a figyelőlista-gombok nélkül.
+function detail(r, cols = 14, pf = false) {
   const mk = r.mk;
-  return `<tr class="d"><td colspan="14"><div class="dg"><div>${pillars(r.p)}<p class="rec"><b>Aktuális ajánlás: ${esc(r.rw || "–")}</b> (a mai ár alapján)${r.rw0 && r.rw0 !== r.rw ? ` · elemzéskor: ${esc(r.rw0)}` : ""}</p><p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}${r.srcs ? `<p class="rec note">Források: ${esc([].concat(r.srcs).join(", "))}</p>` : ""}<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button> ${typeof pfBtn == "function" ? pfBtn(r) : ""}</div>
+  return `<tr class="d"><td colspan="${cols}"><div class="dg"><div>${pillars(r.p)}<p class="rec"><b>Aktuális ajánlás: ${esc(r.rw || "–")}</b> (a mai ár alapján)${r.rw0 && r.rw0 !== r.rw ? ` · elemzéskor: ${esc(r.rw0)}` : ""}</p><p class="rec">${esc(r.r)}</p>${r.risks ? `<p class="rec">Kockázatok: ${esc(r.risks)}</p>` : ""}${r.ivb ? `<p class="rec note">Belső érték alapja: ${esc(r.ivb)}</p>` : ""}${r.srcs ? `<p class="rec note">Források: ${esc([].concat(r.srcs).join(", "))}</p>` : ""}${pf ? "" : `<button class="del" data-act="Törlés: ${esc(r.id)}">Törlés a listáról</button> ${typeof pfBtn == "function" ? pfBtn(r) : ""}`}</div>
 <div><div class="k"><span>Záróár dátuma</span><span>${esc(mk.d || r.d || "–")}</span></div>
 <div class="k"><span>Napi változás</span><span>${mk.prev ? pct((mk.p / mk.prev - 1) * 100) : "–"}</span></div>
 <div class="k"><span>Trend (20 / 50 / 200 nap)</span><span>${esc(r.trS || "–")} / ${esc(r.trM || "–")} / ${esc(r.trL || "–")}</span></div>
