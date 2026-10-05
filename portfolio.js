@@ -153,8 +153,11 @@ function pfNear() {
   }
   return out.sort((a, b) => a.need - b.need);
 }
+// Kulcs az elrejtéshez: a legfrissebb jelzésnap + a célár-közeli papírok; ha bármelyik változik, a jelzések újra megjelennek.
+function pfSigKey(sig, near) { return (sig[0]?.d || "") + "|" + near.map((c) => c.id + ":" + c.kind).join(","); }
 function pfBadge() {
-  const n = pfSignals().length + pfNear().length, b = $("#npfc");
+  const sig = pfSignals(), near = pfNear(), hid = sigHid("pf", pfSigKey(sig, near));
+  const n = hid ? 0 : sig.length + near.length, b = $("#npfc");
   b.hidden = !n; b.textContent = n || ""; b.title = n ? n + " jelzés a portfólióban (7 nap)" : "";
 }
 
@@ -191,12 +194,12 @@ function pfDraw() {
   $("#pflockbtn").hidden = false;
   const RC = { buy: "g", accumulate: "g", hold: "a", avoid: "r" };
   const sig = pfSignals(), last = sig[0]?.d, near = pfNear();
-  const hit = new Map(); for (const s of [...near, ...sig.filter((s) => s.d == last)]) hit.set(s.id, (hit.get(s.id) || []).concat(s.kind));
+  const pfKey = pfSigKey(sig, near), pfHid = sigHid("pf", pfKey);
+  const hit = new Map(); if (!pfHid) for (const s of [...near, ...sig.filter((s) => s.d == last)]) hit.set(s.id, (hit.get(s.id) || []).concat(s.kind));
   const rows = PF.ids.map((x) => { const c = C.find((r) => r.id == x.id); return c ? derive(c) : { id: x.id, n: x.id, missing: true }; })
     .sort((a, b) => String(a.n).localeCompare(String(b.n), "hu"));
   const nearHtml = near.map((c) => `<li class="pfnear"><span class="sgv"><b class="g">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">🎯 ${esc(c.kind)}</span><span class="sgv">ár ${esc(mon(c.px, c.cur))} → <b class="g">${esc(c.to)}</b></span></li>`).join("");
-  const pfKey = last || near.map((c) => c.id + c.kind).join(",");
-  const sigHtml = !(sig.length || near.length) ? "" : sigHid("pf", pfKey) ? `<section class="sig min">${sigMin("pf", "Portfólió-jelzések", sig.length + near.length, last)}</section>` : `<section class="sig">${sigHead("pf", `Portfólió-jelzések${last ? " · " + esc(last) : ""}`, pfKey)}<p class="sgs">Saját célár 2%-on belül, valamint trend- vagy ajánlásváltás a portfólió papírjainál (az elmúlt 7 nap).</p><ul>${nearHtml}${sig.map((c) => {
+  const sigHtml = !(sig.length || near.length) ? "" : pfHid ? `<section class="sig min">${sigMin("pf", "Portfólió-jelzések", sig.length + near.length, last)}</section>` : `<section class="sig">${sigHead("pf", `Portfólió-jelzések${last ? " · " + esc(last) : ""}`, pfKey)}<p class="sgs">Saját célár 2%-on belül, valamint trend- vagy ajánlásváltás a portfólió papírjainál (az elmúlt 7 nap).</p><ul>${nearHtml}${sig.map((c) => {
     const tr = c.kind.includes("trend"), f = (v) => (tr && ARW[v] ? ARW[v] + " " : "") + v;
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id)}</b> ${esc(c.n || "")}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b></span>${c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; }).join("")}</ul></section>`;
   box.innerHTML = sigHtml + (rows.length ? `<div class="w"><table class="pft"><thead><tr><th>Cég</th><th>Árfolyam</th><th>Célár</th><th>Potenciál</th><th title="Saját célár – kattints a mezőbe és írd be">Saját célár</th><th title="Ennyi százalékos emelkedés kell a mai árfolyamtól a saját célárig">Szükséges emelkedés</th><th title="Rövid (20 nap), közép (50 nap), hosszú (200 nap)">Trend 20/50/200</th><th>Elemzés</th><th></th></tr></thead><tbody>${rows.map((r) => r.missing
