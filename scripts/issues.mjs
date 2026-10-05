@@ -69,7 +69,7 @@ function pfParse(body) {
     const e = JSON.parse(String(body || "").trim());
     if (e && e.v === 1 && Number.isInteger(e.it) && e.it >= 100000 && typeof e.at === "string" && !isNaN(Date.parse(e.at))
       && [e.salt, e.iv, e.ct].every((x) => typeof x === "string" && B64.test(x)) && e.ct.length < 50000)
-      return { v: 1, at: e.at, it: e.it, salt: e.salt, iv: e.iv, ct: e.ct };
+      return { v: 1, at: e.at, it: e.it, salt: e.salt, iv: e.iv, ct: e.ct, ...(typeof e.ah === "string" && /^[0-9a-f]{64}$/.test(e.ah) ? { ah: e.ah } : {}) };
   } catch {}
   return null;
 }

@@ -3,6 +3,8 @@
 // (AES-GCM 256, a kulcs a jelszóból PBKDF2-SHA256-tal). A jelszó soha nem hagyja el a böngészőt.
 // Mentés: a böngésző újratitkosítja a teljes listát, és "Portfólió: mentés" issue-t nyit, a törzsében
 // csak a titkosított adat van; a scripts/issues.mjs (csak a tulajdonos kérésére) beírja a fájlba.
+// GitHub-kulcs nélkül (pl. a telepített alkalmazásban) a konninvest közvetítőn át ment: a jogosultságot egy,
+// a kulcsból számolt "auth" érték igazolja, amelynek hash-e (ah) a titkosított fájlban van – a jelszó így sem megy ki.
 // Az árak, a célár, a trend és az ajánlás a főlista (data/companies.json) napi frissítéséből jönnek,
 // a jelzések a data/signals.json-ból (trend- és ajánlásváltás).
 // Saját célár: papíronként a titkosított listában (my); a szükséges emelkedés = saját célár / árfolyam − 1.
@@ -23,10 +25,19 @@ async function pfDecrypt(env, key) {
   const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: unb64(env.iv) }, key, unb64(env.ct));
   return JSON.parse(new TextDecoder().decode(pt));
 }
+// Mentési jogosultság a közvetítőnél: auth = SHA-256("mm-pf-auth:" + kulcs), a fájlban csak ennek hash-e (ah).
+async function pfAuth() {
+  const raw = new Uint8Array(await crypto.subtle.exportKey("raw", PF_KEY)), pre = new TextEncoder().encode("mm-pf-auth:");
+  const buf = new Uint8Array(pre.length + raw.length); buf.set(pre); buf.set(raw, pre.length);
+  const auth = b64(await crypto.subtle.digest("SHA-256", buf));
+  const ah = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(auth)))].map((x) => x.toString(16).padStart(2, "0")).join("");
+  return { auth, ah };
+}
 async function pfEncrypt(data) {
   const iv = crypto.getRandomValues(new Uint8Array(12));
   const ct = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, PF_KEY, new TextEncoder().encode(JSON.stringify(data)));
-  return { v: 1, at: new Date().toISOString(), it: PF_ITER, salt: b64(PF_SALT), iv: b64(iv), ct: b64(ct) };
+  const { ah } = await pfAuth();
+  return { v: 1, at: new Date().toISOString(), it: PF_ITER, salt: b64(PF_SALT), iv: b64(iv), ct: b64(ct), ah };
 }
 
 // A titkosított fájl: a repóból, vagy a böngészőben tárolt utolsó mentés, ha az újabb (a GitHub Pages pár percig késhet).
@@ -74,8 +85,15 @@ async function pfSave(okText, redraw = true) {
   if (redraw) { pfDraw(); if (C.length) draw(); }
   const body = JSON.stringify(env);
   if (!TOKEN) {
-    if (!confirm((okText ? okText + "\n\n" : "") + "A mentéshez megnyitom a GitHubot (a kérés csak titkosított adatot tartalmaz). Ott kattints a „Submit new issue” gombra.")) return;
-    window.open(`https://github.com/${OWNER}/${REPO}/issues/new?title=${encodeURIComponent(PF_TITLE)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
+    // GitHub-kulcs nélkül: a konninvest közvetítőn át, átirányítás nélkül.
+    try {
+      const r = await fetch(RELAY, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind: "portfolio", env, auth: (await pfAuth()).auth }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || r.status);
+      if (!PENDING.some((p) => p.title == PF_TITLE)) PENDING.push({ n: j.number, title: PF_TITLE, at: Date.now() });
+      renderPending(); poll(true);
+      pfMsg(okText ? okText + " Mentés folyamatban (kb. 1 perc)." : "Mentés folyamatban (kb. 1 perc).", true);
+    } catch (e) { pfMsg("Nem sikerült menteni (" + (e.message || e) + "). Próbáld újra.", false); }
     return;
   }
   try {
