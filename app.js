@@ -109,7 +109,7 @@ ${mk.err ? `<p class="note r">Utolsó frissítési hiba: ${esc(mk.err)}</p>` : "
 
 function draw() {
   const q = $("#q").value.toLowerCase(), fm = $("#fm").value, fl = $("#fl").value, ft = $("#ft").value;
-  const a = C.map(derive).filter((r) => (!q || (r.n + r.t + r.sec).toLowerCase().includes(q)) && (!fm || r.m == fm) && (!fl || r.l == fl) && (!ft || r.tr == ft));
+  const a = C.map(derive).filter((r) => (!q || (r.n + r.t + r.sec).toLowerCase().includes(q)) && (!fm || r.m == fm) && (!fl || String(r.rw || "").toLowerCase() == fl.toLowerCase()) && (!ft || r.tr == ft));
   a.sort((x, y) => { const u = x[sk] ?? -1e18, w = y[sk] ?? -1e18; return (typeof u == "string" ? u.localeCompare(w) : u - w) * sd; });
   $("#cnt").textContent = a.length + " / " + C.length + " cég";
   const RC = { buy: "g", accumulate: "g", hold: "a", avoid: "r" }, VH = { Undervalued: "Alulértékelt", Fair: "Korrekt ár", Expensive: "Drága" };
@@ -248,16 +248,33 @@ function sigTone(c) {
   if (c.kind == "Vételi szint") return /alá/.test(t) ? "g" : "a";
   return t && t != "nincs" ? "g" : "a";
 }
+// Elrejtés: a böngésző megjegyzi, melyik napi jelzéscsomagot rejtetted el; ha újabb jelzés érkezik, a doboz magától újra megjelenik.
+function sigHid(sc, last) { try { return !!last && localStorage.getItem("mm_sig_hide_" + sc) == last; } catch { return false; } }
+function sigSet(sc, last) { try { last ? localStorage.setItem("mm_sig_hide_" + sc, last) : localStorage.removeItem("mm_sig_hide_" + sc); } catch {} }
+// Fejléc elrejtés-gombbal, illetve elrejtve egy keskeny sáv a visszahozáshoz. A kattintást a doboz delegálja (data-sgh / data-sgs).
+function sigHead(sc, title, last) { return `<div class="sgh"><h2>${title}</h2><button class="sgx" type="button" data-sgh="${esc(sc)}" data-d="${esc(last || "")}" title="A jelzések elrejtése, amíg újabb nem érkezik">Elrejtés</button></div>`; }
+function sigMin(sc, title, n, last) { return `<button class="sgmin" type="button" data-sgs="${esc(sc)}" title="A jelzések megjelenítése"><b>${title}</b> elrejtve · ${n} változás${last ? " · " + esc(last) : ""}<span>Megjelenítés</span></button>`; }
+document.addEventListener("click", (e) => {
+  const h = e.target.closest("[data-sgh]"), s = e.target.closest("[data-sgs]");
+  if (!h && !s) return;
+  if (h) sigSet(h.dataset.sgh, h.dataset.d); else sigSet(s.dataset.sgs, "");
+  const sc = (h || s).dataset[h ? "sgh" : "sgs"];
+  if (sc == "pf") { if (typeof pfDraw == "function") pfDraw(); } else drawSig(SIG);
+});
+let SIG = [];
 function drawSig(S) {
+  SIG = S || [];
   const el = $("#sig"), lim = new Date(Date.now() - 7 * 864e5).toLocaleDateString("sv-SE", { timeZone: "Europe/Budapest" });
   const seen = new Set(); // cégenként és jelzésfajtánként csak a legfrissebb
-  const a = (S || []).filter((c) => c.d >= lim && c.kind != "Mai ajánlat" && !seen.has(c.id + "|" + c.kind) && seen.add(c.id + "|" + c.kind));
+  const a = SIG.filter((c) => c.d >= lim && c.kind != "Mai ajánlat" && !seen.has(c.id + "|" + c.kind) && seen.add(c.id + "|" + c.kind));
   if (!a.length) { el.hidden = true; return; }
   const last = a[0].d, now = a.filter((c) => c.d == last), old = a.filter((c) => c.d != last);
+  el.classList.toggle("min", sigHid("main", last));
+  if (sigHid("main", last)) { el.innerHTML = sigMin("main", "Jelzések", a.length, last); el.hidden = false; return; }
   const nm = (id) => (C.find((r) => r.id == id) || {}).n || "";
   const li = (c) => { const tr = c.kind.includes("trend"), f = (x) => (tr && ARW[x] ? ARW[x] + " " : "") + x;
     return `<li><span class="sgv"><b class="${sigTone(c)}">${esc(c.id || "")}</b> ${esc(c.n || nm(c.id))}</span><span class="sgk">${esc(c.kind)}</span><span class="sgv">${esc(f(c.from))} → <b class="${sigTone(c)}">${esc(f(c.to))}</b>${c.px != null ? ` <span class="sgd">· ár ${esc(c.px)} ${esc(c.cur || "")}${c.bb ? `, vételi szint ${esc(c.bb)}` : ""}</span>` : ""}</span>${old.length && c.d != last ? `<span class="sgd">${esc(c.d)}</span>` : ""}</li>`; };
-  el.innerHTML = `<h2>Jelzések · ${esc(last)}</h2><p class="sgs">${now.length} változás a figyelőlistán: trendváltás, ajánlásváltás, vagy a vételi szint átlépése.</p><ul>${now.map(li).join("")}</ul>`
+  el.innerHTML = sigHead("main", `Jelzések · ${esc(last)}`, last) + `<p class="sgs">${now.length} változás a figyelőlistán: trendváltás, ajánlásváltás, vagy a vételi szint átlépése.</p><ul>${now.map(li).join("")}</ul>`
     + (old.length ? `<details><summary>Korábbi jelzések (7 nap, ${old.length})</summary><ul>${old.map(li).join("")}</ul></details>` : "");
   el.hidden = false;
 }
