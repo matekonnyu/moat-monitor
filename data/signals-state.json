@@ -1,5 +1,5 @@
 {
- "at": "2026-10-05T05:51:57.467Z",
+ "at": "2026-10-06T05:48:37.195Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -8,7 +8,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 333.69,
+   "px": 332.89,
    "bb": 144.2,
    "cur": "USD"
   },
@@ -18,7 +18,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 633.91,
+   "px": 631.75,
    "bb": 135,
    "cur": "USD"
   },
@@ -28,7 +28,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 251.52,
+   "px": 251.4,
    "bb": 147,
    "cur": "USD"
   },
@@ -38,7 +38,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1867.31,
+   "px": 1859.86,
    "bb": 875,
    "cur": "USD"
   },
@@ -48,7 +48,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 355.14,
+   "px": 362.51,
    "bb": 187.8,
    "cur": "USD"
   },
@@ -58,7 +58,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 159.02,
+   "px": 158.33,
    "bb": 147,
    "cur": "USD"
   },
@@ -74,11 +74,11 @@
   },
   "GOOGL": {
    "n": "Alphabet Inc. (Class A)",
-   "trM": "Csökkenő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 343.5,
+   "px": 346.47,
    "bb": 211.8,
    "cur": "USD"
   },
@@ -88,7 +88,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 85.65,
+   "px": 86.51,
    "bb": 59.2,
    "cur": "USD"
   },
@@ -98,7 +98,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 552.26,
+   "px": 564.59,
    "bb": 441,
    "cur": "USD"
   },
@@ -108,7 +108,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 728.08,
+   "px": 741.9,
    "bb": 360,
    "cur": "USD"
   },
@@ -126,9 +126,9 @@
    "n": "Microsoft Corporation",
    "trM": "Emelkedő",
    "trL": "Emelkedő",
-   "rw": "Accumulate",
+   "rw": "Hold",
    "below": false,
-   "px": 517.53,
+   "px": 525.18,
    "bb": 349.3,
    "cur": "USD"
   },
@@ -148,7 +148,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 233.95,
+   "px": 238.9,
    "bb": 81.5,
    "cur": "USD"
   },
@@ -158,7 +158,7 @@
    "trL": "Csökkenő",
    "rw": "Avoid",
    "below": false,
-   "px": 1.02,
+   "px": 1.04,
    "bb": 0.2,
    "cur": "USD"
   },
@@ -188,7 +188,7 @@
    "trL": null,
    "rw": "Avoid",
    "below": false,
-   "px": 158.96,
+   "px": 171.09,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -198,17 +198,17 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 472.78,
+   "px": 485.8,
    "bb": 280,
    "cur": "USD"
   },
   "V": {
    "n": "Visa Inc.",
-   "trM": "Oldalazó",
+   "trM": "Emelkedő",
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 360.66,
+   "px": 369.71,
    "bb": 233.8,
    "cur": "USD"
   },
@@ -218,7 +218,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 125.89,
+   "px": 125.65,
    "bb": 108,
    "cur": "USD"
   },
@@ -228,17 +228,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 196.6,
+   "px": 201.8,
    "bb": 69,
    "cur": "USD"
   },
   "STX": {
    "n": "Seagate Technology Holdings plc",
-   "trM": "Oldalazó",
+   "trM": "Emelkedő",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 848.99,
+   "px": 887.09,
    "bb": 150,
    "cur": "USD"
   },
@@ -248,7 +248,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 112.51,
+   "px": 110,
    "bb": 37.8,
    "cur": "USD"
   },
@@ -258,7 +258,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 80.45,
+   "px": 81.44,
    "bb": 77,
    "cur": "USD"
   },
@@ -268,7 +268,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1142.85,
+   "px": 1143.12,
    "bb": 574,
    "cur": "USD"
   },
@@ -278,17 +278,17 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 81.94,
+   "px": 82.65,
    "bb": 51.8,
    "cur": "USD"
   },
   "VST": {
    "n": "Vistra Corp.",
-   "trM": "Csökkenő",
+   "trM": "Oldalazó",
    "trL": "Csökkenő",
    "rw": "Avoid",
    "below": false,
-   "px": 140.02,
+   "px": 144.89,
    "bb": 52.2,
    "cur": "USD"
   },
@@ -298,7 +298,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 275.43,
+   "px": 285.22,
    "bb": 216.3,
    "cur": "USD"
   },
@@ -308,7 +308,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 190.31,
+   "px": 190.19,
    "bb": 90,
    "cur": "USD"
   },
@@ -328,7 +328,7 @@
    "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 67.25,
+   "px": 66.14,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -338,7 +338,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 27.8,
+   "px": 27.41,
    "bb": 15.4,
    "cur": "USD"
   },
@@ -348,7 +348,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 119.33,
+   "px": 116.19,
    "bb": 17.5,
    "cur": "USD"
   }

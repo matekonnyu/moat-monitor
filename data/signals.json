@@ -1,5 +1,60 @@
 [
  {
+  "d": "2026-10-06",
+  "id": "GOOGL",
+  "n": "Alphabet Inc. (Class A)",
+  "kind": "Középtávú trend",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 346.47,
+  "bb": 211.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-06",
+  "id": "MSFT",
+  "n": "Microsoft Corporation",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 525.18,
+  "bb": 349.3,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-06",
+  "id": "V",
+  "n": "Visa Inc.",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 369.71,
+  "bb": 233.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-06",
+  "id": "STX",
+  "n": "Seagate Technology Holdings plc",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 887.09,
+  "bb": 150,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-06",
+  "id": "VST",
+  "n": "Vistra Corp.",
+  "kind": "Középtávú trend",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 144.89,
+  "bb": 52.2,
+  "cur": "USD"
+ },
+ {
   "d": "2026-10-04",
   "id": "BKNG",
   "n": "Booking Holdings Inc.",
@@ -30,17 +85,6 @@
   "to": "Gyűjtés (Accumulate)",
   "px": 552.26,
   "bb": 441,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-04",
-  "id": "MSFT",
-  "n": "Microsoft Corporation",
-  "kind": "Ajánlás",
-  "from": "Tartás (Hold)",
-  "to": "Gyűjtés (Accumulate)",
-  "px": 517.53,
-  "bb": 349.3,
   "cur": "USD"
  },
  {
@@ -100,17 +144,6 @@
  },
  {
   "d": "2026-10-03",
-  "id": "STX",
-  "n": "Seagate Technology Holdings plc",
-  "kind": "Középtávú trend",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
-  "px": 848.99,
-  "bb": 150,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-03",
   "id": "LLY",
   "n": "Eli Lilly and Company",
   "kind": "Középtávú trend",
@@ -129,17 +162,6 @@
   "to": "Tartás (Hold)",
   "px": 272.96,
   "bb": 216.3,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-01",
-  "id": "GOOGL",
-  "n": "Alphabet Inc. (Class A)",
-  "kind": "Középtávú trend",
-  "from": "Oldalazó",
-  "to": "Csökkenő",
-  "px": 338.24,
-  "bb": 211.8,
   "cur": "USD"
  }
 ]
