@@ -3,7 +3,7 @@
  "leiras": "konninvest Moat Monitor – a követett cégek moat-, értékelési és trendadatai. Kutatási eszköz, nem befektetési tanács.",
  "modszertan": "https://konninvest.com/MODSZERTAN.md",
  "arak_datuma": "2026-10-06",
- "frissitve": "2026-10-06T22:00:16.646Z",
+ "frissitve": "2026-10-06T22:01:01.919Z",
  "mai_ajanlat": "MA",
  "cegek": [
   {
@@ -2048,6 +2048,58 @@
    "kockazatok": "Magas értékeltség (trailing P/E ~34, FCF-hozam ~2%) – multiplikátor-zsugorodás esetén jelentős árfolyamesés; az ipari gázkereslet lanyhulása és a gyenge ipari termelés; a tiszta hidrogén/ammónia projektek késése és nagy tőkeigénye (Q2 FCF csak 833 M USD a 1,4 Md USD capex miatt); ~22 Md USD nettó adósság és kamat-/devizakockázat",
    "belso_ertek_alapja": "Normalizált owner earnings kb. 12 USD/részvény (2025 FCF 5,09 Md USD, ~465 M részvény, növekedési capex egy részének visszaadásával) × ~30 szorzó; a részvényszámot és a pontos jelenlegi árat becsültem, nem közvetlen forrásból.",
    "forrasok": "Linde Q2 2026 eredmény (SEC 8-K), Linde 10-K FY2025, Linde 10-Q Q1 2026, MarketBeat, Barchart",
+   "elemzes_datuma": "2026-10-06"
+  },
+  {
+   "id": "UNP",
+   "nev": "Union Pacific Corporation",
+   "ticker": "UNP",
+   "yahoo": "UNP",
+   "lista": "Jelölt",
+   "szektor": "Industrials",
+   "penznem": "USD",
+   "arfolyam": 276.61,
+   "arfolyam_datum": "2026-10-06",
+   "celar": 328.92,
+   "potencial_szazalek": 18.91,
+   "trend": {
+    "nap20": "Oldalazó",
+    "nap50": "Csökkenő",
+    "nap200": "Emelkedő"
+   },
+   "sma20": 277.95,
+   "sma50": 289.5,
+   "sma200": 265.17,
+   "valtozas_1ho": -4.49,
+   "valtozas_6ho": 12.39,
+   "belso_ertek": 215,
+   "veteli_szint": 150.5,
+   "biztonsagi_sav_szazalek": 30,
+   "ar_vs_belso_ertek_szazalek": 28.66,
+   "csillag": 2,
+   "ertekeles": "Drága",
+   "bizonytalansag": "Medium",
+   "moat": "Wide",
+   "moat_trend": "Stable",
+   "moat_score": 74,
+   "moat_pillerek": {
+    "immaterialis_javak": 55,
+    "valtasi_koltseg": 45,
+    "halozati_hatas": 60,
+    "koltsegelony": 70,
+    "hatekony_meret": 95
+   },
+   "mpa_score": 66,
+   "elteres": -8,
+   "penzugyi_ero": "Adequate",
+   "ai_kockazat": "Low",
+   "bizonyossag": "High",
+   "ajanlas": "Hold",
+   "ajanlas_elemzeskor": "Hold",
+   "ajanlas_szoveg": "Hold: a széles moat és a kiváló működési hatékonyság mellett a 276,61 USD-s ár kb. 29%-kal a ~215 USD-s belső érték felett van (2 csillagos zóna), a ~150 USD-s vételi szint pedig messze alatta.",
+   "kockazatok": "A Norfolk Southern-egyesülés (85 milliárd USD) szabályozói (STB) késése vagy elutasítása, illetve az integrációs és adósságkockázat; a szakszervezetek és mezőgazdasági csoportok ellenállása; ciklikus áruforgalmi visszaesés és vámok hatása; a kamionos verseny és a bérköltség-nyomás",
+   "belso_ertek_alapja": "Normalizált szabad cash flow (~5,7 milliárd USD, a 2025-ös 5,5 és 2024-es 5,9 milliárd USD átlaga) ≈ 9,6 USD/részvény (594 millió részvény), konzervatív ~22× szorzóval; a nettó adósságot pontosan nem találtam, az egyesülés hatását nem építettem be.",
+   "forrasok": "StockAnalysis (UNP összefoglaló és cash flow, 2026-10-06); TIKR; Yahoo Finance; Simply Wall St",
    "elemzes_datuma": "2026-10-06"
   }
  ]

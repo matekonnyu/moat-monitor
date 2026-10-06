@@ -1,6 +1,6 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-06 záró (Yahoo Finance). Frissítve: 2026-10-06T22:00:16.646Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-06 záró (Yahoo Finance). Frissítve: 2026-10-06T22:01:01.919Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
@@ -503,6 +503,7 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
 - Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
-## Jóváhagyásra váró elemzések (1)
+## Jóváhagyásra váró elemzések (2)
 
 - Linde plc (LIN): Wide moat, ★☆☆☆☆ Drága, árfolyam $489,95, belső érték $360,00, célár $548,67, potenciál +12,0%. Avoid: a széles moat és a stabil, szerződéses cash flow ellenére a ~511 USD-s ár kb. 42%-kal a ~360 USD-s fair value felett van (1 csillagos zóna), jóval a ~288 USD-s vételi szint fölött.
+- Union Pacific Corporation (UNP): Wide moat, ★★☆☆☆ Drága, árfolyam $276,61, belső érték $215,00, célár $328,92, potenciál +18,9%. Hold: a széles moat és a kiváló működési hatékonyság mellett a 276,61 USD-s ár kb. 29%-kal a ~215 USD-s belső érték felett van (2 csillagos zóna), a ~150 USD-s vételi szint pedig messze alatta.
