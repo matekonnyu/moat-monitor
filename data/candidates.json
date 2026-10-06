@@ -1,1 +1,52 @@
-[]
+[
+ {
+  "id": "LIN",
+  "n": "Linde plc",
+  "t": "LIN",
+  "y": "LIN",
+  "l": "Jelölt",
+  "m": "Wide",
+  "s": 84,
+  "ai": "Low",
+  "c": "High",
+  "p": [
+   70,
+   80,
+   45,
+   85,
+   92
+  ],
+  "sec": "Materials (Industrial Gases)",
+  "r": "Avoid: a széles moat és a stabil, szerződéses cash flow ellenére a ~511 USD-s ár kb. 42%-kal a ~360 USD-s fair value felett van (1 csillagos zóna), jóval a ~288 USD-s vételi szint fölött.",
+  "risks": "Magas értékeltség (trailing P/E ~34, FCF-hozam ~2%) – multiplikátor-zsugorodás esetén jelentős árfolyamesés; az ipari gázkereslet lanyhulása és a gyenge ipari termelés; a tiszta hidrogén/ammónia projektek késése és nagy tőkeigénye (Q2 FCF csak 833 M USD a 1,4 Md USD capex miatt); ~22 Md USD nettó adósság és kamat-/devizakockázat",
+  "mt": "Stable",
+  "u": "Low",
+  "ivb": "Normalizált owner earnings kb. 12 USD/részvény (2025 FCF 5,09 Md USD, ~465 M részvény, növekedési capex egy részének visszaadásával) × ~30 szorzó; a részvényszámot és a pontos jelenlegi árat becsültem, nem közvetlen forrásból.",
+  "srcs": "Linde Q2 2026 eredmény (SEC 8-K), Linde 10-K FY2025, Linde 10-Q Q1 2026, MarketBeat, Barchart",
+  "d": "2026-10-06",
+  "ch": "https://finance.yahoo.com/chart/LIN",
+  "pr": 511.2,
+  "tp": 548.67,
+  "iv": 360,
+  "mos": 20,
+  "bb": 288,
+  "f": "Strong",
+  "cur": "USD",
+  "mk": {
+   "p": 489.95,
+   "prev": 482.38,
+   "sma20": 468.72,
+   "sma50": 479.61,
+   "sma200": 486.86,
+   "ema20": 474.4,
+   "ema50": 480.88,
+   "tr": "Oldalazó",
+   "ch1m": 2.59,
+   "ch6m": -0.94,
+   "d": "2026-10-06",
+   "at": "2026-10-06T22:00:16.646Z",
+   "src": "Yahoo Finance"
+  },
+  "added": "2026-10-06T22:00:16.646Z"
+ }
+]
