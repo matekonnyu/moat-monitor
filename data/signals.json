@@ -1,5 +1,93 @@
 [
  {
+  "d": "2026-10-07",
+  "id": "AVGO",
+  "n": "Broadcom Inc.",
+  "kind": "Középtávú trend",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 375.81,
+  "bb": 187.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "AVGO",
+  "n": "Broadcom Inc.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 375.81,
+  "bb": 187.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "AVGO",
+  "n": "Broadcom Inc.",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 375.81,
+  "bb": 187.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "META",
+  "n": "Meta Platforms, Inc.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 738.88,
+  "bb": 360,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "MOL",
+  "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 4980,
+  "bb": 2310,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "RICHTER",
+  "n": "Richter Gedeon Nyrt.",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Csökkenő",
+  "px": 12300,
+  "bb": 9450,
+  "cur": "HUF"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "STX",
+  "n": "Seagate Technology Holdings plc",
+  "kind": "Középtávú trend",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 805.63,
+  "bb": 150,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-07",
+  "id": "VST",
+  "n": "Vistra Corp.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 160.5,
+  "bb": 52.2,
+  "cur": "USD"
+ },
+ {
   "d": "2026-10-06",
   "id": "GOOGL",
   "n": "Alphabet Inc. (Class A)",
@@ -30,17 +118,6 @@
   "to": "Emelkedő",
   "px": 369.71,
   "bb": 233.8,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-06",
-  "id": "STX",
-  "n": "Seagate Technology Holdings plc",
-  "kind": "Középtávú trend",
-  "from": "Oldalazó",
-  "to": "Emelkedő",
-  "px": 887.09,
-  "bb": 150,
   "cur": "USD"
  },
  {

@@ -1,5 +1,5 @@
 {
- "at": "2026-10-06T05:48:37.195Z",
+ "at": "2026-10-07T05:49:57.209Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -8,7 +8,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 332.89,
+   "px": 333.63,
    "bb": 144.2,
    "cur": "USD"
   },
@@ -18,7 +18,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 631.75,
+   "px": 649.42,
    "bb": 135,
    "cur": "USD"
   },
@@ -28,7 +28,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 251.4,
+   "px": 256.29,
    "bb": 147,
    "cur": "USD"
   },
@@ -38,17 +38,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1859.86,
+   "px": 1834.1,
    "bb": 875,
    "cur": "USD"
   },
   "AVGO": {
    "n": "Broadcom Inc.",
-   "trM": "Csökkenő",
-   "trL": "Oldalazó",
-   "rw": "Hold",
+   "trM": "Oldalazó",
+   "trL": "Emelkedő",
+   "rw": "Accumulate",
    "below": false,
-   "px": 362.51,
+   "px": 375.81,
    "bb": 187.8,
    "cur": "USD"
   },
@@ -58,7 +58,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 158.33,
+   "px": 157.63,
    "bb": 147,
    "cur": "USD"
   },
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.56,
+   "px": 26.83,
    "bb": 21,
    "cur": "EUR"
   },
@@ -78,7 +78,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 346.47,
+   "px": 347.68,
    "bb": 211.8,
    "cur": "USD"
   },
@@ -88,7 +88,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 86.51,
+   "px": 86.17,
    "bb": 59.2,
    "cur": "USD"
   },
@@ -98,27 +98,27 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 564.59,
+   "px": 566.58,
    "bb": 441,
    "cur": "USD"
   },
   "META": {
    "n": "Meta Platforms, Inc.",
    "trM": "Emelkedő",
-   "trL": "Oldalazó",
+   "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 741.9,
+   "px": 738.88,
    "bb": 360,
    "cur": "USD"
   },
   "MOL": {
    "n": "MOL Magyar Olaj- és Gázipari Nyrt.",
-   "trM": "Oldalazó",
+   "trM": "Emelkedő",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4852,
+   "px": 4980,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -128,7 +128,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 525.18,
+   "px": 529.3,
    "bb": 349.3,
    "cur": "USD"
   },
@@ -138,7 +138,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 2520,
+   "px": 2578,
    "bb": 1750,
    "cur": "HUF"
   },
@@ -148,7 +148,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 238.9,
+   "px": 239.24,
    "bb": 81.5,
    "cur": "USD"
   },
@@ -168,17 +168,17 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 40250,
+   "px": 40700,
    "bb": 24600,
    "cur": "HUF"
   },
   "RICHTER": {
    "n": "Richter Gedeon Nyrt.",
-   "trM": "Oldalazó",
+   "trM": "Csökkenő",
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 12230,
+   "px": 12300,
    "bb": 9450,
    "cur": "HUF"
   },
@@ -188,7 +188,7 @@
    "trL": null,
    "rw": "Avoid",
    "below": false,
-   "px": 171.09,
+   "px": 171.92,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -198,7 +198,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 485.8,
+   "px": 482.3,
    "bb": 280,
    "cur": "USD"
   },
@@ -208,7 +208,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 369.71,
+   "px": 370.64,
    "bb": 233.8,
    "cur": "USD"
   },
@@ -218,7 +218,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 125.65,
+   "px": 125.71,
    "bb": 108,
    "cur": "USD"
   },
@@ -228,17 +228,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 201.8,
+   "px": 212.25,
    "bb": 69,
    "cur": "USD"
   },
   "STX": {
    "n": "Seagate Technology Holdings plc",
-   "trM": "Emelkedő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 887.09,
+   "px": 805.63,
    "bb": 150,
    "cur": "USD"
   },
@@ -248,7 +248,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 110,
+   "px": 111.87,
    "bb": 37.8,
    "cur": "USD"
   },
@@ -258,7 +258,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 81.44,
+   "px": 81.51,
    "bb": 77,
    "cur": "USD"
   },
@@ -268,7 +268,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1143.12,
+   "px": 1157.49,
    "bb": 574,
    "cur": "USD"
   },
@@ -278,17 +278,17 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 82.65,
+   "px": 83.6,
    "bb": 51.8,
    "cur": "USD"
   },
   "VST": {
    "n": "Vistra Corp.",
    "trM": "Oldalazó",
-   "trL": "Csökkenő",
+   "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 144.89,
+   "px": 160.5,
    "bb": 52.2,
    "cur": "USD"
   },
@@ -298,7 +298,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 285.22,
+   "px": 278.2,
    "bb": 216.3,
    "cur": "USD"
   },
@@ -308,7 +308,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 190.19,
+   "px": 191.02,
    "bb": 90,
    "cur": "USD"
   },
@@ -318,7 +318,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 64.64,
+   "px": 63.47,
    "bb": 15.6,
    "cur": "EUR"
   },
@@ -328,7 +328,7 @@
    "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 66.14,
+   "px": 66.96,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -338,7 +338,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 27.41,
+   "px": 27.5,
    "bb": 15.4,
    "cur": "USD"
   },
@@ -348,7 +348,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 116.19,
+   "px": 112.5,
    "bb": 17.5,
    "cur": "USD"
   }

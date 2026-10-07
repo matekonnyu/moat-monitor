@@ -1,6 +1,6 @@
 # konninvest Moat Monitor – adatok
 
-Árak: 2026-10-06 záró (Yahoo Finance). Frissítve: 2026-10-06T22:01:01.919Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
+Árak: 2026-10-06 záró (Yahoo Finance). Frissítve: 2026-10-07T05:49:39.524Z. Forrás: https://konninvest.com. Módszertan: https://konninvest.com/MODSZERTAN.md (Morningstar-gyakorlat). Gépi formátumok: https://konninvest.com/adatok.json, https://konninvest.com/adatok.csv. Kutatási eszköz, nem befektetési tanács.
 
 ## Mai ajánlat
 
