@@ -1,5 +1,38 @@
 [
  {
+  "d": "2026-10-08",
+  "id": "AMZN",
+  "n": "Amazon.com, Inc.",
+  "kind": "Középtávú trend",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 259.92,
+  "bb": 147,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-08",
+  "id": "META",
+  "n": "Meta Platforms, Inc.",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 721.31,
+  "bb": 360,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-08",
+  "id": "LLY",
+  "n": "Eli Lilly and Company",
+  "kind": "Középtávú trend",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 1188.72,
+  "bb": 574,
+  "cur": "USD"
+ },
+ {
   "d": "2026-10-07",
   "id": "AVGO",
   "n": "Broadcom Inc.",
@@ -217,17 +250,6 @@
   "to": "Emelkedő",
   "px": 343.5,
   "bb": 211.8,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-03",
-  "id": "LLY",
-  "n": "Eli Lilly and Company",
-  "kind": "Középtávú trend",
-  "from": "Oldalazó",
-  "to": "Csökkenő",
-  "px": 1142.85,
-  "bb": 574,
   "cur": "USD"
  },
  {

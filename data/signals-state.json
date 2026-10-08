@@ -1,5 +1,5 @@
 {
- "at": "2026-10-07T05:49:57.209Z",
+ "at": "2026-10-08T05:50:05.157Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -8,7 +8,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 333.63,
+   "px": 336.67,
    "bb": 144.2,
    "cur": "USD"
   },
@@ -18,17 +18,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 649.42,
+   "px": 645.86,
    "bb": 135,
    "cur": "USD"
   },
   "AMZN": {
    "n": "Amazon.com, Inc.",
-   "trM": "Csökkenő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 256.29,
+   "px": 259.92,
    "bb": 147,
    "cur": "USD"
   },
@@ -38,7 +38,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1834.1,
+   "px": 1804.96,
    "bb": 875,
    "cur": "USD"
   },
@@ -48,7 +48,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 375.81,
+   "px": 376.51,
    "bb": 187.8,
    "cur": "USD"
   },
@@ -58,7 +58,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 157.63,
+   "px": 155.87,
    "bb": 147,
    "cur": "USD"
   },
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.83,
+   "px": 26.41,
    "bb": 21,
    "cur": "EUR"
   },
@@ -78,7 +78,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 347.68,
+   "px": 350.5,
    "bb": 211.8,
    "cur": "USD"
   },
@@ -88,7 +88,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 86.17,
+   "px": 85.82,
    "bb": 59.2,
    "cur": "USD"
   },
@@ -98,7 +98,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 566.58,
+   "px": 570.06,
    "bb": 441,
    "cur": "USD"
   },
@@ -106,9 +106,9 @@
    "n": "Meta Platforms, Inc.",
    "trM": "Emelkedő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
-   "px": 738.88,
+   "px": 721.31,
    "bb": 360,
    "cur": "USD"
   },
@@ -118,7 +118,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4980,
+   "px": 5055,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -128,7 +128,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 529.3,
+   "px": 529.76,
    "bb": 349.3,
    "cur": "USD"
   },
@@ -138,7 +138,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 2578,
+   "px": 2572,
    "bb": 1750,
    "cur": "HUF"
   },
@@ -148,7 +148,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 239.24,
+   "px": 237.47,
    "bb": 81.5,
    "cur": "USD"
   },
@@ -158,7 +158,7 @@
    "trL": "Csökkenő",
    "rw": "Avoid",
    "below": false,
-   "px": 1.04,
+   "px": 1,
    "bb": 0.2,
    "cur": "USD"
   },
@@ -168,7 +168,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 40700,
+   "px": 41470,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -178,7 +178,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 12300,
+   "px": 12370,
    "bb": 9450,
    "cur": "HUF"
   },
@@ -188,7 +188,7 @@
    "trL": null,
    "rw": "Avoid",
    "below": false,
-   "px": 171.92,
+   "px": 167.6,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -198,7 +198,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 482.3,
+   "px": 472.2,
    "bb": 280,
    "cur": "USD"
   },
@@ -208,7 +208,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 370.64,
+   "px": 372.1,
    "bb": 233.8,
    "cur": "USD"
   },
@@ -218,7 +218,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 125.71,
+   "px": 123.73,
    "bb": 108,
    "cur": "USD"
   },
@@ -228,7 +228,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 212.25,
+   "px": 213.55,
    "bb": 69,
    "cur": "USD"
   },
@@ -238,7 +238,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 805.63,
+   "px": 807.57,
    "bb": 150,
    "cur": "USD"
   },
@@ -248,7 +248,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 111.87,
+   "px": 110.17,
    "bb": 37.8,
    "cur": "USD"
   },
@@ -258,17 +258,17 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 81.51,
+   "px": 80.26,
    "bb": 77,
    "cur": "USD"
   },
   "LLY": {
    "n": "Eli Lilly and Company",
-   "trM": "Csökkenő",
+   "trM": "Oldalazó",
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1157.49,
+   "px": 1188.72,
    "bb": 574,
    "cur": "USD"
   },
@@ -278,7 +278,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 83.6,
+   "px": 81.46,
    "bb": 51.8,
    "cur": "USD"
   },
@@ -288,7 +288,7 @@
    "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 160.5,
+   "px": 166.72,
    "bb": 52.2,
    "cur": "USD"
   },
@@ -298,7 +298,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 278.2,
+   "px": 275.4,
    "bb": 216.3,
    "cur": "USD"
   },
@@ -308,7 +308,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 191.02,
+   "px": 189.71,
    "bb": 90,
    "cur": "USD"
   },
@@ -318,7 +318,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 63.47,
+   "px": 64.68,
    "bb": 15.6,
    "cur": "EUR"
   },
@@ -328,7 +328,7 @@
    "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 66.96,
+   "px": 66.5,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -338,7 +338,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 27.5,
+   "px": 28,
    "bb": 15.4,
    "cur": "USD"
   },
@@ -348,7 +348,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 112.5,
+   "px": 113.12,
    "bb": 17.5,
    "cur": "USD"
   }
