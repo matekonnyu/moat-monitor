@@ -1938,63 +1938,6 @@
     "TradingView News Q2 2026"
    ],
    "elemzes_datuma": "2026-10-03"
-  },
-  {
-   "id": "OCGN",
-   "nev": "Ocugen, Inc.",
-   "ticker": "OCGN",
-   "yahoo": "OCGN",
-   "lista": "Követett",
-   "szektor": "Biotechnology",
-   "penznem": "USD",
-   "arfolyam": 1,
-   "arfolyam_datum": "2026-10-07",
-   "celar": 9.17,
-   "potencial_szazalek": 817,
-   "trend": {
-    "nap20": "Csökkenő",
-    "nap50": "Csökkenő",
-    "nap200": "Csökkenő"
-   },
-   "sma20": 1.03,
-   "sma50": 1.21,
-   "sma200": 1.49,
-   "valtozas_1ho": -24.81,
-   "valtozas_6ho": -46.24,
-   "belso_ertek": 0.8,
-   "veteli_szint": 0.2,
-   "biztonsagi_sav_szazalek": 75,
-   "ar_vs_belso_ertek_szazalek": 25,
-   "csillag": 3,
-   "ertekeles": "Korrekt ár",
-   "bizonytalansag": "Extreme",
-   "moat": "None",
-   "moat_trend": "Stable",
-   "moat_score": 14,
-   "moat_pillerek": {
-    "immaterialis_javak": 30,
-    "valtasi_koltseg": 10,
-    "halozati_hatas": 0,
-    "koltsegelony": 5,
-    "hatekony_meret": 10
-   },
-   "mpa_score": 18,
-   "elteres": 4,
-   "penzugyi_ero": "Weak",
-   "ai_kockazat": "Low",
-   "bizonyossag": "Low",
-   "ajanlas": "Avoid",
-   "ajanlas_elemzeskor": "Avoid",
-   "ajanlas_szoveg": "Avoid: moat nélküli, bináris kimenetelű génterápiás biotech, amelynek 1,02 USD-s ára a ~0,80 USD-s konzervatív fair value felett és messze a 75%-os diszkontú 0,20 USD-s vételi szint felett van.",
-   "kockazatok": "Az OCU400 fázis 3 (topline 2027 Q1) vagy az OCU410ST (2027 Q2) sikertelensége; folyamatos veszteség (Q2 2026: -24,9 M USD) és további hígítás, 130 M USD átváltható kötvény; FDA-engedélyezési és gyártási kockázat; nincs érdemi bevétel (Q2 2026: 1,5 M USD)",
-   "belso_ertek_alapja": "Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.",
-   "forrasok": [
-    "Ocugen Q2 2026 business update (2026-08)",
-    "Ocugen 10-Q Q2 2026 (SEC)",
-    "WallStreetZen konszenzus 2026-09",
-    "Ocugen Q2 2026 earnings call"
-   ],
-   "elemzes_datuma": "2026-09-30"
   }
  ],
  "jovahagyasra_var": [

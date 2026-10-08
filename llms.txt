@@ -10,4 +10,4 @@ Az oldal (https://konninvest.com) JavaScripttel jelenik meg; ugyanazok az adatok
 - [Módszertan](https://konninvest.com/MODSZERTAN.md): moat, belső érték, bizonytalanság, csillagok, MPA score, trend, Mai ajánlat szabályai.
 - Nyers adatfájlok: https://konninvest.com/data/companies.json, https://konninvest.com/data/candidates.json, https://konninvest.com/data/meta.json
 
-Árak dátuma: 2026-10-08. Cégek száma: 35.
+Árak dátuma: 2026-10-08. Cégek száma: 34.

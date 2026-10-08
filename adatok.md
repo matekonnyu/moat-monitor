@@ -6,7 +6,7 @@
 
 Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfolyam $570,06, belső érték $630,00, vételi szint $441,00, trend 20/50/200: Emelkedő / Oldalazó / Emelkedő. Hold: a széles, hálózati hatáson alapuló moat stabil, de az 554,53 USD-s ár csak ~12%-kal van a ~630 USD-s fair value alatt, messze a közepes bizonytalansághoz tartozó 441 USD-s vételi szint felett.
 
-## Követett cégek (35)
+## Követett cégek (34)
 
 | Cég | Ticker | Árfolyam | Célár | Potenciál | Trend 20/50/200 | Belső érték | Vételi szint | Ár vs IV | Értékelés | Moat | Moat score | MPA score | Eltérés | Elemzés |
 | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | --- |
@@ -44,7 +44,6 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 | MOL Magyar Olaj- és Gázipari Nyrt. | MOL | 4972 Ft | 4440 Ft | -10,7% | Csökkenő / Emelkedő / Emelkedő | 3850 Ft | 2310 Ft | +29,1% | ★★☆☆☆ Drága | None | 38 | 43 | +5 | Avoid |
 | United Airlines Holdings, Inc. | UAL | $110,17 | $156,35 | +41,9% | Oldalazó / Csökkenő / Emelkedő | $63,00 | $37,80 | +74,9% | ★☆☆☆☆ Drága | None | 38 | 23 | -15 | Avoid |
 | BridgeBio Pharma, Inc. | BBIO | $66,50 | $109,10 | +64,1% | Csökkenő / Csökkenő / Oldalazó | $45,00 | $22,50 | +47,8% | ★★☆☆☆ Drága | None | 35 | 23 | -12 | Avoid |
-| Ocugen, Inc. | OCGN | $1,00 | $9,17 | +817,0% | Csökkenő / Csökkenő / Csökkenő | $0,80 | $0,20 | +25,0% | ★★★☆☆ Korrekt ár | None | 14 | 18 | +4 | Avoid |
 
 ## Cégenkénti részletek
 
@@ -489,19 +488,6 @@ Mastercard Incorporated (MA) – Wide moat, ★★★☆☆ (Korrekt ár), árfo
 - Kockázatok: Az Attruby (ATTR-CM) erős versenyben van az Alnylam, Pfizer és Intellia termékeivel, az ár- és térítési nyomás (MFN, IRA) rontja a bevételt; az infigratinib és más pipeline-jelöltek klinikai/FDA kudarca bináris kockázat; a veszteség (Q2 2026: -152 M USD) és az elhígulás (1 Mrd USD preferált tőke) miatt a finanszírozási igény magas; szabadalmi és jogi viták
 - Belső érték alapja: Negatív FCF és nyereség híján nem DCF-ből: a ~1 Mrd USD-s 2026-os konszenzus árbevételből (Attruby Q2: 222,4 M USD) ~6x konzervatív árbevétel-szorzóval, a hígulást és a bináris pipeline-kockázatot levonva, kb. 45 USD/részvény (pontos FCF és nettó adósság nem volt fellelhető).
 - Források: BridgeBio Q2 2026 eredményközlemény (GlobeNewswire, 2026-08-10); StockAnalysis.com BBIO (2026-10-02); Simply Wall St BBIO forecast; TradingView News Q2 2026
-
-### Ocugen, Inc. (OCGN)
-
-- Szektor: Biotechnology; lista: Követett; elemzés dátuma: 2026-09-30
-- Moat: None (score 14, trend: Stable); pillérek: immateriális javak 30, váltási költség 10, hálózati hatás 0, költségelőny 5, hatékony méret 10
-- Értékelés: ★★★☆☆ Korrekt ár; bizonytalanság: Extreme; pénzügyi erő: Weak; AI-kockázat: Low
-- Árfolyam $1,00 (2026-10-07); belső érték $0,80; vételi szint $0,20 (biztonsági sáv 75%); konszenzus célár $9,17
-- Trend 20/50/200 nap: Csökkenő / Csökkenő / Csökkenő; változás 1 hó -24,8%, 6 hó -46,2%
-- Aktuális ajánlás (mai ár alapján): Avoid
-- Elemzés: Avoid: moat nélküli, bináris kimenetelű génterápiás biotech, amelynek 1,02 USD-s ára a ~0,80 USD-s konzervatív fair value felett és messze a 75%-os diszkontú 0,20 USD-s vételi szint felett van.
-- Kockázatok: Az OCU400 fázis 3 (topline 2027 Q1) vagy az OCU410ST (2027 Q2) sikertelensége; folyamatos veszteség (Q2 2026: -24,9 M USD) és további hígítás, 130 M USD átváltható kötvény; FDA-engedélyezési és gyártási kockázat; nincs érdemi bevétel (Q2 2026: 1,5 M USD)
-- Belső érték alapja: Nincs pozitív FCF: ~100 M USD készpénz mínusz 130 M USD átváltható adósság, plusz a pipeline (OCU400, OCU410ST, OCU410, MENA-licenc) erősen valószínűség-súlyozott értéke, 339 M részvényre vetítve → ~0,80 USD/részvény, szándékosan nem felfújva.
-- Források: Ocugen Q2 2026 business update (2026-08); Ocugen 10-Q Q2 2026 (SEC); WallStreetZen konszenzus 2026-09; Ocugen Q2 2026 earnings call
 
 ## Jóváhagyásra váró elemzések (2)
 
