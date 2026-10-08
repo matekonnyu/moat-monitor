@@ -1,5 +1,5 @@
 {
- "at": "2026-10-08T05:50:05.157Z",
+ "at": "2026-10-08T08:22:19.558Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 26.41,
+   "px": 27,
    "bb": 21,
    "cur": "EUR"
   },
@@ -118,7 +118,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 5055,
+   "px": 4972,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -168,7 +168,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 41470,
+   "px": 38770,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -318,7 +318,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 64.68,
+   "px": 59.26,
    "bb": 15.6,
    "cur": "EUR"
   },
