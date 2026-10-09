@@ -1,5 +1,5 @@
 {
- "at": "2026-10-08T08:22:19.558Z",
+ "at": "2026-10-09T05:50:35.017Z",
  "pick": "MA",
  "c": {
   "AAPL": {
@@ -8,7 +8,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 336.67,
+   "px": 340.42,
    "bb": 144.2,
    "cur": "USD"
   },
@@ -18,17 +18,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 645.86,
+   "px": 620.68,
    "bb": 135,
    "cur": "USD"
   },
   "AMZN": {
    "n": "Amazon.com, Inc.",
-   "trM": "Oldalazó",
+   "trM": "Csökkenő",
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 259.92,
+   "px": 254.06,
    "bb": 147,
    "cur": "USD"
   },
@@ -38,17 +38,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1804.96,
+   "px": 1769.79,
    "bb": 875,
    "cur": "USD"
   },
   "AVGO": {
    "n": "Broadcom Inc.",
-   "trM": "Oldalazó",
-   "trL": "Emelkedő",
-   "rw": "Accumulate",
+   "trM": "Csökkenő",
+   "trL": "Oldalazó",
+   "rw": "Hold",
    "below": false,
-   "px": 376.51,
+   "px": 360.14,
    "bb": 187.8,
    "cur": "USD"
   },
@@ -58,7 +58,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 155.87,
+   "px": 159.97,
    "bb": 147,
    "cur": "USD"
   },
@@ -68,7 +68,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 27,
+   "px": 26.99,
    "bb": 21,
    "cur": "EUR"
   },
@@ -78,7 +78,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 350.5,
+   "px": 348.29,
    "bb": 211.8,
    "cur": "USD"
   },
@@ -88,17 +88,17 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 85.82,
+   "px": 87.77,
    "bb": 59.2,
    "cur": "USD"
   },
   "MA": {
    "n": "Mastercard Incorporated",
-   "trM": "Oldalazó",
+   "trM": "Emelkedő",
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 570.06,
+   "px": 574.76,
    "bb": 441,
    "cur": "USD"
   },
@@ -108,7 +108,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 721.31,
+   "px": 720.89,
    "bb": 360,
    "cur": "USD"
   },
@@ -118,7 +118,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 4972,
+   "px": 5035,
    "bb": 2310,
    "cur": "HUF"
   },
@@ -126,9 +126,9 @@
    "n": "Microsoft Corporation",
    "trM": "Emelkedő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
-   "px": 529.76,
+   "px": 522.61,
    "bb": 349.3,
    "cur": "USD"
   },
@@ -138,7 +138,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 2572,
+   "px": 2540,
    "bb": 1750,
    "cur": "HUF"
   },
@@ -148,18 +148,8 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 237.47,
+   "px": 230.48,
    "bb": 81.5,
-   "cur": "USD"
-  },
-  "OCGN": {
-   "n": "Ocugen, Inc.",
-   "trM": "Csökkenő",
-   "trL": "Csökkenő",
-   "rw": "Avoid",
-   "below": false,
-   "px": 1,
-   "bb": 0.2,
    "cur": "USD"
   },
   "OTP": {
@@ -168,7 +158,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 38770,
+   "px": 39900,
    "bb": 24600,
    "cur": "HUF"
   },
@@ -178,7 +168,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 12370,
+   "px": 12500,
    "bb": 9450,
    "cur": "HUF"
   },
@@ -188,7 +178,7 @@
    "trL": null,
    "rw": "Avoid",
    "below": false,
-   "px": 167.6,
+   "px": 160.57,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -196,9 +186,9 @@
    "n": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
    "trM": "Emelkedő",
    "trL": "Emelkedő",
-   "rw": "Hold",
+   "rw": "Accumulate",
    "below": false,
-   "px": 472.2,
+   "px": 457.99,
    "bb": 280,
    "cur": "USD"
   },
@@ -208,7 +198,7 @@
    "trL": "Emelkedő",
    "rw": "Accumulate",
    "below": false,
-   "px": 372.1,
+   "px": 375.1,
    "bb": 233.8,
    "cur": "USD"
   },
@@ -218,7 +208,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 123.73,
+   "px": 128.34,
    "bb": 108,
    "cur": "USD"
   },
@@ -228,7 +218,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 213.55,
+   "px": 216.81,
    "bb": 69,
    "cur": "USD"
   },
@@ -238,17 +228,17 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 807.57,
+   "px": 774.83,
    "bb": 150,
    "cur": "USD"
   },
   "UAL": {
    "n": "United Airlines Holdings, Inc.",
    "trM": "Csökkenő",
-   "trL": "Emelkedő",
+   "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 110.17,
+   "px": 107.44,
    "bb": 37.8,
    "cur": "USD"
   },
@@ -258,7 +248,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 80.26,
+   "px": 82.03,
    "bb": 77,
    "cur": "USD"
   },
@@ -268,7 +258,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 1188.72,
+   "px": 1169.6,
    "bb": 574,
    "cur": "USD"
   },
@@ -278,17 +268,17 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 81.46,
+   "px": 81.88,
    "bb": 51.8,
    "cur": "USD"
   },
   "VST": {
    "n": "Vistra Corp.",
-   "trM": "Oldalazó",
+   "trM": "Emelkedő",
    "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 166.72,
+   "px": 156.14,
    "bb": 52.2,
    "cur": "USD"
   },
@@ -298,7 +288,7 @@
    "trL": "Csökkenő",
    "rw": "Hold",
    "below": false,
-   "px": 275.4,
+   "px": 276.97,
    "bb": 216.3,
    "cur": "USD"
   },
@@ -308,7 +298,7 @@
    "trL": "Oldalazó",
    "rw": "Hold",
    "below": false,
-   "px": 189.71,
+   "px": 187.44,
    "bb": 90,
    "cur": "USD"
   },
@@ -318,7 +308,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 59.26,
+   "px": 60.95,
    "bb": 15.6,
    "cur": "EUR"
   },
@@ -328,7 +318,7 @@
    "trL": "Oldalazó",
    "rw": "Avoid",
    "below": false,
-   "px": 66.5,
+   "px": 65.04,
    "bb": 22.5,
    "cur": "USD"
   },
@@ -338,7 +328,7 @@
    "trL": "Emelkedő",
    "rw": "Hold",
    "below": false,
-   "px": 28,
+   "px": 27.82,
    "bb": 15.4,
    "cur": "USD"
   },
@@ -348,7 +338,7 @@
    "trL": "Emelkedő",
    "rw": "Avoid",
    "below": false,
-   "px": 113.12,
+   "px": 107.08,
    "bb": 17.5,
    "cur": "USD"
   }

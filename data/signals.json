@@ -1,13 +1,101 @@
 [
  {
-  "d": "2026-10-08",
+  "d": "2026-10-09",
   "id": "AMZN",
   "n": "Amazon.com, Inc.",
   "kind": "Középtávú trend",
-  "from": "Csökkenő",
-  "to": "Oldalazó",
-  "px": 259.92,
+  "from": "Oldalazó",
+  "to": "Csökkenő",
+  "px": 254.06,
   "bb": 147,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "AVGO",
+  "n": "Broadcom Inc.",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Csökkenő",
+  "px": 360.14,
+  "bb": 187.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "AVGO",
+  "n": "Broadcom Inc.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 360.14,
+  "bb": 187.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "AVGO",
+  "n": "Broadcom Inc.",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 360.14,
+  "bb": 187.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "MA",
+  "n": "Mastercard Incorporated",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 574.76,
+  "bb": 441,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "MSFT",
+  "n": "Microsoft Corporation",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 522.61,
+  "bb": 349.3,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "TSM",
+  "n": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
+  "kind": "Ajánlás",
+  "from": "Tartás (Hold)",
+  "to": "Gyűjtés (Accumulate)",
+  "px": 457.99,
+  "bb": 280,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "UAL",
+  "n": "United Airlines Holdings, Inc.",
+  "kind": "Hosszú távú trend (200 nap)",
+  "from": "Emelkedő",
+  "to": "Oldalazó",
+  "px": 107.44,
+  "bb": 37.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-09",
+  "id": "VST",
+  "n": "Vistra Corp.",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 156.14,
+  "bb": 52.2,
   "cur": "USD"
  },
  {
@@ -30,39 +118,6 @@
   "to": "Oldalazó",
   "px": 1188.72,
   "bb": 574,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-07",
-  "id": "AVGO",
-  "n": "Broadcom Inc.",
-  "kind": "Középtávú trend",
-  "from": "Csökkenő",
-  "to": "Oldalazó",
-  "px": 375.81,
-  "bb": 187.8,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-07",
-  "id": "AVGO",
-  "n": "Broadcom Inc.",
-  "kind": "Hosszú távú trend (200 nap)",
-  "from": "Oldalazó",
-  "to": "Emelkedő",
-  "px": 375.81,
-  "bb": 187.8,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-07",
-  "id": "AVGO",
-  "n": "Broadcom Inc.",
-  "kind": "Ajánlás",
-  "from": "Tartás (Hold)",
-  "to": "Gyűjtés (Accumulate)",
-  "px": 375.81,
-  "bb": 187.8,
   "cur": "USD"
  },
  {
@@ -133,17 +188,6 @@
  },
  {
   "d": "2026-10-06",
-  "id": "MSFT",
-  "n": "Microsoft Corporation",
-  "kind": "Ajánlás",
-  "from": "Gyűjtés (Accumulate)",
-  "to": "Tartás (Hold)",
-  "px": 525.18,
-  "bb": 349.3,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-06",
   "id": "V",
   "n": "Visa Inc.",
   "kind": "Középtávú trend",
@@ -151,17 +195,6 @@
   "to": "Emelkedő",
   "px": 369.71,
   "bb": 233.8,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-06",
-  "id": "VST",
-  "n": "Vistra Corp.",
-  "kind": "Középtávú trend",
-  "from": "Csökkenő",
-  "to": "Oldalazó",
-  "px": 144.89,
-  "bb": 52.2,
   "cur": "USD"
  },
  {
