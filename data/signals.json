@@ -1,13 +1,68 @@
 [
  {
-  "d": "2026-10-09",
+  "d": "2026-10-10",
   "id": "AMZN",
   "n": "Amazon.com, Inc.",
   "kind": "Középtávú trend",
+  "from": "Csökkenő",
+  "to": "Oldalazó",
+  "px": 262.43,
+  "bb": 147,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-10",
+  "id": "KO",
+  "n": "The Coca-Cola Company",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 88.05,
+  "bb": 59.2,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-10",
+  "id": "MSFT",
+  "n": "Microsoft Corporation",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 535.07,
+  "bb": 349.3,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-10",
+  "id": "V",
+  "n": "Visa Inc.",
+  "kind": "Ajánlás",
+  "from": "Gyűjtés (Accumulate)",
+  "to": "Tartás (Hold)",
+  "px": 385.45,
+  "bb": 233.8,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-10",
+  "id": "STX",
+  "n": "Seagate Technology Holdings plc",
+  "kind": "Középtávú trend",
   "from": "Oldalazó",
   "to": "Csökkenő",
-  "px": 254.06,
-  "bb": 147,
+  "px": 783,
+  "bb": 150,
+  "cur": "USD"
+ },
+ {
+  "d": "2026-10-10",
+  "id": "LLY",
+  "n": "Eli Lilly and Company",
+  "kind": "Középtávú trend",
+  "from": "Oldalazó",
+  "to": "Emelkedő",
+  "px": 1179.27,
+  "bb": 574,
   "cur": "USD"
  },
  {
@@ -56,17 +111,6 @@
  },
  {
   "d": "2026-10-09",
-  "id": "MSFT",
-  "n": "Microsoft Corporation",
-  "kind": "Ajánlás",
-  "from": "Tartás (Hold)",
-  "to": "Gyűjtés (Accumulate)",
-  "px": 522.61,
-  "bb": 349.3,
-  "cur": "USD"
- },
- {
-  "d": "2026-10-09",
   "id": "TSM",
   "n": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
   "kind": "Ajánlás",
@@ -110,17 +154,6 @@
   "cur": "USD"
  },
  {
-  "d": "2026-10-08",
-  "id": "LLY",
-  "n": "Eli Lilly and Company",
-  "kind": "Középtávú trend",
-  "from": "Csökkenő",
-  "to": "Oldalazó",
-  "px": 1188.72,
-  "bb": 574,
-  "cur": "USD"
- },
- {
   "d": "2026-10-07",
   "id": "META",
   "n": "Meta Platforms, Inc.",
@@ -152,17 +185,6 @@
   "px": 12300,
   "bb": 9450,
   "cur": "HUF"
- },
- {
-  "d": "2026-10-07",
-  "id": "STX",
-  "n": "Seagate Technology Holdings plc",
-  "kind": "Középtávú trend",
-  "from": "Emelkedő",
-  "to": "Oldalazó",
-  "px": 805.63,
-  "bb": 150,
-  "cur": "USD"
  },
  {
   "d": "2026-10-07",
@@ -251,17 +273,6 @@
   "px": 12230,
   "bb": 9450,
   "cur": "HUF"
- },
- {
-  "d": "2026-10-04",
-  "id": "V",
-  "n": "Visa Inc.",
-  "kind": "Ajánlás",
-  "from": "Tartás (Hold)",
-  "to": "Gyűjtés (Accumulate)",
-  "px": 360.66,
-  "bb": 233.8,
-  "cur": "USD"
  },
  {
   "d": "2026-10-04",
